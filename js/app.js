@@ -1,6 +1,6 @@
 //var API_URL = 'http://localhost/fino_app/admin/api/'
 
-var API_URL = 'http://cocinamosconfino.com/admin/api/'
+var API_URL = 'http://cocinamosconfino.com/api/'
 
 //var API_URL = 'http://192.168.43.129/fino_app/admin/api/'
 //var API_URL = 'http://172.20.10.5/fino_app/admin/api/'
