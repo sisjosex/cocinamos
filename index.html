@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' http://10.0.0.24:3000 'unsafe-inline' 'unsafe-eval'">-->
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Fexbo</title>
+
+    <!--<link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components-blue-basic-theme.css">-->
+
+    <link rel="stylesheet" href="lib/onsen2/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen2/css/onsen-css-components-blue-basic-theme.css">
+
+    <script src="lib/onsen2/js/onsenui.js"></script>
+    <script src="lib/onsen/js/angular/angular.min.js"></script>
+    <script src="lib/onsen2/js/angular-onsenui.min.js"></script>
+
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/framework-fixes.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!--
+    <script src="lib/onsen/js/angular/angular.js"></script>
+    <script src="lib/onsen/js/onsenui.js"></script>-->
+
+    <script src="lib/jquery-2.1.4.min.js"></script>
+    <script src="lib/moment.js"></script>
+    <!--<script src="cordova.js"></script>-->
+    <script src="js/services.js"></script>
+    <script src="js/util.js"></script>
+    <script src="lib/angular-satinize.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/notifications.js"></script>
+</head>
+<body>
+
+<ons-modal var="modal">
+    <ons-icon icon="ion-load-d" spin="true"></ons-icon>
+    <br><br>
+    Cargando ...
+</ons-modal>
+
+<ons-navigator animation="slide" id="mainNavigator" ng-controller="MainNavigatorController" class="">
+
+</ons-navigator>
+
+<ons-template id="intro.html">
+    <ons-page ng-controller="Intro" class="intro">
+
+        <div class="intro-content">
+            <div class="center-content">
+                <div class="intro-section">
+                    <div class="logo-intro">
+                        <img class="img-logo" src="img/logo.png"/>
+                    </div>
+
+                    <p class="text">La mejor comida es la <br> que se cocina en casa</p>
+
+                    <h1 class="intro-title">Bienvenido</h1>
+                    <ons-button modifier="large" class="btn-yellow" ng-click="register()">Soy nuevo</ons-button>
+                    <ons-button modifier="large" class="btn-yellow" ng-click="login()">Ya he estado
+                        aqu&iacute;</ons-button>
+                    <p class="text">No personalizar, <a class="btn-link" ng-click="saltar()">SALTAR</a></p>
+
+                    <div class="fino-button-container">
+                        <img class="img-logo" src="img/fino-button.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ons-page>
+</ons-template>
+
+<ons-template id="login.html">
+    <ons-page ng-controller="Login" class="intro">
+        <div class="intro-content">
+            <div class="center-content2">
+                <div class="intro-section">
+                    <div class="logo-intro">
+                        <img class="img-logo" src="img/logo.png"/>
+                    </div>
+
+                    <p class="text">La mejor comida es la <br> que se cocina en casa</p>
+                    <input type="email" class="text-input--underbar input-text" placeholder="Ingrese su email"
+                           ng-model="user.email">
+                    <input type="password" class="text-input--underbar input-text"
+                           placeholder="Ingrese su contrase&ntilde;a" ng-model="user.password">
+                    <ons-button class="btn-yellow arrow-right" ng-click="login()">Entrar <i
+                            class="fa fa-chevron-right"></i></ons-button>
+                    <p class="text"><a class="btn-link" ng-click="forgot()">¿Has olvidado tu contraseña?</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="fino-button-container2">
+            <img class="img-logo" src="img/fino-button.png"/>
+        </div>
+    </ons-page>
+</ons-template>
+
+<ons-template id="register.html">
+    <ons-page ng-controller="Register" class="intro">
+        <div class="intro-content">
+            <div class="center-content2">
+                <div class="intro-section">
+                    <div class="logo-intro">
+                        <img class="img-logo" src="img/logo.png"/>
+                    </div>
+
+                    <p class="text">La mejor comida es la <br> que se cocina en casa</p>
+                    <input type="text" class="text-input--underbar input-text" placeholder="Ingrese su email"
+                           ng-model="user.email">
+                    <input type="password" class="text-input--underbar input-text"
+                           placeholder="Ingrese su contrase&ntilde;a" ng-model="user.password">
+                    <ons-button class="btn-yellow arrow-right" ng-click="register()">Registrarse <i
+                            class="fa fa-chevron-right"></i></ons-button>
+                    <p class="text">Condiciones del servicio y <br> pol&iacute;ticas de privacidad</p>
+
+                    <p class="text"><a class="btn-link" ng-click="login()">¿Ya eres un miembro?</a></p>
+                    <ons-button class="btn-yellow arrow-right" ng-click="login()">Inicia aqu&iacute; <i
+                            class="fa fa-chevron-right"></i></ons-button>
+                </div>
+            </div>
+        </div>
+
+        <div class="fino-button-container2">
+            <img class="img-logo" src="img/fino-button.png"/>
+        </div>
+    </ons-page>
+</ons-template>
+
+<ons-template id="home.html">
+    <ons-page id="home" ng-controller="Home">
+        <ons-tabbar>
+            <ons-tab page="recipes.html" active>
+                <div class="tab-bar__icon recipe">
+                    <div class="img"></div>
+                </div>
+                <div class="tab-bar__label">Recetario</div>
+            </ons-tab>
+            <ons-tab page="calculator.html">
+                <div class="tab-bar__icon calculator">
+                    <div class="img"></div>
+                </div>
+                <div class="tab-bar__label">Calculadora</div>
+            </ons-tab>
+            <ons-tab page="counsel.html">
+                <div class="tab-bar__icon counsel">
+                    <div class="img"></div>
+                </div>
+                <div class="tab-bar__label">Consejos</div>
+            </ons-tab>
+            <ons-tab page="myshopping.html">
+                <div class="tab-bar__icon myshopping">
+                    <div class="img"></div>
+                </div>
+                <div class="tab-bar__label">Mis Compras</div>
+            </ons-tab>
+            <ons-tab page="invite.html">
+                <div class="tab-bar__icon invite">
+                    <div class="img"></div>
+                </div>
+                <div class="tab-bar__label">Te Invito</div>
+            </ons-tab>
+        </ons-tabbar>
+
+    </ons-page>
+</ons-template>
+
+<ons-template id="recipes.html">
+    <ons-navigator animation="slide" id="menuNavigator">
+        <ons-page ng-controller="Recipes" class="internal-tab">
+
+            <ons-toolbar class="toolbar-big">
+                <div class="left">
+                    <ons-toolbar-button ng-click="goToFavorite()">
+                        <img src="img/heart-blue-icon.png" alt="">
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    <img class="img-logo-header" src="img/logo-header.png"/>
+                </div>
+
+                <div class="right">
+                    <ons-toolbar-button ng-click="goToCategory()">
+                        <img src="img/info-icon.png" alt="">
+                    </ons-toolbar-button>
+                </div>
+            </ons-toolbar>
+
+            <div class="top-menu" ng-show="top_menu!=false">
+                <div class="preview" alt="" src="{{ top_menu.photo }}" ng-click="goToMenuDetail(top_menu)"></div>
+                <div class="top-menu-caption">
+                    <div class="caption">{{ top_menu.name }}</div>
+                    <div class="logo-top-menu">
+                        <img src="img/fino-logo2.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="menus">
+                <div class="menu-box" ng-repeat="item in menus track by $index">
+                    <figure class="figure">
+
+                        <div class="preview" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)"></div>
+
+                        <i ng-show="item.in_recipes" class="icon bookmark">
+                            <img src="img/bookmark-icon.png" alt="">
+                        </i>
+                        <i ng-show="item.type=='video'" class="icon play">
+                            <img src="img/play-icon.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption">{{ item.name }}</div>
+                    <div class="menu-box-footer">
+                        <div class="heart"><img src="img/heart-icon.png" alt=""></div>
+                        <div class="">62.5K</div>
+                        <div class="recipe"><img src="img/recipe-icon.png" alt=""></div>
+                        <div class="">95.5K</div>
+                    </div>
+                </div>
+            </div>
+
+        </ons-page>
+    </ons-navigator>
+</ons-template>
+
+<ons-template id="menu_detail.html">
+    <ons-page ng-controller="MenuDetail" class="tip white-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center">
+            </div>
+
+            <div class="right">
+                <ons-toolbar-button ng-click="goToCategory()">
+                    <ons-toolbar-button>
+                        <img src="img/send.png" alt="">
+                    </ons-toolbar-button>
+                    <ons-toolbar-button>
+                        <img src="img/share.png" alt="">
+                    </ons-toolbar-button>
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="calc-header">
+            <figure class="figure">
+                <div class="preview" src="{{ trustSrc(menu.photo) }}"></div>
+            </figure>
+            <div class="chef-icon">
+                <img ng-src="img/chef-icon.png" alt="">
+            </div>
+        </div>
+
+        <div class="calc-content" style="padding-top: 50px;">
+            <h1>{{ menu.name }}</h1>
+            <div class="menu-box-footer menu-box-footer-detail">
+                <div class="heart"><img src="img/heart-icon.png" alt=""></div>
+                <div class="">62.5K</div>
+                <div class="recipe"><img src="img/recipe-icon.png" alt=""></div>
+                <div class="">95.5K</div>
+            </div>
+
+            <div class="recipe-section">
+                <div class="item">
+                    <img class="img2" ng-src="img/ingredients.png">
+                </div>
+                <div class="item item-title1">
+                    <h3>Ingredients</h3>
+                </div>
+                <div class="item">
+                    <img class="img1" src="img/porciones.png">
+                    <span>6 porciones</span>
+                </div>
+                <div class="item">
+                    <div class="navigation-bar nav-bar-plus-minus">
+                        <div class="navigation-bar__center">
+                            <div class="button-bar">
+                                <div class="button-bar__item" ng-click="filter('normal')">
+                                    <input type="radio" name="navi-segment-a" checked>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <div class="button-bar__item" ng-click="filter('video')">
+                                    <input type="radio" name="navi-segment-a">
+                                    <i class="fa fa-minus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-section">
+                <div class="item">
+                    <img class="img2" ng-src="img/preparacion.png">
+                </div>
+                <div class="item item-title2">
+                    <h3>Preparación</h3>
+                </div>
+                <div class="item">
+                    <img class="img3" src="img/tiempo-preparacion.png">
+                    <span>25 min.</span>
+                </div>
+            </div>
+        </div>
+
+    </ons-page>
+</ons-template>
+
+<ons-template id="calculator.html">
+    <ons-navigator animation="slide" id="calculatorNavigator">
+        <ons-page ng-controller="Calculator" class="home internal-tab">
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button ng-click="goToFavorite()">
+                        <img src="img/heart-blue-icon.png" alt="">
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    Calculadoras
+                </div>
+
+                <div class="right">
+                    <ons-toolbar-button ng-click="goToCategory()">
+                        <img src="img/menu-chef.png" alt="">
+                    </ons-toolbar-button>
+                </div>
+            </ons-toolbar>
+
+            <div class="menus">
+                <div class="menu-box calc-item" ng-click="goToPage('calc-nutrientes.html')">
+                    <figure class="figure">
+                        <div class="preview" src="img/calc-nutrientes.png"></div>
+                    </figure>
+                    <div class="caption"><span>Calculadora de Nutrientes</span></div>
+                </div>
+
+                <div class="menu-box calc-item" ng-click="goToPage('calc-proteinas.html')">
+                    <figure class="figure">
+                        <div class="preview" src="img/calc-proteinas.png"></div>
+                    </figure>
+                    <div class="caption"><span>Calculadora de Proteinas</span></div>
+                </div>
+
+                <div class="menu-box calc-item" ng-click="goToPage('calc-calorias.html')">
+                    <figure class="figure">
+                        <div class="preview" src="img/calc-calorias.png"></div>
+                    </figure>
+                    <div class="caption"><span>Calculadora de Calorias</span></div>
+                </div>
+
+                <div class="menu-box calc-item" ng-click="goToPage('calc-calorias-diarias.html')">
+                    <figure class="figure">
+                        <div class="preview" src="img/calc-calorias-diarias.png"></div>
+                    </figure>
+                    <div class="caption"><span>Calculo de Calorias Diarias</span></div>
+                </div>
+            </div>
+
+        </ons-page>
+    </ons-navigator>
+</ons-template>
+
+<ons-template id="calc-nutrientes.html">
+    <ons-page ng-controller="Calculator" class="home">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center"></div>
+            <div class="right">
+                <ons-toolbar-button>
+                    <img src="img/send.png" alt="">
+                </ons-toolbar-button>
+                <ons-toolbar-button>
+                    <img src="img/share.png" alt="">
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="calc-header">
+            <figure class="figure">
+                <div class="preview" src="img/calc-nutrientes.jpg"></div>
+            </figure>
+            <div class="chef-icon">
+                <img ng-src="img/chef-icon.png" alt="">
+            </div>
+        </div>
+
+        <div class="calc-content">
+            <h4>Calculadora de Nutrientes</h4>
+
+            <p>¿Quieres saber cuántas calorias y nutrientes consumes cada vez que ingieres un alimento?
+                Descubrelo con la Calculadora de Nutrientes.</p>
+
+            <div class="form">
+                <div class="form-control">
+                    <div class="form-element">
+                        <label for="">Alimento:</label>
+
+                        <div class="select-inline">
+                            <select name=""></select>
+
+                            <div class="select">
+                                <span>Elige tu alimento...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <div class="form-element">
+                        <label for="">Porciones:</label>
+
+                        <div class="select-inline">
+                            <select name=""></select>
+
+                            <div class="select">
+                                <span>Elige la cantidad de porciones...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4>Información Nutricional</h4>
+
+            <div class="form2">
+                <div class="form-control">
+                    <div class="form-element">
+                        <label for="">Calorias:</label>
+
+                        <div class="value"><span>999 cal</span></div>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <div class="form-element">
+                        <label for="">Carbohidratos:</label>
+
+                        <div class="value"><span>999 gramos</span></div>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <div class="form-element">
+                        <label for="">Proteínas:</label>
+
+                        <div class="value"><span>999 gramos</span></div>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <div class="form-element">
+                        <label for="">Grasas:</label>
+
+                        <div class="value"><span>999 gramos</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </ons-page>
+</ons-template>
+
+<ons-template id="calc-proteinas.html">
+    <ons-page ng-controller="Calculator" class="home">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center"></div>
+            <div class="right">
+                <ons-toolbar-button>
+                    <img src="img/send.png" alt="">
+                </ons-toolbar-button>
+                <ons-toolbar-button>
+                    <img src="img/share.png" alt="">
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="calc-header">
+            <figure class="figure">
+                <div class="preview" src="img/calc-proteinas.jpg"></div>
+            </figure>
+            <div class="chef-icon">
+                <img ng-src="img/chef-icon.png" alt="">
+            </div>
+        </div>
+
+        <div class="calc-content">
+            <h4>Calculadora de Proteinas</h4>
+
+            <p>Averigua fácilmente cuántas proteínas tiene cada alimento
+                (frutas, verduras, lácteos…) con esta sencilla calculadora de
+                <br><br>
+                El funcionamiento es muy sencillo. Simplemente elige el
+                alimento del que quieres averiguar las proteíans que tiene y
+                pulsa sobre el botón “Calcular Proteínas”. Si quieres puedes
+                filtrar por tipo de alimento para que te resulte más sencillo
+                encontrar el alimento que estás buscando.
+                <br><br>
+                Inmediatamente obtendrás una pequeña ficha nutricional del
+                alimento elegido, con la cantidad aproximada de proteínas
+                que contiene por ración y por cada 100 gr. Si quieres saber
+                más sobre ese alimento, simplemente pulsa sobre el botón
+                verde para ir a la ficha completa del alimento.</p>
+            <br>
+
+            <div class="form">
+                <div class="form-control">
+                    <div class="form-element">
+                        <label for="">Categoría:</label>
+
+                        <div class="select-inline">
+                            <select name=""></select>
+
+                            <div class="select">
+                                <span>Todas las categorías...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <div class="form-element">
+                        <label for="">Alimento:</label>
+
+                        <div class="select-inline">
+                            <select name=""></select>
+
+                            <div class="select">
+                                <span>Todos los alimentos...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4>Cantidad de Proteínas</h4>
+            <h4 style="color:#e83b3b;border-bottom:none;">Nombre del Alimento</h4>
+
+            <div class="form2">
+                <div class="form-control">
+                    <div class="form-element">
+                        <label for="">Por cada 100gr:</label>
+
+                        <div class="value"><span>999 kcal</span></div>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <div class="form-element">
+                        <label for="">Peso de la ración:</label>
+
+                        <div class="value"><span>999 gramos</span></div>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <div class="form-element">
+                        <label for="">Por cada ración:</label>
+
+                        <div class="value"><span>999 kcal</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </ons-page>
+</ons-template>
+
+<ons-template id="calc-calorias.html">
+    <ons-page ng-controller="Calculator" class="home">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center"></div>
+            <div class="right">
+                <ons-toolbar-button>
+                    <img src="img/send.png" alt="">
+                </ons-toolbar-button>
+                <ons-toolbar-button>
+                    <img src="img/share.png" alt="">
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="calc-header">
+            <figure class="figure">
+                <div class="preview" src="img/calc-calorias.jpg"></div>
+            </figure>
+            <div class="chef-icon">
+                <img ng-src="img/chef-icon.png" alt="">
+            </div>
+        </div>
+
+        <div class="calc-content">
+            <h4>Calculadora de Calorías</h4>
+
+            <p>Averigua fácilmente cuántas calorías tiene cada alimento
+                (frutas, verduras, lácteos…) con esta sencilla calculadora de
+                calorías.
+                <br>
+                El funcionamiento es muy sencillo. Simplemente elige el
+                alimento del que quieres averiguar las calorías que tiene y
+                pulsa sobre el botón “Calcular Calorías”. Si quieres puedes
+                filtrar por tipo de alimento para que te resulte más sencillo
+                encontrar el alimento que estás buscando.
+                <br>
+                Inmediatamente obtendrás una pequeña ficha nutricional del
+                alimento elegido, con la cantidad aproximada de calorías que
+                contiene por ración y por cada 100 gr. Si quieres saber más
+                sobre ese alimento, simplemente pulsa sobre el botón verde
+                para ir a la ficha completa del alimento.
+                <br>
+                Existen también otras herramientas que te serán muy útiles a
+                la hora de cocinar y preparar los alimentos para que no
+                pierdan su valor nutricional. A continuación encontrarás
+                alguna de las más útiles para ti.
+            </p>
+
+            <div class="form">
+                <div class="form-control">
+                    <div class="form-element">
+                        <label>Categoría:</label>
+
+                        <div class="select-inline">
+                            <select name=""></select>
+
+                            <div class="select">
+                                <span>Todas las categorías...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <div class="form-element">
+                        <label>Alimento:</label>
+
+                        <div class="select-inline">
+                            <select name=""></select>
+
+                            <div class="select">
+                                <span>Todos los alimentos...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4>Cantidad de Calorías</h4>
+
+            <h4 style="color:#e83b3b;border-bottom:none;">Nombre del Alimento</h4>
+
+            <div class="form2">
+                <div class="form-control">
+                    <div class="form-element" style="text-align: center;">
+                        <label for="">Por cada 100gr:</label>
+
+                        <div class="value"><span>999 calorías</span></div>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <div class="form-element" style="text-align: center;">
+                        <label for="">Peso de la ración:</label>
+
+                        <div class="value"><span>999 gramos</span></div>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <div class="form-element" style="text-align: center;">
+                        <label for="">Por cada ración:</label>
+
+                        <div class="value"><span>999 kcal</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </ons-page>
+</ons-template>
+
+<ons-template id="calc-calorias-diarias.html">
+    <ons-page ng-controller="Calculator" class="home">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center"></div>
+            <div class="right">
+                <ons-toolbar-button>
+                    <img src="img/send.png" alt="">
+                </ons-toolbar-button>
+                <ons-toolbar-button>
+                    <img src="img/share.png" alt="">
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="calc-header">
+            <figure class="figure">
+                <div class="preview" src="img/calc-calorias-diarias.png"></div>
+            </figure>
+            <div class="chef-icon">
+                <img ng-src="img/chef-icon.png" alt="">
+            </div>
+        </div>
+
+        <div class="calc-content">
+            <h4>Calculadora de Calorías diarias</h4>
+
+            <p>Conoce cuál debería ser tu consumo diario ideal de calorías
+                con la Calculadora de Calorías diarias y mejora tu estilo de
+                vida.
+            </p>
+
+            <div class="form2">
+                <div class="form-control">
+                    <div class="form-element">
+                        <label for="" style="width: 150px;">Peso corporal (kg.):</label>
+
+                        <input style="padding-left:10px;padding-right:10px;" type="text" class="value"
+                               placeholder="999 kg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form">
+                <div class="form-control">
+                    <div class="form-element">
+                        <label for="" style="width: 150px;">Nivel de Actividad:</label>
+
+                        <div class="select-inline">
+                            <select name=""></select>
+
+                            <div class="select">
+                                <span>Elige tu nivel...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4>Consumo de calorías necesario (al día)</h4>
+
+            <h4 style="color:#007aff;border-bottom:none;font-size:13px;">Calorías necesarias para mantener tu peso:</h4>
+
+            <div class="form2">
+                <div class="form-control">
+                    <div class="form-element" style="text-align: center;">
+                        <div class="value"><span>99999 calorías</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 style="color:#c88258;border-bottom:none;font-size:13px;">Calorías necesarias para perder medio kilo a la
+                semana:</h4>
+
+            <div class="form2">
+                <div class="form-control">
+                    <div class="form-element" style="text-align: center;">
+                        <div class="value"><span>99999 calorías</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </ons-page>
+</ons-template>
+
+<ons-template id="counsel.html">
+    <ons-navigator animation="slide" id="counselNavigator">
+        <ons-page ng-controller="Counsel" class="home internal-tab">
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button ng-click="goToFavorite()">
+                        <img src="img/heart-blue-icon.png" alt="">
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    Consejos & Tips
+                </div>
+
+                <div class="right">
+                    <ons-toolbar-button ng-click="goToCategory()">
+                        <img src="img/menu-chef.png" alt="">
+                    </ons-toolbar-button>
+                </div>
+            </ons-toolbar>
+
+            <div class="menus">
+                <div class="menu-box tip-category" ng-repeat="item in tip_categories track by $index"
+                     ng-click="goToTipList(item)">
+                    <figure class="figure">
+                        <div class="preview" ng-src="{{item.image}}"></div>
+                    </figure>
+                    <div class="caption"><span>{{ item.title }}</span></div>
+                </div>
+            </div>
+
+        </ons-page>
+    </ons-navigator>
+</ons-template>
+
+<ons-template id="tip_list.html">
+    <ons-page ng-controller="TipList" class="home internal-tab">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center">
+                {{ category.title }}
+            </div>
+
+            <div class="right">
+                <ons-toolbar-button ng-click="goToCategory()">
+                    <img src="img/menu-color.png" alt="">
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="menus">
+            <div class="menu-box tip-list" ng-repeat="item in tips track by $index" ng-click="goToTip(item)">
+                <div class="caption"><span>{{ item.title }}</span></div>
+            </div>
+        </div>
+
+    </ons-page>
+</ons-template>
+
+<ons-template id="tip.html">
+    <ons-page ng-controller="Tip" class=" tip white-page internal-tab">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center">
+                {{ category.title }}
+            </div>
+
+            <div class="right">
+                <ons-toolbar-button ng-click="goToCategory()">
+                    <img src="img/menu-color.png" alt="">
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="tip-content">
+            <div class="chef-icon-tip">
+                <figure>
+                    <img src="img/chef-icon.png" alt="">
+                </figure>
+            </div>
+            <h1>{{ tip.title }}</h1>
+
+            <div ng-bind-html="tip.content"></div>
+        </div>
+
+    </ons-page>
+</ons-template>
+
+<ons-template id="myshopping.html">
+    <ons-page ng-controller="MyShopping" class="internal-tab secondary-toolbar">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button ng-click="goToFavorite()">
+                    <img src="img/heart-blue-icon.png" alt="">
+                </ons-toolbar-button>
+            </div>
+            <div class="center">
+                Consejos & Tips
+            </div>
+
+            <div class="right">
+                <ons-toolbar-button ng-click="goToCategory()">
+                    <img src="img/menu-chef.png" alt="">
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="toolbar-secondary">
+            <div class="navigation-bar">
+                <div class="navigation-bar__center">
+                    <div class="button-bar" style="width:200px; margin:8px auto 0;">
+                        <div class="button-bar__item" ng-click="filter('normal')">
+                            <input type="radio" name="navi-segment-a" checked>
+
+                            <div class="button-bar__button">Recetas (999)</div>
+                        </div>
+                        <div class="button-bar__item" ng-click="filter('video')">
+                            <input type="radio" name="navi-segment-a">
+
+                            <div class="button-bar__button">Videos (999)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menus">
+            <div class="menu-box menu-box2">
+                <figure class="figure">
+                    <div class="preview" src="img/sample/food-preview-sample.jpg"></div>
+                    <i class="icon fino">
+                        <img src="img/fino-logo2.png" alt="">
+                    </i>
+                    <i class="icon play">
+                        <img src="img/play-icon.png" alt="">
+                    </i>
+                </figure>
+                <div class="caption caption2">Silpancho</div>
+            </div>
+        </div>
+
+    </ons-page>
+</ons-template>
+
+<ons-template id="invite.html">
+    <ons-page ng-controller="Invite" class="internal-tab">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button ng-click="goToFavorite()">
+                    <img src="img/heart-blue-icon.png" alt="">
+                </ons-toolbar-button>
+            </div>
+            <div class="center">
+                <img class="img-logo-header" src="img/logo-header.png"/>
+            </div>
+
+            <div class="right">
+                <ons-toolbar-button ng-click="goToCategory()">
+                    <img src="img/info-icon.png" alt="">
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+    </ons-page>
+</ons-template>
+
+<ons-template id="favorite.html">
+    <ons-page ng-controller="Favorite" class="home internal-tab secondary-toolbar">
+
+        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
+            <div class="left">
+                <input type="search" class="search-input" placeholder="Buscador"/>
+                <ons-toolbar-button ng-click="toggleSearch()">
+                    Cancelar
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center">Mis Favoritos</div>
+            <div class="right">
+                <ons-toolbar-button ng-click="toggleSearch()">
+                    Buscador
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="toolbar-secondary">
+            <div class="navigation-bar">
+                <div class="navigation-bar__center">
+                    <div class="button-bar" style="width:200px; margin:8px auto 0;">
+                        <div class="button-bar__item" ng-click="filter('normal')">
+                            <input type="radio" name="navi-segment-a" checked>
+
+                            <div class="button-bar__button">Recetas (999)</div>
+                        </div>
+                        <div class="button-bar__item" ng-click="filter('video')">
+                            <input type="radio" name="navi-segment-a">
+
+                            <div class="button-bar__button">Videos (999)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menus">
+            <div class="menu-box menu-box2">
+                <figure class="figure">
+                    <div class="preview" src="img/sample/food-preview-sample.jpg"></div>
+                    <i class="icon fino">
+                        <img src="img/fino-logo2.png" alt="">
+                    </i>
+                    <i class="icon play">
+                        <img src="img/play-icon.png" alt="">
+                    </i>
+                </figure>
+                <div class="caption caption2">Silpancho</div>
+            </div>
+        </div>
+
+    </ons-page>
+</ons-template>
+
+<ons-template id="category.html">
+    <ons-page ng-controller="Category" class="home internal-tab">
+
+        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
+            <div class="left">
+                <input type="search" class="search-input" placeholder="Buscador"/>
+                <ons-toolbar-button ng-click="toggleSearch()">
+                    Cancelar
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center">Categorias</div>
+            <div class="right">
+                <ons-toolbar-button ng-click="toggleSearch()">
+                    Buscador
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="category">
+            <div class="category-container">
+                <h2 class="text yellow">Platos Típicos de Bolivia</h2>
+
+                <div class="box-category">
+                    <figure>
+                        <div class="preview" src="img/sample/food-preview-sample.jpg"></div>
+                    </figure>
+                    <div class="caption">Carne de Res</div>
+                </div>
+            </div>
+        </div>
+
+    </ons-page>
+</ons-template>
+
+</body>
+</html>

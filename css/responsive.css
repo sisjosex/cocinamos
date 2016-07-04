@@ -1,0 +1,23 @@
+@media all and (max-width:320px) {
+    .tab-bar__label {
+        font-size: 10.7px !important;
+    }
+
+    .tab-bar__icon .img {
+        width: 29px;
+        height: 29px;
+    }
+
+    .tab-bar__icon + .tab-bar__label {
+        font-size: 11.7px;
+        margin-top: 0px !important;
+    }
+
+    .select-inline .select span, input {
+        font-size: 11px;
+    }
+
+    .form2 .form-control .value, .form2 .form-element input {
+        width: 82px;
+    }
+}
