@@ -1,6 +1,6 @@
-//var API_URL = 'http://localhost/fino_app/admin/api/'
+var API_URL = 'http://localhost/fino_app/admin/api/'
 
-var API_URL = 'http://cocinamosconfino.com/api/'
+//var API_URL = 'http://cocinamosconfino.com/api/'
 
 //var API_URL = 'http://192.168.43.129/fino_app/admin/api/'
 //var API_URL = 'http://172.20.10.5/fino_app/admin/api/'
@@ -339,15 +339,54 @@ module.controller('Favorite', function($scope, $sce) {
     });
 });
 
-module.controller('Category', function($scope, $sce) {
+module.controller('Category', function($scope, service, $sce) {
 
     ons.ready(function() {
+
+        initSearch($scope);
 
         $scope.trustSrc = function(src) {
             return $sce.trustAsResourceUrl(src);
         };
 
-        initSearch($scope);
+        $scope.search = '';
+
+        $scope.buscar = function() {
+            $scope.toggleSearch();
+            $scope.getCategories();
+        };
+
+        $scope.goToMenuDetail = function(menu) {
+            menuNavigator.pushPage('menu_detail.html', {data: {menu: menu}});
+        };
+
+        $scope.getCategories = function() {
+
+            modal.show();
+            service.getCategories({search: $scope.search}, function(result){
+
+                if(result.status == 'success') {
+
+                    modal.hide();
+
+                    $scope.categories = result.data;
+
+                } else {
+
+                    modal.hide();
+
+                    alert(result.message);
+                }
+
+            }, function(error){
+
+                modal.hide();
+
+                alert('No se pudo conectar con el servidor');
+            });
+        };
+
+        $scope.getCategories();
 
         setTimeout(function(){
             $('.preview').each(function(){

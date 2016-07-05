@@ -175,6 +175,46 @@
     </ons-page>
 </ons-template>
 
+<ons-template id="category.html">
+    <ons-page ng-controller="Category" class="home internal-tab">
+
+        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
+            <div class="left">
+                <input type="search" ng-model="search" class="search-input" placeholder="Buscador"/>
+                <ons-toolbar-button ng-click="buscar()">
+                    Buscar
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center">Categorias</div>
+            <div class="right">
+                <ons-toolbar-button ng-click="toggleSearch()">
+                    Buscador
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="category">
+            <div class="category-container" ng-repeat="category in categories track by $index">
+                <h2 class="text yellow">{{ category.name }}</h2>
+
+                <div class="box-category" ng-repeat="item in category.foods track by $index" ng-click="goToMenuDetail(item)">
+                    <figure>
+                        <div class="preview" src="{{ trustSrc(item.photo) }}"></div>
+                    </figure>
+                    <div class="caption">{{ item.name }}</div>
+                </div>
+            </div>
+        </div>
+
+    </ons-page>
+</ons-template>
+
 <ons-template id="recipes.html">
     <ons-navigator animation="slide" id="menuNavigator">
         <ons-page ng-controller="Recipes" class="internal-tab">
@@ -1008,46 +1048,6 @@
                     </i>
                 </figure>
                 <div class="caption caption2">Silpancho</div>
-            </div>
-        </div>
-
-    </ons-page>
-</ons-template>
-
-<ons-template id="category.html">
-    <ons-page ng-controller="Category" class="home internal-tab">
-
-        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
-            <div class="left">
-                <input type="search" class="search-input" placeholder="Buscador"/>
-                <ons-toolbar-button ng-click="toggleSearch()">
-                    Cancelar
-                </ons-toolbar-button>
-            </div>
-        </ons-toolbar>
-
-        <ons-toolbar>
-            <div class="left">
-                <ons-back-button></ons-back-button>
-            </div>
-            <div class="center">Categorias</div>
-            <div class="right">
-                <ons-toolbar-button ng-click="toggleSearch()">
-                    Buscador
-                </ons-toolbar-button>
-            </div>
-        </ons-toolbar>
-
-        <div class="category">
-            <div class="category-container">
-                <h2 class="text yellow">Platos Típicos de Bolivia</h2>
-
-                <div class="box-category">
-                    <figure>
-                        <div class="preview" src="img/sample/food-preview-sample.jpg"></div>
-                    </figure>
-                    <div class="caption">Carne de Res</div>
-                </div>
             </div>
         </div>
 
