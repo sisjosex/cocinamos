@@ -80,6 +80,17 @@
     <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
     <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
     <icon src="res/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:qualifier="xhdpi" />
+	<icon src="res/icon/ios/icon-29.png"            gap:platform="ios"        width="29" height="29" />
+	<icon src="res/icon/ios/icon-29-2x.png"            gap:platform="ios"        width="58" height="58" />
+	<icon src="res/icon/ios/icon-29-3x.png"            gap:platform="ios"        width="87" height="87" />
+	<icon src="res/icon/ios/icon-40-2x.png"            gap:platform="ios"        width="80" height="80" />
+	<icon src="res/icon/ios/icon-40-3x.png"            gap:platform="ios"        width="120" height="120" />
+	<icon src="res/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
+	<icon src="res/icon/ios/icon-57-2x.png"            gap:platform="ios"        width="114" height="114" />
+	<icon src="res/icon/ios/icon-60-2x.png"            gap:platform="ios"        width="120" height="120" />
+	<icon src="res/icon/ios/icon-60-3x.png"            gap:platform="ios"        width="180" height="180" />
+    <icon src="res/icon/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
+    <icon src="res/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
     <!--<icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" />
     <icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" gap:state="hover"/>
     <icon src="res/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
@@ -95,6 +106,11 @@
     <gap:splash src="res/screen/android/screen-mdpi-portrait.png"       gap:platform="android" gap:qualifier="port-mdpi" />
     <gap:splash src="res/screen/android/screen-hdpi-portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
     <gap:splash src="res/screen/android/screen-xhdpi-portrait.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
+	<gap:splash src="res/screen/ios/screen-iphone-portrait.png"         gap:platform="ios"     width="320" height="480" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png"      gap:platform="ios"     width="640" height="960" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios"     width="640" height="1136" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-667h@2x.png" gap:platform="ios" width="750"  height="1334" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-736h@3x.png" gap:platform="ios" width="1242" height="2208" />
     <!--<gap:splash src="res/screen/blackberry/screen-225.png"              gap:platform="blackberry" />
     <gap:splash src="res/screen/ios/screen-iphone-portrait.png"         gap:platform="ios"     width="320" height="480" />
     <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png"      gap:platform="ios"     width="640" height="960" />
