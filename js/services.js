@@ -28,6 +28,12 @@ angular.module("services", []).factory("service", [ "$http", "$q", function($htt
         },
         addToRecipes: function(params, success, error) {
             $http({method: 'JSONP', url: API_URL + 'getMenus?callback=JSON_CALLBACK', params: params}).success(success).error(error);
+        },
+        addToFavorite: function(params, success, error) {
+            $http({method: 'JSONP', url: API_URL + 'addToFavorite?callback=JSON_CALLBACK', params: params}).success(success).error(error);
+        },
+        getFavorites:  function(params, success, error) {
+            $http({method: 'JSONP', url: API_URL + 'getFavorites?callback=JSON_CALLBACK', params: params}).success(success).error(error);
         }
     };
 } ]);

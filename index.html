@@ -261,10 +261,10 @@
                     </figure>
                     <div class="caption">{{ item.name }}</div>
                     <div class="menu-box-footer">
-                        <div class="heart"><img src="img/heart-icon.png" alt=""></div>
-                        <div class="">62.5K</div>
+                        <div class="heart" ng-click="makeFavorite(item)"><img src="img/heart-icon.png" alt=""></div>
+                        <div class="">{{ item.likes }}</div>
                         <div class="recipe"><img src="img/recipe-icon.png" alt=""></div>
-                        <div class="">95.5K</div>
+                        <div class="">{{ item.recipes }}</div>
                     </div>
                 </div>
             </div>
@@ -306,10 +306,10 @@
         <div class="calc-content" style="padding-top: 50px;">
             <h1>{{ menu.name }}</h1>
             <div class="menu-box-footer menu-box-footer-detail">
-                <div class="heart"><img src="img/heart-icon.png" alt=""></div>
-                <div class="">62.5K</div>
+                <div class="heart" ng-click="makeFavorite(menu)"><img src="img/heart-icon.png" alt=""></div>
+                <div class="">{{ menu.likes }}</div>
                 <div class="recipe"><img src="img/recipe-icon.png" alt=""></div>
-                <div class="">95.5K</div>
+                <div class="">{{ menu.recipes }}</div>
             </div>
 
             <div class="recipe-section">
@@ -998,9 +998,9 @@
 
         <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
             <div class="left">
-                <input type="search" class="search-input" placeholder="Buscador"/>
-                <ons-toolbar-button ng-click="toggleSearch()">
-                    Cancelar
+                <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
+                <ons-toolbar-button ng-click="buscar()">
+                    Buscar
                 </ons-toolbar-button>
             </div>
         </ons-toolbar>
@@ -1024,12 +1024,12 @@
                         <div class="button-bar__item" ng-click="filter('normal')">
                             <input type="radio" name="navi-segment-a" checked>
 
-                            <div class="button-bar__button">Recetas (999)</div>
+                            <div class="button-bar__button">Recetas ({{ total_menus }})</div>
                         </div>
                         <div class="button-bar__item" ng-click="filter('video')">
                             <input type="radio" name="navi-segment-a">
 
-                            <div class="button-bar__button">Videos (999)</div>
+                            <div class="button-bar__button">Videos ({{ total_videos }})</div>
                         </div>
                     </div>
                 </div>
@@ -1037,17 +1037,34 @@
         </div>
 
         <div class="menus">
-            <div class="menu-box menu-box2">
-                <figure class="figure">
-                    <div class="preview" src="img/sample/food-preview-sample.jpg"></div>
-                    <i class="icon fino">
-                        <img src="img/fino-logo2.png" alt="">
-                    </i>
-                    <i class="icon play">
-                        <img src="img/play-icon.png" alt="">
-                    </i>
-                </figure>
-                <div class="caption caption2">Silpancho</div>
+            <div class="normal">
+                <div class="menu-box menu-box2" ng-repeat="item in normal track by $index" ng-click="goToMenuDetail(item)">
+                    <figure class="figure">
+                        <div class="preview" src="{{ item.photo }}"></div>
+                        <i class="icon fino">
+                            <img src="img/fino-logo2.png" alt="">
+                        </i>
+                        <i ng-show="item.type=='video'" class="icon play">
+                            <img src="img/play-icon.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption caption2">{{ item.name }}</div>
+                </div>
+            </div>
+
+            <div class="video">
+                <div class="menu-box menu-box2" ng-repeat="item in videos track by $index" ng-click="goToMenuDetail(item)">
+                    <figure class="figure">
+                        <div class="preview" src="{{ item.photo }}"></div>
+                        <i class="icon fino">
+                            <img src="img/fino-logo2.png" alt="">
+                        </i>
+                        <i ng-show="item.type=='video'" class="icon play">
+                            <img src="img/play-icon.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption caption2">{{ item.name }}</div>
+                </div>
             </div>
         </div>
 

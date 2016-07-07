@@ -1,6 +1,6 @@
-//var API_URL = 'http://localhost/fino_app/admin/api/'
+var API_URL = 'http://localhost/fino_app/admin/api/'
 
-var API_URL = 'http://cocinamosconfino.com/api/'
+//var API_URL = 'http://cocinamosconfino.com/api/'
 
 //var API_URL = 'http://192.168.43.129/fino_app/admin/api/'
 //var API_URL = 'http://172.20.10.5/fino_app/admin/api/'
@@ -299,7 +299,7 @@ module.controller('Home', function($scope, service, $sce) {
     });
 });
 
-module.controller('MenuDetail', function($scope, $sce) {
+module.controller('MenuDetail', function($scope, service, $sce) {
 
     ons.ready(function() {
 
@@ -316,10 +316,14 @@ module.controller('MenuDetail', function($scope, $sce) {
 
             });
         }, 100);
+
+        initCommonFunctions($scope, {
+            service: service
+        });
     });
 });
 
-module.controller('Favorite', function($scope, $sce) {
+module.controller('Favorite', function($scope, service, $sce) {
 
     ons.ready(function() {
 
@@ -329,6 +333,12 @@ module.controller('Favorite', function($scope, $sce) {
 
         initSearch($scope);
 
+        $scope.normal = [];
+        $scope.videos = [];
+        $scope.total_menus = 0;
+        $scope.total_videos = 0;
+        $scope.search = '';
+
         setTimeout(function(){
             $('.preview').each(function(){
 
@@ -336,6 +346,62 @@ module.controller('Favorite', function($scope, $sce) {
 
             });
         }, 100);
+
+        $scope.goToMenuDetail = function(menu) {
+            menuNavigator.pushPage('menu_detail.html', {data: {menu: menu}});
+        };
+
+
+        modal.show();
+
+        $('.menus .normal').show();
+        $('.menus .video').hide();
+
+
+        $scope.buscar = function() {
+            $scope.toggleSearch();
+            $scope.getFavorites({user_id: getUser().id, search: $scope.search});
+        };
+
+        $scope.filter = function(filter) {
+
+            console.log(filter);
+
+            $('.menus .normal').hide();
+            $('.menus .video').hide();
+
+            $('.menus .' + filter).show();
+        };
+
+        $scope.getFavorites = function() {
+
+            service.getFavorites({user_id: getUser().id, search: $scope.search}, function(result){
+
+                if(result.status == 'success') {
+
+                    modal.hide();
+
+                    $scope.normal = result.normal;
+                    $scope.videos = result.videos;
+                    $scope.total_menus = result.total_menus;
+                    $scope.total_videos = result.total_videos;
+
+                } else {
+
+                    modal.hide();
+
+                    alert(result.message);
+                }
+
+            }, function(error){
+
+                modal.hide();
+
+                alert('No se pudo conectar con el servidor');
+            });
+        };
+        $scope.getFavorites();
+
     });
 });
 
@@ -398,7 +464,7 @@ module.controller('Category', function($scope, service, $sce) {
     });
 });
 
-module.controller('Recipes', function($scope, $sce) {
+module.controller('Recipes', function($scope, service, $sce) {
 
     ons.ready(function() {
 
@@ -413,6 +479,10 @@ module.controller('Recipes', function($scope, $sce) {
 
             });
         }, 100);
+
+        initCommonFunctions($scope, {
+            service: service
+        });
     });
 });
 
@@ -564,6 +634,37 @@ module.controller('Invite', function($scope) {
 
     });
 });
+
+
+function initCommonFunctions($scope, services) {
+
+    $scope.makeFavorite = function(item) {
+
+        modal.show();
+
+        services.service.addToFavorite({user_id: getUser().id, food_id: item.id}, function(result){
+
+            if(result.status == 'success') {
+
+                modal.hide();
+
+                alert(result.message);
+
+            } else {
+
+                modal.hide();
+
+                alert(result.message);
+            }
+
+        }, function(error){
+
+            modal.hide();
+
+            alert('No se pudo conectar con el servidor');
+        });
+    }
+}
 
 
 function initSearch($scope) {
