@@ -20,4 +20,43 @@
     .form2 .form-control .value, .form2 .form-element input {
         width: 82px;
     }
+
+    .btn-agregar {
+        color: #fff;
+        box-shadow: 0px 3px 0px #929292;
+        background: url(../img/detail.png) 8px center no-repeat #ffcc00;
+        background-size: 32px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        font-size: 15px;
+        text-align: right;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .share img {
+        max-width:50px;
+    }
+
+    .share {
+        padding-left: 25px;
+    }
+
+    .text-bottom {
+        font-size: 11px;
+    }
+
+    .btn-yellow2 {
+        height: 46px;
+    }
+
+    .recipe-section .item:first-child {
+        min-width: 40px;
+    }
+
+    .menu-detail h3 {
+        font-size: 14px;
+    }
 }
