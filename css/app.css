@@ -935,3 +935,11 @@ h2 {
     margin-top:10px;
     margin-bottom:10px;
 }
+
+.share > div {
+    text-align: center;
+}
+
+.btn-yellow2 {
+    height: 62px;
+}

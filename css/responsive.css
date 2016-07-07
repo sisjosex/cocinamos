@@ -60,3 +60,18 @@
         font-size: 14px;
     }
 }
+
+@media all and (max-width:375px) {
+    .btn-agregar {
+        font-size: 19px;
+    }
+
+    .share img {
+        min-width:50px;
+        max-width:50px;
+    }
+
+    .text-bottom {
+        font-size: 14px;
+    }
+}
