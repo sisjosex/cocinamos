@@ -75,7 +75,7 @@ module.controller('MainNavigatorController', function ($scope) {
 
         try {
 
-            StatusBar.hide();
+            //StatusBar.hide();
 
         } catch(error){
 
