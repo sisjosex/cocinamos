@@ -59,6 +59,7 @@ img {
     font-weight: bold;
     box-shadow: 0px 3px 0px #333333;
     margin-bottom:10px;
+    border:none;
 }
 
 .btn-yellow:active {
@@ -799,7 +800,7 @@ img {
 }
 
 .recipe-section .item .img1 {
-    width: 65px;
+    width: 50px;
 }
 
 .recipe-section .item .img2 {
@@ -822,8 +823,9 @@ img {
 
 .nav-bar-plus-minus {
     width:100px;
-    border: solid 1px #9f9f9f;
+    height: 30px;
     border-radius: 5px;
+    border: solid 1px #9f9f9f;
 }
 
 .nav-bar-plus-minus .button-bar {
@@ -841,4 +843,95 @@ img {
 
 .nav-bar-plus-minus .button-bar__item {
     background:transparent;
+}
+
+
+.col-dot {
+    max-width:5%;
+    color:#ff0700;
+}
+
+.col-number {
+    min-width: 20%;
+    text-align: center;
+    font-family: 'SFUIText-Light';
+}
+
+.col-text {
+    min-width: 75%;
+    text-align: left;
+    font-family: 'SFUIText-Light';
+}
+
+.text-bottom {
+    text-align: center;
+    width: 100%;
+    font-family: 'SFUIText-Light';
+}
+
+.btn-yellow2 {
+    background: #ffcc00;
+    box-shadow: 0px 3px 0px #929292;
+}
+
+.btn-agregar {
+    color: #fff;
+    box-shadow: 0px 3px 0px #929292;
+    background: url(../img/detail.png) 8px center no-repeat #ffcc00;
+    background-size: 48px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 22px;
+    text-align: right;
+}
+
+hr {
+    background: #ababab;
+}
+
+h2 {
+    color:#666666;
+}
+
+.share {
+    padding-left:25px;
+}
+
+.share:first-child {
+    padding-left:0px;
+}
+
+.pasos h1 {
+    color:#ff0700;
+    text-align: left;
+}
+
+.menu_detail h1 {
+    font-family: 'SFUIText-Semibold';
+}
+
+.menu-detail h3 {
+    font-size: 20px;
+}
+
+.menu-detail .nav-bar-plus-minus {
+
+}
+
+.menu-detail .navigation-bar__item, .navigation-bar__left, .menu-detail .navigation-bar__right, .navigation-bar__center {
+    height: 30px;
+    line-height: 30px;
+}
+
+.menu-detail .nav-bar-plus-minus .button-bar__item:first-child {
+    border-right: solid 1px #9f9f9f;
+}
+
+.menu-detail i {
+    color:#929292;
+}
+
+.ingredients {
+    margin-top:10px;
+    margin-bottom:10px;
 }

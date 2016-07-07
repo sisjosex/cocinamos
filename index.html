@@ -22,8 +22,8 @@
     <script src="lib/onsen/js/angular/angular.min.js"></script>
     <script src="lib/onsen2/js/angular-onsenui.min.js"></script>
 
-    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/framework-fixes.css">
+    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/responsive.css">
 
     <!--
@@ -203,7 +203,8 @@
             <div class="category-container" ng-repeat="category in categories track by $index">
                 <h2 class="text yellow">{{ category.name }}</h2>
 
-                <div class="box-category" ng-repeat="item in category.foods track by $index" ng-click="goToMenuDetail(item)">
+                <div class="box-category" ng-repeat="item in category.foods track by $index"
+                     ng-click="goToMenuDetail(item)">
                     <figure>
                         <div class="preview" src="{{ trustSrc(item.photo) }}"></div>
                     </figure>
@@ -274,7 +275,7 @@
 </ons-template>
 
 <ons-template id="menu_detail.html">
-    <ons-page ng-controller="MenuDetail" class="tip white-page">
+    <ons-page ng-controller="MenuDetail" class="tip white-page menu-detail">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -305,6 +306,7 @@
 
         <div class="calc-content" style="padding-top: 50px;">
             <h1>{{ menu.name }}</h1>
+
             <div class="menu-box-footer menu-box-footer-detail">
                 <div class="heart" ng-click="makeFavorite(menu)"><img src="img/heart-icon.png" alt=""></div>
                 <div class="">{{ menu.likes }}</div>
@@ -313,13 +315,13 @@
             </div>
 
             <div class="recipe-section">
-                <div class="item">
+                <div class="item" style="width: 60px;">
                     <img class="img2" ng-src="img/ingredients.png">
                 </div>
-                <div class="item item-title1">
-                    <h3>Ingredients</h3>
+                <div class="item item-title1" style="width:37%;">
+                    <h3>Ingredientes</h3>
                 </div>
-                <div class="item">
+                <div class="item" style="width:77px;">
                     <img class="img1" src="img/porciones.png">
                     <span>6 porciones</span>
                 </div>
@@ -341,6 +343,50 @@
                 </div>
             </div>
 
+            <div class="ingredients">
+                <ons-row ng-repeat="ingredient in menu.ingredients">
+                    <ons-col class="col-dot"><span class="red">·</span></ons-col>
+                    <ons-col class="col-number">{{ ingredient.quantity }}</ons-col>
+                    <ons-col class="col-text">{{ ingredient.name }}</ons-col>
+                </ons-row>
+            </div>
+
+            <ons-row>
+                <ons-col class="col-dot" width="15%">
+                    <ons-button class="btn-yellow btn-yellow2" ng-click="agregar()"><img style="padding-top: 6px;padding-bottom: 6px;" src="img/time.png" alt="">
+                    </ons-button>
+                </ons-col>
+                <ons-col class="col-number" width="85%" style="padding-left:10px;">
+                    <ons-button class="btn-yellow btn-agregar" style="width: 100%;" ng-click="agregar()">Agregar a tus
+                        compras
+                    </ons-button>
+                </ons-col>
+            </ons-row>
+
+            <hr>
+
+            <h2>Comparte esta receta:</h2>
+            <ons-row>
+                <ons-col class="share share-mail">
+                    <div><img src="img/mail.png" alt=""></div>
+                    <div class="text-bottom">Mail</div>
+                </ons-col>
+                <ons-col class="share share-mensajes">
+                    <div><img src="img/mensjae.png" alt=""></div>
+                    <div class="text-bottom">Mensajes</div>
+                </ons-col>
+                <ons-col class="share share-facebook">
+                    <div><img src="img/facebook.png" alt=""></div>
+                    <div class="text-bottom">Facebook</div>
+                </ons-col>
+                <ons-col class="share share-whatsapp">
+                    <div><img src="img/whatsapp.png" alt=""></div>
+                    <div class="text-bottom">Whatsapp</div>
+                </ons-col>
+            </ons-row>
+
+            <hr>
+
             <div class="recipe-section">
                 <div class="item">
                     <img class="img2" ng-src="img/preparacion.png">
@@ -353,6 +399,15 @@
                     <span>25 min.</span>
                 </div>
             </div>
+
+            <div class="tip pasos" ng-repeat="item in menu.steps">
+                <h1>{{ item.name }}</h1>
+                <div>
+                    {{ item.content }}
+                </div>
+                <img src="img/sample/top-menu-sample.jpg" alt="">
+            </div>
+
         </div>
 
     </ons-page>
@@ -1038,7 +1093,8 @@
 
         <div class="menus">
             <div class="normal">
-                <div class="menu-box menu-box2" ng-repeat="item in normal track by $index" ng-click="goToMenuDetail(item)">
+                <div class="menu-box menu-box2" ng-repeat="item in normal track by $index"
+                     ng-click="goToMenuDetail(item)">
                     <figure class="figure">
                         <div class="preview" src="{{ item.photo }}"></div>
                         <i class="icon fino">
@@ -1053,7 +1109,8 @@
             </div>
 
             <div class="video">
-                <div class="menu-box menu-box2" ng-repeat="item in videos track by $index" ng-click="goToMenuDetail(item)">
+                <div class="menu-box menu-box2" ng-repeat="item in videos track by $index"
+                     ng-click="goToMenuDetail(item)">
                     <figure class="figure">
                         <div class="preview" src="{{ item.photo }}"></div>
                         <i class="icon fino">
