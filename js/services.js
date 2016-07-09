@@ -5,6 +5,9 @@ angular.module("services", []).factory("service", [ "$http", "$q", function($htt
         authenticate: function(params, success, error) {
             $http({method: 'JSONP', url: API_URL + 'authenticate?callback=JSON_CALLBACK', params: params}).success(success).error(error);
         },
+        retrievePassword: function(params, success, error) {
+            $http({method: 'JSONP', url: API_URL + 'retrievePassword?callback=JSON_CALLBACK', params: params}).success(success).error(error);
+        },
         registerUser: function(params, success, error) {
             $http({method: 'JSONP', url: API_URL + 'registerUser?callback=JSON_CALLBACK', params: params}).success(success).error(error);
         },

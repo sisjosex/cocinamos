@@ -80,6 +80,7 @@ div.navigation-bar {
 
 .tab-bar__icon {
     height: 36px;
+    text-align: center;
 }
 
 .tab-bar__icon .img {

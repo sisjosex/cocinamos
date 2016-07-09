@@ -2,38 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="592c7479-11ec-4e29-94f2-654d88ee78df" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/FuturaBT-HeavyItalic.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/FuturaBT-HeavyItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/FuturaBT-HeavyItalic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/FuturaBT-HeavyItalic.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/ios/icon-29-2x.png" afterPath="$PROJECT_DIR$/res/icon/ios/icon-29-2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/ios/icon-29-3x.png" afterPath="$PROJECT_DIR$/res/icon/ios/icon-29-3x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/ios/icon-29.png" afterPath="$PROJECT_DIR$/res/icon/ios/icon-29.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/android/icon-36-ldpi.png" afterPath="$PROJECT_DIR$/res/icon/android/icon-36-ldpi.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/ios/icon-40-2x.png" afterPath="$PROJECT_DIR$/res/icon/ios/icon-40-2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/ios/icon-40-3x.png" afterPath="$PROJECT_DIR$/res/icon/ios/icon-40-3x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/android/icon-48-mdpi.png" afterPath="$PROJECT_DIR$/res/icon/android/icon-48-mdpi.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/ios/icon-57-2x.png" afterPath="$PROJECT_DIR$/res/icon/ios/icon-57-2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/ios/icon-57.png" afterPath="$PROJECT_DIR$/res/icon/ios/icon-57.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/ios/icon-60-2x.png" afterPath="$PROJECT_DIR$/res/icon/ios/icon-60-2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/ios/icon-60-3x.png" afterPath="$PROJECT_DIR$/res/icon/ios/icon-60-3x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/ios/icon-72-2x.png" afterPath="$PROJECT_DIR$/res/icon/ios/icon-72-2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/android/icon-72-hdpi.png" afterPath="$PROJECT_DIR$/res/icon/android/icon-72-hdpi.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/ios/icon-72.png" afterPath="$PROJECT_DIR$/res/icon/ios/icon-72.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/android/icon-96-xhdpi.png" afterPath="$PROJECT_DIR$/res/icon/android/icon-96-xhdpi.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/screen/android/screen-hdpi-portrait.png" afterPath="$PROJECT_DIR$/res/screen/android/screen-hdpi-portrait.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/screen/ios/screen-iphone-portrait-2x.png" afterPath="$PROJECT_DIR$/res/screen/ios/screen-iphone-portrait-2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/screen/ios/screen-iphone-portrait-568h-2x.png" afterPath="$PROJECT_DIR$/res/screen/ios/screen-iphone-portrait-568h-2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/screen/ios/screen-iphone-portrait-667h@2x.png" afterPath="$PROJECT_DIR$/res/screen/ios/screen-iphone-portrait-667h@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/screen/ios/screen-iphone-portrait-736h@3x.png" afterPath="$PROJECT_DIR$/res/screen/ios/screen-iphone-portrait-736h@3x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/screen/ios/screen-iphone-portrait.png" afterPath="$PROJECT_DIR$/res/screen/ios/screen-iphone-portrait.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/screen/android/screen-ldpi-portrait.png" afterPath="$PROJECT_DIR$/res/screen/android/screen-ldpi-portrait.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/screen/android/screen-mdpi-portrait.png" afterPath="$PROJECT_DIR$/res/screen/android/screen-mdpi-portrait.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/screen/android/screen-xhdpi-portrait.png" afterPath="$PROJECT_DIR$/res/screen/android/screen-xhdpi-portrait.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/app.css" afterPath="$PROJECT_DIR$/css/app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/framework-fixes.css" afterPath="$PROJECT_DIR$/css/framework-fixes.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/services.js" afterPath="$PROJECT_DIR$/js/services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="www.iws" />
@@ -60,14 +33,14 @@
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="203" column="23" selection-start-line="203" selection-start-column="23" selection-end-line="203" selection-end-column="23" />
+              <caret line="265" column="49" selection-start-line="265" selection-start-column="49" selection-end-line="265" selection-end-column="49" />
               <folding>
-                <element signature="e#13289#13607#0" expanded="false" />
-                <element signature="e#13667#14347#0" expanded="false" />
-                <element signature="e#14407#15218#0" expanded="false" />
-                <element signature="e#15274#16059#0" expanded="false" />
-                <element signature="e#16113#16154#0" expanded="false" />
-                <element signature="e#16204#16245#0" expanded="false" />
+                <element signature="e#14700#15018#0" expanded="false" />
+                <element signature="e#15078#15758#0" expanded="false" />
+                <element signature="e#15818#16629#0" expanded="false" />
+                <element signature="e#16685#17470#0" expanded="false" />
+                <element signature="e#17524#17565#0" expanded="false" />
+                <element signature="e#17615#17656#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -87,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+              <caret line="8" column="64" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -96,21 +69,20 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.923077">
-              <caret line="130" column="71" selection-start-line="130" selection-start-column="71" selection-end-line="130" selection-end-column="71" />
+            <state vertical-scroll-proportion="-20.346153">
+              <caret line="189" column="35" selection-start-line="189" selection-start-column="35" selection-end-line="189" selection-end-column="35" />
               <folding>
                 <element signature="n#ons-modal#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-template#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-template#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ons-template#4;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#ons-button#0;n#ons-col#0;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ons-col#1;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ons-button#0;n#ons-col#1;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#ons-button#0;n#ons-col#0;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ons-col#1;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ons-button#0;n#ons-col#1;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#ons-template#8;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-template#9;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-template#10;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -121,16 +93,17 @@
                 <element signature="n#ons-template#15;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-template#16;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-template#17;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37782562">
-              <caret line="1036" column="1" selection-start-line="1036" selection-start-column="1" selection-end-line="1036" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="435" column="1" selection-start-line="435" selection-start-column="1" selection-end-line="435" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -146,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="framework-fixes.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="framework-fixes.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/framework-fixes.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="109" column="19" selection-start-line="109" selection-start-column="19" selection-end-line="109" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.39074275">
+              <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -165,12 +138,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/config.xml" />
-        <option value="$PROJECT_DIR$/js/services.js" />
         <option value="$PROJECT_DIR$/css/responsive.css" />
-        <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/css/framework-fixes.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/services.js" />
+        <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/css/app.css" />
+        <option value="$PROJECT_DIR$/css/framework-fixes.css" />
       </list>
     </option>
   </component>
@@ -355,12 +328,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#13289#13607#0" expanded="false" />
-            <element signature="e#13667#14347#0" expanded="false" />
-            <element signature="e#14407#15218#0" expanded="false" />
-            <element signature="e#15274#16059#0" expanded="false" />
-            <element signature="e#16113#16154#0" expanded="false" />
-            <element signature="e#16204#16245#0" expanded="false" />
+            <element signature="e#14700#15018#0" expanded="false" />
+            <element signature="e#15078#15758#0" expanded="false" />
+            <element signature="e#15818#16629#0" expanded="false" />
+            <element signature="e#16685#17470#0" expanded="false" />
+            <element signature="e#17524#17565#0" expanded="false" />
+            <element signature="e#17615#17656#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -379,17 +352,16 @@
           <caret line="218" column="54" selection-start-line="218" selection-start-column="41" selection-end-line="218" selection-end-column="54" />
           <folding>
             <element signature="n#ons-modal#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-template#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-template#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#4;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#ons-button#0;n#ons-col#0;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ons-col#1;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ons-button#0;n#ons-col#1;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#ons-button#0;n#ons-col#0;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ons-col#1;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ons-button#0;n#ons-col#1;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-template#8;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#9;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#10;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -400,6 +372,7 @@
             <element signature="n#ons-template#15;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#16;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#17;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -412,26 +385,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.413794">
-          <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../control_crecimiento/ControlCrecimiento/www/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="89" column="9" selection-start-line="38" selection-start-column="8" selection-end-line="89" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
           <folding />
         </state>
       </provider>
@@ -444,21 +401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="203" column="23" selection-start-line="203" selection-start-column="23" selection-end-line="203" selection-end-column="23" />
-          <folding>
-            <element signature="e#13289#13607#0" expanded="false" />
-            <element signature="e#13667#14347#0" expanded="false" />
-            <element signature="e#14407#15218#0" expanded="false" />
-            <element signature="e#15274#16059#0" expanded="false" />
-            <element signature="e#16113#16154#0" expanded="false" />
-            <element signature="e#16204#16245#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../_support/desings/FONTS/FuturaBT-HeavyItalic/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.018299246">
@@ -467,31 +409,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/framework-fixes.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="109" column="19" selection-start-line="109" selection-start-column="19" selection-end-line="109" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.923077">
-          <caret line="130" column="71" selection-start-line="130" selection-start-column="71" selection-end-line="130" selection-end-column="71" />
+        <state vertical-scroll-proportion="-20.346153">
+          <caret line="189" column="35" selection-start-line="189" selection-start-column="35" selection-end-line="189" selection-end-column="35" />
           <folding>
             <element signature="n#ons-modal#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-template#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-template#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#4;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#ons-button#0;n#ons-col#0;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ons-col#1;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ons-button#0;n#ons-col#1;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#6;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#ons-button#0;n#ons-col#0;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ons-col#1;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ons-button#0;n#ons-col#1;n#ons-row#0;n#div#1;n#ons-page#0;n#ons-template#7;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-template#8;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#9;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#10;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -502,14 +435,54 @@
             <element signature="n#ons-template#15;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#16;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#17;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.413794">
+          <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="64" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="265" column="49" selection-start-line="265" selection-start-column="49" selection-end-line="265" selection-end-column="49" />
+          <folding>
+            <element signature="e#14700#15018#0" expanded="false" />
+            <element signature="e#15078#15758#0" expanded="false" />
+            <element signature="e#15818#16629#0" expanded="false" />
+            <element signature="e#16685#17470#0" expanded="false" />
+            <element signature="e#17524#17565#0" expanded="false" />
+            <element signature="e#17615#17656#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37782562">
-          <caret line="1036" column="1" selection-start-line="1036" selection-start-column="1" selection-end-line="1036" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="435" column="1" selection-start-line="435" selection-start-column="1" selection-end-line="435" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/framework-fixes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39074275">
+          <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
           <folding />
         </state>
       </provider>

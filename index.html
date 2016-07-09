@@ -166,6 +166,41 @@
     </ons-page>
 </ons-template>
 
+<ons-template id="forgot.html">
+    <ons-page ng-controller="Forgot" class="register intro internal-tab login">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button>Cancelar</ons-back-button>
+            </div>
+            <div class="center">Olvidaste tu contraseña</div>
+            <div class="right">
+
+            </div>
+        </ons-toolbar>
+
+        <div class="intro-content">
+            <div class="center-content2">
+                <div class="intro-section">
+                    <div class="logo-intro">
+                        <img class="img-logo" src="img/logo.png"/>
+                    </div>
+
+                    <div class="intro-section-content2">
+                        <p class="text">La mejor comida es la <br> que se cocina en casa</p>
+                        <input type="email" class="text-input--underbar input-text" placeholder="Ingrese su email"
+                               ng-model="user.email" autocomplete="off">
+                        <ons-button class="btn-yellow arrow-right" ng-click="retrieve_password()">Entrar <i
+                                class="fa fa-chevron-right"></i></ons-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fino-button-container2">
+            <img class="img-logo" src="img/fino-button.png"/>
+        </div>
+    </ons-page>
+</ons-template>
 
 <ons-template id="home.html">
     <ons-page id="home" ng-controller="Home">

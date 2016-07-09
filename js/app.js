@@ -11,6 +11,8 @@ var applicationLanguage = 'es';
 var user;
 var user_storage_key = 'finoapp_user';
 
+var app_id = 123;
+
 var lang = {
     en: {
         yes: 'Yes',
@@ -191,6 +193,11 @@ module.controller('Login', function ($scope, service) {
             password: ''
         };
 
+        $scope.forgot = function () {
+
+            mainNavigator.pushPage('forgot.html');
+        };
+
         $scope.login = function () {
 
             if ($scope.user.email == '') {
@@ -234,6 +241,56 @@ module.controller('Login', function ($scope, service) {
     });
 });
 
+module.controller('Forgot', function ($scope, service) {
+
+    ons.ready(function () {
+
+        $scope.user = {
+            email: ''
+        };
+
+        $scope.retrieve_password = function () {
+
+            if ($scope.user.email == '') {
+                alert(t('email_required'));
+                return;
+            } else if (!$.trim($scope.user.email).match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/)) {
+                alert(t('email_invalid'));
+                return;
+            }
+
+            modal.show();
+
+            service.retrievePassword($scope.user, function (result) {
+
+                if (result.status == 'success') {
+
+                    saveUser(result.user);
+
+                    modal.hide();
+
+                    $scope.user.email = '';
+
+                    alert(result.message);
+
+                } else {
+
+                    modal.hide();
+
+                    alert(result.message);
+                }
+
+            }, function () {
+
+                modal.hide();
+
+                alert('No se pudo conectar con el servidor');
+            });
+        };
+
+    });
+});
+
 module.controller('Register', function ($scope, service) {
 
     ons.ready(function () {
@@ -242,7 +299,7 @@ module.controller('Register', function ($scope, service) {
             email: '',
             password: '',
             token: '',
-            app_id: '123',
+            app_id: app_id,
             device: ''
         };
 
@@ -265,9 +322,16 @@ module.controller('Register', function ($scope, service) {
 
                 if (result.status == 'success') {
 
-                    saveUser(result.user);
+                    if(!result.message) {
 
-                    mainNavigator.pushPage('home.html');
+                        saveUser(result.user);
+
+                        mainNavigator.pushPage('home.html');
+
+                    } else {
+
+                        alert(result.message);
+                    }
 
                     modal.hide();
 
@@ -436,7 +500,7 @@ module.controller('Favorite', function ($scope, service, $sce) {
 
         $scope.buscar = function () {
             $scope.toggleSearch();
-            $scope.getFavorites({user_id: getUser().id, search: $scope.search});
+            $scope.getFavorites({app_id: getUserOrAppId().app_id, search: $scope.search});
         };
 
         $scope.filter = function (filter) {
@@ -451,7 +515,7 @@ module.controller('Favorite', function ($scope, service, $sce) {
 
         $scope.getFavorites = function () {
 
-            service.getFavorites({user_id: getUser().id, search: $scope.search}, function (result) {
+            service.getFavorites({app_id: getUserOrAppId().app_id, search: $scope.search}, function (result) {
 
                 if (result.status == 'success') {
 
@@ -718,7 +782,7 @@ function initCommonFunctions($scope, services) {
 
         modal.show();
 
-        services.service.addToFavorite({user_id: getUser().id, food_id: item.id}, function (result) {
+        services.service.addToFavorite({app_id: getUserOrAppId().app_id, food_id: item.id}, function (result) {
 
             if (result.status == 'success') {
 
@@ -875,5 +939,19 @@ function t(label) {
         return label;
     } else {
         return lang[applicationLanguage][label]
+    }
+}
+
+function getUserOrAppId() {
+
+    user = getUser();
+
+    if(!user) {
+
+        return app_id;
+
+    } else {
+
+        return user.app_id;
     }
 }
