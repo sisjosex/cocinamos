@@ -187,8 +187,8 @@ module.controller('Login', function ($scope, service) {
     ons.ready(function () {
 
         $scope.user = {
-            email: 'sisjosex@gmail.com',
-            password: 'kalindor'
+            email: '',
+            password: ''
         };
 
         $scope.login = function () {
@@ -239,8 +239,6 @@ module.controller('Register', function ($scope, service) {
     ons.ready(function () {
 
         $scope.user = {
-            /*email: 'sisjosex@gmail.com',
-             password: 'kalindor'*/
             email: '',
             password: '',
             token: '',

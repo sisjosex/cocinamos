@@ -107,5 +107,22 @@ div.navigation-bar {
 
 .back-button {
     color: #000;
-    padding-left: 25px;
+    padding-left: 10px;
+}
+
+.menu-detail .navigation-bar__item, .navigation-bar__left, .menu-detail .navigation-bar__right, .navigation-bar__center {
+    height: 50px;
+    line-height: 50px;
+}
+
+.input-text {
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 22px;
+    height: 48px;
+}
+
+.back-button__label {
+    color:#007aff;
+    font-family: 'SFUIText-Light';
 }
