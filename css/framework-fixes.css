@@ -104,3 +104,8 @@ div.navigation-bar {
 .toolbar-button, .toolbar-button--outline, .toolbar-button--quiet {
     padding: 4px 2px;
 }
+
+.back-button {
+    color: #000;
+    padding-left: 25px;
+}

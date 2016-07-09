@@ -776,7 +776,7 @@ img {
 
 .menu-box-footer-detail {
     display: table;
-    width: 220px;
+    width: 190px;
     border-top: solid 1px #c0c0c0;
     margin: 0 auto;
     border-top:none;
@@ -847,14 +847,17 @@ img {
 
 
 .col-dot {
-    max-width:5%;
-    color:#ff0700;
+    max-width: 5%;
+    color: #ff0700;
+    text-align: right;
 }
 
 .col-number {
-    min-width: 20%;
+    min-width: 15%;
     text-align: center;
     font-family: 'SFUIText-Light';
+    max-width: 14%;
+    text-align: center;
 }
 
 .col-text {
@@ -871,22 +874,26 @@ img {
 
 .btn-yellow2 {
     background: #ffcc00;
-    box-shadow: 0px 3px 0px #929292;
+    box-shadow: 0px 5px 0px #929292;
 }
 
 .btn-agregar {
     color: #fff;
-    box-shadow: 0px 3px 0px #929292;
+    box-shadow: 0px 5px 0px #929292;
     background: url(../img/detail.png) 8px center no-repeat #ffcc00;
-    background-size: 48px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    background-size: 33px;
     font-size: 22px;
     text-align: right;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 17px;
 }
 
 hr {
     background: #ababab;
+    margin:0;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 h2 {
@@ -914,6 +921,12 @@ h2 {
     font-size: 20px;
 }
 
+.menu-detail h2 {
+    margin:0;
+    font-size: 19px;
+    margin-top: 10px;
+}
+
 .menu-detail .nav-bar-plus-minus {
 
 }
@@ -932,14 +945,42 @@ h2 {
 }
 
 .ingredients {
-    margin-top:10px;
-    margin-bottom:10px;
+    margin-top:0px;
+    margin-bottom:15px;
+}
+
+.share {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.share:first-child {
+    padding-left: 12px;
 }
 
 .share > div {
     text-align: center;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+.share img {
+    max-width:67px;
 }
 
 .btn-yellow2 {
-    height: 62px;
+    height: 49px;
+}
+
+.ingredient-row {
+    margin-bottom: 2px;
+}
+
+
+.col-time {
+    max-width: 12% !important;
+}
+
+.col-button-agregar {
+    max-width: 85%;
 }

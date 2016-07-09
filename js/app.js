@@ -1,6 +1,6 @@
-//var API_URL = 'http://localhost/fino_app/admin/api/'
+var API_URL = 'http://localhost/fino_app/admin/api/'
 
-var API_URL = 'http://cocinamosconfino.com/api/'
+//var API_URL = 'http://cocinamosconfino.com/api/'
 
 //var API_URL = 'http://192.168.43.129/fino_app/admin/api/'
 //var API_URL = 'http://172.20.10.5/fino_app/admin/api/'
@@ -62,23 +62,58 @@ module.controller('MainNavigatorController', function ($scope) {
 
     ons.ready(function () {
 
-        localStorage.setItem('lang', applicationLanguage);
+        $scope.deviceReady = false;
 
-        if (getUser()) {
+        if (document.location.protocol == 'http:') {
 
-            mainNavigator.pushPage('home.html', {animation: 'none'});
+            API_URL = 'http://localhost/fino_app/admin/api/';
+
+            setTimeout(onDeviceReady, 500);
 
         } else {
 
-            mainNavigator.pushPage('intro.html', {animation: 'none'});
+            API_URL = 'http://cocinamosconfino.com/api/';
+
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        try {
+        function onDeviceReady() {
 
-            //StatusBar.hide();
+            $scope.$apply(function () {
 
-        } catch(error){
+                document.addEventListener("online", onOnline, false);
+                document.addEventListener("offline", onOffline, false);
 
+                $scope.deviceReady = true;
+
+                localStorage.setItem('lang', applicationLanguage);
+
+                if (getUser()) {
+
+                    mainNavigator.pushPage('home.html', {animation: 'none'});
+
+                } else {
+
+                    mainNavigator.pushPage('intro.html', {animation: 'none'});
+                }
+
+                try {
+
+                    //StatusBar.hide();
+
+                } catch(error){
+
+                }
+
+            });
+        }
+
+        function onOnline() {
+            $rootScope.online = true;
+        }
+
+        function onOffline() {
+            $rootScope.online = false;
         }
 
         /*
@@ -809,7 +844,7 @@ function alert(message, callback) {
     ons.notification.alert({
         message: message,
         // or messageHTML: '<div>Message in HTML</div>',
-        title: t('message'),
+        title: 'Mensaje',
         buttonLabel: 'OK',
         animation: 'default', // or 'none'
         // modifier: 'optional-modifier'
@@ -823,7 +858,7 @@ function confirm(message, callback) {
     ons.notification.confirm({
         message: message,
         // or messageHTML: '<div>Message in HTML</div>',
-        title: t('confirmation'),
+        title: ('Confirmación'),
         buttonLabels: [t('yes'), t('no')],
         animation: 'default', // or 'none'
         primaryButtonIndex: 1,

@@ -285,10 +285,10 @@
 
             <div class="right">
                 <ons-toolbar-button ng-click="goToCategory()">
-                    <ons-toolbar-button>
+                    <ons-toolbar-button class="header-send">
                         <img src="img/send.png" alt="">
                     </ons-toolbar-button>
-                    <ons-toolbar-button>
+                    <ons-toolbar-button class="header-share">
                         <img src="img/share.png" alt="">
                     </ons-toolbar-button>
                 </ons-toolbar-button>
@@ -310,7 +310,7 @@
             <div class="menu-box-footer menu-box-footer-detail">
                 <div class="heart" ng-click="makeFavorite(menu)"><img src="img/heart-icon.png" alt=""></div>
                 <div class="">{{ menu.likes }}</div>
-                <div class="recipe"><img src="img/recipe-icon.png" alt=""></div>
+                <div class="recipe"><img src="img/invite-icon.png" alt=""></div>
                 <div class="">{{ menu.recipes }}</div>
             </div>
 
@@ -344,7 +344,7 @@
             </div>
 
             <div class="ingredients">
-                <ons-row ng-repeat="ingredient in menu.ingredients">
+                <ons-row ng-repeat="ingredient in menu.ingredients" class="ingredient-row">
                     <ons-col class="col-dot"><span class="red">·</span></ons-col>
                     <ons-col class="col-number">{{ ingredient.quantity }}</ons-col>
                     <ons-col class="col-text">{{ ingredient.name }}</ons-col>
@@ -352,11 +352,11 @@
             </div>
 
             <ons-row>
-                <ons-col class="col-dot" width="15%">
+                <ons-col class="col-dot col-time" width="15%">
                     <ons-button class="btn-yellow btn-yellow2" ng-click="agregar()"><img style="padding-top: 6px;padding-bottom: 6px;" src="img/time.png" alt="">
                     </ons-button>
                 </ons-col>
-                <ons-col class="col-number" width="85%" style="padding-left:10px;">
+                <ons-col class="col-number col-button-agregar" width="85%" style="padding-left:10px;">
                     <ons-button class="btn-yellow btn-agregar" style="width: 100%;" ng-click="agregar()">Agregar a tus
                         compras
                     </ons-button>
@@ -475,10 +475,10 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button>
+                <ons-toolbar-button class="header-send">
                     <img src="img/send.png" alt="">
                 </ons-toolbar-button>
-                <ons-toolbar-button>
+                <ons-toolbar-button class="header-share">
                     <img src="img/share.png" alt="">
                 </ons-toolbar-button>
             </div>
@@ -577,10 +577,10 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button>
+                <ons-toolbar-button class="header-send">
                     <img src="img/send.png" alt="">
                 </ons-toolbar-button>
-                <ons-toolbar-button>
+                <ons-toolbar-button class="header-share">
                     <img src="img/share.png" alt="">
                 </ons-toolbar-button>
             </div>
@@ -685,10 +685,10 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button>
+                <ons-toolbar-button class="header-send">
                     <img src="img/send.png" alt="">
                 </ons-toolbar-button>
-                <ons-toolbar-button>
+                <ons-toolbar-button class="header-share">
                     <img src="img/share.png" alt="">
                 </ons-toolbar-button>
             </div>
@@ -800,10 +800,10 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button>
+                <ons-toolbar-button class="header-send">
                     <img src="img/send.png" alt="">
                 </ons-toolbar-button>
-                <ons-toolbar-button>
+                <ons-toolbar-button class="header-share">
                     <img src="img/share.png" alt="">
                 </ons-toolbar-button>
             </div>
