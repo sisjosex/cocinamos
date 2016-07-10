@@ -440,7 +440,7 @@ module.controller('Home', function ($scope, service, $sce) {
                         new ImageLoader($(this), new Image());
 
                     });
-                }, 100);
+                }, 500);
 
             } else {
 
@@ -467,6 +467,8 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
 
     ons.ready(function () {
 
+        $scope.porciones = 1;
+
         $scope.menu = menuNavigator.pages[menuNavigator.pages.length - 1].data.menu;
 
         $scope.trustSrc = function (src) {
@@ -479,11 +481,36 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
                 new ImageLoader($(this), new Image());
 
             });
-        }, 100);
+        }, 500);
 
         initCommonFunctions($scope, {
             service: service
         });
+
+
+        $scope.increasePortions = function() {
+
+            $scope.porciones ++;
+
+            $scope.recalculate_portions();
+        };
+
+        $scope.decreasePortions = function() {
+
+            if($scope.porciones > 1) {
+                $scope.porciones --;
+                $scope.recalculate_portions();
+            }
+        };
+
+        $scope.recalculate_portions = function() {
+            for ( var i in  $scope.menu.ingredients) {
+
+                eval("var quantity = " + $scope.menu.ingredients[i].quantity + ";");
+
+                $scope.menu.ingredients[i].quantity_calculated = quantity * $scope.porciones;
+            }
+        };
 
         service.getMenu({id: $scope.menu.id}, function (result) {
 
@@ -492,6 +519,8 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
                 modal.hide();
 
                 $scope.menu = result.data;
+
+                $scope.recalculate_portions();
 
                 setTimeout(function () {
                     $('.preview').each(function () {
@@ -505,7 +534,7 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
                         new ImageLoader($(this), new Image());
 
                     });
-                }, 100);
+                }, 500);
 
             } else {
 
@@ -545,7 +574,7 @@ module.controller('Favorite', function ($scope, service, $sce) {
                 new ImageLoader($(this), new Image());
 
             });
-        }, 100);
+        }, 500);
 
         $scope.goToMenuDetail = function (menu) {
             menuNavigator.pushPage('menu_detail.html', {data: {menu: menu}});
@@ -592,7 +621,7 @@ module.controller('Favorite', function ($scope, service, $sce) {
                             new ImageLoader($(this), new Image());
 
                         });
-                    }, 100);
+                    }, 500);
 
                 } else {
 
@@ -651,7 +680,7 @@ module.controller('Category', function ($scope, service, $sce) {
                             new ImageLoader($(this), new Image());
 
                         });
-                    }, 100);
+                    }, 500);
 
                 } else {
 
@@ -676,7 +705,7 @@ module.controller('Category', function ($scope, service, $sce) {
                 new ImageLoader($(this), new Image());
 
             });
-        }, 100);
+        }, 500);
     });
 });
 
@@ -694,7 +723,7 @@ module.controller('Recipes', function ($scope, service, $sce) {
                 new ImageLoader($(this), new Image());
 
             });
-        }, 100);
+        }, 500);
 
         initCommonFunctions($scope, {
             service: service
@@ -717,7 +746,7 @@ module.controller('Calculator', function ($scope) {
                 new ImageLoader($(this), new Image());
 
             });
-        }, 100);
+        }, 500);
     });
 });
 

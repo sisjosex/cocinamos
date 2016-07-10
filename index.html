@@ -395,11 +395,11 @@
                     <div class="navigation-bar nav-bar-plus-minus">
                         <div class="navigation-bar__center">
                             <div class="button-bar">
-                                <div class="button-bar__item" ng-click="filter('normal')">
+                                <div class="button-bar__item" ng-click="increasePortions()">
                                     <input type="radio" name="navi-segment-a" checked>
                                     <i class="fa fa-plus"></i>
                                 </div>
-                                <div class="button-bar__item" ng-click="filter('video')">
+                                <div class="button-bar__item" ng-click="decreasePortions()">
                                     <input type="radio" name="navi-segment-a">
                                     <i class="fa fa-minus"></i>
                                 </div>
@@ -412,7 +412,7 @@
             <div class="ingredients">
                 <ons-row ng-repeat="ingredient in menu.ingredients" class="ingredient-row">
                     <ons-col class="col-dot"><span class="red">·</span></ons-col>
-                    <ons-col class="col-number">{{ ingredient.quantity }}</ons-col>
+                    <ons-col class="col-number">{{ ingredient.quantity_calculated }}</ons-col>
                     <ons-col class="col-text">{{ ingredient.name }}</ons-col>
                 </ons-row>
             </div>
