@@ -1,4 +1,5 @@
-var API_URL = 'http://localhost/fino_app/admin/api/'
+var API_URL = 'http://localhost/fino_app/admin/api/';
+var WEB_URL = 'http://cocinamosconfino.com/';
 
 //var API_URL = 'http://cocinamosconfino.com/api/'
 
@@ -12,6 +13,7 @@ var user;
 var user_storage_key = 'finoapp_user';
 
 var app_id = 123;
+var recipe_share_text = 'Te invito a participar';
 
 var lang = {
     en: {
@@ -67,6 +69,36 @@ module.controller('MainNavigatorController', function ($scope, $rootScope) {
         $rootScope.playVideo = function(video_id) {
 
             YoutubeVideoPlayer.openVideo(video_id);
+        };
+
+        $rootScope.showImage = function(url) {
+
+            PhotoViewer.show(url);
+        };
+
+        $rootScope.shareByEmail = function(message) {
+
+            shareByEmail(message, function(){
+            });
+        };
+
+        $rootScope.shareBySMS = function(message) {
+            shareBySMS(message, function(){
+            });
+        };
+
+        $rootScope.shareByWhatsApp = function(message) {
+            shareByWhatsApp(message, function(){
+            });
+        };
+
+        $rootScope.shareByFacebook = function(message) {
+            shareByFacebook(message, function(){
+            });
+        };
+
+        $rootScope.shareBy = function(message, url) {
+            shareBy(message, url);
         };
 
         $scope.deviceReady = false;
@@ -998,4 +1030,38 @@ function getUserOrAppId() {
 
         return user.app_id;
     }
+}
+
+function shareByEmail(message, callback) {
+
+    window.plugins.socialsharing.shareViaEmail(
+        message, // can contain HTML tags, but support on Android is rather limited:  http://stackoverflow.com/questions/15136480/how-to-send-html-content-with-image-through-android-default-email-client
+        '¿Cocinamos?',
+        null, // TO: must be null or an array
+        null, // CC: must be null or an array
+        null, // BCC: must be null or an array
+        [], // FILES: can be null, a string, or an array
+        callback, // called when sharing worked, but also when the user cancelled sharing via email (I've found no way to detect the difference)
+        function(error){alert(error)} // called when sh*t hits the fan
+    );
+}
+
+function shareBySMS(message, callback) {
+    window.plugins.socialsharing.shareViaSMS(message, null /* see the note below */, callback, function(msg) {alert('error: ' + msg)});
+}
+
+function shareByWhatsApp(message, callback) {
+    window.plugins.socialsharing.shareViaWhatsApp(message, null /* img */, null /* url */, callback, function(errormsg){alert(errormsg)});
+}
+
+function shareByFacebook(message, callback) {
+    window.plugins.socialsharing.shareViaFacebook(message, null /* img */, null /* url */, callback, function(errormsg){alert(errormsg)})
+}
+
+function shareBy(message, img) {
+    window.plugins.socialsharing.share(
+        message,
+        'Compartir',
+        [img],
+        WEB_URL);
 }

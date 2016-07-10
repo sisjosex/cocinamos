@@ -350,19 +350,19 @@
 
             <div class="right">
                 <ons-toolbar-button ng-click="goToCategory()">
-                    <ons-toolbar-button class="header-send">
+                    <ons-toolbar-button class="header-send" ng-click="shareBy(menu.name, menu.photo)">
                         <img src="img/send.png" alt="">
                     </ons-toolbar-button>
-                    <ons-toolbar-button class="header-share">
+                    <!--<ons-toolbar-button class="header-share">
                         <img src="img/share.png" alt="">
-                    </ons-toolbar-button>
+                    </ons-toolbar-button>-->
                 </ons-toolbar-button>
             </div>
         </ons-toolbar>
 
         <div class="calc-header">
             <figure class="figure">
-                <div class="preview" src="{{ trustSrc(menu.photo) }}"></div>
+                <div class="preview" src="{{ trustSrc(menu.photo) }}" ng-click="showImage(menu.photo)"></div>
             </figure>
             <div class="chef-icon">
                 <img ng-src="img/chef-icon.png" alt="">
@@ -389,7 +389,7 @@
                 </div>
                 <div class="item" style="width:77px;">
                     <img class="img1" src="img/porciones.png">
-                    <span>6 porciones</span>
+                    <span>{{ porciones }} porciones</span>
                 </div>
                 <div class="item">
                     <div class="navigation-bar nav-bar-plus-minus">
@@ -434,19 +434,19 @@
 
             <h2>Comparte esta receta:</h2>
             <ons-row>
-                <ons-col class="share share-mail">
+                <ons-col class="share share-mail" ng-click="shareByEmail(recipe_share_text)">
                     <div><img src="img/mail.png" alt=""></div>
                     <div class="text-bottom">Mail</div>
                 </ons-col>
-                <ons-col class="share share-mensajes">
+                <ons-col class="share share-mensajes" ng-click="shareBySMS(recipe_share_text)">
                     <div><img src="img/mensjae.png" alt=""></div>
                     <div class="text-bottom">Mensajes</div>
                 </ons-col>
-                <ons-col class="share share-facebook">
+                <ons-col class="share share-facebook" ng-click="shareByFacebook(recipe_share_text)">
                     <div><img src="img/facebook.png" alt=""></div>
                     <div class="text-bottom">Facebook</div>
                 </ons-col>
-                <ons-col class="share share-whatsapp">
+                <ons-col class="share share-whatsapp" ng-click="shareByWhatsApp(recipe_share_text)">
                     <div><img src="img/whatsapp.png" alt=""></div>
                     <div class="text-bottom">Whatsapp</div>
                 </ons-col>
@@ -476,7 +476,7 @@
 
                 <div class="image-list-container">
                     <div class="image" ng-repeat="image in item.images">
-                        <div class="preview" src="{{ image.image }}" alt=""></div>
+                        <div class="preview" src="{{ image.image }}" alt=""  ng-click="showImage(image.image)"></div>
                     </div>
                 </div>
 
@@ -555,12 +555,12 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button class="header-send">
+                <ons-toolbar-button class="header-send" ng-click="shareBy('Calculadora de Nutrientes', 'img/calc-nutrientes.jpg')">
                     <img src="img/send.png" alt="">
                 </ons-toolbar-button>
-                <ons-toolbar-button class="header-share">
+                <!--<ons-toolbar-button class="header-share">
                     <img src="img/share.png" alt="">
-                </ons-toolbar-button>
+                </ons-toolbar-button>-->
             </div>
         </ons-toolbar>
 
@@ -657,12 +657,12 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button class="header-send">
+                <ons-toolbar-button class="header-send" ng-click="shareBy('Calculadora de Proteinas', 'img/calc-proteinas.jpg')">
                     <img src="img/send.png" alt="">
                 </ons-toolbar-button>
-                <ons-toolbar-button class="header-share">
+                <!--<ons-toolbar-button class="header-share">
                     <img src="img/share.png" alt="">
-                </ons-toolbar-button>
+                </ons-toolbar-button>-->
             </div>
         </ons-toolbar>
 
@@ -765,12 +765,12 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button class="header-send">
+                <ons-toolbar-button class="header-send" ng-click="shareBy('Calculadora de Calorías', 'img/calc-calorias.jpg')">
                     <img src="img/send.png" alt="">
                 </ons-toolbar-button>
-                <ons-toolbar-button class="header-share">
+                <!--<ons-toolbar-button class="header-share">
                     <img src="img/share.png" alt="">
-                </ons-toolbar-button>
+                </ons-toolbar-button>-->
             </div>
         </ons-toolbar>
 
@@ -880,12 +880,12 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button class="header-send">
+                <ons-toolbar-button class="header-send" ng-click="shareBy('Calculadora de Calorías diarias', 'img/calc-calorias-diarias.png')">
                     <img src="img/send.png" alt="">
                 </ons-toolbar-button>
-                <ons-toolbar-button class="header-share">
+                <!--<ons-toolbar-button class="header-share">
                     <img src="img/share.png" alt="">
-                </ons-toolbar-button>
+                </ons-toolbar-button>-->
             </div>
         </ons-toolbar>
 
