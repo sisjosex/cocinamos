@@ -60,9 +60,14 @@ var lang = {
     }
 };
 
-module.controller('MainNavigatorController', function ($scope) {
+module.controller('MainNavigatorController', function ($scope, $rootScope) {
 
     ons.ready(function () {
+
+        $rootScope.playVideo = function(video_id) {
+
+            YoutubeVideoPlayer.openVideo(video_id);
+        };
 
         $scope.deviceReady = false;
 
@@ -392,9 +397,18 @@ module.controller('Home', function ($scope, service, $sce) {
                 $scope.menus = result.data;
                 $scope.top_menu = result.top_menu;
 
-                try {
-                    navigator.splashscreen.hide();
-                }catch(error){}
+                setTimeout(function () {
+
+                    try {
+                        navigator.splashscreen.hide();
+                    }catch(error){}
+
+                    $('.preview').each(function () {
+
+                        new ImageLoader($(this), new Image());
+
+                    });
+                }, 100);
 
             } else {
 
@@ -446,6 +460,20 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
                 modal.hide();
 
                 $scope.menu = result.data;
+
+                setTimeout(function () {
+                    $('.preview').each(function () {
+
+                        $('.image-list-container').each(function(){
+
+                            $(this).find('.image').css('width', 100/$(this).find('.image').length);
+                            $(this).find('.image:first-child').css('width', 100/$(this).find('.image').length - (15/$(this).find('.image').length));
+                        });
+
+                        new ImageLoader($(this), new Image());
+
+                    });
+                }, 100);
 
             } else {
 
@@ -526,6 +554,14 @@ module.controller('Favorite', function ($scope, service, $sce) {
                     $scope.total_menus = result.total_menus;
                     $scope.total_videos = result.total_videos;
 
+                    setTimeout(function () {
+                        $('.preview').each(function () {
+
+                            new ImageLoader($(this), new Image());
+
+                        });
+                    }, 100);
+
                 } else {
 
                     modal.hide();
@@ -576,6 +612,14 @@ module.controller('Category', function ($scope, service, $sce) {
                     modal.hide();
 
                     $scope.categories = result.data;
+
+                    setTimeout(function () {
+                        $('.preview').each(function () {
+
+                            new ImageLoader($(this), new Image());
+
+                        });
+                    }, 100);
 
                 } else {
 

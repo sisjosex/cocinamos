@@ -321,7 +321,7 @@
                         <i ng-show="item.in_recipes" class="icon bookmark">
                             <img src="img/bookmark-icon.png" alt="">
                         </i>
-                        <i ng-show="item.type=='video'" class="icon play">
+                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
                             <img src="img/play-icon.png" alt="">
                         </i>
                     </figure>
@@ -367,6 +367,7 @@
             <div class="chef-icon">
                 <img ng-src="img/chef-icon.png" alt="">
             </div>
+            <div ng-click="playVideo(menu.video)" ng-show="menu.type=='video'" class="play-icon-main"></div>
         </div>
 
         <div class="calc-content" style="padding-top: 50px;">
@@ -469,10 +470,22 @@
             <div class="tip pasos" ng-repeat="item in menu.steps">
                 <h1>{{ item.name }}</h1>
 
-                <div>
-                    {{ item.content }}
+                <p>
+                    {{ item.description }}
+                </p>
+
+                <div class="image-list-container">
+                    <div class="image" ng-repeat="image in item.images">
+                        <div class="preview" src="{{ image.image }}" alt=""></div>
+                    </div>
                 </div>
-                <img src="img/sample/top-menu-sample.jpg" alt="">
+
+                <div class="video-container" ng-repeat="video in item.videos">
+                    <div class="video">
+                        <div class="preview" src="{{ trustSrc(video.video) }}" alt=""></div>
+                        <div ng-click="playVideo(video.video_id)" class="play-video-button"></div>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -1083,7 +1096,7 @@
                     <i class="icon fino">
                         <img src="img/fino-logo2.png" alt="">
                     </i>
-                    <i class="icon play">
+                    <i class="icon play" ng-click="playVideo(item.video)">
                         <img src="img/play-icon.png" alt="">
                     </i>
                 </figure>

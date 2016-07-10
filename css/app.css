@@ -1063,3 +1063,73 @@ h2 {
     margin-top: 10px;
     display: block;
 }
+
+.image-list-container {
+    height:220px;
+    display:table;
+    width:100%;
+}
+
+.video-container {
+    height:220px;
+    display:table;
+    width:100%;
+    margin-top:10px;
+}
+
+.video-container .video {
+    display: table-cell;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    position:relative;
+}
+
+.video-container .video .preview {
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+.image-list-container .image {
+    display: table-cell;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-list-container .image .preview {
+    margin-left: 15px;
+}
+
+.image-list-container .image:first-child .preview {
+    margin-left: 0px;
+}
+
+.image-list-container .preview {
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+
+.play-video-button {
+    background: url('../img/play-icon-big.png') 0 0 no-repeat transparent;
+    background-size: 100%;
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:50px;
+    height:50px;
+    margin-top:-25px;
+    margin-left:-25px;
+}
+
+.play-icon-main {
+    background: url('../img/play-icon-big.png') 0 0 no-repeat transparent;
+    background-size: 100%;
+    position: absolute;
+    right: 10px;
+    bottom: 35px;
+    width: 50px;
+    height: 50px;
+}
