@@ -262,7 +262,7 @@
             </ons-toolbar>
 
             <div class="top-menu" ng-show="top_menu!=false">
-                <div class="preview" alt="" src="{{ top_menu.photo }}" ng-click="goToMenuDetail(top_menu)"></div>
+                <div class="preview" alt="" src="{{ trustSrc(top_menu.photo) }}" ng-click="goToMenuDetail(top_menu)"></div>
                 <div class="top-menu-caption">
                     <div class="caption">{{ top_menu.name }}</div>
                     <div class="logo-top-menu">
@@ -1067,7 +1067,7 @@
                 <div class="menu-box tip-category" ng-repeat="item in tip_categories track by $index"
                      ng-click="goToTipList(item)">
                     <figure class="figure">
-                        <div class="preview" ng-src="{{item.image}}"></div>
+                        <div class="preview" ng-src="{{ trustSrc(item.image) }}"></div>
                     </figure>
                     <div class="caption"><span>{{ item.title }}</span></div>
                 </div>
@@ -1133,7 +1133,6 @@
 
     </ons-page>
 </ons-template>
-
 
 <ons-template id="favorite.html">
     <ons-page ng-controller="Favorite" class="home internal-tab secondary-toolbar">
@@ -1212,7 +1211,6 @@
 
     </ons-page>
 </ons-template>
-
 
 <ons-template id="invite.html">
     <ons-navigator animation="slide" id="inviteNavigator">

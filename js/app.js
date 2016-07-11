@@ -106,7 +106,8 @@ module.controller('MainNavigatorController', function ($scope, $rootScope) {
 
         if (document.location.protocol == 'http:') {
 
-            API_URL = 'http://localhost/fino_app/admin/api/';
+            //API_URL = 'http://localhost/fino_app/admin/api/';
+            API_URL = 'http://cocinamosconfino.com/api/';
 
             setTimeout(onDeviceReady, 500);
 
