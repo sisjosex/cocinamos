@@ -14,6 +14,7 @@ var user_storage_key = 'finoapp_user';
 
 var app_id = 123;
 var recipe_share_text = 'Te invito a participar';
+var currentNavigator = undefined;
 
 var lang = {
     en: {
@@ -138,7 +139,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope) {
 
                 try {
 
-                    //StatusBar.hide();
+                    StatusBar.hide();
 
                 } catch(error){
 
@@ -400,20 +401,25 @@ module.controller('Home', function ($scope, service, $sce) {
 
         $scope.top_menu = true;
 
+        $scope.changeNavigator = function(navigator) {
+
+            eval('currentNavigator = ' + navigator + ';');
+        };
+
         $scope.trustSrc = function (src) {
             return $sce.trustAsResourceUrl(src);
         };
 
         $scope.goToCategory = function () {
-            menuNavigator.pushPage('category.html');
+            currentNavigator.pushPage('category.html');
         };
 
         $scope.goToFavorite = function () {
-            menuNavigator.pushPage('favorite.html');
+            currentNavigator.pushPage('favorite.html');
         };
 
         $scope.goToMenuDetail = function (menu) {
-            menuNavigator.pushPage('menu_detail.html', {data: {menu: menu}});
+            currentNavigator.pushPage('menu_detail.html', {data: {menu: menu}});
         };
 
         modal.show();
@@ -469,7 +475,7 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
 
         $scope.porciones = 1;
 
-        $scope.menu = menuNavigator.pages[menuNavigator.pages.length - 1].data.menu;
+        $scope.menu = currentNavigator.pages[currentNavigator.pages.length - 1].data.menu;
 
         $scope.trustSrc = function (src) {
             return $sce.trustAsResourceUrl(src);
@@ -487,6 +493,30 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
             service: service
         });
 
+        $scope.addToRecipes =function() {
+
+            service.addToRecipes({food_id: $scope.menu.id, app_id: getUserOrAppId(), portions: $scope.porciones}, function (result) {
+
+                if (result.status == 'success') {
+
+                    modal.hide();
+
+                    alert(result.message);
+
+                } else {
+
+                    modal.hide();
+
+                    alert(result.message);
+                }
+
+            }, function (error) {
+
+                modal.hide();
+
+                alert('No se pudo conectar con el servidor');
+            });
+        };
 
         $scope.increasePortions = function() {
 
@@ -577,7 +607,7 @@ module.controller('Favorite', function ($scope, service, $sce) {
         }, 500);
 
         $scope.goToMenuDetail = function (menu) {
-            menuNavigator.pushPage('menu_detail.html', {data: {menu: menu}});
+            currentNavigator.pushPage('menu_detail.html', {data: {menu: menu}});
         };
 
 
@@ -659,8 +689,8 @@ module.controller('Category', function ($scope, service, $sce) {
             $scope.getCategories();
         };
 
-        $scope.goToMenuDetail = function (menu) {
-            menuNavigator.pushPage('menu_detail.html', {data: {menu: menu}});
+        $scope.goToMenuDetail = function(item) {
+            currentNavigator.pushPage('subcategory.html', {data: {subcategory: item}});
         };
 
         $scope.getCategories = function () {
@@ -709,6 +739,98 @@ module.controller('Category', function ($scope, service, $sce) {
     });
 });
 
+module.controller('Subcategory', function ($scope, service, $sce) {
+
+    ons.ready(function () {
+
+        $scope.subcategory = currentNavigator.pages[currentNavigator.pages.length - 1].data.subcategory;
+
+        $scope.trustSrc = function (src) {
+            return $sce.trustAsResourceUrl(src);
+        };
+
+        initSearch($scope);
+
+        $scope.normal = [];
+        $scope.videos = [];
+        $scope.total_menus = 0;
+        $scope.total_videos = 0;
+        $scope.search = '';
+
+        setTimeout(function () {
+            $('.preview').each(function () {
+
+                new ImageLoader($(this), new Image());
+
+            });
+        }, 500);
+
+        $scope.goToMenuDetail = function (menu) {
+            currentNavigator.pushPage('menu_detail.html', {data: {menu: menu}});
+        };
+
+
+        modal.show();
+
+        $('.menus .normal').show();
+        $('.menus .video').hide();
+
+
+        $scope.buscar = function () {
+            $scope.toggleSearch();
+            $scope.getSubcategory();
+        };
+
+        $scope.filter = function (filter) {
+
+            console.log(filter);
+
+            $('.menus .normal').hide();
+            $('.menus .video').hide();
+
+            $('.menus .' + filter).show();
+        };
+
+        $scope.getSubcategory = function () {
+
+            service.getSubcategory({app_id: getUserOrAppId().app_id, search: $scope.search, subcategory_id: $scope.subcategory.id}, function (result) {
+
+                if (result.status == 'success') {
+
+                    modal.hide();
+
+                    $scope.normal = result.normal;
+                    $scope.videos = result.videos;
+                    $scope.total_menus = result.total_menus;
+                    $scope.total_videos = result.total_videos;
+
+                    setTimeout(function () {
+                        $('.preview').each(function () {
+
+                            new ImageLoader($(this), new Image());
+
+                        });
+                    }, 500);
+
+                } else {
+
+                    modal.hide();
+
+                    alert(result.message);
+                }
+
+            }, function (error) {
+
+                modal.hide();
+
+                alert('No se pudo conectar con el servidor');
+            });
+        };
+        $scope.getSubcategory();
+
+    });
+});
+
 module.controller('Recipes', function ($scope, service, $sce) {
 
     ons.ready(function () {
@@ -723,6 +845,9 @@ module.controller('Recipes', function ($scope, service, $sce) {
                 new ImageLoader($(this), new Image());
 
             });
+
+            currentNavigator = recipesNavigator;
+
         }, 500);
 
         initCommonFunctions($scope, {
@@ -887,7 +1012,7 @@ function initCommonFunctions($scope, services) {
 
         modal.show();
 
-        services.service.addToFavorite({app_id: getUserOrAppId().app_id, food_id: item.id}, function (result) {
+        services.service.addToFavorite({app_id: getUserOrAppId(), food_id: item.id}, function (result) {
 
             if (result.status == 'success') {
 

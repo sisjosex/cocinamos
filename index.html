@@ -205,31 +205,31 @@
 <ons-template id="home.html">
     <ons-page id="home" ng-controller="Home">
         <ons-tabbar>
-            <ons-tab page="recipes.html" active>
+            <ons-tab page="recipes.html" active ng-click="changeNavigator('recipesNavigator')">
                 <div class="tab-bar__icon recipe">
                     <div class="img"></div>
                 </div>
                 <div class="tab-bar__label">Recetario</div>
             </ons-tab>
-            <ons-tab page="calculator.html">
+            <ons-tab page="calculator.html" ng-click="changeNavigator('calculatorNavigator')">
                 <div class="tab-bar__icon calculator">
                     <div class="img"></div>
                 </div>
                 <div class="tab-bar__label">Calculadora</div>
             </ons-tab>
-            <ons-tab page="counsel.html">
+            <ons-tab page="counsel.html" ng-click="changeNavigator('counselNavigator')">
                 <div class="tab-bar__icon counsel">
                     <div class="img"></div>
                 </div>
                 <div class="tab-bar__label">Consejos</div>
             </ons-tab>
-            <ons-tab page="myshopping.html">
+            <ons-tab page="myshopping.html" ng-click="changeNavigator('myshoppingNavigator')">
                 <div class="tab-bar__icon myshopping">
                     <div class="img"></div>
                 </div>
                 <div class="tab-bar__label">Mis Compras</div>
             </ons-tab>
-            <ons-tab page="invite.html">
+            <ons-tab page="invite.html" ng-click="changeNavigator('inviteNavigator')">
                 <div class="tab-bar__icon invite">
                     <div class="img"></div>
                 </div>
@@ -240,49 +240,8 @@
     </ons-page>
 </ons-template>
 
-<ons-template id="category.html">
-    <ons-page ng-controller="Category" class="home internal-tab">
-
-        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
-            <div class="left">
-                <input type="search" ng-model="search" class="search-input" placeholder="Buscador"/>
-                <ons-toolbar-button ng-click="buscar()">
-                    Buscar
-                </ons-toolbar-button>
-            </div>
-        </ons-toolbar>
-
-        <ons-toolbar>
-            <div class="left">
-                <ons-back-button></ons-back-button>
-            </div>
-            <div class="center">Categorias</div>
-            <div class="right">
-                <ons-toolbar-button ng-click="toggleSearch()">
-                    Buscador
-                </ons-toolbar-button>
-            </div>
-        </ons-toolbar>
-
-        <div class="category">
-            <div class="category-container" ng-repeat="category in categories track by $index">
-                <h2 class="text yellow">{{ category.name }}</h2>
-
-                <div class="box-category" ng-repeat="item in category.foods track by $index"
-                     ng-click="goToMenuDetail(item)">
-                    <figure>
-                        <div class="preview" src="{{ trustSrc(item.photo) }}"></div>
-                    </figure>
-                    <div class="caption">{{ item.name }}</div>
-                </div>
-            </div>
-        </div>
-
-    </ons-page>
-</ons-template>
-
 <ons-template id="recipes.html">
-    <ons-navigator animation="slide" id="menuNavigator">
+    <ons-navigator animation="slide" id="recipesNavigator">
         <ons-page ng-controller="Recipes" class="internal-tab">
 
             <ons-toolbar class="toolbar-big">
@@ -337,6 +296,125 @@
 
         </ons-page>
     </ons-navigator>
+</ons-template>
+
+<ons-template id="category.html">
+    <ons-page ng-controller="Category" class="home internal-tab">
+
+        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
+            <div class="left">
+                <input type="search" ng-model="search" class="search-input" placeholder="Buscador"/>
+                <ons-toolbar-button ng-click="buscar()">
+                    Buscar
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center">Categorias</div>
+            <div class="right">
+                <ons-toolbar-button ng-click="toggleSearch()">
+                    Buscador
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="category">
+            <div class="category-container" ng-repeat="category in categories track by $index">
+                <h2 class="text yellow">{{ category.name }}</h2>
+
+                <div class="box-category" ng-repeat="item in category.subcategories track by $index"
+                     ng-click="goToMenuDetail(item)">
+                    <figure>
+                        <div class="preview" src="{{ trustSrc(item.photo) }}"></div>
+                    </figure>
+                    <div class="caption">{{ item.name }}</div>
+                </div>
+            </div>
+        </div>
+
+    </ons-page>
+</ons-template>
+
+<ons-template id="subcategory.html">
+    <ons-page ng-controller="Subcategory" class="home internal-tab secondary-toolbar">
+
+        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
+            <div class="left">
+                <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
+                <ons-toolbar-button ng-click="buscar()">
+                    Buscar
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center">Menús</div>
+            <div class="right">
+                <ons-toolbar-button ng-click="toggleSearch()">
+                    Buscador
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="toolbar-secondary">
+            <div class="navigation-bar">
+                <div class="navigation-bar__center">
+                    <div class="button-bar" style="width:200px; margin:8px auto 0;">
+                        <div class="button-bar__item" ng-click="filter('normal')">
+                            <input type="radio" name="navi-segment-a" checked>
+
+                            <div class="button-bar__button">Recetas ({{ total_menus }})</div>
+                        </div>
+                        <div class="button-bar__item" ng-click="filter('video')">
+                            <input type="radio" name="navi-segment-a">
+
+                            <div class="button-bar__button">Videos ({{ total_videos }})</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menus">
+            <div class="normal">
+                <div class="menu-box menu-box2" ng-repeat="item in normal track by $index">
+                    <figure class="figure">
+                        <div class="preview" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)"></div>
+                        <i class="icon fino">
+                            <img src="img/fino-logo2.png" alt="">
+                        </i>
+                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
+                            <img src="img/play-icon.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption caption2">{{ item.name }}</div>
+                </div>
+            </div>
+
+            <div class="video">
+                <div class="menu-box menu-box2" ng-repeat="item in videos track by $index">
+                    <figure class="figure">
+                        <div class="preview" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)"></div>
+                        <i class="icon fino">
+                            <img src="img/fino-logo2.png" alt="">
+                        </i>
+                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
+                            <img src="img/play-icon.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption caption2">{{ item.name }}</div>
+                </div>
+            </div>
+        </div>
+
+    </ons-page>
 </ons-template>
 
 <ons-template id="menu_detail.html">
@@ -424,7 +502,7 @@
                     </ons-button>
                 </ons-col>
                 <ons-col class="col-number col-button-agregar" width="85%" style="padding-left:10px;">
-                    <ons-button class="btn-yellow btn-agregar" style="width: 100%;" ng-click="agregar()">Agregar a tus
+                    <ons-button class="btn-yellow btn-agregar" style="width: 100%;" ng-click="addToRecipes()">Agregar a tus
                         compras
                     </ons-button>
                 </ons-col>
@@ -476,7 +554,7 @@
 
                 <div class="image-list-container">
                     <div class="image" ng-repeat="image in item.images">
-                        <div class="preview" src="{{ image.image }}" alt=""  ng-click="showImage(image.image)"></div>
+                        <div class="preview" src="{{ image.image }}" alt="" ng-click="showImage(image.image)"></div>
                     </div>
                 </div>
 
@@ -555,7 +633,8 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button class="header-send" ng-click="shareBy('Calculadora de Nutrientes', 'img/calc-nutrientes.jpg')">
+                <ons-toolbar-button class="header-send"
+                                    ng-click="shareBy('Calculadora de Nutrientes', 'img/calc-nutrientes.jpg')">
                     <img src="img/send.png" alt="">
                 </ons-toolbar-button>
                 <!--<ons-toolbar-button class="header-share">
@@ -657,7 +736,8 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button class="header-send" ng-click="shareBy('Calculadora de Proteinas', 'img/calc-proteinas.jpg')">
+                <ons-toolbar-button class="header-send"
+                                    ng-click="shareBy('Calculadora de Proteinas', 'img/calc-proteinas.jpg')">
                     <img src="img/send.png" alt="">
                 </ons-toolbar-button>
                 <!--<ons-toolbar-button class="header-share">
@@ -765,7 +845,8 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button class="header-send" ng-click="shareBy('Calculadora de Calorías', 'img/calc-calorias.jpg')">
+                <ons-toolbar-button class="header-send"
+                                    ng-click="shareBy('Calculadora de Calorías', 'img/calc-calorias.jpg')">
                     <img src="img/send.png" alt="">
                 </ons-toolbar-button>
                 <!--<ons-toolbar-button class="header-share">
@@ -880,7 +961,8 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button class="header-send" ng-click="shareBy('Calculadora de Calorías diarias', 'img/calc-calorias-diarias.png')">
+                <ons-toolbar-button class="header-send"
+                                    ng-click="shareBy('Calculadora de Calorías diarias', 'img/calc-calorias-diarias.png')">
                     <img src="img/send.png" alt="">
                 </ons-toolbar-button>
                 <!--<ons-toolbar-button class="header-share">
@@ -1052,80 +1134,84 @@
 </ons-template>
 
 <ons-template id="myshopping.html">
-    <ons-page ng-controller="MyShopping" class="internal-tab secondary-toolbar">
-        <ons-toolbar>
-            <div class="left">
-                <ons-toolbar-button ng-click="goToFavorite()">
-                    <img src="img/heart-blue-icon.png" alt="">
-                </ons-toolbar-button>
-            </div>
-            <div class="center">
-                Consejos & Tips
-            </div>
+    <ons-navigator animation="slide" id="myshoppingNavigator">
+        <ons-page ng-controller="MyShopping" class="internal-tab secondary-toolbar">
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button ng-click="goToFavorite()">
+                        <img src="img/heart-blue-icon.png" alt="">
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    Consejos & Tips
+                </div>
 
-            <div class="right">
-                <ons-toolbar-button>
-                    <img src="img/menu-chef.png" alt="">
-                </ons-toolbar-button>
-            </div>
-        </ons-toolbar>
+                <div class="right">
+                    <ons-toolbar-button>
+                        <img src="img/menu-chef.png" alt="">
+                    </ons-toolbar-button>
+                </div>
+            </ons-toolbar>
 
-        <div class="toolbar-secondary">
-            <div class="navigation-bar">
-                <div class="navigation-bar__center">
-                    <div class="button-bar" style="width:200px; margin:8px auto 0;">
-                        <div class="button-bar__item" ng-click="filter('normal')">
-                            <input type="radio" name="navi-segment-a" checked>
+            <div class="toolbar-secondary">
+                <div class="navigation-bar">
+                    <div class="navigation-bar__center">
+                        <div class="button-bar" style="width:200px; margin:8px auto 0;">
+                            <div class="button-bar__item" ng-click="filter('normal')">
+                                <input type="radio" name="navi-segment-a" checked>
 
-                            <div class="button-bar__button">Recetas (999)</div>
-                        </div>
-                        <div class="button-bar__item" ng-click="filter('video')">
-                            <input type="radio" name="navi-segment-a">
+                                <div class="button-bar__button">Recetas (999)</div>
+                            </div>
+                            <div class="button-bar__item" ng-click="filter('video')">
+                                <input type="radio" name="navi-segment-a">
 
-                            <div class="button-bar__button">Videos (999)</div>
+                                <div class="button-bar__button">Videos (999)</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="menus">
-            <div class="menu-box menu-box2">
-                <figure class="figure">
-                    <div class="preview" src="img/sample/food-preview-sample.jpg"></div>
-                    <i class="icon fino">
-                        <img src="img/fino-logo2.png" alt="">
-                    </i>
-                    <i class="icon play" ng-click="playVideo(item.video)">
-                        <img src="img/play-icon.png" alt="">
-                    </i>
-                </figure>
-                <div class="caption caption2">Silpancho</div>
+            <div class="menus">
+                <div class="menu-box menu-box2">
+                    <figure class="figure">
+                        <div class="preview" src="img/sample/food-preview-sample.jpg"></div>
+                        <i class="icon fino">
+                            <img src="img/fino-logo2.png" alt="">
+                        </i>
+                        <i class="icon play" ng-click="playVideo(item.video)">
+                            <img src="img/play-icon.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption caption2">Silpancho</div>
+                </div>
             </div>
-        </div>
 
-    </ons-page>
+        </ons-page>
+    </ons-navigator>
 </ons-template>
 
 <ons-template id="invite.html">
-    <ons-page ng-controller="Invite" class="internal-tab">
-        <ons-toolbar>
-            <div class="left">
-                <ons-toolbar-button ng-click="goToFavorite()">
-                    <img src="img/heart-blue-icon.png" alt="">
-                </ons-toolbar-button>
-            </div>
-            <div class="center">
-                <img class="img-logo-header" src="img/logo-header.png"/>
-            </div>
+    <ons-navigator animation="slide" id="inviteNavigator">
+        <ons-page ng-controller="Invite" class="internal-tab">
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button ng-click="goToFavorite()">
+                        <img src="img/heart-blue-icon.png" alt="">
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    <img class="img-logo-header" src="img/logo-header.png"/>
+                </div>
 
-            <div class="right">
-                <ons-toolbar-button>
-                    <img src="img/info-icon.png" alt="">
-                </ons-toolbar-button>
-            </div>
-        </ons-toolbar>
-    </ons-page>
+                <div class="right">
+                    <ons-toolbar-button>
+                        <img src="img/info-icon.png" alt="">
+                    </ons-toolbar-button>
+                </div>
+            </ons-toolbar>
+        </ons-page>
+    </ons-navigator>
 </ons-template>
 
 <ons-template id="favorite.html">
@@ -1173,14 +1259,13 @@
 
         <div class="menus">
             <div class="normal">
-                <div class="menu-box menu-box2" ng-repeat="item in normal track by $index"
-                     ng-click="goToMenuDetail(item)">
+                <div class="menu-box menu-box2" ng-repeat="item in normal track by $index">
                     <figure class="figure">
-                        <div class="preview" src="{{ item.photo }}"></div>
+                        <div class="preview" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)"></div>
                         <i class="icon fino">
                             <img src="img/fino-logo2.png" alt="">
                         </i>
-                        <i ng-show="item.type=='video'" class="icon play">
+                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
                             <img src="img/play-icon.png" alt="">
                         </i>
                     </figure>
@@ -1189,14 +1274,13 @@
             </div>
 
             <div class="video">
-                <div class="menu-box menu-box2" ng-repeat="item in videos track by $index"
-                     ng-click="goToMenuDetail(item)">
+                <div class="menu-box menu-box2" ng-repeat="item in videos track by $index">
                     <figure class="figure">
-                        <div class="preview" src="{{ item.photo }}"></div>
+                        <div class="preview" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)"></div>
                         <i class="icon fino">
                             <img src="img/fino-logo2.png" alt="">
                         </i>
-                        <i ng-show="item.type=='video'" class="icon play">
+                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
                             <img src="img/play-icon.png" alt="">
                         </i>
                     </figure>

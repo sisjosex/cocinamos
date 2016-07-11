@@ -29,8 +29,11 @@ angular.module("services", []).factory("service", [ "$http", "$q", function($htt
         addToFavorite: function(params, success, error) {
             $http({method: 'JSONP', url: API_URL + 'addToFavorite?callback=JSON_CALLBACK', params: params}).success(success).error(error);
         },
+        getSubcategory: function(params, success, error) {
+            $http({method: 'JSONP', url: API_URL + 'getSubcategory?callback=JSON_CALLBACK', params: params}).success(success).error(error);
+        },
         addToRecipes: function(params, success, error) {
-            $http({method: 'JSONP', url: API_URL + 'getMenus?callback=JSON_CALLBACK', params: params}).success(success).error(error);
+            $http({method: 'JSONP', url: API_URL + 'addToRecipes?callback=JSON_CALLBACK', params: params}).success(success).error(error);
         },
         getMenu: function(params, success, error) {
             $http({method: 'JSONP', url: API_URL + 'getMenu?callback=JSON_CALLBACK', params: params}).success(success).error(error);
