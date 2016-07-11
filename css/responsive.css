@@ -82,4 +82,8 @@
     .col-time {
         max-width: 15% !important;
     }
+
+    .fino-button-container2 {
+        position:relative;
+    }
 }
