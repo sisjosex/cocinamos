@@ -1212,9 +1212,9 @@
     </ons-page>
 </ons-template>
 
-<ons-template id="invite.html">
-    <ons-navigator animation="slide" id="inviteNavigator">
-        <ons-page ng-controller="Invite" class="internal-tab secondary-toolbar">
+<ons-template id="myshopping.html">
+    <ons-navigator animation="slide" id="myshoppingNavigator">
+        <ons-page ng-controller="MyShopping" class="internal-tab secondary-toolbar">
             <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
                 <div class="left">
                     <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
@@ -1230,7 +1230,7 @@
                         <img src="img/heart-blue-icon.png" alt="">
                     </ons-toolbar-button>
                 </div>
-                <div class="center">Mis Invitaciones</div>
+                <div class="center">Mis Compras</div>
                 <div class="right">
                     <ons-toolbar-button ng-click="toggleSearch()">
                         Buscador
@@ -1239,11 +1239,11 @@
             </ons-toolbar>
 
             <ons-list>
-                <ons-list-item modifier="chevron" ng-repeat="item in invites track by $index"
+                <ons-list-item modifier="chevron" ng-repeat="item in recipes track by $index"
                                ng-click="goToShoppingDetail(item)">
                     <div class="left">
                         <div class="list__item__thumbnail myshopping-item">
-                            <div class="preview" src="{{ item.photo }}">
+                            <div class="preview" src="{{ trustSrc(item.photo) }}">
                             </div>
                         </div>
 
@@ -1325,9 +1325,10 @@
     </ons-page>
 </ons-template>
 
-<ons-template id="myshopping.html">
-    <ons-navigator animation="slide" id="myshoppingNavigator">
-        <ons-page ng-controller="MyShopping" class="internal-tab secondary-toolbar">
+
+<ons-template id="invite.html">
+    <ons-navigator animation="slide" id="inviteNavigator">
+        <ons-page ng-controller="Invite" class="internal-tab secondary-toolbar">
             <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
                 <div class="left">
                     <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
@@ -1343,7 +1344,7 @@
                         <img src="img/heart-blue-icon.png" alt="">
                     </ons-toolbar-button>
                 </div>
-                <div class="center">Mis Compras</div>
+                <div class="center">Mis Invitaciones</div>
                 <div class="right">
                     <ons-toolbar-button ng-click="toggleSearch()">
                         Buscador
@@ -1363,6 +1364,8 @@
                         <div class="center">
                             <div class="list__item__title">{{ item.name }}</div>
                             <div class="list__item__subtitle">Para {{ item.portions }} invitados</div>
+                            <div class="list__item__subtitle"><b ng-show="item.caducado != '1'" class="fecha">Fecha:</b> {{ item.fecha }} <b>Horas:</b> {{ item.hora }}</div>
+                            <div class="list__item__subtitle"><b ng-show="item.caducado == '1'" class="caducada">Invitacion Caducada</b></div>
                         </div>
                     </div>
                 </ons-list-item>
@@ -1370,6 +1373,114 @@
 
         </ons-page>
     </ons-navigator>
+</ons-template>
+
+<ons-template id="invite_detail.html">
+    <ons-page ng-controller="InviteDetail" class="tip white-page menu-detail">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center">
+            </div>
+
+            <div class="right">
+                <ons-toolbar-button>
+                    <ons-toolbar-button class="header-send" ng-click="shareBy(menu.name, menu.photo)">
+                        <img src="img/send.png" alt="">
+                    </ons-toolbar-button>
+                    <!--<ons-toolbar-button class="header-share">
+                        <img src="img/share.png" alt="">
+                    </ons-toolbar-button>-->
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="calc-header">
+            <figure class="figure">
+                <div class="preview" src="{{ trustSrc(menu.photo) }}" ng-click="showImage(menu.photo)"></div>
+            </figure>
+            <div class="chef-icon">
+                <img ng-src="img/chef-icon.png" alt="">
+            </div>
+            <div ng-click="playVideo(menu.video)" ng-show="menu.type=='video'" class="play-icon-main"></div>
+        </div>
+
+        <div class="calc-content" style="padding-top: 50px;">
+            <h1>configura la fecha, hora y dirección <br>
+                <span class="subtitle">Receta:</span> {{ menu.name }}</h1>
+
+            <hr>
+
+            <div class="recipe-section">
+                <div class="item item-title1" style="width:37%;">
+                    <h3>Seleccionaste</h3>
+                </div>
+                <div class="item" style="width:77px;">
+                    <img class="img1" src="img/porciones.png">
+                    <span>{{ menu.portions }} porciones</span>
+                </div>
+            </div>
+
+            <div class="form2">
+                <div class="form-control datefield">
+                    <div class="form-element">
+                        <label class="blue">Fecha:</label>
+
+                        <input ng-model="fecha" style="padding-left:10px;padding-right:10px;" type="date" class="value" placeholder="YYYY/MM/DD">
+                    </div>
+                    <div class="time-form">
+                        <img src="img/tiempo-preparacion.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form2">
+                <div class="form-control">
+                    <div class="form-element">
+                        <label class="blue">Hora:</label>
+
+                        <input ng-model="hora" style="padding-left:10px;padding-right:10px;" type="time" class="value" placeholder="08:20">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form2">
+                <div class="form-control">
+                    <div class="form-element">
+                        <label class="blue">Dirección:</label>
+
+                        <textarea ng-model="direccion" cols="30" rows="10" placeholder="Escriba la dirección del a invitación..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Elige a <span class="red">{{ menu.portions }}</span> contactos que prefieras:</h2>
+            <ons-row>
+                <ons-col class="share share-mail" ng-click="shareByEmail(recipe_share_text)">
+                    <div><img src="img/mail.png" alt=""></div>
+                    <div class="text-bottom">Mail</div>
+                </ons-col>
+                <ons-col class="share share-mensajes" ng-click="shareBySMS(recipe_share_text)">
+                    <div><img src="img/mensjae.png" alt=""></div>
+                    <div class="text-bottom">Mensajes</div>
+                </ons-col>
+                <ons-col class="share share-facebook" ng-click="shareByFacebook(recipe_share_text)">
+                    <div><img src="img/facebook.png" alt=""></div>
+                    <div class="text-bottom">Facebook</div>
+                </ons-col>
+                <ons-col class="share share-whatsapp" ng-click="shareByWhatsApp(recipe_share_text)">
+                    <div><img src="img/whatsapp.png" alt=""></div>
+                    <div class="text-bottom">Whatsapp</div>
+                </ons-col>
+            </ons-row>
+
+            <h2>Te faltan <span class="blue">{{ invitados }}</span> / <span class="red">{{ menu.portions }}</span></h2>
+
+
+        </div>
+
+    </ons-page>
 </ons-template>
 
 </body>

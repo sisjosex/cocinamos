@@ -787,6 +787,7 @@ img {
     text-align: right;
     font-family: 'SFUIText-Semibold';
     font-size: 15px;
+    vertical-align: top;
 }
 
 .form2 .form-control .value {
@@ -1154,4 +1155,49 @@ h2 {
     text-align: center;
     color:#e83b3b !important;
     font-weight: bold;
+}
+
+.fecha {
+    font-weight: bold;
+    color:#000;
+}
+
+.caducada, .red {
+    color:#e31f20;
+}
+
+.subtitle {
+    color:#86858b;
+}
+
+.blue {
+    color:#016af9;
+}
+
+.datefield {
+    position:relative;
+}
+
+.time-form {
+    top:0px;
+    left:40px;
+    width:50px;
+    position:absolute;
+}
+
+.recipe-section {
+    margin: 0 auto;
+}
+
+.form2 textarea {
+    display:inline-block;
+    text-align: left;
+    border: solid 1px #929292;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 15px;
+    width: 146px;
+    padding:10px;
+    font-family: 'SFUIText-Light';
+    height: 90px;
 }

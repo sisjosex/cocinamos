@@ -106,8 +106,8 @@ module.controller('MainNavigatorController', function ($scope, $rootScope) {
 
         if (document.location.protocol == 'http:') {
 
-            //API_URL = 'http://localhost/fino_app/admin/api/';
-            API_URL = 'http://cocinamosconfino.com/api/';
+            API_URL = 'http://localhost/fino_app/admin/api/';
+            //API_URL = 'http://cocinamosconfino.com/api/';
 
             setTimeout(onDeviceReady, 500);
 
@@ -1119,19 +1119,19 @@ module.controller('Invite', function ($scope, service, $sce) {
 
         $scope.buscar = function () {
             $scope.toggleSearch();
-            $scope.getMyShopping();
+            $scope.getInvites();
         };
 
         $scope.goToShoppingDetail = function(item) {
 
-            currentNavigator.pushPage('myshopping_detail.html', {data: {menu: item}});
+            currentNavigator.pushPage('invite_detail.html', {data: {menu: item}});
         };
 
-        $scope.getMyShopping = function() {
+        $scope.getInvites = function() {
 
             modal.show();
 
-            service.getMyShopping({app_id: getUserOrAppId(), search: $scope.search}, function(result){
+            service.getInvites({app_id: getUserOrAppId(), search: $scope.search}, function(result){
 
                 if (result.status == 'success') {
 
@@ -1162,7 +1162,121 @@ module.controller('Invite', function ($scope, service, $sce) {
             });
         };
 
-        $scope.getMyShopping();
+        $scope.getInvites();
+
+    });
+});
+
+module.controller('InviteDetail', function ($scope, service, $sce) {
+
+    ons.ready(function () {
+
+        $scope.fecha = new Date();
+        $scope.hora = new Date();
+        $scope.direccion = '';
+
+        $scope.invitados = 0;
+
+        $scope.menu = currentNavigator.pages[currentNavigator.pages.length - 1].data.menu;
+
+        $scope.recalculate_portions = function() {
+            for ( var i in  $scope.menu.ingredients) {
+
+                eval("var quantity = " + $scope.menu.ingredients[i].quantity + ";");
+
+                $scope.menu.ingredients[i].quantity_calculated = quantity * $scope.menu.portions;
+            }
+        };
+
+
+        $scope.shareByEmail = function() {
+
+            if($scope.invitados > 0) {
+                $scope.invitados --;
+            }
+
+            message = 'Te invito para las: ' + $scope.fecha + ', ' + $scope.hora + ' en la direccion: ' + $scope.direccion;
+
+            shareByEmail(message, function(){
+            });
+        };
+
+        $scope.shareBySMS = function() {
+
+            if($scope.invitados > 0) {
+                $scope.invitados --;
+            }
+
+            message = 'Te invito para las: ' + $scope.fecha + ', ' + $scope.hora + ' en la direccion: ' + $scope.direccion;
+
+            shareBySMS(message, function(){
+            });
+        };
+
+        $scope.shareByWhatsApp = function() {
+
+            if($scope.invitados > 0) {
+                $scope.invitados --;
+            }
+
+            message = 'Te invito para las: ' + $scope.fecha + ', ' + $scope.hora + ' en la direccion: ' + $scope.direccion;
+
+            shareByWhatsApp(message, function(){
+            });
+        };
+
+        $scope.shareByFacebook = function() {
+
+            if($scope.invitados > 0) {
+                $scope.invitados --;
+            }
+
+            message = 'Te invito para las: ' + $scope.fecha + ', ' + $scope.hora + ' en la direccion: ' + $scope.direccion;
+
+            shareByFacebook(message, function(){
+            });
+        };
+
+        $scope.getInviteDetail = function() {
+
+            modal.show();
+
+            service.getInviteDetail({app_id: getUserOrAppId(), id: $scope.menu.id}, function(result){
+
+                if (result.status == 'success') {
+
+                    modal.hide();
+
+                    $scope.menu = result.data;
+
+                    $scope.menu.portions = parseInt($scope.menu.portions);
+
+                    $scope.invitados = $scope.menu.portions;
+
+                    setTimeout(function () {
+                        $('.preview').each(function () {
+
+                            new ImageLoader($(this), new Image());
+
+                        });
+                    }, 500);
+
+                } else {
+
+                    modal.hide();
+
+                    alert(result.message);
+                }
+
+            }, function() {
+
+                modal.hide();
+
+                alert('No se pudo conectar con el servidor');
+            });
+        };
+
+        $scope.getInviteDetail();
 
     });
 });
