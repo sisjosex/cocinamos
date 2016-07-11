@@ -132,3 +132,44 @@ div.navigation-bar {
     color:#007aff;
     font-family: 'SFUIText-Light';
 }
+
+.checkbox__checkmark:before {
+    border-radius: 0px;
+    border: 1px solid #e83b3b;
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox__input:checked + .checkbox__checkmark:before {
+    background: transparent;
+    border: 1px solid #e83b3b;
+    color:#e83b3b;
+}
+
+.checkbox__checkmark:after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 12px;
+    height: 6px;
+    background: transparent;
+    border: 3px solid red;
+    border-width: 2px;
+    border-top: none;
+    border-right: none;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+}
+
+
+.checkbox__checkmark:after {
+    top: 4px;
+    left: 3px;
+}

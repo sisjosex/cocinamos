@@ -40,6 +40,12 @@ angular.module("services", []).factory("service", [ "$http", "$q", function($htt
         },
         getFavorites:  function(params, success, error) {
             $http({method: 'JSONP', url: API_URL + 'getFavorites?callback=JSON_CALLBACK', params: params}).success(success).error(error);
+        },
+        getMyShopping: function(params, success, error) {
+            $http({method: 'JSONP', url: API_URL + 'getMyShopping?callback=JSON_CALLBACK', params: params}).success(success).error(error);
+        },
+        getMyShoppingDetail: function(params, success, error) {
+            $http({method: 'JSONP', url: API_URL + 'getMyShoppingDetail?callback=JSON_CALLBACK', params: params}).success(success).error(error);
         }
     };
 } ]);
