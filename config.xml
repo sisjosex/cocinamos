@@ -144,7 +144,7 @@
 
     <plugin name="com.bunkerpalace.cordova.youtubevideoplayer" source="pgb" />
     <plugin name="com-sarriaroman-photoviewer" />
-    <plugin name="nl.x-services.plugins.socialsharing "source="pgb" />
+    <plugin name="nl.x-services.plugins.socialsharing" source="pgb" />
 
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
