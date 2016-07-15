@@ -1201,3 +1201,18 @@ h2 {
     font-family: 'SFUIText-Light';
     height: 90px;
 }
+
+.span-block {
+    font-size:12px;
+    font-family: 'SFUIText-Light';
+    display:block;
+}
+
+.header-title {
+    line-height: 20px;
+    margin-top: 11px;
+}
+
+.header-subtitle {
+    line-height: 12px;
+}

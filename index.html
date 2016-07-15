@@ -262,7 +262,8 @@
             </ons-toolbar>
 
             <div class="top-menu" ng-show="top_menu!=false">
-                <div class="preview" alt="" src="{{ trustSrc(top_menu.photo) }}" ng-click="goToMenuDetail(top_menu)"></div>
+                <div class="preview" alt="" src="{{ trustSrc(top_menu.photo) }}"
+                     ng-click="goToMenuDetail(top_menu)"></div>
                 <div class="top-menu-caption">
                     <div class="caption">{{ top_menu.name }}</div>
                     <div class="logo-top-menu">
@@ -497,7 +498,7 @@
 
             <ons-row>
                 <ons-col class="col-dot col-time" width="15%">
-                    <ons-button class="btn-yellow btn-yellow2" ng-click="agregar()"><img
+                    <ons-button class="btn-yellow btn-yellow2" ng-click="goToUnits()"><img
                             style="padding-top: 6px;padding-bottom: 6px;" src="img/time.png" alt="">
                     </ons-button>
                 </ons-col>
@@ -1325,7 +1326,6 @@
     </ons-page>
 </ons-template>
 
-
 <ons-template id="invite.html">
     <ons-navigator animation="slide" id="inviteNavigator">
         <ons-page ng-controller="Invite" class="internal-tab secondary-toolbar">
@@ -1364,8 +1364,11 @@
                         <div class="center">
                             <div class="list__item__title">{{ item.name }}</div>
                             <div class="list__item__subtitle">Para {{ item.portions }} invitados</div>
-                            <div class="list__item__subtitle"><b ng-show="item.caducado != '1'" class="fecha">Fecha:</b> {{ item.fecha }} <b>Horas:</b> {{ item.hora }}</div>
-                            <div class="list__item__subtitle"><b ng-show="item.caducado == '1'" class="caducada">Invitacion Caducada</b></div>
+                            <div class="list__item__subtitle"><b ng-show="item.caducado != '1'" class="fecha">Fecha:</b>
+                                {{ item.fecha }} <b>Horas:</b> {{ item.hora }}
+                            </div>
+                            <div class="list__item__subtitle"><b ng-show="item.caducado == '1'" class="caducada">Invitacion
+                                Caducada</b></div>
                         </div>
                     </div>
                 </ons-list-item>
@@ -1427,7 +1430,8 @@
                     <div class="form-element">
                         <label class="blue">Fecha:</label>
 
-                        <input ng-model="fecha" style="padding-left:10px;padding-right:10px;" type="date" class="value" placeholder="YYYY/MM/DD">
+                        <input ng-model="fecha" style="padding-left:10px;padding-right:10px;" type="date" class="value"
+                               placeholder="YYYY/MM/DD">
                     </div>
                     <div class="time-form">
                         <img src="img/tiempo-preparacion.png" alt="">
@@ -1440,7 +1444,8 @@
                     <div class="form-element">
                         <label class="blue">Hora:</label>
 
-                        <input ng-model="hora" style="padding-left:10px;padding-right:10px;" type="time" class="value" placeholder="08:20">
+                        <input ng-model="hora" style="padding-left:10px;padding-right:10px;" type="time" class="value"
+                               placeholder="08:20">
                     </div>
                 </div>
             </div>
@@ -1450,7 +1455,8 @@
                     <div class="form-element">
                         <label class="blue">Dirección:</label>
 
-                        <textarea ng-model="direccion" cols="30" rows="10" placeholder="Escriba la dirección del a invitación..."></textarea>
+                        <textarea ng-model="direccion" cols="30" rows="10"
+                                  placeholder="Escriba la dirección del a invitación..."></textarea>
                     </div>
                 </div>
             </div>
@@ -1479,6 +1485,129 @@
 
 
         </div>
+
+    </ons-page>
+</ons-template>
+
+<ons-template id="units.html">
+    <ons-page ng-controller="Units" class="internal-tab secondary-toolbar">
+        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
+            <div class="left">
+                <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
+                <ons-toolbar-button ng-click="buscar()">
+                    Buscar
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center">Medidas de Cocina</div>
+            <div class="right">
+                <ons-toolbar-button ng-click="toggleSearch()">
+                    Buscador
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <ons-list>
+            <ons-list-item modifier="chevron" ng-repeat="item in units track by $index"
+                           ng-click="goToUnit(item)">
+                <div class="">
+                    <div class="center">
+                        <div class="list__item__title">{{ item.name }}</div>
+                    </div>
+                </div>
+            </ons-list-item>
+        </ons-list>
+
+    </ons-page>
+</ons-template>
+
+<ons-template id="unit.html">
+    <ons-page ng-controller="Unit" class="internal-tab secondary-toolbar">
+        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
+            <div class="left">
+                <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
+                <ons-toolbar-button ng-click="buscar()">
+                    Buscar
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center">
+                <div class="header-title">Medidas de Cocina</div>
+                <span class="header-subtitle red span-block">{{ unitType.name }}</span>
+            </div>
+            <div class="right">
+                <ons-toolbar-button ng-click="toggleSearch()">
+                    Buscador
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <ons-list>
+            <div ng-repeat="item in units track by $index">
+                <ons-list-header ng-show="item.header!=''" modifier="">{{ item.header }}</ons-list-header>
+                <ons-list-item ng-show="item.header==undefined" modifier="chevron"
+                               ng-click="showUnit(item)">
+                    <div class="">
+                        <div class="center">
+                            <div class="list__item__title">{{ item.text }}</div>
+                        </div>
+                    </div>
+                </ons-list-item>
+            </div>
+        </ons-list>
+
+    </ons-page>
+</ons-template>
+
+<ons-template id="unit_cocina.html">
+    <ons-page ng-controller="Unit" class="internal-tab secondary-toolbar">
+        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
+            <div class="left">
+                <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
+                <ons-toolbar-button ng-click="buscar()">
+                    Buscar
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center">
+                <div>Medidas de Cocina</div>
+                <span class="red span-block">{{ unitType.name }}</span>
+            </div>
+            <div class="right">
+                <ons-toolbar-button ng-click="toggleSearch()">
+                    Buscador
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <ons-list>
+            <div ng-repeat="item in units track by $index">
+                <ons-list-header ng-show="item.header!=''" modifier="">{{ item.header }}</ons-list-header>
+                <ons-list-item ng-show="item.header==undefined" modifier="chevron"
+                               ng-click="showUnit(item)">
+                    <div class="">
+                        <div class="center">
+                            <div class="list__item__title">{{ item.text }}</div>
+                        </div>
+                    </div>
+                </ons-list-item>
+            </div>
+        </ons-list>
 
     </ons-page>
 </ons-template>

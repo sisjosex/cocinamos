@@ -52,6 +52,12 @@ angular.module("services", []).factory("service", [ "$http", "$q", function($htt
         },
         getInviteDetail: function(params, success, error) {
             $http({method: 'JSONP', url: API_URL + 'getInviteDetail?callback=JSON_CALLBACK', params: params}).success(success).error(error);
+        },
+        getUnitsType: function(params, success, error) {
+            $http({method: 'JSONP', url: API_URL + 'getUnitsType?callback=JSON_CALLBACK', params: params}).success(success).error(error);
+        },
+        getUnits: function(params, success, error) {
+            $http({method: 'JSONP', url: API_URL + 'getUnits?callback=JSON_CALLBACK', params: params}).success(success).error(error);
         }
     };
 } ]);

@@ -173,3 +173,7 @@ div.navigation-bar {
     top: 4px;
     left: 3px;
 }
+
+.list__header {
+    background: #fff;
+}

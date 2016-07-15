@@ -407,6 +407,10 @@ module.controller('Home', function ($scope, service, $sce) {
             eval('currentNavigator = ' + navigator + ';');
         };
 
+        setTimeout(function(){
+            currentNavigator = recipesNavigator;
+        }, 100);
+
         $scope.trustSrc = function (src) {
             return $sce.trustAsResourceUrl(src);
         };
@@ -517,6 +521,11 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
 
                 alert('No se pudo conectar con el servidor');
             });
+        };
+
+        $scope.goToUnits = function() {
+
+            currentNavigator.pushPage('units.html', {data:{}});
         };
 
         $scope.increasePortions = function() {
@@ -846,8 +855,6 @@ module.controller('Recipes', function ($scope, service, $sce) {
                 new ImageLoader($(this), new Image());
 
             });
-
-            currentNavigator = recipesNavigator;
 
         }, 500);
 
@@ -1281,6 +1288,112 @@ module.controller('InviteDetail', function ($scope, service, $sce) {
     });
 });
 
+module.controller('Units', function ($scope, service, $sce) {
+
+    ons.ready(function () {
+
+        $scope.search = '';
+
+        initSearch($scope);
+
+        $scope.buscar = function () {
+            $scope.toggleSearch();
+            $scope.getUnitsType();
+        };
+
+        $scope.goToUnit = function(item) {
+
+            console.log(item);
+
+            currentNavigator.pushPage('unit.html', {data: {unit: item}});
+        };
+
+        $scope.getUnitsType = function() {
+
+            modal.show();
+
+            service.getUnitsType({search: $scope.search}, function(result){
+
+                if (result.status == 'success') {
+
+                    modal.hide();
+
+                    $scope.units = result.data;
+
+                } else {
+
+                    modal.hide();
+
+                    alert(result.message);
+                }
+
+            }, function() {
+
+                modal.hide();
+
+                alert('No se pudo conectar con el servidor');
+            });
+        };
+
+        $scope.getUnitsType();
+
+    });
+});
+
+module.controller('Unit', function ($scope, service, $sce) {
+
+    ons.ready(function () {
+
+        $scope.unitType = currentNavigator.pages[currentNavigator.pages.length - 1].data.unit;
+
+        $scope.search = '';
+
+        initSearch($scope);
+
+        $scope.buscar = function () {
+            $scope.toggleSearch();
+            $scope.getUnits();
+        };
+
+        $scope.showUnit = function(item) {
+
+            alert(item.text);
+        };
+
+        $scope.getUnits = function() {
+
+            modal.show();
+
+            service.getUnits({type: $scope.unitType.id, search: $scope.search}, function(result){
+
+                if (result.status == 'success') {
+
+                    modal.hide();
+
+                    $scope.units = result.data;
+
+                } else {
+
+                    modal.hide();
+
+                    alert(result.message);
+                }
+
+            }, function() {
+
+                modal.hide();
+
+                alert('No se pudo conectar con el servidor');
+            });
+        };
+
+        $scope.getUnits();
+
+    });
+});
+
+
+/* Common function*/
 
 function initCommonFunctions($scope, services) {
 
@@ -1311,7 +1424,6 @@ function initCommonFunctions($scope, services) {
         });
     }
 }
-
 
 function initSearch($scope) {
 
