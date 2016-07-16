@@ -58,6 +58,12 @@ angular.module("services", []).factory("service", [ "$http", "$q", function($htt
         },
         getUnits: function(params, success, error) {
             $http({method: 'JSONP', url: API_URL + 'getUnits?callback=JSON_CALLBACK', params: params}).success(success).error(error);
+        },
+        getCalculadoraInformation: function(params, success, error) {
+            $http({method: 'JSONP', url: API_URL + 'getCalculadoraInformation?callback=JSON_CALLBACK', params: params}).success(success).error(error);
+        },
+        getCalculadoraDetalle: function(params, success, error) {
+            $http({method: 'JSONP', url: API_URL + 'getCalculadoraDetalle?callback=JSON_CALLBACK', params: params}).success(success).error(error);
         }
     };
 } ]);

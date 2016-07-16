@@ -15,6 +15,7 @@ var user_storage_key = 'finoapp_user';
 var app_id = 123;
 var recipe_share_text = 'Te invito a participar';
 var currentNavigator = undefined;
+var MyShoppingScope;
 
 var lang = {
     en: {
@@ -63,7 +64,7 @@ var lang = {
     }
 };
 
-module.controller('MainNavigatorController', function ($scope, $rootScope) {
+module.controller('MainNavigatorController', function ($scope, $rootScope, service, $sce) {
 
     ons.ready(function () {
 
@@ -100,6 +101,52 @@ module.controller('MainNavigatorController', function ($scope, $rootScope) {
 
         $rootScope.shareBy = function(message, url) {
             shareBy(message, url);
+        };
+
+        $rootScope.calculator_params = {};
+
+        $rootScope.trustSrc = function (src) {
+            return $sce.trustAsResourceUrl(src);
+        };
+
+
+        $rootScope.ingredient = 'Elige tu alimento...';
+        $rootScope.porcion = 'Elige la cantidad de porciones...';
+        $rootScope.categoria =  'Elige tu categoria...';
+        $rootScope.nivel_de_actividad = 'Elige tu nivel...';
+
+        $rootScope.getCalculadoraInformation = function(table) {
+
+            modal.show();
+
+            service.getCalculadoraInformation({app_id: getUserOrAppId(), table: table}, function(result){
+
+                if (result.status == 'success') {
+
+                    modal.hide();
+
+                    $rootScope.calculator_params = result.data;
+
+                    /*
+                    $rootScope.ingredient = $rootScope.calculator_params.alimentos[0].name;
+                    $rootScope.porcion = $rootScope.calculator_params.porciones[0].name;
+                    $rootScope.categoria = $rootScope.calculator_params.categorias[0].name;
+
+                    console.log($rootScope.ingredient);*/
+
+                } else {
+
+                    modal.hide();
+
+                    alert(result.message);
+                }
+
+            }, function() {
+
+                modal.hide();
+
+                alert('No se pudo conectar con el servidor');
+            });
         };
 
         $scope.deviceReady = false;
@@ -405,6 +452,13 @@ module.controller('Home', function ($scope, service, $sce) {
         $scope.changeNavigator = function(navigator) {
 
             eval('currentNavigator = ' + navigator + ';');
+
+            if(navigator == 'myshoppingNavigator') {
+
+                if(MyShoppingScope) {
+                    MyShoppingScope.getMyShopping();
+                }
+            }
         };
 
         setTimeout(function(){
@@ -446,7 +500,7 @@ module.controller('Home', function ($scope, service, $sce) {
                         navigator.splashscreen.hide();
                     }catch(error){}
 
-                    $('.preview').each(function () {
+                    $('.home-page .preview').each(function () {
 
                         new ImageLoader($(this), new Image());
 
@@ -485,14 +539,6 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
         $scope.trustSrc = function (src) {
             return $sce.trustAsResourceUrl(src);
         };
-
-        setTimeout(function () {
-            $('.preview').each(function () {
-
-                new ImageLoader($(this), new Image());
-
-            });
-        }, 500);
 
         initCommonFunctions($scope, {
             service: service
@@ -563,7 +609,7 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
                 $scope.recalculate_portions();
 
                 setTimeout(function () {
-                    $('.preview').each(function () {
+                    $('.menu_detail-page .preview').each(function () {
 
                         $('.image-list-container').each(function(){
 
@@ -608,14 +654,6 @@ module.controller('Favorite', function ($scope, service, $sce) {
         $scope.total_videos = 0;
         $scope.search = '';
 
-        setTimeout(function () {
-            $('.preview').each(function () {
-
-                new ImageLoader($(this), new Image());
-
-            });
-        }, 500);
-
         $scope.goToMenuDetail = function (menu) {
             currentNavigator.pushPage('menu_detail.html', {data: {menu: menu}});
         };
@@ -656,7 +694,7 @@ module.controller('Favorite', function ($scope, service, $sce) {
                     $scope.total_videos = result.total_videos;
 
                     setTimeout(function () {
-                        $('.preview').each(function () {
+                        $('.favorite-page .preview').each(function () {
 
                             new ImageLoader($(this), new Image());
 
@@ -715,7 +753,7 @@ module.controller('Category', function ($scope, service, $sce) {
                     $scope.categories = result.data;
 
                     setTimeout(function () {
-                        $('.preview').each(function () {
+                        $('.category-page .preview').each(function () {
 
                             new ImageLoader($(this), new Image());
 
@@ -738,14 +776,6 @@ module.controller('Category', function ($scope, service, $sce) {
         };
 
         $scope.getCategories();
-
-        setTimeout(function () {
-            $('.preview').each(function () {
-
-                new ImageLoader($(this), new Image());
-
-            });
-        }, 500);
     });
 });
 
@@ -766,14 +796,6 @@ module.controller('Subcategory', function ($scope, service, $sce) {
         $scope.total_menus = 0;
         $scope.total_videos = 0;
         $scope.search = '';
-
-        setTimeout(function () {
-            $('.preview').each(function () {
-
-                new ImageLoader($(this), new Image());
-
-            });
-        }, 500);
 
         $scope.goToMenuDetail = function (menu) {
             currentNavigator.pushPage('menu_detail.html', {data: {menu: menu}});
@@ -815,7 +837,7 @@ module.controller('Subcategory', function ($scope, service, $sce) {
                     $scope.total_videos = result.total_videos;
 
                     setTimeout(function () {
-                        $('.preview').each(function () {
+                        $('.subcategory-page .preview').each(function () {
 
                             new ImageLoader($(this), new Image());
 
@@ -850,7 +872,7 @@ module.controller('Recipes', function ($scope, service, $sce) {
         };
 
         setTimeout(function () {
-            $('.preview').each(function () {
+            $('.recipes-page .preview').each(function () {
 
                 new ImageLoader($(this), new Image());
 
@@ -874,12 +896,345 @@ module.controller('Calculator', function ($scope) {
         };
 
         setTimeout(function () {
-            $('.preview').each(function () {
+            $('.calculator-page .preview').each(function () {
 
                 new ImageLoader($(this), new Image());
 
             });
         }, 500);
+    });
+});
+
+
+module.controller('CalNutrientes', function ($scope, service) {
+
+    ons.ready(function () {
+
+        calNutrientesScope = $scope;
+
+        $scope.ingredient_id = '';
+        $scope.porcion_id = '';
+        $scope.table = 'calculadora_nutrientes';
+
+        $scope.goToPage = function (page) {
+
+            calculatorNavigator.pushPage(page, {});
+        };
+
+        $scope.updateIngredient = function() {
+            for(var i in $scope.calculator_params.alimentos) {
+                if($scope.calculator_params.alimentos[i].id == $scope.ingredient_id) {
+                    $scope.ingredient = $scope.calculator_params.alimentos[i].name;
+                }
+            }
+
+            $scope.getCalculatorDetails();
+        };
+
+        $scope.updatePorcion = function() {
+            for(var i in $scope.calculator_params.porciones) {
+                if($scope.calculator_params.porciones[i].id == $scope.porcion_id) {
+                    $scope.porcion = $scope.calculator_params.porciones[i].name;
+                }
+            }
+
+            $scope.getCalculatorDetails();
+        };
+
+
+        $scope.getCalculatorDetails = function() {
+
+            if($scope.ingredient_id != '' && $scope.porcion_id != '') {
+
+                modal.show();
+
+                service.getCalculadoraDetalle({
+                    ingredient_id: $scope.ingredient_id,
+                    porcion: $scope.porcion_id,
+                    table: $scope.table
+                }, function(result){
+
+                    if (result.status == 'success') {
+
+                        modal.hide();
+
+                        $scope.result = result.data;
+
+                    } else {
+
+                        modal.hide();
+
+                        alert(result.message);
+                    }
+
+                }, function(err){
+
+                    modal.hide();
+
+                    alert('No se pudo conectar con el servidor');
+                });
+            }
+        };
+
+        setTimeout(function () {
+            $('.calc-nutrientes-page .preview').each(function () {
+
+                new ImageLoader($(this), new Image());
+
+            });
+        }, 500);
+
+        $scope.getCalculadoraInformation($scope.table);
+
+    });
+});
+
+module.controller('CalcProteinas', function ($scope, service) {
+
+    ons.ready(function () {
+
+        calNutrientesScope = $scope;
+
+        $scope.categoria_id = '';
+        $scope.ingredient_id = '';
+        $scope.porcion_id = '';
+        $scope.table = 'calculadora_proteinas';
+
+        $scope.goToPage = function (page) {
+
+            calculatorNavigator.pushPage(page, {});
+        };
+
+        $scope.updateIngredient = function() {
+            for(var i in $scope.calculator_params.alimentos) {
+                if($scope.calculator_params.alimentos[i].id == $scope.ingredient_id) {
+                    $scope.ingredient = $scope.calculator_params.alimentos[i].name;
+                }
+            }
+
+            $scope.getCalculatorDetails();
+        };
+
+        $scope.updateCategoria = function() {
+            for(var i in $scope.calculator_params.categorias) {
+                if($scope.calculator_params.categorias[i].id == $scope.categoria_id) {
+                    $scope.categoria = $scope.calculator_params.categorias[i].name;
+                }
+            }
+
+            $scope.getCalculatorDetails();
+        };
+
+
+        $scope.getCalculatorDetails = function() {
+
+            if($scope.categoria_id != '' && $scope.ingredient_id != '') {
+
+                modal.show();
+
+                service.getCalculadoraDetalle({
+                    categoria_id: $scope.categoria_id,
+                    ingredient_id: $scope.ingredient_id,
+                    table: $scope.table
+                }, function(result){
+
+                    if (result.status == 'success') {
+
+                        modal.hide();
+
+                        $scope.result = result.data;
+
+                    } else {
+
+                        modal.hide();
+
+                        alert(result.message);
+                    }
+
+                }, function(err){
+
+                    modal.hide();
+
+                    alert('No se pudo conectar con el servidor');
+                });
+            }
+        };
+
+        setTimeout(function () {
+            $('.calc-proteinas-page .preview').each(function () {
+
+                new ImageLoader($(this), new Image());
+
+            });
+        }, 500);
+
+        $scope.getCalculadoraInformation($scope.table);
+
+    });
+});
+
+module.controller('CalcCalorias', function ($scope, service) {
+
+    ons.ready(function () {
+
+        calNutrientesScope = $scope;
+
+        $scope.categoria_id = '';
+        $scope.ingredient_id = '';
+        $scope.porcion_id = '';
+        $scope.table = 'calculadora_calorias';
+
+        $scope.goToPage = function (page) {
+
+            calculatorNavigator.pushPage(page, {});
+        };
+
+        $scope.updateIngredient = function() {
+            for(var i in $scope.calculator_params.alimentos) {
+                if($scope.calculator_params.alimentos[i].id == $scope.ingredient_id) {
+                    $scope.ingredient = $scope.calculator_params.alimentos[i].name;
+                }
+            }
+
+            $scope.getCalculatorDetails();
+        };
+
+        $scope.updateCategoria = function() {
+            for(var i in $scope.calculator_params.categorias) {
+                if($scope.calculator_params.categorias[i].id == $scope.categoria_id) {
+                    $scope.categoria = $scope.calculator_params.categorias[i].name;
+                }
+            }
+
+            $scope.getCalculatorDetails();
+        };
+
+
+        $scope.getCalculatorDetails = function() {
+
+            if($scope.categoria_id != '' && $scope.ingredient_id != '') {
+
+                modal.show();
+
+                service.getCalculadoraDetalle({
+                    categoria_id: $scope.categoria_id,
+                    ingredient_id: $scope.ingredient_id,
+                    table: $scope.table
+                }, function(result){
+
+                    if (result.status == 'success') {
+
+                        modal.hide();
+
+                        $scope.result = result.data;
+
+                    } else {
+
+                        modal.hide();
+
+                        alert(result.message);
+                    }
+
+                }, function(err){
+
+                    modal.hide();
+
+                    alert('No se pudo conectar con el servidor');
+                });
+            }
+        };
+
+        setTimeout(function () {
+            $('.calc-calorias-page .preview').each(function () {
+
+                new ImageLoader($(this), new Image());
+
+            });
+        }, 500);
+
+        $scope.getCalculadoraInformation($scope.table);
+
+    });
+});
+
+module.controller('CalCaloriasDiarias', function ($scope, service) {
+
+    ons.ready(function () {
+
+        calNutrientesScope = $scope;
+
+        $scope.peso_corporal = '';
+        $scope.nivel_de_actividad_id = '';
+        $scope.table = 'calculadora_calorias_diarias';
+
+        $scope.goToPage = function (page) {
+
+            calculatorNavigator.pushPage(page, {});
+        };
+
+        $scope.updatePesoCorporal = function() {
+
+            $scope.getCalculatorDetails(false);
+        };
+
+        $scope.updateNivelDeActividad = function() {
+            for(var i in $scope.calculator_params.nivel_de_actividad) {
+                if($scope.calculator_params.nivel_de_actividad[i].id == $scope.nivel_de_actividad_id) {
+                    $scope.nivel_de_actividad = $scope.calculator_params.nivel_de_actividad[i].name;
+                }
+            }
+
+            $scope.getCalculatorDetails(true);
+        };
+
+
+        $scope.getCalculatorDetails = function(showLoader) {
+
+            if($scope.categoria_id != '' && $scope.ingredient_id != '') {
+
+                if(showLoader) {
+
+                    modal.show();
+                }
+
+                service.getCalculadoraDetalle({
+                    nivel_de_actividad_id: $scope.nivel_de_actividad_id,
+                    peso_corporal: $scope.peso_corporal,
+                    table: $scope.table
+                }, function(result){
+
+                    if (result.status == 'success') {
+
+                        modal.hide();
+
+                        $scope.result = result.data;
+
+                    } else {
+
+                        modal.hide();
+
+                        alert(result.message);
+                    }
+
+                }, function(err){
+
+                    modal.hide();
+
+                    alert('No se pudo conectar con el servidor');
+                });
+            }
+        };
+
+        setTimeout(function () {
+            $('.calc-calorias-diarias-page .preview').each(function () {
+
+                new ImageLoader($(this), new Image());
+
+            });
+        }, 500);
+
+        $scope.getCalculadoraInformation($scope.table);
+
     });
 });
 
@@ -1003,6 +1358,8 @@ module.controller('MyShopping', function ($scope, service, $sce) {
 
     ons.ready(function () {
 
+        MyShoppingScope = $scope;
+
         $scope.search = '';
 
         initSearch($scope);
@@ -1030,7 +1387,7 @@ module.controller('MyShopping', function ($scope, service, $sce) {
                     $scope.recipes = result.data;
 
                     setTimeout(function () {
-                        $('.preview').each(function () {
+                        $('.myshopping-page .preview').each(function () {
 
                             new ImageLoader($(this), new Image());
 
@@ -1089,7 +1446,7 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
                     $scope.recalculate_portions();
 
                     setTimeout(function () {
-                        $('.preview').each(function () {
+                        $('.myshopping_detail-page .preview').each(function () {
 
                             new ImageLoader($(this), new Image());
 
@@ -1147,7 +1504,7 @@ module.controller('Invite', function ($scope, service, $sce) {
                     $scope.recipes = result.data;
 
                     setTimeout(function () {
-                        $('.preview').each(function () {
+                        $('.invite-page .preview').each(function () {
 
                             new ImageLoader($(this), new Image());
 
@@ -1261,7 +1618,7 @@ module.controller('InviteDetail', function ($scope, service, $sce) {
                     $scope.invitados = $scope.menu.portions;
 
                     setTimeout(function () {
-                        $('.preview').each(function () {
+                        $('.invite_detail-page .preview').each(function () {
 
                             new ImageLoader($(this), new Image());
 

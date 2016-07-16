@@ -52,7 +52,7 @@
 </ons-navigator>
 
 <ons-template id="intro.html">
-    <ons-page ng-controller="Intro" class="intro">
+    <ons-page ng-controller="Intro" class="intro intro-page">
 
         <div class="intro-content">
             <div class="center-content">
@@ -83,7 +83,7 @@
 </ons-template>
 
 <ons-template id="register.html">
-    <ons-page ng-controller="Register" class="register intro internal-tab">
+    <ons-page ng-controller="Register" class="register intro internal-tab register-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button>Cancelar</ons-back-button>
@@ -128,7 +128,7 @@
 </ons-template>
 
 <ons-template id="login.html">
-    <ons-page ng-controller="Login" class="register intro internal-tab login">
+    <ons-page ng-controller="Login" class="register intro internal-tab login login-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button>Cancelar</ons-back-button>
@@ -167,7 +167,7 @@
 </ons-template>
 
 <ons-template id="forgot.html">
-    <ons-page ng-controller="Forgot" class="register intro internal-tab login">
+    <ons-page ng-controller="Forgot" class="register intro internal-tab login forgot-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button>Cancelar</ons-back-button>
@@ -203,7 +203,7 @@
 </ons-template>
 
 <ons-template id="home.html">
-    <ons-page id="home" ng-controller="Home">
+    <ons-page id="home" ng-controller="Home" class="home-page">
         <ons-tabbar>
             <ons-tab page="recipes.html" active ng-click="changeNavigator('recipesNavigator')">
                 <div class="tab-bar__icon recipe">
@@ -242,7 +242,7 @@
 
 <ons-template id="recipes.html">
     <ons-navigator animation="slide" id="recipesNavigator">
-        <ons-page ng-controller="Recipes" class="internal-tab">
+        <ons-page ng-controller="Recipes" class="internal-tab recipes-page">
 
             <ons-toolbar class="toolbar-big">
                 <div class="left">
@@ -300,7 +300,7 @@
 </ons-template>
 
 <ons-template id="category.html">
-    <ons-page ng-controller="Category" class="home internal-tab">
+    <ons-page ng-controller="Category" class="home internal-tab category-page">
 
         <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
             <div class="left">
@@ -341,7 +341,7 @@
 </ons-template>
 
 <ons-template id="subcategory.html">
-    <ons-page ng-controller="Subcategory" class="home internal-tab secondary-toolbar">
+    <ons-page ng-controller="Subcategory" class="home internal-tab secondary-toolbar subcategory-page">
 
         <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
             <div class="left">
@@ -419,7 +419,7 @@
 </ons-template>
 
 <ons-template id="menu_detail.html">
-    <ons-page ng-controller="MenuDetail" class="tip white-page menu-detail">
+    <ons-page ng-controller="MenuDetail" class="tip white-page menu-detail menu_detail-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -575,7 +575,7 @@
 
 <ons-template id="calculator.html">
     <ons-navigator animation="slide" id="calculatorNavigator">
-        <ons-page ng-controller="Calculator" class="home internal-tab">
+        <ons-page ng-controller="Calculator" class="home internal-tab calculator-page">
             <ons-toolbar>
                 <div class="left">
                     <ons-toolbar-button ng-click="goToFavorite()">
@@ -628,7 +628,7 @@
 </ons-template>
 
 <ons-template id="calc-nutrientes.html">
-    <ons-page ng-controller="Calculator" class="home">
+    <ons-page ng-controller="CalNutrientes" class="home calc-nutrientes-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -666,10 +666,10 @@
                         <label for="">Alimento:</label>
 
                         <div class="select-inline">
-                            <select name=""></select>
+                            <select ng-change="updateIngredient()" ng-model="ingredient_id" ng-options="item.id as item.name for item in calculator_params.alimentos"></select>
 
                             <div class="select">
-                                <span>Elige tu alimento...</span>
+                                <span>{{ ingredient }}<!-- Elige tu alimento... --></span>
                             </div>
                         </div>
                     </div>
@@ -680,10 +680,10 @@
                         <label for="">Porciones:</label>
 
                         <div class="select-inline">
-                            <select name=""></select>
+                            <select ng-change="updatePorcion()" ng-model="porcion_id" ng-options="item.id as item.name for item in calculator_params.porciones"></select>
 
                             <div class="select">
-                                <span>Elige la cantidad de porciones...</span>
+                                <span>{{ porcion }}<!-- Elige la cantidad de porciones... --></span>
                             </div>
                         </div>
                     </div>
@@ -697,7 +697,7 @@
                     <div class="form-element">
                         <label for="">Calorias:</label>
 
-                        <div class="value"><span>999 cal</span></div>
+                        <div class="value"><span>{{ result.calorias }} cal</span></div>
                     </div>
                 </div>
 
@@ -705,7 +705,7 @@
                     <div class="form-element">
                         <label for="">Carbohidratos:</label>
 
-                        <div class="value"><span>999 gramos</span></div>
+                        <div class="value"><span>{{ result.carbohidratos }} gramos</span></div>
                     </div>
                 </div>
 
@@ -713,7 +713,7 @@
                     <div class="form-element">
                         <label for="">Proteínas:</label>
 
-                        <div class="value"><span>999 gramos</span></div>
+                        <div class="value"><span>{{ result.proteinas }} gramos</span></div>
                     </div>
                 </div>
 
@@ -721,7 +721,7 @@
                     <div class="form-element">
                         <label for="">Grasas:</label>
 
-                        <div class="value"><span>999 gramos</span></div>
+                        <div class="value"><span>{{ result.grasas }} gramos</span></div>
                     </div>
                 </div>
             </div>
@@ -731,7 +731,7 @@
 </ons-template>
 
 <ons-template id="calc-proteinas.html">
-    <ons-page ng-controller="Calculator" class="home">
+    <ons-page ng-controller="CalcProteinas" class="home calc-proteinas-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -782,10 +782,10 @@
                         <label for="">Categoría:</label>
 
                         <div class="select-inline">
-                            <select name=""></select>
+                            <select ng-change="updateCategoria()" ng-model="categoria_id" ng-options="item.id as item.name for item in calculator_params.categorias"></select>
 
                             <div class="select">
-                                <span>Todas las categorías...</span>
+                                <span>{{ categoria }}<!-- Elige tu alimento... --></span>
                             </div>
                         </div>
                     </div>
@@ -796,10 +796,10 @@
                         <label for="">Alimento:</label>
 
                         <div class="select-inline">
-                            <select name=""></select>
+                            <select ng-change="updateIngredient()" ng-model="ingredient_id" ng-options="item.id as item.name for item in calculator_params.alimentos"></select>
 
                             <div class="select">
-                                <span>Todos los alimentos...</span>
+                                <span>{{ ingredient }}<!-- Elige tu alimento... --></span>
                             </div>
                         </div>
                     </div>
@@ -807,14 +807,14 @@
             </div>
 
             <h4>Cantidad de Proteínas</h4>
-            <h4 style="color:#e83b3b;border-bottom:none;">Nombre del Alimento</h4>
+            <h4 style="color:#e83b3b;border-bottom:none;">{{ ingredient }}</h4>
 
             <div class="form2">
                 <div class="form-control">
                     <div class="form-element">
                         <label for="">Por cada 100gr:</label>
 
-                        <div class="value"><span>999 kcal</span></div>
+                        <div class="value"><span>{{ result.proteinas_por_kcal }} kcal</span></div>
                     </div>
                 </div>
 
@@ -822,7 +822,7 @@
                     <div class="form-element">
                         <label for="">Peso de la ración:</label>
 
-                        <div class="value"><span>999 gramos</span></div>
+                        <div class="value"><span>{{ result.peso_racion }} gramos</span></div>
                     </div>
                 </div>
 
@@ -830,7 +830,7 @@
                     <div class="form-element">
                         <label for="">Por cada ración:</label>
 
-                        <div class="value"><span>999 kcal</span></div>
+                        <div class="value"><span>{{ result.proteinas }} kcal</span></div>
                     </div>
                 </div>
             </div>
@@ -840,7 +840,7 @@
 </ons-template>
 
 <ons-template id="calc-calorias.html">
-    <ons-page ng-controller="Calculator" class="home">
+    <ons-page ng-controller="CalcCalorias" class="home calc-calorias-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -897,10 +897,10 @@
                         <label>Categoría:</label>
 
                         <div class="select-inline">
-                            <select name=""></select>
+                            <select ng-change="updateCategoria()" ng-model="categoria_id" ng-options="item.id as item.name for item in calculator_params.categorias"></select>
 
                             <div class="select">
-                                <span>Todas las categorías...</span>
+                                <span>{{ categoria }}<!-- Elige tu alimento... --></span>
                             </div>
                         </div>
                     </div>
@@ -911,10 +911,10 @@
                         <label>Alimento:</label>
 
                         <div class="select-inline">
-                            <select name=""></select>
+                            <select ng-change="updateIngredient()" ng-model="ingredient_id" ng-options="item.id as item.name for item in calculator_params.alimentos"></select>
 
                             <div class="select">
-                                <span>Todos los alimentos...</span>
+                                <span>{{ ingredient }}<!-- Elige tu alimento... --></span>
                             </div>
                         </div>
                     </div>
@@ -923,14 +923,14 @@
 
             <h4>Cantidad de Calorías</h4>
 
-            <h4 style="color:#e83b3b;border-bottom:none;">Nombre del Alimento</h4>
+            <h4 style="color:#e83b3b;border-bottom:none;">{{ ingredient }}</h4>
 
             <div class="form2">
                 <div class="form-control">
                     <div class="form-element" style="text-align: center;">
                         <label for="">Por cada 100gr:</label>
 
-                        <div class="value"><span>999 calorías</span></div>
+                        <div class="value"><span>{{ result.calorias }} calorías</span></div>
                     </div>
                 </div>
 
@@ -938,7 +938,7 @@
                     <div class="form-element" style="text-align: center;">
                         <label for="">Peso de la ración:</label>
 
-                        <div class="value"><span>999 gramos</span></div>
+                        <div class="value"><span>{{ result.peso_racion }} gramos</span></div>
                     </div>
                 </div>
 
@@ -946,7 +946,7 @@
                     <div class="form-element" style="text-align: center;">
                         <label for="">Por cada ración:</label>
 
-                        <div class="value"><span>999 kcal</span></div>
+                        <div class="value"><span>{{ result.calorias_por_kcal }} kcal</span></div>
                     </div>
                 </div>
             </div>
@@ -956,7 +956,7 @@
 </ons-template>
 
 <ons-template id="calc-calorias-diarias.html">
-    <ons-page ng-controller="Calculator" class="home">
+    <ons-page ng-controller="CalCaloriasDiarias" class="home calc-calorias-diarias-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -975,7 +975,7 @@
 
         <div class="calc-header">
             <figure class="figure">
-                <div class="preview" src="img/calc-calorias-diarias.png"></div>
+                <div class="preview" src="{{ trustSrc('img/calc-calorias-diarias.png') }}"></div>
             </figure>
             <div class="chef-icon">
                 <img ng-src="img/chef-icon.png" alt="">
@@ -995,8 +995,8 @@
                     <div class="form-element">
                         <label for="" style="width: 150px;">Peso corporal (kg.):</label>
 
-                        <input style="padding-left:10px;padding-right:10px;" type="text" class="value"
-                               placeholder="999 kg">
+                        <input style="padding-left:10px;padding-right:10px;" type="number" class="value" ng-model="peso_corporal"
+                               placeholder="999 kg" ng-change="updatePesoCorporal()">
                     </div>
                 </div>
             </div>
@@ -1007,10 +1007,10 @@
                         <label for="" style="width: 150px;">Nivel de Actividad:</label>
 
                         <div class="select-inline">
-                            <select name=""></select>
+                            <select ng-change="updateNivelDeActividad()" ng-model="nivel_de_actividad_id" ng-options="item.id as item.name for item in calculator_params.nivel_de_actividad"></select>
 
                             <div class="select">
-                                <span>Elige tu nivel...</span>
+                                <span>{{ nivel_de_actividad }}<!-- Elige tu alimento... --></span>
                             </div>
                         </div>
                     </div>
@@ -1024,7 +1024,7 @@
             <div class="form2">
                 <div class="form-control">
                     <div class="form-element" style="text-align: center;">
-                        <div class="value"><span>99999 calorías</span></div>
+                        <div class="value"><span>{{ result.calorias_mantener }} calorías</span></div>
                     </div>
                 </div>
             </div>
@@ -1035,7 +1035,7 @@
             <div class="form2">
                 <div class="form-control">
                     <div class="form-element" style="text-align: center;">
-                        <div class="value"><span>99999 calorías</span></div>
+                        <div class="value"><span>{{ result.calorias_bajar }} calorías</span></div>
                     </div>
                 </div>
             </div>
@@ -1046,7 +1046,7 @@
 
 <ons-template id="counsel.html">
     <ons-navigator animation="slide" id="counselNavigator">
-        <ons-page ng-controller="Counsel" class="home internal-tab">
+        <ons-page ng-controller="Counsel" class="home internal-tab counsel-page">
             <ons-toolbar>
                 <div class="left">
                     <ons-toolbar-button ng-click="goToFavorite()">
@@ -1079,7 +1079,7 @@
 </ons-template>
 
 <ons-template id="tip_list.html">
-    <ons-page ng-controller="TipList" class="home internal-tab">
+    <ons-page ng-controller="TipList" class="home internal-tab tip_list-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -1105,7 +1105,7 @@
 </ons-template>
 
 <ons-template id="tip.html">
-    <ons-page ng-controller="Tip" class=" tip white-page internal-tab">
+    <ons-page ng-controller="Tip" class=" tip white-page internal-tab tip-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -1136,7 +1136,7 @@
 </ons-template>
 
 <ons-template id="favorite.html">
-    <ons-page ng-controller="Favorite" class="home internal-tab secondary-toolbar">
+    <ons-page ng-controller="Favorite" class="home internal-tab secondary-toolbar favorite-page">
 
         <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
             <div class="left">
@@ -1215,7 +1215,7 @@
 
 <ons-template id="myshopping.html">
     <ons-navigator animation="slide" id="myshoppingNavigator">
-        <ons-page ng-controller="MyShopping" class="internal-tab secondary-toolbar">
+        <ons-page ng-controller="MyShopping" class="internal-tab secondary-toolbar myshopping-page">
             <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
                 <div class="left">
                     <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
@@ -1261,7 +1261,7 @@
 </ons-template>
 
 <ons-template id="myshopping_detail.html">
-    <ons-page ng-controller="MyshoppingDetail" class="tip white-page menu-detail">
+    <ons-page ng-controller="MyshoppingDetail" class="tip white-page menu-detail myshopping_detail-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -1328,7 +1328,7 @@
 
 <ons-template id="invite.html">
     <ons-navigator animation="slide" id="inviteNavigator">
-        <ons-page ng-controller="Invite" class="internal-tab secondary-toolbar">
+        <ons-page ng-controller="Invite" class="internal-tab secondary-toolbar invite-page">
             <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
                 <div class="left">
                     <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
@@ -1379,7 +1379,7 @@
 </ons-template>
 
 <ons-template id="invite_detail.html">
-    <ons-page ng-controller="InviteDetail" class="tip white-page menu-detail">
+    <ons-page ng-controller="InviteDetail" class="tip white-page menu-detail invite_detail-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -1490,7 +1490,7 @@
 </ons-template>
 
 <ons-template id="units.html">
-    <ons-page ng-controller="Units" class="internal-tab secondary-toolbar">
+    <ons-page ng-controller="Units" class="internal-tab secondary-toolbar units-page">
         <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
             <div class="left">
                 <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
@@ -1527,7 +1527,7 @@
 </ons-template>
 
 <ons-template id="unit.html">
-    <ons-page ng-controller="Unit" class="internal-tab secondary-toolbar">
+    <ons-page ng-controller="Unit" class="internal-tab secondary-toolbar unit-page">
         <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
             <div class="left">
                 <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
@@ -1570,7 +1570,7 @@
 </ons-template>
 
 <ons-template id="unit_cocina.html">
-    <ons-page ng-controller="Unit" class="internal-tab secondary-toolbar">
+    <ons-page ng-controller="Unit" class="internal-tab secondary-toolbar unit_cocina-page">
         <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
             <div class="left">
                 <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
