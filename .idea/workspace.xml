@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="592c7479-11ec-4e29-94f2-654d88ee78df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60387516">
-              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="63" column="58" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -37,7 +38,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.384615">
+            <state vertical-scroll-proportion="0.0">
               <caret line="1321" column="66" selection-start-line="1321" selection-start-column="66" selection-end-line="1321" selection-end-column="66" />
               <folding>
                 <element signature="n#ons-modal#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -96,35 +97,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1490" column="32" selection-start-line="1490" selection-start-column="32" selection-end-line="1490" selection-end-column="32" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#2032#5912#0" expanded="false" />
                 <element signature="n#!!block;n#onResize#0" expanded="false" />
-                <element signature="e#6471#7116#0" expanded="false" />
-                <element signature="e#7174#8438#0" expanded="false" />
-                <element signature="e#8497#9556#0" expanded="false" />
-                <element signature="e#9617#11107#0" expanded="false" />
-                <element signature="e#13163#15908#0" expanded="false" />
-                <element signature="e#15975#17939#0" expanded="false" />
-                <element signature="e#18006#19326#0" expanded="false" />
-                <element signature="e#19396#21467#0" expanded="false" />
-                <element signature="e#21533#21941#0" expanded="false" />
-                <element signature="e#21995#22330#0" expanded="false" />
-                <element signature="e#22396#24535#0" expanded="false" />
-                <element signature="e#24601#26790#0" expanded="false" />
-                <element signature="e#26855#29042#0" expanded="false" />
-                <element signature="e#29113#31171#0" expanded="false" />
-                <element signature="e#31231#31911#0" expanded="false" />
-                <element signature="e#31971#32782#0" expanded="false" />
-                <element signature="e#32838#33623#0" expanded="false" />
-                <element signature="e#38860#41793#0" expanded="false" />
-                <element signature="e#41857#42826#0" expanded="false" />
-                <element signature="e#42889#43888#0" expanded="false" />
-                <element signature="n#!!block;n#initCommonFunctions#0" expanded="false" />
+                <element signature="e#8836#9895#0" expanded="false" />
+                <element signature="e#18354#19674#0" expanded="false" />
+                <element signature="e#21881#22289#0" expanded="false" />
+                <element signature="e#22343#22678#0" expanded="false" />
+                <element signature="e#22744#24883#0" expanded="false" />
+                <element signature="e#24949#27138#0" expanded="false" />
+                <element signature="e#27203#29390#0" expanded="false" />
+                <element signature="e#29461#31519#0" expanded="false" />
+                <element signature="e#31579#32259#0" expanded="false" />
+                <element signature="e#32319#33130#0" expanded="false" />
+                <element signature="e#33186#33971#0" expanded="false" />
+                <element signature="e#42205#43174#0" expanded="false" />
+                <element signature="e#43237#44236#0" expanded="false" />
                 <element signature="n#!!block;n#formatMeetings#0" expanded="false" />
                 <element signature="n#!!block;n#getUser#0" expanded="false" />
                 <element signature="n#!!block;n#saveUser#0" expanded="false" />
@@ -132,7 +124,6 @@
                 <element signature="n#!!block;n#updateLanguage#0" expanded="false" />
                 <element signature="n#!!block;n#alert#0" expanded="false" />
                 <element signature="n#!!block;n#t#0" expanded="false" />
-                <element signature="n#!!block;n#getUserOrAppId#0" expanded="false" />
                 <element signature="n#!!block;n#shareByEmail#0" expanded="false" />
                 <element signature="n#!!block;n#shareBySMS#0" expanded="false" />
                 <element signature="n#!!block;n#shareByWhatsApp#0" expanded="false" />
@@ -196,8 +187,8 @@
         <option value="$PROJECT_DIR$/css/app.css" />
         <option value="$PROJECT_DIR$/js/services.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/config.xml" />
+        <option value="$PROJECT_DIR$/js/app.js" />
       </list>
     </option>
   </component>
@@ -242,7 +233,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -291,6 +281,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -391,29 +382,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2032#5912#0" expanded="false" />
             <element signature="n#!!block;n#onResize#0" expanded="false" />
-            <element signature="e#6471#7116#0" expanded="false" />
-            <element signature="e#7174#8438#0" expanded="false" />
-            <element signature="e#8497#9556#0" expanded="false" />
-            <element signature="e#9617#11107#0" expanded="false" />
-            <element signature="e#13163#15908#0" expanded="false" />
-            <element signature="e#15975#17939#0" expanded="false" />
-            <element signature="e#18006#19326#0" expanded="false" />
-            <element signature="e#19396#21467#0" expanded="false" />
-            <element signature="e#21533#21941#0" expanded="false" />
-            <element signature="e#21995#22330#0" expanded="false" />
-            <element signature="e#22396#24535#0" expanded="false" />
-            <element signature="e#24601#26790#0" expanded="false" />
-            <element signature="e#26855#29042#0" expanded="false" />
-            <element signature="e#29113#31171#0" expanded="false" />
-            <element signature="e#31231#31911#0" expanded="false" />
-            <element signature="e#31971#32782#0" expanded="false" />
-            <element signature="e#32838#33623#0" expanded="false" />
-            <element signature="e#38860#41793#0" expanded="false" />
-            <element signature="e#41857#42826#0" expanded="false" />
-            <element signature="e#42889#43888#0" expanded="false" />
-            <element signature="n#!!block;n#initCommonFunctions#0" expanded="false" />
+            <element signature="e#8836#9895#0" expanded="false" />
+            <element signature="e#18354#19674#0" expanded="false" />
+            <element signature="e#21881#22289#0" expanded="false" />
+            <element signature="e#22343#22678#0" expanded="false" />
+            <element signature="e#22744#24883#0" expanded="false" />
+            <element signature="e#24949#27138#0" expanded="false" />
+            <element signature="e#27203#29390#0" expanded="false" />
+            <element signature="e#29461#31519#0" expanded="false" />
+            <element signature="e#31579#32259#0" expanded="false" />
+            <element signature="e#32319#33130#0" expanded="false" />
+            <element signature="e#33186#33971#0" expanded="false" />
+            <element signature="e#42205#43174#0" expanded="false" />
+            <element signature="e#43237#44236#0" expanded="false" />
             <element signature="n#!!block;n#formatMeetings#0" expanded="false" />
             <element signature="n#!!block;n#getUser#0" expanded="false" />
             <element signature="n#!!block;n#saveUser#0" expanded="false" />
@@ -421,7 +403,6 @@
             <element signature="n#!!block;n#updateLanguage#0" expanded="false" />
             <element signature="n#!!block;n#alert#0" expanded="false" />
             <element signature="n#!!block;n#t#0" expanded="false" />
-            <element signature="n#!!block;n#getUserOrAppId#0" expanded="false" />
             <element signature="n#!!block;n#shareByEmail#0" expanded="false" />
             <element signature="n#!!block;n#shareBySMS#0" expanded="false" />
             <element signature="n#!!block;n#shareByWhatsApp#0" expanded="false" />
@@ -444,29 +425,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1300" column="31" selection-start-line="1300" selection-start-column="31" selection-end-line="1300" selection-end-column="31" />
           <folding>
-            <element signature="e#2032#5912#0" expanded="false" />
             <element signature="n#!!block;n#onResize#0" expanded="false" />
-            <element signature="e#6471#7116#0" expanded="false" />
-            <element signature="e#7174#8438#0" expanded="false" />
-            <element signature="e#8497#9556#0" expanded="false" />
-            <element signature="e#9617#11107#0" expanded="false" />
-            <element signature="e#13163#15908#0" expanded="false" />
-            <element signature="e#15975#17939#0" expanded="false" />
-            <element signature="e#18006#19326#0" expanded="false" />
-            <element signature="e#19396#21467#0" expanded="false" />
-            <element signature="e#21533#21941#0" expanded="false" />
-            <element signature="e#21995#22330#0" expanded="false" />
-            <element signature="e#22396#24535#0" expanded="false" />
-            <element signature="e#24601#26790#0" expanded="false" />
-            <element signature="e#26855#29042#0" expanded="false" />
-            <element signature="e#29113#31171#0" expanded="false" />
-            <element signature="e#31231#31911#0" expanded="false" />
-            <element signature="e#31971#32782#0" expanded="false" />
-            <element signature="e#32838#33623#0" expanded="false" />
-            <element signature="e#38860#41793#0" expanded="false" />
-            <element signature="e#41857#42826#0" expanded="false" />
-            <element signature="e#42889#43888#0" expanded="false" />
-            <element signature="n#!!block;n#initCommonFunctions#0" expanded="false" />
+            <element signature="e#8836#9895#0" expanded="false" />
+            <element signature="e#18354#19674#0" expanded="false" />
+            <element signature="e#21881#22289#0" expanded="false" />
+            <element signature="e#22343#22678#0" expanded="false" />
+            <element signature="e#22744#24883#0" expanded="false" />
+            <element signature="e#24949#27138#0" expanded="false" />
+            <element signature="e#27203#29390#0" expanded="false" />
+            <element signature="e#29461#31519#0" expanded="false" />
+            <element signature="e#31579#32259#0" expanded="false" />
+            <element signature="e#32319#33130#0" expanded="false" />
+            <element signature="e#33186#33971#0" expanded="false" />
+            <element signature="e#42205#43174#0" expanded="false" />
+            <element signature="e#43237#44236#0" expanded="false" />
             <element signature="n#!!block;n#formatMeetings#0" expanded="false" />
             <element signature="n#!!block;n#getUser#0" expanded="false" />
             <element signature="n#!!block;n#saveUser#0" expanded="false" />
@@ -474,7 +446,6 @@
             <element signature="n#!!block;n#updateLanguage#0" expanded="false" />
             <element signature="n#!!block;n#alert#0" expanded="false" />
             <element signature="n#!!block;n#t#0" expanded="false" />
-            <element signature="n#!!block;n#getUserOrAppId#0" expanded="false" />
             <element signature="n#!!block;n#shareByEmail#0" expanded="false" />
             <element signature="n#!!block;n#shareBySMS#0" expanded="false" />
             <element signature="n#!!block;n#shareByWhatsApp#0" expanded="false" />
@@ -589,29 +560,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="120" column="34" selection-start-line="120" selection-start-column="34" selection-end-line="120" selection-end-column="34" />
           <folding>
-            <element signature="e#2032#5912#0" expanded="false" />
             <element signature="n#!!block;n#onResize#0" expanded="false" />
-            <element signature="e#6471#7116#0" expanded="false" />
-            <element signature="e#7174#8438#0" expanded="false" />
-            <element signature="e#8497#9556#0" expanded="false" />
-            <element signature="e#9617#11107#0" expanded="false" />
-            <element signature="e#13163#15908#0" expanded="false" />
-            <element signature="e#15975#17939#0" expanded="false" />
-            <element signature="e#18006#19326#0" expanded="false" />
-            <element signature="e#19396#21467#0" expanded="false" />
-            <element signature="e#21533#21941#0" expanded="false" />
-            <element signature="e#21995#22330#0" expanded="false" />
-            <element signature="e#22396#24535#0" expanded="false" />
-            <element signature="e#24601#26790#0" expanded="false" />
-            <element signature="e#26855#29042#0" expanded="false" />
-            <element signature="e#29113#31171#0" expanded="false" />
-            <element signature="e#31231#31911#0" expanded="false" />
-            <element signature="e#31971#32782#0" expanded="false" />
-            <element signature="e#32838#33623#0" expanded="false" />
-            <element signature="e#38860#41793#0" expanded="false" />
-            <element signature="e#41857#42826#0" expanded="false" />
-            <element signature="e#42889#43888#0" expanded="false" />
-            <element signature="n#!!block;n#initCommonFunctions#0" expanded="false" />
+            <element signature="e#8836#9895#0" expanded="false" />
+            <element signature="e#18354#19674#0" expanded="false" />
+            <element signature="e#21881#22289#0" expanded="false" />
+            <element signature="e#22343#22678#0" expanded="false" />
+            <element signature="e#22744#24883#0" expanded="false" />
+            <element signature="e#24949#27138#0" expanded="false" />
+            <element signature="e#27203#29390#0" expanded="false" />
+            <element signature="e#29461#31519#0" expanded="false" />
+            <element signature="e#31579#32259#0" expanded="false" />
+            <element signature="e#32319#33130#0" expanded="false" />
+            <element signature="e#33186#33971#0" expanded="false" />
+            <element signature="e#42205#43174#0" expanded="false" />
+            <element signature="e#43237#44236#0" expanded="false" />
             <element signature="n#!!block;n#formatMeetings#0" expanded="false" />
             <element signature="n#!!block;n#getUser#0" expanded="false" />
             <element signature="n#!!block;n#saveUser#0" expanded="false" />
@@ -619,7 +581,6 @@
             <element signature="n#!!block;n#updateLanguage#0" expanded="false" />
             <element signature="n#!!block;n#alert#0" expanded="false" />
             <element signature="n#!!block;n#t#0" expanded="false" />
-            <element signature="n#!!block;n#getUserOrAppId#0" expanded="false" />
             <element signature="n#!!block;n#shareByEmail#0" expanded="false" />
             <element signature="n#!!block;n#shareBySMS#0" expanded="false" />
             <element signature="n#!!block;n#shareByWhatsApp#0" expanded="false" />
@@ -734,29 +695,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="106" column="52" selection-start-line="106" selection-start-column="52" selection-end-line="106" selection-end-column="52" />
           <folding>
-            <element signature="e#2032#5912#0" expanded="false" />
             <element signature="n#!!block;n#onResize#0" expanded="false" />
-            <element signature="e#6471#7116#0" expanded="false" />
-            <element signature="e#7174#8438#0" expanded="false" />
-            <element signature="e#8497#9556#0" expanded="false" />
-            <element signature="e#9617#11107#0" expanded="false" />
-            <element signature="e#13163#15908#0" expanded="false" />
-            <element signature="e#15975#17939#0" expanded="false" />
-            <element signature="e#18006#19326#0" expanded="false" />
-            <element signature="e#19396#21467#0" expanded="false" />
-            <element signature="e#21533#21941#0" expanded="false" />
-            <element signature="e#21995#22330#0" expanded="false" />
-            <element signature="e#22396#24535#0" expanded="false" />
-            <element signature="e#24601#26790#0" expanded="false" />
-            <element signature="e#26855#29042#0" expanded="false" />
-            <element signature="e#29113#31171#0" expanded="false" />
-            <element signature="e#31231#31911#0" expanded="false" />
-            <element signature="e#31971#32782#0" expanded="false" />
-            <element signature="e#32838#33623#0" expanded="false" />
-            <element signature="e#38860#41793#0" expanded="false" />
-            <element signature="e#41857#42826#0" expanded="false" />
-            <element signature="e#42889#43888#0" expanded="false" />
-            <element signature="n#!!block;n#initCommonFunctions#0" expanded="false" />
+            <element signature="e#8836#9895#0" expanded="false" />
+            <element signature="e#18354#19674#0" expanded="false" />
+            <element signature="e#21881#22289#0" expanded="false" />
+            <element signature="e#22343#22678#0" expanded="false" />
+            <element signature="e#22744#24883#0" expanded="false" />
+            <element signature="e#24949#27138#0" expanded="false" />
+            <element signature="e#27203#29390#0" expanded="false" />
+            <element signature="e#29461#31519#0" expanded="false" />
+            <element signature="e#31579#32259#0" expanded="false" />
+            <element signature="e#32319#33130#0" expanded="false" />
+            <element signature="e#33186#33971#0" expanded="false" />
+            <element signature="e#42205#43174#0" expanded="false" />
+            <element signature="e#43237#44236#0" expanded="false" />
             <element signature="n#!!block;n#formatMeetings#0" expanded="false" />
             <element signature="n#!!block;n#getUser#0" expanded="false" />
             <element signature="n#!!block;n#saveUser#0" expanded="false" />
@@ -764,7 +716,6 @@
             <element signature="n#!!block;n#updateLanguage#0" expanded="false" />
             <element signature="n#!!block;n#alert#0" expanded="false" />
             <element signature="n#!!block;n#t#0" expanded="false" />
-            <element signature="n#!!block;n#getUserOrAppId#0" expanded="false" />
             <element signature="n#!!block;n#shareByEmail#0" expanded="false" />
             <element signature="n#!!block;n#shareBySMS#0" expanded="false" />
             <element signature="n#!!block;n#shareByWhatsApp#0" expanded="false" />
@@ -879,29 +830,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2032#5912#0" expanded="false" />
             <element signature="n#!!block;n#onResize#0" expanded="false" />
-            <element signature="e#6471#7116#0" expanded="false" />
-            <element signature="e#7174#8438#0" expanded="false" />
-            <element signature="e#8497#9556#0" expanded="false" />
-            <element signature="e#9617#11107#0" expanded="false" />
-            <element signature="e#13163#15908#0" expanded="false" />
-            <element signature="e#15975#17939#0" expanded="false" />
-            <element signature="e#18006#19326#0" expanded="false" />
-            <element signature="e#19396#21467#0" expanded="false" />
-            <element signature="e#21533#21941#0" expanded="false" />
-            <element signature="e#21995#22330#0" expanded="false" />
-            <element signature="e#22396#24535#0" expanded="false" />
-            <element signature="e#24601#26790#0" expanded="false" />
-            <element signature="e#26855#29042#0" expanded="false" />
-            <element signature="e#29113#31171#0" expanded="false" />
-            <element signature="e#31231#31911#0" expanded="false" />
-            <element signature="e#31971#32782#0" expanded="false" />
-            <element signature="e#32838#33623#0" expanded="false" />
-            <element signature="e#38860#41793#0" expanded="false" />
-            <element signature="e#41857#42826#0" expanded="false" />
-            <element signature="e#42889#43888#0" expanded="false" />
-            <element signature="n#!!block;n#initCommonFunctions#0" expanded="false" />
+            <element signature="e#8836#9895#0" expanded="false" />
+            <element signature="e#18354#19674#0" expanded="false" />
+            <element signature="e#21881#22289#0" expanded="false" />
+            <element signature="e#22343#22678#0" expanded="false" />
+            <element signature="e#22744#24883#0" expanded="false" />
+            <element signature="e#24949#27138#0" expanded="false" />
+            <element signature="e#27203#29390#0" expanded="false" />
+            <element signature="e#29461#31519#0" expanded="false" />
+            <element signature="e#31579#32259#0" expanded="false" />
+            <element signature="e#32319#33130#0" expanded="false" />
+            <element signature="e#33186#33971#0" expanded="false" />
+            <element signature="e#42205#43174#0" expanded="false" />
+            <element signature="e#43237#44236#0" expanded="false" />
             <element signature="n#!!block;n#formatMeetings#0" expanded="false" />
             <element signature="n#!!block;n#getUser#0" expanded="false" />
             <element signature="n#!!block;n#saveUser#0" expanded="false" />
@@ -909,7 +851,6 @@
             <element signature="n#!!block;n#updateLanguage#0" expanded="false" />
             <element signature="n#!!block;n#alert#0" expanded="false" />
             <element signature="n#!!block;n#t#0" expanded="false" />
-            <element signature="n#!!block;n#getUserOrAppId#0" expanded="false" />
             <element signature="n#!!block;n#shareByEmail#0" expanded="false" />
             <element signature="n#!!block;n#shareBySMS#0" expanded="false" />
             <element signature="n#!!block;n#shareByWhatsApp#0" expanded="false" />
@@ -1016,29 +957,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2032#5912#0" expanded="false" />
             <element signature="n#!!block;n#onResize#0" expanded="false" />
-            <element signature="e#6471#7116#0" expanded="false" />
-            <element signature="e#7174#8438#0" expanded="false" />
-            <element signature="e#8497#9556#0" expanded="false" />
-            <element signature="e#9617#11107#0" expanded="false" />
-            <element signature="e#13163#15908#0" expanded="false" />
-            <element signature="e#15975#17939#0" expanded="false" />
-            <element signature="e#18006#19326#0" expanded="false" />
-            <element signature="e#19396#21467#0" expanded="false" />
-            <element signature="e#21533#21941#0" expanded="false" />
-            <element signature="e#21995#22330#0" expanded="false" />
-            <element signature="e#22396#24535#0" expanded="false" />
-            <element signature="e#24601#26790#0" expanded="false" />
-            <element signature="e#26855#29042#0" expanded="false" />
-            <element signature="e#29113#31171#0" expanded="false" />
-            <element signature="e#31231#31911#0" expanded="false" />
-            <element signature="e#31971#32782#0" expanded="false" />
-            <element signature="e#32838#33623#0" expanded="false" />
-            <element signature="e#38860#41793#0" expanded="false" />
-            <element signature="e#41857#42826#0" expanded="false" />
-            <element signature="e#42889#43888#0" expanded="false" />
-            <element signature="n#!!block;n#initCommonFunctions#0" expanded="false" />
+            <element signature="e#8836#9895#0" expanded="false" />
+            <element signature="e#18354#19674#0" expanded="false" />
+            <element signature="e#21881#22289#0" expanded="false" />
+            <element signature="e#22343#22678#0" expanded="false" />
+            <element signature="e#22744#24883#0" expanded="false" />
+            <element signature="e#24949#27138#0" expanded="false" />
+            <element signature="e#27203#29390#0" expanded="false" />
+            <element signature="e#29461#31519#0" expanded="false" />
+            <element signature="e#31579#32259#0" expanded="false" />
+            <element signature="e#32319#33130#0" expanded="false" />
+            <element signature="e#33186#33971#0" expanded="false" />
+            <element signature="e#42205#43174#0" expanded="false" />
+            <element signature="e#43237#44236#0" expanded="false" />
             <element signature="n#!!block;n#formatMeetings#0" expanded="false" />
             <element signature="n#!!block;n#getUser#0" expanded="false" />
             <element signature="n#!!block;n#saveUser#0" expanded="false" />
@@ -1046,7 +978,6 @@
             <element signature="n#!!block;n#updateLanguage#0" expanded="false" />
             <element signature="n#!!block;n#alert#0" expanded="false" />
             <element signature="n#!!block;n#t#0" expanded="false" />
-            <element signature="n#!!block;n#getUserOrAppId#0" expanded="false" />
             <element signature="n#!!block;n#shareByEmail#0" expanded="false" />
             <element signature="n#!!block;n#shareBySMS#0" expanded="false" />
             <element signature="n#!!block;n#shareByWhatsApp#0" expanded="false" />
@@ -1161,29 +1092,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2032#5912#0" expanded="false" />
             <element signature="n#!!block;n#onResize#0" expanded="false" />
-            <element signature="e#6471#7116#0" expanded="false" />
-            <element signature="e#7174#8438#0" expanded="false" />
-            <element signature="e#8497#9556#0" expanded="false" />
-            <element signature="e#9617#11107#0" expanded="false" />
-            <element signature="e#13163#15908#0" expanded="false" />
-            <element signature="e#15975#17939#0" expanded="false" />
-            <element signature="e#18006#19326#0" expanded="false" />
-            <element signature="e#19396#21467#0" expanded="false" />
-            <element signature="e#21533#21941#0" expanded="false" />
-            <element signature="e#21995#22330#0" expanded="false" />
-            <element signature="e#22396#24535#0" expanded="false" />
-            <element signature="e#24601#26790#0" expanded="false" />
-            <element signature="e#26855#29042#0" expanded="false" />
-            <element signature="e#29113#31171#0" expanded="false" />
-            <element signature="e#31231#31911#0" expanded="false" />
-            <element signature="e#31971#32782#0" expanded="false" />
-            <element signature="e#32838#33623#0" expanded="false" />
-            <element signature="e#38860#41793#0" expanded="false" />
-            <element signature="e#41857#42826#0" expanded="false" />
-            <element signature="e#42889#43888#0" expanded="false" />
-            <element signature="n#!!block;n#initCommonFunctions#0" expanded="false" />
+            <element signature="e#8836#9895#0" expanded="false" />
+            <element signature="e#18354#19674#0" expanded="false" />
+            <element signature="e#21881#22289#0" expanded="false" />
+            <element signature="e#22343#22678#0" expanded="false" />
+            <element signature="e#22744#24883#0" expanded="false" />
+            <element signature="e#24949#27138#0" expanded="false" />
+            <element signature="e#27203#29390#0" expanded="false" />
+            <element signature="e#29461#31519#0" expanded="false" />
+            <element signature="e#31579#32259#0" expanded="false" />
+            <element signature="e#32319#33130#0" expanded="false" />
+            <element signature="e#33186#33971#0" expanded="false" />
+            <element signature="e#42205#43174#0" expanded="false" />
+            <element signature="e#43237#44236#0" expanded="false" />
             <element signature="n#!!block;n#formatMeetings#0" expanded="false" />
             <element signature="n#!!block;n#getUser#0" expanded="false" />
             <element signature="n#!!block;n#saveUser#0" expanded="false" />
@@ -1191,7 +1113,6 @@
             <element signature="n#!!block;n#updateLanguage#0" expanded="false" />
             <element signature="n#!!block;n#alert#0" expanded="false" />
             <element signature="n#!!block;n#t#0" expanded="false" />
-            <element signature="n#!!block;n#getUserOrAppId#0" expanded="false" />
             <element signature="n#!!block;n#shareByEmail#0" expanded="false" />
             <element signature="n#!!block;n#shareBySMS#0" expanded="false" />
             <element signature="n#!!block;n#shareByWhatsApp#0" expanded="false" />
@@ -1330,7 +1251,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.384615">
+        <state vertical-scroll-proportion="0.0">
           <caret line="1321" column="66" selection-start-line="1321" selection-start-column="66" selection-end-line="1321" selection-end-column="66" />
           <folding>
             <element signature="n#ons-modal#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1396,34 +1317,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="58" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1490" column="32" selection-start-line="1490" selection-start-column="32" selection-end-line="1490" selection-end-column="32" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2032#5912#0" expanded="false" />
             <element signature="n#!!block;n#onResize#0" expanded="false" />
-            <element signature="e#6471#7116#0" expanded="false" />
-            <element signature="e#7174#8438#0" expanded="false" />
-            <element signature="e#8497#9556#0" expanded="false" />
-            <element signature="e#9617#11107#0" expanded="false" />
-            <element signature="e#13163#15908#0" expanded="false" />
-            <element signature="e#15975#17939#0" expanded="false" />
-            <element signature="e#18006#19326#0" expanded="false" />
-            <element signature="e#19396#21467#0" expanded="false" />
-            <element signature="e#21533#21941#0" expanded="false" />
-            <element signature="e#21995#22330#0" expanded="false" />
-            <element signature="e#22396#24535#0" expanded="false" />
-            <element signature="e#24601#26790#0" expanded="false" />
-            <element signature="e#26855#29042#0" expanded="false" />
-            <element signature="e#29113#31171#0" expanded="false" />
-            <element signature="e#31231#31911#0" expanded="false" />
-            <element signature="e#31971#32782#0" expanded="false" />
-            <element signature="e#32838#33623#0" expanded="false" />
-            <element signature="e#38860#41793#0" expanded="false" />
-            <element signature="e#41857#42826#0" expanded="false" />
-            <element signature="e#42889#43888#0" expanded="false" />
-            <element signature="n#!!block;n#initCommonFunctions#0" expanded="false" />
+            <element signature="e#8836#9895#0" expanded="false" />
+            <element signature="e#18354#19674#0" expanded="false" />
+            <element signature="e#21881#22289#0" expanded="false" />
+            <element signature="e#22343#22678#0" expanded="false" />
+            <element signature="e#22744#24883#0" expanded="false" />
+            <element signature="e#24949#27138#0" expanded="false" />
+            <element signature="e#27203#29390#0" expanded="false" />
+            <element signature="e#29461#31519#0" expanded="false" />
+            <element signature="e#31579#32259#0" expanded="false" />
+            <element signature="e#32319#33130#0" expanded="false" />
+            <element signature="e#33186#33971#0" expanded="false" />
+            <element signature="e#42205#43174#0" expanded="false" />
+            <element signature="e#43237#44236#0" expanded="false" />
             <element signature="n#!!block;n#formatMeetings#0" expanded="false" />
             <element signature="n#!!block;n#getUser#0" expanded="false" />
             <element signature="n#!!block;n#saveUser#0" expanded="false" />
@@ -1431,21 +1351,12 @@
             <element signature="n#!!block;n#updateLanguage#0" expanded="false" />
             <element signature="n#!!block;n#alert#0" expanded="false" />
             <element signature="n#!!block;n#t#0" expanded="false" />
-            <element signature="n#!!block;n#getUserOrAppId#0" expanded="false" />
             <element signature="n#!!block;n#shareByEmail#0" expanded="false" />
             <element signature="n#!!block;n#shareBySMS#0" expanded="false" />
             <element signature="n#!!block;n#shareByWhatsApp#0" expanded="false" />
             <element signature="n#!!block;n#shareByFacebook#0" expanded="false" />
             <element signature="n#!!block;n#shareBy#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60387516">
-          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>

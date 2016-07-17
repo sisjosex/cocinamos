@@ -16,6 +16,7 @@ var app_id = 123;
 var recipe_share_text = 'Te invito a participar';
 var currentNavigator = undefined;
 var MyShoppingScope;
+var device_name;
 
 var lang = {
     en: {
@@ -170,6 +171,17 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
             $scope.$apply(function () {
 
+                if (device.platform === 'android' || device.platform === 'Android') {
+
+                    device_name = 'android';
+
+                } else {
+
+                    device_name = 'iphone';
+                }
+
+                app_id = device.uuid;
+
                 document.addEventListener("online", onOnline, false);
                 document.addEventListener("offline", onOffline, false);
 
@@ -277,7 +289,9 @@ module.controller('Login', function ($scope, service) {
 
         $scope.user = {
             email: '',
-            password: ''
+            password: '',
+            device: device_name,
+            app_id: app_id
         };
 
         $scope.forgot = function () {
@@ -387,7 +401,7 @@ module.controller('Register', function ($scope, service) {
             password: '',
             token: '',
             app_id: app_id,
-            device: ''
+            device: device_name
         };
 
         $scope.register = function () {
