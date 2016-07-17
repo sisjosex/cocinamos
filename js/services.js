@@ -64,6 +64,9 @@ angular.module("services", []).factory("service", [ "$http", "$q", function($htt
         },
         getCalculadoraDetalle: function(params, success, error) {
             $http({method: 'JSONP', url: API_URL + 'getCalculadoraDetalle?callback=JSON_CALLBACK', params: params}).success(success).error(error);
+        },
+        deleteShopping: function(params, success, error) {
+            $http({method: 'JSONP', url: API_URL + 'deleteShopping?callback=JSON_CALLBACK', params: params}).success(success).error(error);
         }
     };
 } ]);

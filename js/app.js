@@ -155,6 +155,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
             API_URL = 'http://localhost/fino_app/admin/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
+            //API_URL = 'http://cocinamosconfino.com/api/';
 
             setTimeout(onDeviceReady, 500);
 
@@ -905,7 +906,6 @@ module.controller('Calculator', function ($scope) {
     });
 });
 
-
 module.controller('CalNutrientes', function ($scope, service) {
 
     ons.ready(function () {
@@ -1396,9 +1396,11 @@ module.controller('MyShopping', function ($scope, service, $sce) {
 
                 } else {
 
+                    $scope.recipes = [];
+
                     modal.hide();
 
-                    alert(result.message);
+                    //alert(result.message);
                 }
 
             }, function() {
@@ -1468,6 +1470,42 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
             });
         };
 
+        $scope.deleteShopping = function() {
+
+            confirm('Esta seguro de eliminar esta compra?', function(){
+
+                modal.show();
+
+                service.deleteShopping({app_id: getUserOrAppId(), id: $scope.menu.id}, function(result){
+
+                    if (result.status == 'success') {
+
+                        modal.hide();
+
+                        //alert(result.message);
+
+                        currentNavigator.popPage();
+
+                        setTimeout(function(){
+                            MyShoppingScope.getMyShopping();
+                        }, 200);
+
+                    } else {
+
+                        modal.hide();
+
+                        alert(result.message);
+                    }
+
+                }, function() {
+
+                    modal.hide();
+
+                    alert('No se pudo conectar con el servidor');
+                });
+            });
+        };
+
         $scope.getMyShoppingDetail();
 
     });
@@ -1513,9 +1551,11 @@ module.controller('Invite', function ($scope, service, $sce) {
 
                 } else {
 
+                    $scope.recipes = [];
+
                     modal.hide();
 
-                    alert(result.message);
+                    //alert(result.message);
                 }
 
             }, function() {
@@ -1903,7 +1943,9 @@ function confirm(message, callback) {
         callback: function (index) {
             // -1: Cancel
             // 0-: Button index from the left
-            callback ? callback(index) : '';
+            if(index == 0) {
+                callback ? callback(index) : '';
+            }
         }
     });
 }
