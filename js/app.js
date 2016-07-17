@@ -171,16 +171,20 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
             $scope.$apply(function () {
 
-                if (device.platform === 'android' || device.platform === 'Android') {
+                try {
 
-                    device_name = 'android';
+                    if (device.platform === 'android' || device.platform === 'Android') {
 
-                } else {
+                        device_name = 'android';
 
-                    device_name = 'iphone';
-                }
+                    } else {
 
-                app_id = device.uuid;
+                        device_name = 'iphone';
+                    }
+
+                    app_id = device.uuid;
+
+                } catch(error) {}
 
                 document.addEventListener("online", onOnline, false);
                 document.addEventListener("offline", onOffline, false);
