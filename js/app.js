@@ -1,4 +1,4 @@
-var API_URL = 'http://localhost/fino_app/admin/api/';
+var API_URL = 'http://localhost/fino/admin/api/';
 var WEB_URL = 'http://cocinamosconfino.com/';
 
 //var API_URL = 'http://cocinamosconfino.com/api/'
@@ -16,16 +16,18 @@ var app_id = 123;
 var recipe_share_text = 'Te invito a participar';
 var currentNavigator = undefined;
 var MyShoppingScope;
-var device_name;
+var device_name = 'iphone';
 
 var lang = {
     en: {
         yes: 'Yes',
         no: 'No',
         confirmation: 'Confirmation',
+        name_required: 'Name is required',
         email_required: 'Email is required',
         email_invalid: 'Email is invalid',
         password_required: 'Password is required',
+        password_old_required: 'Old password is required',
         message: 'Message',
         login: 'Login',
         email: 'Email',
@@ -45,9 +47,11 @@ var lang = {
         yes: 'Si',
         no: 'No',
         confirmation: 'Confirmación',
+        name_required: 'Nombre es requerido',
         email_required: 'Email es requerido',
         email_invalid: 'Email es inválido',
         password_required: 'Password es requerido',
+        password_old_required: 'Contraseña anterior es requerida',
         message: 'Mensage',
         login: 'Ingresar',
         email: 'Email',
@@ -154,7 +158,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
         if (document.location.protocol == 'http:') {
 
-            API_URL = 'http://localhost/fino_app/admin/api/';
+            API_URL = 'http://localhost/fino/admin/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
 
@@ -184,7 +188,9 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
                     app_id = device.uuid;
 
-                } catch(error) {}
+                } catch(error) {
+                    device_name = 'iphone';
+                }
 
                 document.addEventListener("online", onOnline, false);
                 document.addEventListener("offline", onOffline, false);
@@ -195,7 +201,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
                 if (getUser()) {
 
-                    mainNavigator.pushPage('home.html', {animation: 'none'});
+                    mainNavigator.pushPage('dashboard.html', {animation: 'none'});
 
                 } else {
 
@@ -276,7 +282,12 @@ module.controller('Intro', function ($scope) {
 
         $scope.saltar = function () {
             //mainNavigator.popPage();
-            mainNavigator.pushPage('home.html');
+            mainNavigator.pushPage('dashboard.html');
+        };
+
+        $scope.forgot = function () {
+
+            mainNavigator.pushPage('forgot.html');
         };
 
 
@@ -326,7 +337,7 @@ module.controller('Login', function ($scope, service) {
 
                     modal.hide();
 
-                    mainNavigator.pushPage('home.html');
+                    mainNavigator.pushPage('dashboard.html');
 
                 } else {
 
@@ -396,11 +407,39 @@ module.controller('Forgot', function ($scope, service) {
     });
 });
 
+module.controller('Dashboard', function ($scope, service) {
+
+    ons.ready(function () {
+
+        $scope.gotoPerfil = function() {
+            mainNavigator.pushPage('perfil.html');
+        };
+
+        $scope.gotoRecetas = function() {
+            mainNavigator.pushPage('home_recipes.html');
+        };
+
+        $scope.gotoCalculadora = function() {
+            mainNavigator.pushPage('home_calculator.html');
+        };
+
+        $scope.gotoCompras = function() {
+            mainNavigator.pushPage('home_myshopping.html');
+        };
+
+        $scope.gotoConsejos = function() {
+            mainNavigator.pushPage('home_counsel.html');
+        };
+
+    });
+});
+
 module.controller('Register', function ($scope, service) {
 
     ons.ready(function () {
 
         $scope.user = {
+            name: '',
             email: '',
             password: '',
             token: '',
@@ -410,7 +449,10 @@ module.controller('Register', function ($scope, service) {
 
         $scope.register = function () {
 
-            if ($scope.user.email == '') {
+            if ($scope.user.name == '') {
+                alert(t('name_required'));
+                return;
+            } else if ($scope.user.email == '') {
                 alert(t('email_required'));
                 return;
             } else if (!$.trim($scope.user.email).match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/)) {
@@ -432,6 +474,90 @@ module.controller('Register', function ($scope, service) {
                         saveUser(result.user);
 
                         mainNavigator.pushPage('home.html');
+
+                    } else {
+
+                        alert(result.message);
+                    }
+
+                    modal.hide();
+
+                } else {
+
+                    modal.hide();
+
+                    alert(result.message);
+                }
+
+            }, function () {
+
+                modal.hide();
+
+                alert('No se pudo conectar con el servidor');
+            });
+        };
+
+        $scope.login = function () {
+            mainNavigator.pushPage('login.html');
+        };
+
+    });
+});
+
+module.controller('Perfil', function ($scope, service) {
+
+    ons.ready(function () {
+
+        $scope.user = getUser();
+
+        if(!$scope.user) {
+
+            $scope.user = {
+                name: '',
+                email: '',
+                password: '',
+                password_old: '',
+                token: '',
+                app_id: app_id,
+                device: device_name
+            };
+        }
+
+        $scope.register = function () {
+
+            if ($scope.user.name == '') {
+                alert(t('name_required'));
+                return;
+            } else if ($scope.user.email == '') {
+                alert(t('email_required'));
+                return;
+            } else if (!$.trim($scope.user.email).match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/)) {
+                alert(t('email_invalid'));
+                return;
+            }
+
+            if ($scope.user.password != '') {
+
+                if ($scope.user.password_old == '') {
+
+                    alert(t('password_old_required'));
+                    return;
+                }
+            }
+
+            modal.show();
+
+            service.registerUser($scope.user, function (result) {
+
+                if (result.status == 'success') {
+
+                    if(!result.message) {
+
+                        saveUser(result.user);
+
+                        //mainNavigator.pushPage('home.html');
+
+                        alert('Se actualizaron sus datos correctamente.');
 
                     } else {
 
@@ -502,7 +628,7 @@ module.controller('Home', function ($scope, service, $sce) {
 
         modal.show();
 
-        service.getMenus({topmenu: 1}, function (result) {
+        service.getMenus({}, function (result) {
 
             if (result.status == 'success') {
 
@@ -745,6 +871,8 @@ module.controller('Category', function ($scope, service, $sce) {
 
         initSearch($scope);
 
+        $scope.subcategories = [];
+
         $scope.trustSrc = function (src) {
             return $sce.trustAsResourceUrl(src);
         };
@@ -769,7 +897,7 @@ module.controller('Category', function ($scope, service, $sce) {
 
                     modal.hide();
 
-                    $scope.categories = result.data;
+                    $scope.subcategories = result.data;
 
                     setTimeout(function () {
                         $('.category-page .preview').each(function () {
@@ -1899,6 +2027,12 @@ function getUser() {
 
             user = undefined;
         }
+    }
+
+    console.log(user);
+
+    if( user && (user.app_id==undefined || user.app_id==null || user.app_id=='') ) {
+        user = undefined;
     }
 
     return user;

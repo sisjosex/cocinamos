@@ -1,8 +1,8 @@
 
 
 .text-input--underbar:invalid, .text-input--underbar:valid {
-    background: #fff;
-    color:#999999;
+    background: transparent;
+    color:#676767;
 }
 
 div.navigation-bar {
@@ -10,7 +10,7 @@ div.navigation-bar {
 }
 
 .navigation-bar {
-    border-bottom: solid 1px #a5a5a5;
+    /*border-bottom: solid 1px #a5a5a5;*/
 }
 
 .button-bar__button:active, :active + .button-bar__button {
@@ -76,10 +76,11 @@ div.navigation-bar {
 .tab-bar__icon + .tab-bar__label {
     font-size: 11.7px;
     margin-top: 4px;
+
 }
 
 .tab-bar__icon {
-    height: 36px;
+    height: 49px;
     text-align: center;
 }
 
@@ -95,6 +96,10 @@ div.navigation-bar {
 
 .toolbar-big .navigation-bar__center {
     width: 62%;
+    color:#83be4e;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Poppins';
 }
 
 .toolbar-big .navigation-bar__left, .toolbar-big .navigation-bar__right {
@@ -176,4 +181,8 @@ div.navigation-bar {
 
 .list__header {
     background: #fff;
+}
+
+.back-button__label {
+    max-width: 35px;
 }
