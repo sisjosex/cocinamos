@@ -1010,6 +1010,14 @@ module.controller('Subcategory', function ($scope, service, $sce) {
             $('.menus .video').hide();
 
             $('.menus .' + filter).show();
+
+            setTimeout(function () {
+                $('.subcategory-page .preview').each(function () {
+
+                    new ImageLoader($(this), new Image());
+
+                });
+            }, 500);
         };
 
         $scope.getSubcategory = function () {
