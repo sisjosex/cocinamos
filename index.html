@@ -638,7 +638,7 @@
 
             <div class="ingredients">
                 <h1>{{ menu.name }}</h1>
-                <h3 class="ingredientes-title">Ingredientes</h3>
+                <h3 class="ingredientes-title2">Ingredientes</h3>
                 <ons-row ng-repeat="ingredient in menu.ingredients" class="ingredient-row">
                     <ons-col class="col-dot"><span class="red">·</span></ons-col>
                     <ons-col class="col-number">{{ ingredient.quantity_calculated }}</ons-col>
@@ -661,7 +661,7 @@
                 </ons-row>
 
                 <div class="">
-                    <h3 class="ingredientes-title">Preparación</h3>
+                    <h3 class="ingredientes-title2">Preparación</h3>
                 </div>
 
                 <div class="tip pasos" ng-repeat="item in menu.steps">
