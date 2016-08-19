@@ -161,6 +161,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
             API_URL = 'http://localhost/fino/admin/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
+            //API_URL = 'http://cocinamosconfino.com/api/';
 
             setTimeout(onDeviceReady, 500);
 
@@ -289,7 +290,6 @@ module.controller('Intro', function ($scope) {
 
             mainNavigator.pushPage('forgot.html');
         };
-
 
         try {
             navigator.splashscreen.hide();
@@ -450,6 +450,10 @@ module.controller('Dashboard', function ($scope, service) {
                 currentNavigator = counselNavigator;
             }, 500);
         };
+
+        try {
+            navigator.splashscreen.hide();
+        }catch(error){}
 
     });
 });
