@@ -1592,3 +1592,16 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     top: 50%;
     left: 50%;
 }
+
+h1 {
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.ingredientes-title {
+    color: #82bc49;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left !important;
+}

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="592c7479-11ec-4e29-94f2-654d88ee78df" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/app.css" afterPath="$PROJECT_DIR$/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -194,8 +193,8 @@
       <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3923767">
-              <caret line="404" column="17" selection-start-line="404" selection-start-column="17" selection-end-line="404" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.77130044">
+              <caret line="1601" column="21" selection-start-line="1601" selection-start-column="21" selection-end-line="1601" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -1443,8 +1442,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3923767">
-          <caret line="404" column="17" selection-start-line="404" selection-start-column="17" selection-end-line="404" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.77130044">
+          <caret line="1601" column="21" selection-start-line="1601" selection-start-column="21" selection-end-line="1601" selection-end-column="21" />
           <folding />
         </state>
       </provider>
