@@ -3,8 +3,8 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.helloworld"
-        version   = "1.0.0">
+        id        = "com.motion.cocinamos"
+        version   = "2.0.0">
 
     <name>Cocinamos</name>
 
@@ -122,7 +122,7 @@
 
     <plugin name="com.bunkerpalace.cordova.youtubevideoplayer" source="pgb" />
     <plugin name="com-sarriaroman-photoviewer" />
-    <plugin name="nl.x-services.plugins.socialsharing" source="pgb" />
+    <!--<plugin name="nl.x-services.plugins.socialsharing" source="pgb" />-->
 
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
