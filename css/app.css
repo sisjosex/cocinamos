@@ -1549,3 +1549,26 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .search-toolbar .search-input {
     border: solid 2px #82bd49;
 }
+
+.toolbar-button, .toolbar-button--outline, .toolbar-button--quiet {
+    padding: 4px 2px;
+    margin: 0;
+    width: 22px;
+    display: inline-block;
+    line-height: 1px;
+}
+
+.left.navigation-bar__left .button{
+    text-align: left;
+    padding: 0;
+}
+
+.back-icon:before {
+    font-family: 'Ionicons';
+    content: '\f3cf';
+    font-size: 32px;
+    width: 25px;
+    height: 40px;
+    display: block;
+    padding-left: 10px;
+}

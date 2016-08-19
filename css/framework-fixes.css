@@ -189,3 +189,7 @@ div.navigation-bar {
 .back-button__label {
     max-width: 35px;
 }
+
+.button {
+    background-color: transparent;
+}

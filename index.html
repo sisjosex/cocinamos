@@ -48,7 +48,6 @@
 </ons-modal>
 
 <ons-navigator animation="slide" id="mainNavigator" ng-controller="MainNavigatorController" class="">
-
 </ons-navigator>
 
 <ons-template id="intro.html">
@@ -83,7 +82,7 @@
         <ons-toolbar>
             <div class="left">
                 <ons-back-button>
-                    <ons-back-button><img src="img/new/back_button.png" alt=""></ons-back-button>
+                    <ons-button class="back-button" ng-click="back()"><span class="back-icon"></span></ons-button>
                 </ons-back-button>
             </div>
             <div class="center"></div>
@@ -122,7 +121,7 @@
         <ons-toolbar class="toolbar-green">
             <div class="left">
                 <ons-back-button>
-                    <ons-back-button><img class="header-icon" src="img/new/back_button.png" alt=""></ons-back-button>
+                    <ons-button class="back-button" ng-click="back()"><span class="back-icon"></span></ons-button>
                 </ons-back-button>
             </div>
             <div class="center">PERFIL</div>
@@ -163,9 +162,7 @@
         <ons-page ng-controller="Perfil" class="register intro internal-tab register-page">
             <ons-toolbar class="toolbar-green">
                 <div class="left">
-                    <ons-back-button>
-                        <ons-back-button><img class="header-icon" src="img/new/back_button.png" alt=""></ons-back-button>
-                    </ons-back-button>
+                    <ons-button class="back-button" ng-click="back()"><span class="back-icon"></span></ons-button>
                 </div>
                 <div class="center">PERFIL</div>
                 <div class="right">
@@ -205,7 +202,7 @@
     <ons-page ng-controller="Login" class="register intro internal-tab login login-page">
         <ons-toolbar>
             <div class="left">
-                <ons-back-button><img src="img/new/back_button.png" alt=""></ons-back-button>
+                <ons-button class="back-button" ng-click="back()"><span class="back-icon"></span></ons-button>
             </div>
             <div class="center"></div>
             <div class="right">
@@ -245,7 +242,7 @@
         <ons-toolbar>
             <div class="left">
                 <ons-back-button>
-                    <ons-back-button><img src="img/new/back_button.png" alt=""></ons-back-button>
+                    <ons-button class="back-button" ng-click="back()"><span class="back-icon"></span></ons-button>
                 </ons-back-button>
             </div>
             <div class="center"></div>
@@ -525,15 +522,16 @@
 
             <ons-toolbar class="toolbar-big">
                 <div class="left">
-                    <ons-toolbar-button ng-click="goToFavorite()">
-                        <img src="img/new/corazon_green.png" alt="">
-                    </ons-toolbar-button>
+                    <ons-button class="back-button" ng-click="back()"><span class="back-icon"></span></ons-button>
                 </div>
                 <div class="center">
                     Recetas
                 </div>
 
                 <div class="right">
+                    <ons-toolbar-button ng-click="goToFavorite()">
+                        <img src="img/new/corazon_green.png" alt="">
+                    </ons-toolbar-button>
                     <ons-toolbar-button ng-click="goToCategory()">
                         <img src="img/new/search-yellow.png" alt="">
                     </ons-toolbar-button>
@@ -856,15 +854,16 @@
         <ons-page ng-controller="Calculator" class="intro internal-tab calculator-page">
             <ons-toolbar class="toolbar-big">
                 <div class="left">
-                    <ons-toolbar-button ng-click="goToFavorite()">
-                        <img src="img/new/corazon_green.png" alt="">
-                    </ons-toolbar-button>
+                    <ons-button class="back-button" ng-click="back()"><span class="back-icon"></span></ons-button>
                 </div>
                 <div class="center">
                     Calculadoras
                 </div>
 
                 <div class="right">
+                    <ons-toolbar-button ng-click="goToFavorite()">
+                        <img src="img/new/corazon_green.png" alt="">
+                    </ons-toolbar-button>
                 </div>
             </ons-toolbar>
 
@@ -1282,15 +1281,16 @@
         <ons-page ng-controller="Counsel" class="intro internal-tab counsel-page">
             <ons-toolbar class="toolbar-big">
                 <div class="left">
-                    <ons-toolbar-button ng-click="goToFavorite()">
-                        <img src="img/new/corazon_green.png" alt="">
-                    </ons-toolbar-button>
+                    <ons-button class="back-button" ng-click="back()"><span class="back-icon"></span></ons-button>
                 </div>
                 <div class="center">
                     Tips & Consejos
                 </div>
 
                 <div class="right">
+                    <ons-toolbar-button ng-click="goToFavorite()">
+                        <img src="img/new/corazon_green.png" alt="">
+                    </ons-toolbar-button>
                 </div>
             </ons-toolbar>
 
@@ -1392,7 +1392,7 @@
 </ons-template>
 
 <ons-template id="favorite.html">
-    <ons-page ng-controller="Favorite" class="home internal-tab favorite-page">
+    <ons-page ng-controller="Favorite" class="intro internal-tab favorite-page">
 
         <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
             <div class="left">
@@ -1471,16 +1471,19 @@
                         Buscar
                     </ons-toolbar-button>
                 </div>
+                <div class="right">
+                </div>
             </ons-toolbar>
 
             <ons-toolbar>
                 <div class="left">
-                    <ons-toolbar-button ng-click="goToFavorite()">
-                        <img src="img/new/corazon_green.png" alt="">
-                    </ons-toolbar-button>
+                    <ons-button class="back-button" ng-click="back()"><span class="back-icon"></span></ons-button>
                 </div>
                 <div class="center">Mis Compras</div>
                 <div class="right">
+                    <ons-toolbar-button ng-click="goToFavorite()">
+                        <img src="img/new/corazon_green.png" alt="">
+                    </ons-toolbar-button>
                     <ons-toolbar-button ng-click="toggleSearch()">
                         <img src="img/new/search-yellow.png" alt="">
                     </ons-toolbar-button>

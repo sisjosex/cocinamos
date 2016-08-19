@@ -123,6 +123,11 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
             });
         };
 
+        $rootScope.back = function() {
+
+            mainNavigator.popPage();
+        };
+
 
         $rootScope.ingredient = 'Elige tu alimento...';
         $rootScope.porcion = 'Elige la cantidad de porciones...';
