@@ -412,23 +412,43 @@ module.controller('Dashboard', function ($scope, service) {
     ons.ready(function () {
 
         $scope.gotoPerfil = function() {
-            mainNavigator.pushPage('perfil.html');
+            mainNavigator.pushPage('home_perfil.html');
+
+            setTimeout(function(){
+                currentNavigator = perfilNavigator;
+            }, 500);
         };
 
         $scope.gotoRecetas = function() {
             mainNavigator.pushPage('home_recipes.html');
+
+            setTimeout(function(){
+                currentNavigator = recipesNavigator;
+            }, 500);
         };
 
         $scope.gotoCalculadora = function() {
             mainNavigator.pushPage('home_calculator.html');
+
+            setTimeout(function(){
+                currentNavigator = calculatorNavigator;
+            }, 500);
         };
 
         $scope.gotoCompras = function() {
             mainNavigator.pushPage('home_myshopping.html');
+
+            setTimeout(function(){
+                currentNavigator = myshoppingNavigator;
+            }, 500);
         };
 
         $scope.gotoConsejos = function() {
             mainNavigator.pushPage('home_counsel.html');
+
+            setTimeout(function(){
+                currentNavigator = counselNavigator;
+            }, 500);
         };
 
     });
@@ -1405,6 +1425,15 @@ module.controller('Counsel', function ($scope, service) {
 
                 $scope.tip_categories = result.data;
 
+                setTimeout(function () {
+                    $('.counsel-page .preview').each(function () {
+
+                        new ImageLoader($(this), new Image());
+
+                    });
+
+                }, 500);
+
             } else {
 
                 modal.hide();
@@ -1447,6 +1476,15 @@ module.controller('TipList', function ($scope, service) {
 
                 $scope.tips = result.data;
 
+                setTimeout(function () {
+                    $('.tip_list-page .preview').each(function () {
+
+                        new ImageLoader($(this), new Image());
+
+                    });
+
+                }, 500);
+
             } else {
 
                 modal.hide();
@@ -1483,6 +1521,15 @@ module.controller('Tip', function ($scope, service) {
                 $scope.tip = result.data;
 
                 $scope.tip.content = $('<div>' + $scope.tip.content + '</div>').html();
+
+                setTimeout(function () {
+                    $('.tip-page .preview').each(function () {
+
+                        new ImageLoader($(this), new Image());
+
+                    });
+
+                }, 500);
 
             } else {
 

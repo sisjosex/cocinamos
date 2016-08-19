@@ -6,7 +6,7 @@
 }
 
 div.navigation-bar {
-    background:rgba(196, 196, 196, 0.9);
+    background: #rgba(234, 243, 220, 0.7);
 }
 
 .navigation-bar {
@@ -18,22 +18,25 @@ div.navigation-bar {
 }
 
 .button-bar__button {
-    color:#666666;
+    color:#8bc53f;
     border-color:#929292;
-    background: #bdbec2;
+    background: none;
+    border:none;
 }
 
 .button-bar__item:last-child > .button-bar__button {
-    border-color:#929292;
+    border:none;
 }
 
 .button-bar__item:first-child > .button-bar__button {
-    border-color:#929292;
+    border:none;
 }
 
 .button-bar__item.active > .button-bar__button, :checked + .button-bar__button {
-    background-color: #fff;
-    color:#666666;
+    font-weight: bold;
+    background: none;
+    color:#8bc53f;
+    font-weight:bold;
 }
 
 .search-toolbar .center.navigation-bar__center {
@@ -140,15 +143,15 @@ div.navigation-bar {
 
 .checkbox__checkmark:before {
     border-radius: 0px;
-    border: 1px solid #e83b3b;
+    border: 1px solid #cccccc;
     width: 20px;
     height: 20px;
 }
 
 .checkbox__input:checked + .checkbox__checkmark:before {
-    background: transparent;
-    border: 1px solid #e83b3b;
-    color:#e83b3b;
+    background: #cbdd5f;
+    border: 1px solid #cbdd5f;
+    color:#cbdd5f;
 }
 
 .checkbox__checkmark:after {
@@ -159,7 +162,7 @@ div.navigation-bar {
     width: 12px;
     height: 6px;
     background: transparent;
-    border: 3px solid red;
+    border: 3px solid #cccccc;
     border-width: 2px;
     border-top: none;
     border-right: none;

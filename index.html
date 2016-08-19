@@ -159,41 +159,43 @@
 </ons-template>
 
 <ons-template id="perfil2.html">
-    <ons-page ng-controller="Perfil" class="register intro internal-tab register-page">
-        <ons-toolbar class="toolbar-green">
-            <div class="left">
-            </div>
-            <div class="center">PERFIL</div>
-            <div class="right">
+    <ons-navigator animation="slide" id="perfilNavigator">
+        <ons-page ng-controller="Perfil" class="register intro internal-tab register-page">
+            <ons-toolbar class="toolbar-green">
+                <div class="left">
+                </div>
+                <div class="center">PERFIL</div>
+                <div class="right">
 
-            </div>
-        </ons-toolbar>
+                </div>
+            </ons-toolbar>
 
-        <div class="intro-content">
-            <div class="center-content2">
-                <div class="intro-section">
-                    <div class="logo-intro">
-                        <img src="img/new/logo_cocinamos.png" alt="">
-                    </div>
+            <div class="intro-content">
+                <div class="center-content2">
+                    <div class="intro-section">
+                        <div class="logo-intro">
+                            <img src="img/new/logo_cocinamos.png" alt="">
+                        </div>
 
-                    <div class="intro-section-content2">
-                        <p class="text">La mejor comida es la que se cocina en casa</p>
-                        <h1 class="intro-title">Modifica tus datos</h1>
-                        <input type="text" class="text-input--underbar input-text" placeholder="Nombre completo"
-                               ng-model="user.name" autocomplete="off">
-                        <input type="text" class="text-input--underbar input-text" placeholder="Correo electrónico"
-                               ng-model="user.email" autocomplete="off">
-                        <input type="text" class="text-input--underbar input-text" placeholder="Contraseña antigua"
-                               ng-model="user.password_old" autocomplete="off">
-                        <input type="password" class="text-input--underbar input-text"
-                               placeholder="Contraseña nueva" ng-model="user.password" autocomplete="off">
-                        <ons-button class="btn-yellow" ng-click="register()">Guardar</ons-button>
-                        <!--<p class="text text3">Condiciones del servicio y <br> pol&iacute;ticas de privacidad</p>-->
+                        <div class="intro-section-content2">
+                            <p class="text">La mejor comida es la que se cocina en casa</p>
+                            <h1 class="intro-title">Modifica tus datos</h1>
+                            <input type="text" class="text-input--underbar input-text" placeholder="Nombre completo"
+                                   ng-model="user.name" autocomplete="off">
+                            <input type="text" class="text-input--underbar input-text" placeholder="Correo electrónico"
+                                   ng-model="user.email" autocomplete="off">
+                            <input type="text" class="text-input--underbar input-text" placeholder="Contraseña antigua"
+                                   ng-model="user.password_old" autocomplete="off">
+                            <input type="password" class="text-input--underbar input-text"
+                                   placeholder="Contraseña nueva" ng-model="user.password" autocomplete="off">
+                            <ons-button class="btn-yellow" ng-click="register()">Guardar</ons-button>
+                            <!--<p class="text text3">Condiciones del servicio y <br> pol&iacute;ticas de privacidad</p>-->
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </ons-page>
+        </ons-page>
+    </ons-navigator>
 </ons-template>
 
 <ons-template id="login.html">
@@ -353,6 +355,37 @@
             </ons-tab>
         </ons-tabbar>
 
+    </ons-page>
+</ons-template>
+
+<ons-template id="home_perfil.html">
+    <ons-page ng-controller="Home" class="home-page">
+        <ons-tabbar>
+            <ons-tab page="perfil2.html" active ng-click="changeNavigator('perfilNavigator')">
+                <div class="tab-bar__icon perfil">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
+            <ons-tab page="recipes.html" ng-click="changeNavigator('recipesNavigator')">
+                <div class="tab-bar__icon recipe">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
+            <ons-tab page="calculator.html" ng-click="changeNavigator('calculatorNavigator')">
+                <div class="tab-bar__icon calculator">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
+            <ons-tab page="counsel.html" ng-click="changeNavigator('counselNavigator')">
+                <div class="tab-bar__icon counsel">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
+            <ons-tab page="myshopping.html" ng-click="changeNavigator('myshoppingNavigator')">
+                <div class="tab-bar__icon myshopping">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
     </ons-page>
 </ons-template>
 
@@ -738,18 +771,18 @@
 </ons-template>
 
 <ons-template id="subcategory.html">
-    <ons-page ng-controller="Subcategory" class="home internal-tab secondary-toolbar subcategory-page">
+    <ons-page ng-controller="Subcategory" class="intro internal-tab secondary-toolbar subcategory-page">
 
         <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
             <div class="left">
-                <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
+                <input type="search" class="search-input" placeholder="" ng-model="search"/>
                 <ons-toolbar-button ng-click="buscar()">
                     Buscar
                 </ons-toolbar-button>
             </div>
         </ons-toolbar>
 
-        <ons-toolbar>
+        <ons-toolbar class="toolbar-big">
             <div class="left">
                 <ons-back-button></ons-back-button>
             </div>
@@ -821,7 +854,7 @@
             <ons-toolbar class="toolbar-big">
                 <div class="left">
                     <ons-toolbar-button ng-click="goToFavorite()">
-                        <img src="img/heart-blue-icon.png" alt="">
+                        <img src="img/new/corazon_green.png" alt="">
                     </ons-toolbar-button>
                 </div>
                 <div class="center">
@@ -844,28 +877,28 @@
 
                     <div class="menu-box calc-item" ng-click="goToPage('calc-nutrientes.html')">
                         <figure class="figure">
-                            <div class="preview" src="img/calc-nutrientes.png"></div>
+                            <div class="preview" src="img/new/calc-nutrientes.jpg"></div>
                         </figure>
                         <div class="caption"><span>Calculadora de Nutrientes</span></div>
                     </div>
 
                     <div class="menu-box calc-item" ng-click="goToPage('calc-proteinas.html')">
                         <figure class="figure">
-                            <div class="preview" src="img/calc-proteinas.png"></div>
+                            <div class="preview" src="img/new/calc-proteinas.jpg"></div>
                         </figure>
                         <div class="caption"><span>Calculadora de Proteinas</span></div>
                     </div>
 
                     <div class="menu-box calc-item" ng-click="goToPage('calc-calorias.html')">
                         <figure class="figure">
-                            <div class="preview" src="img/calc-calorias.png"></div>
+                            <div class="preview" src="img/new/calc-calorias.jpg"></div>
                         </figure>
                         <div class="caption"><span>Calculadora de Calorias</span></div>
                     </div>
 
                     <div class="menu-box calc-item" ng-click="goToPage('calc-calorias-diarias.html')">
                         <figure class="figure">
-                            <div class="preview" src="img/calc-calorias-diarias.png"></div>
+                            <div class="preview" src="img/new/calc-calorias-diarias.jpg"></div>
                         </figure>
                         <div class="caption"><span>Calculo de Calorias Diarias</span></div>
                     </div>
@@ -877,7 +910,7 @@
 </ons-template>
 
 <ons-template id="calc-nutrientes.html">
-    <ons-page ng-controller="CalNutrientes" class="home calc-nutrientes-page">
+    <ons-page ng-controller="CalNutrientes" class="intro calc-nutrientes-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -898,16 +931,10 @@
             <figure class="figure">
                 <div class="preview" src="img/calc-nutrientes.jpg"></div>
             </figure>
-            <div class="chef-icon">
-                <img ng-src="img/chef-icon.png" alt="">
-            </div>
         </div>
 
         <div class="calc-content">
-            <h4>Calculadora de Nutrientes</h4>
-
-            <p>¿Quieres saber cuántas calorias y nutrientes consumes cada vez que ingieres un alimento?
-                Descubrelo con la Calculadora de Nutrientes.</p>
+            <h4 class="calculadora-title">Calcula los nutrientes</h4>
 
             <div class="form">
                 <div class="form-control">
@@ -941,7 +968,7 @@
                 </div>
             </div>
 
-            <h4>Información Nutricional</h4>
+            <h5>Información Nutricional</h5>
 
             <div class="form2">
                 <div class="form-control">
@@ -982,7 +1009,7 @@
 </ons-template>
 
 <ons-template id="calc-proteinas.html">
-    <ons-page ng-controller="CalcProteinas" class="home calc-proteinas-page">
+    <ons-page ng-controller="CalcProteinas" class="intro calc-proteinas-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -1003,29 +1030,10 @@
             <figure class="figure">
                 <div class="preview" src="img/calc-proteinas.jpg"></div>
             </figure>
-            <div class="chef-icon">
-                <img ng-src="img/chef-icon.png" alt="">
-            </div>
         </div>
 
         <div class="calc-content">
             <h4>Calculadora de Proteinas</h4>
-
-            <p>Averigua fácilmente cuántas proteínas tiene cada alimento
-                (frutas, verduras, lácteos…) con esta sencilla calculadora de
-                <br><br>
-                El funcionamiento es muy sencillo. Simplemente elige el
-                alimento del que quieres averiguar las proteíans que tiene y
-                pulsa sobre el botón “Calcular Proteínas”. Si quieres puedes
-                filtrar por tipo de alimento para que te resulte más sencillo
-                encontrar el alimento que estás buscando.
-                <br><br>
-                Inmediatamente obtendrás una pequeña ficha nutricional del
-                alimento elegido, con la cantidad aproximada de proteínas
-                que contiene por ración y por cada 100 gr. Si quieres saber
-                más sobre ese alimento, simplemente pulsa sobre el botón
-                verde para ir a la ficha completa del alimento.</p>
-            <br>
 
             <div class="form">
                 <div class="form-control">
@@ -1059,8 +1067,9 @@
                 </div>
             </div>
 
-            <h4>Cantidad de Proteínas</h4>
-            <h4 style="color:#e83b3b;border-bottom:none;">{{ ingredient }}</h4>
+            <h5>Cantidad de Proteínas</h5>
+
+            <h3>{{ ingredient }}</h3>
 
             <div class="form2">
                 <div class="form-control">
@@ -1093,7 +1102,7 @@
 </ons-template>
 
 <ons-template id="calc-calorias.html">
-    <ons-page ng-controller="CalcCalorias" class="home calc-calorias-page">
+    <ons-page ng-controller="CalcCalorias" class="intro calc-calorias-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -1112,37 +1121,12 @@
 
         <div class="calc-header">
             <figure class="figure">
-                <div class="preview" src="img/calc-calorias.jpg"></div>
+                <div class="preview" src="img/new/calc-calorias.jpg"></div>
             </figure>
-            <div class="chef-icon">
-                <img ng-src="img/chef-icon.png" alt="">
-            </div>
         </div>
 
         <div class="calc-content">
             <h4>Calculadora de Calorías</h4>
-
-            <p>Averigua fácilmente cuántas calorías tiene cada alimento
-                (frutas, verduras, lácteos…) con esta sencilla calculadora de
-                calorías.
-                <br>
-                El funcionamiento es muy sencillo. Simplemente elige el
-                alimento del que quieres averiguar las calorías que tiene y
-                pulsa sobre el botón “Calcular Calorías”. Si quieres puedes
-                filtrar por tipo de alimento para que te resulte más sencillo
-                encontrar el alimento que estás buscando.
-                <br>
-                Inmediatamente obtendrás una pequeña ficha nutricional del
-                alimento elegido, con la cantidad aproximada de calorías que
-                contiene por ración y por cada 100 gr. Si quieres saber más
-                sobre ese alimento, simplemente pulsa sobre el botón verde
-                para ir a la ficha completa del alimento.
-                <br>
-                Existen también otras herramientas que te serán muy útiles a
-                la hora de cocinar y preparar los alimentos para que no
-                pierdan su valor nutricional. A continuación encontrarás
-                alguna de las más útiles para ti.
-            </p>
 
             <div class="form">
                 <div class="form-control">
@@ -1176,9 +1160,9 @@
                 </div>
             </div>
 
-            <h4>Cantidad de Calorías</h4>
+            <h5>Cantidad de Calorías</h5>
 
-            <h4 style="color:#e83b3b;border-bottom:none;">{{ ingredient }}</h4>
+            <h3>{{ ingredient }}</h3>
 
             <div class="form2">
                 <div class="form-control">
@@ -1211,7 +1195,7 @@
 </ons-template>
 
 <ons-template id="calc-calorias-diarias.html">
-    <ons-page ng-controller="CalCaloriasDiarias" class="home calc-calorias-diarias-page">
+    <ons-page ng-controller="CalCaloriasDiarias" class="intro calc-calorias-diarias-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -1232,18 +1216,10 @@
             <figure class="figure">
                 <div class="preview" src="{{ trustSrc('img/calc-calorias-diarias.png') }}"></div>
             </figure>
-            <div class="chef-icon">
-                <img ng-src="img/chef-icon.png" alt="">
-            </div>
         </div>
 
         <div class="calc-content">
             <h4>Calculadora de Calorías diarias</h4>
-
-            <p>Conoce cuál debería ser tu consumo diario ideal de calorías
-                con la Calculadora de Calorías diarias y mejora tu estilo de
-                vida.
-            </p>
 
             <div class="form2">
                 <div class="form-control">
@@ -1274,9 +1250,9 @@
                 </div>
             </div>
 
-            <h4>Consumo de calorías necesario (al día)</h4>
+            <h5>Consumo de calorías necesario (al día)</h5>
 
-            <h4 style="color:#007aff;border-bottom:none;font-size:13px;">Calorías necesarias para mantener tu peso:</h4>
+            <h3 class="style1">Calorías necesarias para mantener tu peso:</h3>
 
             <div class="form2">
                 <div class="form-control">
@@ -1286,8 +1262,8 @@
                 </div>
             </div>
 
-            <h4 style="color:#c88258;border-bottom:none;font-size:13px;">Calorías necesarias para perder medio kilo a la
-                semana:</h4>
+            <h3 class="style2">Calorías necesarias para perder medio kilo a la
+                semana:</h3>
 
             <div class="form2">
                 <div class="form-control">
@@ -1363,7 +1339,7 @@
             <div class="menu-box" ng-repeat="item in tips track by $index" ng-click="goToTip(item)">
                 <figure class="figure">
 
-                    <div class="preview" src="{{ trustSrc(item.photo) }}"></div>
+                    <div class="preview" src="{{ trustSrc(item.image) }}"></div>
                     <!--
                     <i ng-show="item.in_recipes" class="icon bookmark">
                         <img src="img/bookmark-icon.png" alt="">
@@ -1386,7 +1362,7 @@
 </ons-template>
 
 <ons-template id="tip.html">
-    <ons-page ng-controller="Tip" class=" tip white-page internal-tab tip-page">
+    <ons-page ng-controller="Tip" class="intro white-page internal-tab tip-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -1402,14 +1378,16 @@
             </div>
         </ons-toolbar>
 
-        <div class="tip-content">
-            <div class="chef-icon-tip">
-                <figure>
-                    <img src="img/chef-icon.png" alt="">
+        <div class="menus">
+            <div class="menu-box">
+                <figure class="figure">
+                    <div class="preview" src="{{ trustSrc(tip.image) }}"></div>
                 </figure>
+                <div class="caption">{{ tip.title }}</div>
             </div>
-            <h1>{{ tip.title }}</h1>
+        </div>
 
+        <div class="ingredients">
             <div ng-bind-html="tip.content"></div>
         </div>
 
@@ -1421,7 +1399,7 @@
 
         <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
             <div class="left">
-                <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
+                <input type="search" class="search-input" placeholder="" ng-model="search"/>
                 <ons-toolbar-button ng-click="buscar()">
                     Buscar
                 </ons-toolbar-button>
@@ -1488,10 +1466,10 @@
 
 <ons-template id="myshopping.html">
     <ons-navigator animation="slide" id="myshoppingNavigator">
-        <ons-page ng-controller="MyShopping" class="internal-tab secondary-toolbar myshopping-page">
+        <ons-page ng-controller="MyShopping" class="intro internal-tab secondary-toolbar myshopping-page">
             <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
                 <div class="left">
-                    <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
+                    <input type="search" class="search-input" placeholder="" ng-model="search"/>
                     <ons-toolbar-button ng-click="buscar()">
                         Buscar
                     </ons-toolbar-button>
@@ -1501,13 +1479,13 @@
             <ons-toolbar>
                 <div class="left">
                     <ons-toolbar-button ng-click="goToFavorite()">
-                        <img src="img/heart-blue-icon.png" alt="">
+                        <img src="img/new/corazon_green.png" alt="">
                     </ons-toolbar-button>
                 </div>
                 <div class="center">Mis Compras</div>
                 <div class="right">
                     <ons-toolbar-button ng-click="toggleSearch()">
-                        Buscador
+                        <img src="img/new/search-yellow.png" alt="">
                     </ons-toolbar-button>
                 </div>
             </ons-toolbar>
@@ -1534,7 +1512,7 @@
 </ons-template>
 
 <ons-template id="myshopping_detail.html">
-    <ons-page ng-controller="MyshoppingDetail" class="tip white-page menu-detail myshopping_detail-page">
+    <ons-page ng-controller="MyshoppingDetail" class="intro white-page menu-detail myshopping_detail-page">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -1558,26 +1536,18 @@
             <figure class="figure">
                 <div class="preview" src="{{ trustSrc(menu.photo) }}" ng-click="showImage(menu.photo)"></div>
             </figure>
-            <div class="chef-icon">
-                <img ng-src="img/chef-icon.png" alt="">
-            </div>
             <div ng-click="playVideo(menu.video)" ng-show="menu.type=='video'" class="play-icon-main"></div>
         </div>
 
-        <div class="calc-content" style="padding-top: 50px;">
-            <h1>Detalla de Compras para {{ menu.name }}</h1>
-
-            <hr>
+        <div class="calc-content shopping-detail">
 
             <div class="recipe-section">
-                <div class="item" style="width: 60px;">
-                    <img class="img2" ng-src="img/ingredients.png">
-                </div>
-                <div class="item item-title1" style="width:37%;">
+                <div class="item item-title1" style="width:80%;">
+                    <h2>{{ menu.name }}</h2>
                     <h3>Lista de Ingredientes</h3>
                 </div>
                 <div class="item" style="width:77px;">
-                    <img class="img1" src="img/porciones.png">
+                    <img class="img1" src="img/new/icon-porciones.png">
                     <span>{{ menu.portions }} porciones</span>
                 </div>
             </div>
@@ -1592,7 +1562,7 @@
                 </ons-row>
             </div>
 
-            <h1 class="delete-shopping" ng-click="deleteShopping()">Eliminar de la lista</h1>
+            <h1 class="delete-shopping btn-yellow" ng-click="deleteShopping()">Eliminar de la lista</h1>
 
         </div>
 
@@ -1604,7 +1574,7 @@
         <ons-page ng-controller="Invite" class="internal-tab secondary-toolbar invite-page">
             <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
                 <div class="left">
-                    <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
+                    <input type="search" class="search-input" placeholder="" ng-model="search"/>
                     <ons-toolbar-button ng-click="buscar()">
                         Buscar
                     </ons-toolbar-button>
@@ -1620,7 +1590,7 @@
                 <div class="center">Mis Invitaciones</div>
                 <div class="right">
                     <ons-toolbar-button ng-click="toggleSearch()">
-                        Buscador
+                        <img src="img/new/search-yellow.png" alt="">
                     </ons-toolbar-button>
                 </div>
             </ons-toolbar>
@@ -1763,10 +1733,10 @@
 </ons-template>
 
 <ons-template id="units.html">
-    <ons-page ng-controller="Units" class="internal-tab secondary-toolbar units-page">
+    <ons-page ng-controller="Units" class="intro internal-tab secondary-toolbar units-page">
         <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
             <div class="left">
-                <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
+                <input type="search" class="search-input" placeholder="" ng-model="search"/>
                 <ons-toolbar-button ng-click="buscar()">
                     Buscar
                 </ons-toolbar-button>
@@ -1780,7 +1750,7 @@
             <div class="center">Medidas de Cocina</div>
             <div class="right">
                 <ons-toolbar-button ng-click="toggleSearch()">
-                    Buscador
+                    <img src="img/new/search-yellow.png" alt="">
                 </ons-toolbar-button>
             </div>
         </ons-toolbar>
@@ -1800,10 +1770,10 @@
 </ons-template>
 
 <ons-template id="unit.html">
-    <ons-page ng-controller="Unit" class="internal-tab secondary-toolbar unit-page">
+    <ons-page ng-controller="Unit" class="intro internal-tab secondary-toolbar unit-page">
         <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
             <div class="left">
-                <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
+                <input type="search" class="search-input" placeholder="" ng-model="search"/>
                 <ons-toolbar-button ng-click="buscar()">
                     Buscar
                 </ons-toolbar-button>
@@ -1843,10 +1813,10 @@
 </ons-template>
 
 <ons-template id="unit_cocina.html">
-    <ons-page ng-controller="Unit" class="internal-tab secondary-toolbar unit_cocina-page">
+    <ons-page ng-controller="Unit" class="intro internal-tab secondary-toolbar unit_cocina-page">
         <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
             <div class="left">
-                <input type="search" class="search-input" placeholder="Buscador" ng-model="search"/>
+                <input type="search" class="search-input" placeholder="" ng-model="search"/>
                 <ons-toolbar-button ng-click="buscar()">
                     Buscar
                 </ons-toolbar-button>

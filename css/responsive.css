@@ -1,3 +1,9 @@
+@media all and (max-width:450px) {
+    .toolbar-big .navigation-bar__center {
+        font-size: 22px;
+    }
+}
+
 @media all and (max-width:375px) {
     .btn-agregar {
         font-size: 19px;
@@ -19,8 +25,8 @@
     }
 
     .tab-bar__icon .img {
-        width: 29px;
-        height: 29px;
+        width: 40px;
+        height: 40px;
     }
 
     .tab-bar__icon + .tab-bar__label {

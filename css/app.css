@@ -22,7 +22,7 @@
 }
 
 @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins-Regular';
     src: url('fonts/Poppins.eot?#iefix') format('embedded-opentype'),  url('fonts/Poppins.woff') format('woff'), url('fonts/Poppins.ttf')  format('truetype'), url('fonts/Poppins.svg#Poppins') format('svg');
     font-weight: normal;
     font-style: normal;
@@ -282,7 +282,7 @@ img {
 }
 
 .navigation-bar {
-    background: #eaf3dc;
+    background: rgba(234, 243, 220, 0.8);
 }
 
 .tab-bar {
@@ -711,7 +711,11 @@ img {
     padding-right: 5px;
     font-weight: bold;
     font-size: 12px;
-    height:100%;
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    white-space: normal;
 }
 
 .tip-category .preview {
@@ -808,23 +812,48 @@ img {
     padding-top: 0px;
     margin-top: 0px;
     position: relative;
-    padding-bottom:70px;
+    padding-bottom: 70px;
     padding-left: 0px;
     padding-right: 0px;
+    margin-top: -27px;
 }
 
 
 .calc-content h4 {
-    font-family: 'SFUIText-Semibold';
-    font-weight: bold;
-    text-align: center;
-    border-bottom: solid 1px #b0b0b0;
-    color: #000;
-    font-size: 19px;
+    color: #ffffff;
+    font-size: 20px;
+    display: block;
+    width: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
     padding-bottom: 5px;
-    margin-bottom: 12px;
-    position: relative;
-    z-index: 10;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background: -webkit-linear-gradient(left, rgba(130, 189, 73, 1), rgba(175, 206, 68, 1), rgba(251, 233, 60, 1));
+    background: -o-linear-gradient(right, rgba(130, 189, 73, 1), rgba(175, 206, 68, 1), rgba(251, 233, 60, 1));
+    background: -moz-linear-gradient(right, rgba(130, 189, 73, 1), rgba(175, 206, 68, 1), rgba(251, 233, 60, 1));
+    background: linear-gradient(to right, rgba(130, 189, 73, 1), rgba(175, 206, 68, 1) , rgba(251, 233, 60, 1));
+    text-align: center;
+}
+
+.calc-content h5 {
+    color: #9f9f23;
+    font-size: 17px;
+    display: block;
+    width: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    text-align: center;
 }
 
 .calc-content p {
@@ -842,23 +871,24 @@ img {
     margin-bottom:10px;
 }
 
-.form, .form2 {
+form, .form2 {
     margin-top: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .form .form-element {
-    border: solid 1px #929292;
+    border: solid 1px #f7faf3;
     border-radius: 5px;
     margin-right: 0px;
     height: 100%;
     background: #fff;
     padding-left: 10px;
     padding-right: 10px;
-
-    background: url('../img/arrow.png') 98% center no-repeat #fff;
+    background: url('../img/new/select-arrow.png') 98% center no-repeat #fff;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-size: 15px;
+    background-size: 25px;
 }
 
 .form2 .form-element {
@@ -888,7 +918,7 @@ img {
 
 .form2 .form-control .value {
     text-align: left;
-    border: solid 1px #929292;
+    border: solid 1px #f7faf3;
     border-radius: 5px;
     background: #fff;
     font-size: 15px;
@@ -900,7 +930,7 @@ img {
     display: block;
     padding-left: 10px;
     padding-right: 10px;
-    color: #858586;
+    color: #9f9f23;
     font-family: 'SFUIText-Light';
 }
 
@@ -934,8 +964,8 @@ img {
     min-width: 88px;
     text-align: right;
     font-size: 14px;
-    font-family: 'SFUIText-Semibold';
     display:table-cell;
+    color:#9f9f23;
 }
 
 .form .form-element .select-inline {
@@ -946,6 +976,7 @@ img {
 
 .select-inline select {
     width: 100%;
+    color: #dcdcb2;
 }
 
 .menu-box-footer-detail {
@@ -1424,7 +1455,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     display: block;
     text-align: center;
     width: 100%;
-    margin-top: 60px;
+    /*margin-top: 60px;*/
 }
 
 .category-container img {
@@ -1446,4 +1477,75 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .calculadoras.custom .caption {
     font-size: 21px;
     text-align: center;
+}
+
+.calc-content .form {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.select {
+    color: #dcdcb2;
+}
+
+.calc-content h3 {
+    text-align: center;
+    color: #67696b;
+    font-family: 'Poppins-Regular';
+    font-size: 19px;
+}
+
+.calc-content .style1 {
+    color:#9f9f23;
+    font-size: 14px;
+}
+
+.calc-content .style2 {
+    color:#c88258;
+    font-size: 14px;
+}
+
+.shopping-detail .recipe-section{
+    background: none;
+}
+
+.shopping-detail .recipe-section .item span {
+    color:#4d4d4d;
+}
+
+.shopping-detail h2 {
+    text-transform: uppercase;
+    font-size: 16px;
+    color:#4d4d4d;
+}
+
+.shopping-detail h3 {
+    font-size: 15px;
+    color:#4d4d4d;
+    text-align: left;
+}
+
+.shopping-detail {
+    margin-top: 0px;
+}
+
+.delete-shopping {
+    text-align: center;
+    color: #e83b3b !important;
+    font-weight: bold;
+    width: 218px;
+    margin: 0 auto !important;
+    text-align: center;
+    color: #fff !important;
+}
+
+.recipe-section .item-title1 {
+    width: 40%;
+    text-align: left;
+    padding-left: 10px;
+    line-height: 16px;
+}
+
+.search-toolbar .search-input {
+    border solid 2px #82bd49;
 }
