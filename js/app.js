@@ -439,7 +439,7 @@ module.controller('Dashboard', function ($scope, service) {
             mainNavigator.pushPage('home_recipes.html');
 
             setTimeout(function(){
-                currentNavigator = recipesNavigator;
+                currentNavigator = categoryNavigator;
             }, 500);
         };
 
