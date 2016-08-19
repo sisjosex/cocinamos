@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="592c7479-11ec-4e29-94f2-654d88ee78df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/responsive.css" afterPath="$PROJECT_DIR$/css/responsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,8 +54,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65469295">
-              <caret line="658" column="37" selection-start-line="658" selection-start-column="37" selection-end-line="658" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.70683664">
+              <caret line="1225" column="47" selection-start-line="1225" selection-start-column="16" selection-end-line="1225" selection-end-column="47" />
               <folding>
                 <element signature="n#ons-modal#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-navigator#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -73,6 +73,7 @@
                 <element signature="n#ons-template#11;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-template#12;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-template#13;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#ons-button#0;n#ons-col#0;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ons-col#1;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -87,7 +88,6 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -215,8 +215,8 @@
         <option value="$PROJECT_DIR$/css/framework-fixes.css" />
         <option value="$PROJECT_DIR$/css/app.css" />
         <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/responsive.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -536,6 +536,7 @@
             <element signature="n#ons-template#11;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#12;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#13;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#ons-button#0;n#ons-col#0;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ons-col#1;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -550,7 +551,6 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -683,6 +683,7 @@
             <element signature="n#ons-template#11;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#12;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#13;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#ons-button#0;n#ons-col#0;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ons-col#1;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -697,7 +698,6 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -830,6 +830,7 @@
             <element signature="n#ons-template#11;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#12;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#13;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#ons-button#0;n#ons-col#0;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ons-col#1;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -844,7 +845,6 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -977,6 +977,7 @@
             <element signature="n#ons-template#11;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#12;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#13;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#ons-button#0;n#ons-col#0;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ons-col#1;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -991,7 +992,6 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1124,6 +1124,7 @@
             <element signature="n#ons-template#11;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#12;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#13;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#ons-button#0;n#ons-col#0;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ons-col#1;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1138,7 +1139,6 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1263,6 +1263,7 @@
             <element signature="n#ons-template#11;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#12;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#13;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#ons-button#0;n#ons-col#0;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ons-col#1;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1277,7 +1278,6 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1350,6 +1350,14 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.384615">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1394,18 +1402,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65469295">
-          <caret line="658" column="37" selection-start-line="658" selection-start-column="37" selection-end-line="658" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.70683664">
+          <caret line="1225" column="47" selection-start-line="1225" selection-start-column="16" selection-end-line="1225" selection-end-column="47" />
           <folding>
             <element signature="n#ons-modal#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-navigator#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1423,6 +1423,7 @@
             <element signature="n#ons-template#11;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#12;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-template#13;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#ons-button#0;n#ons-col#0;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ons-col#1;n#ons-row#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#14;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1437,7 +1438,6 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#ons-page#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#1;n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="true" />
