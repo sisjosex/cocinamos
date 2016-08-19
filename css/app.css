@@ -1547,5 +1547,5 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 }
 
 .search-toolbar .search-input {
-    border solid 2px #82bd49;
+    border: solid 2px #82bd49;
 }

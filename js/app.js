@@ -114,6 +114,15 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
             return $sce.trustAsResourceUrl(src);
         };
 
+        $rootScope.reloadPreviews = function() {
+
+            $('.preview').each(function () {
+
+                new ImageLoader($(this), new Image());
+
+            });
+        };
+
 
         $rootScope.ingredient = 'Elige tu alimento...';
         $rootScope.porcion = 'Elige la cantidad de porciones...';
@@ -162,6 +171,8 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
             //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
+
+            API_URL = 'http://cocinamosconfino.com/api/';
 
             setTimeout(onDeviceReady, 500);
 
@@ -628,6 +639,8 @@ module.controller('Home', function ($scope, service, $sce) {
                     MyShoppingScope.getMyShopping();
                 }
             }
+
+            $scope.reloadPreviews();
         };
 
         setTimeout(function(){
