@@ -237,6 +237,39 @@
     </ons-page>
 </ons-template>
 
+
+<ons-template id="register_fb.html">
+<ons-page ng-controller="RegisterFB" class="register intro internal-tab login registerfb-page">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button><img src="img/new/back_button.png" alt=""></ons-back-button>
+        </div>
+        <div class="center"></div>
+        <div class="right">
+            
+        </div>
+    </ons-toolbar>
+    
+    <div class="intro-content">
+        <div class="center-content2">
+            <div class="intro-section">
+                <div class="logo-intro">
+                    <img class="img-logo" src="img/new/logo_cocinamos.png"/>
+                </div>
+                <p class="text">La mejor comida es la que se cocina en casa</p>
+                
+                <div class="intro-section-content2">
+                    
+                    <a href="" ng-click="register()"><img src="img/new/fb_btn.png" ></a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</ons-page>
+</ons-template>
+
+
 <ons-template id="forgot.html">
     <ons-page ng-controller="Forgot" class="register intro internal-tab login forgot-page">
         <ons-toolbar>
@@ -293,10 +326,7 @@
 
                     <div class="intro-section-content3">
                         <div class="">
-                            <div class="dashboard-icon" ng-click="gotoPerfil()">
-                                <img src="img/new/icon_perfil.png" alt="">
-                                <div class="icon-text">Perfil</div>
-                            </div>
+                            
                             <div class="dashboard-icon" ng-click="gotoRecetas()">
                                 <img src="img/new/icon_recetas.png" alt="">
                                 <div class="icon-text">Recetas</div>
@@ -313,6 +343,10 @@
                                 <img src="img/new/icon_consejos.png" alt="">
                                 <div class="icon-text">Tips y consejos</div>
                             </div>
+                            <div class="dashboard-icon" ng-click="gotoTutorials()">
+                                <img src="img/new/icon_tutorials.png" alt="">
+                                    <div class="icon-text">Tutoriales</div>
+                                    </div>
                             <div class="dashboard-icon">
                                 <div class="icon-text"></div>
                             </div>
@@ -328,11 +362,11 @@
 <ons-template id="home.html">
     <ons-page id="home" ng-controller="Home" class="home-page">
         <ons-tabbar>
-            <ons-tab page="perfil2.html" active ng-click="changeNavigator('perfilNavigator')">
+            <!--<ons-tab page="perfil2.html" active ng-click="changeNavigator('perfilNavigator')">
                 <div class="tab-bar__icon perfil">
                     <div class="img"></div>
                 </div>
-            </ons-tab>
+            </ons-tab>-->
             <ons-tab page="recipes.html" active ng-click="changeNavigator('recipesNavigator')">
                 <div class="tab-bar__icon recipe">
                     <div class="img"></div>
@@ -353,6 +387,11 @@
                     <div class="img"></div>
                 </div>
             </ons-tab>
+            <ons-tab page="tutorials.html" ng-click="changeNavigator('tutorialsNavigator')">
+                <div class="tab-bar__icon tutorials">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
         </ons-tabbar>
 
     </ons-page>
@@ -361,11 +400,11 @@
 <ons-template id="home_perfil.html">
     <ons-page ng-controller="Home" class="home-page">
         <ons-tabbar>
-            <ons-tab page="perfil2.html" active ng-click="changeNavigator('perfilNavigator')">
+            <!--<ons-tab page="perfil2.html" active ng-click="changeNavigator('perfilNavigator')">
                 <div class="tab-bar__icon perfil">
                     <div class="img"></div>
                 </div>
-            </ons-tab>
+            </ons-tab>-->
             <ons-tab page="recipes.html" ng-click="changeNavigator('recipesNavigator')">
                 <div class="tab-bar__icon recipe">
                     <div class="img"></div>
@@ -386,17 +425,22 @@
                     <div class="img"></div>
                 </div>
             </ons-tab>
+            <ons-tab page="tutorials.html" ng-click="changeNavigator('tutorialsNavigator')">
+                <div class="tab-bar__icon counsel">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
     </ons-page>
 </ons-template>
 
 <ons-template id="home_recipes.html">
     <ons-page ng-controller="Home" class="home-page">
         <ons-tabbar>
-            <ons-tab page="perfil2.html" ng-click="changeNavigator('perfilNavigator')">
+            <!--<ons-tab page="perfil2.html" ng-click="changeNavigator('perfilNavigator')">
                 <div class="tab-bar__icon perfil">
                     <div class="img"></div>
                 </div>
-            </ons-tab>
+            </ons-tab>-->
             <ons-tab page="recipes.html" active ng-click="changeNavigator('recipesNavigator')">
                 <div class="tab-bar__icon recipe">
                     <div class="img"></div>
@@ -417,17 +461,22 @@
                     <div class="img"></div>
                 </div>
             </ons-tab>
+            <ons-tab page="tutorials.html" ng-click="changeNavigator('tutorialsNavigator')">
+                <div class="tab-bar__icon counsel">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
     </ons-page>
 </ons-template>
 
 <ons-template id="home_calculator.html">
     <ons-page ng-controller="Home" class="home-page">
         <ons-tabbar>
-            <ons-tab page="perfil2.html" ng-click="changeNavigator('perfilNavigator')">
+            <!--<ons-tab page="perfil2.html" ng-click="changeNavigator('perfilNavigator')">
                 <div class="tab-bar__icon perfil">
                     <div class="img"></div>
                 </div>
-            </ons-tab>
+            </ons-tab>-->
             <ons-tab page="recipes.html" ng-click="changeNavigator('recipesNavigator')">
                 <div class="tab-bar__icon recipe">
                     <div class="img"></div>
@@ -449,17 +498,22 @@
                 </div>
             </ons-tab>
         </ons-tabbar>
+        <ons-tab page="tutorials.html" ng-click="changeNavigator('tutorialsNavigator')">
+            <div class="tab-bar__icon counsel">
+                <div class="img"></div>
+            </div>
+        </ons-tab>
     </ons-page>
 </ons-template>
 
 <ons-template id="home_counsel.html">
     <ons-page ng-controller="Home" class="home-page">
         <ons-tabbar>
-            <ons-tab page="perfil2.html" ng-click="changeNavigator('perfilNavigator')">
+            <!--<ons-tab page="perfil2.html" ng-click="changeNavigator('perfilNavigator')">
                 <div class="tab-bar__icon perfil">
                     <div class="img"></div>
                 </div>
-            </ons-tab>
+            </ons-tab>-->
             <ons-tab page="recipes.html" ng-click="changeNavigator('recipesNavigator')">
                 <div class="tab-bar__icon recipe">
                     <div class="img"></div>
@@ -480,6 +534,11 @@
                     <div class="img"></div>
                 </div>
             </ons-tab>
+            <ons-tab page="tutorials.html" ng-click="changeNavigator('tutorialsNavigator')">
+                <div class="tab-bar__icon counsel">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
         </ons-tabbar>
     </ons-page>
 </ons-template>
@@ -487,11 +546,11 @@
 <ons-template id="home_myshopping.html">
     <ons-page ng-controller="Home" class="home-page">
         <ons-tabbar>
-            <ons-tab page="perfil2.html" ng-click="changeNavigator('perfilNavigator')">
+            <!--<ons-tab page="perfil2.html" ng-click="changeNavigator('perfilNavigator')">
                 <div class="tab-bar__icon perfil">
                     <div class="img"></div>
                 </div>
-            </ons-tab>
+            </ons-tab>-->
             <ons-tab page="recipes.html" ng-click="changeNavigator('recipesNavigator')">
                 <div class="tab-bar__icon recipe">
                     <div class="img"></div>
@@ -509,6 +568,48 @@
             </ons-tab>
             <ons-tab page="myshopping.html" active ng-click="changeNavigator('myshoppingNavigator')">
                 <div class="tab-bar__icon myshopping">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
+            <ons-tab page="tutorials.html" ng-click="changeNavigator('tutorialsNavigator')">
+                <div class="tab-bar__icon counsel">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
+        </ons-tabbar>
+    </ons-page>
+</ons-template>
+
+<ons-template id="home_tutorials.html">
+    <ons-page ng-controller="Home" class="home-page">
+        <ons-tabbar>
+            <!--<ons-tab page="perfil2.html" ng-click="changeNavigator('perfilNavigator')">
+                <div class="tab-bar__icon perfil">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>-->
+            <ons-tab page="recipes.html" ng-click="changeNavigator('recipesNavigator')">
+                <div class="tab-bar__icon recipe">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
+            <ons-tab page="calculator.html" ng-click="changeNavigator('calculatorNavigator')">
+                <div class="tab-bar__icon calculator">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
+            <ons-tab page="counsel.html" ng-click="changeNavigator('counselNavigator')">
+                <div class="tab-bar__icon counsel">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
+            <ons-tab page="myshopping.html" ng-click="changeNavigator('myshoppingNavigator')">
+                <div class="tab-bar__icon myshopping">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
+            <ons-tab page="tutorials.html" active ng-click="changeNavigator('tutorialsNavigator')">
+                <div class="tab-bar__icon counsel">
                     <div class="img"></div>
                 </div>
             </ons-tab>
@@ -1392,6 +1493,79 @@
         </div>
 
     </ons-page>
+</ons-template>
+
+
+
+<ons-template id="tutorials.html">
+<ons-navigator animation="slide" id="tutorialsNavigator">
+<ons-page ng-controller="Tutorials" class="intro internal-tab tutorials-page">
+
+<ons-toolbar class="toolbar-big">
+<div class="left">
+<ons-toolbar-button ng-click="goToFavorite()">
+<img src="img/new/corazon_green.png" alt="">
+</ons-toolbar-button>
+</div>
+<div class="center">
+Tutoriales
+</div>
+
+<div class="right">
+<!--<ons-toolbar-button ng-click="goToCategory()">
+<img src="img/new/search-yellow.png" alt="">
+</ons-toolbar-button>-->
+</div>
+</ons-toolbar>
+
+<div class="menus">
+<div class="menu-box" ng-repeat="item in tutorials track by $index" ng-click="goToTutorial(item)">
+<figure class="figure">
+
+<div class="preview" src="{{ trustSrc(item.image) }}"></div>
+</figure>
+<div class="caption">{{ item.title }}</div>
+</div>
+</div>
+
+</ons-page>
+</ons-navigator>
+</ons-template>
+
+
+
+
+<ons-template id="tutorial.html">
+<ons-page ng-controller="Tutorial" class="intro white-page internal-tab tutorial-page">
+<ons-toolbar>
+<div class="left">
+<ons-back-button></ons-back-button>
+</div>
+<div class="center">
+{{ tutorial.title }}
+</div>
+
+<div class="right">
+<ons-toolbar-button>
+<img src="img/menu-color.png" alt="">
+</ons-toolbar-button>
+</div>
+</ons-toolbar>
+
+<div class="menus">
+<div class="menu-box">
+<figure class="figure">
+<div class="preview" src="{{ trustSrc(tip.image) }}"></div>
+</figure>
+<div class="caption">{{ tutorial.title }}</div>
+</div>
+</div>
+
+<div class="ingredients">
+<div ng-bind-html="tutorial.content"></div>
+</div>
+
+</ons-page>
 </ons-template>
 
 <ons-template id="favorite.html">

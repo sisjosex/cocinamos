@@ -67,6 +67,9 @@ angular.module("services", []).factory("service", [ "$http", "$q", function($htt
         },
         deleteShopping: function(params, success, error) {
             $http({method: 'JSONP', url: API_URL + 'deleteShopping?callback=JSON_CALLBACK', params: params}).success(success).error(error);
-        }
+        },
+                                                   getTutorials: function(params, success, error) {
+                                                   $http({method: 'JSONP', url: API_URL + 'getTutorials?callback=JSON_CALLBACK', params: params}).success(success).error(error);
+                                                   }
     };
 } ]);

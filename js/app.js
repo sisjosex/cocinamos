@@ -206,7 +206,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
                 } else {
 
-                    mainNavigator.pushPage('intro.html', {animation: 'none'});
+                    mainNavigator.pushPage('dashboard.html', {animation: 'none'});
                 }
 
                 try {
@@ -450,8 +450,19 @@ module.controller('Dashboard', function ($scope, service) {
                 currentNavigator = counselNavigator;
             }, 500);
         };
-
-        try {
+              
+              $scope.gotoTutorials = function() {
+              mainNavigator.pushPage('home_tutorials.html');
+              
+              setTimeout(function(){
+                         currentNavigator = tutorialsNavigator;
+                         }, 500);
+              };
+              
+              
+              
+              
+              try {
             navigator.splashscreen.hide();
         }catch(error){}
 
@@ -714,28 +725,36 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
         });
 
         $scope.addToRecipes =function() {
+              
+              if(getUser()){
+              
+              service.addToRecipes({food_id: $scope.menu.id, app_id: getUserOrAppId(), portions: $scope.porciones}, function (result) {
+                                   
+                                   if (result.status == 'success') {
+                                   
+                                   modal.hide();
+                                   
+                                   alert(result.message);
+                                   
+                                   } else {
+                                   
+                                   modal.hide();
+                                   
+                                   alert(result.message);
+                                   }
+                                   
+                                   }, function (error) {
+                                   
+                                   modal.hide();
+                                   
+                                   alert('No se pudo conectar con el servidor');
+                                   });
+              
+              } else {
+              mainNavigator.pushPage('register_fb.html');
+              }
 
-            service.addToRecipes({food_id: $scope.menu.id, app_id: getUserOrAppId(), portions: $scope.porciones}, function (result) {
-
-                if (result.status == 'success') {
-
-                    modal.hide();
-
-                    alert(result.message);
-
-                } else {
-
-                    modal.hide();
-
-                    alert(result.message);
-                }
-
-            }, function (error) {
-
-                modal.hide();
-
-                alert('No se pudo conectar con el servidor');
-            });
+            
         };
 
         $scope.goToUnits = function() {
@@ -1987,13 +2006,94 @@ module.controller('Unit', function ($scope, service, $sce) {
 });
 
 
+module.controller('Tutorials', function ($scope, service) {
+                  
+                  ons.ready(function () {
+                            
+                            $scope.tutorials = [];
+                            
+                            
+                            modal.show();
+                            
+                            $scope.goToTutorial = function (tutorial) {
+                            
+                            
+                                tutorialsNavigator.pushPage('tutorial.html', {data: {tutorial: tutorial}});
+                            };
+                            
+                            service.getTutorials({}, function (result) {
+                                            
+                                            if (result.status == 'success') {
+                                            
+                                            modal.hide();
+                                            
+                                            $scope.tutorials = result.data;
+                                            
+                                            setTimeout(function () {
+                                                       $('.tutorials-page .preview').each(function () {
+                                                                                         
+                                                                                         new ImageLoader($(this), new Image());
+                                                                                         
+                                                                                         });
+                                                       
+                                                       }, 500);
+                                            
+                                            } else {
+                                            
+                                            modal.hide();
+                                            
+                                            alert(result.message);
+                                            }
+                                            
+                                            }, function () {
+                                            
+                                            modal.hide();
+                                            
+                                            alert('No se pudo conectar con el servidor');
+                                            });
+                            });
+                  });
+
+
+
+module.controller('Tutorial', function ($scope, service) {
+                  
+                  ons.ready(function () {
+                            
+                            $scope.tips = [];
+                            
+                            $scope.tutorial = tutorialsNavigator.pages[tutorialsNavigator.pages.length - 1].data.tutorial;
+                  });
+                  
+                  });
+
+
+module.controller('RegisterFB', function ($scope, service) {
+                  
+                  ons.ready(function () {
+                            
+                            $scope.register = function() {
+                            modal.show();
+                            setTimeout(function(){
+                                       modal.hide();
+                                       mainNavigator.popPage();
+                                       }, 3000);
+                            };
+                  
+                  });
+                  
+                  });
+
+
 /* Common function*/
 
 function initCommonFunctions($scope, services) {
 
     $scope.makeFavorite = function (item) {
-
-        modal.show();
+        
+        if(getUser()) {
+            
+            modal.show();
 
         services.service.addToFavorite({app_id: getUserOrAppId(), food_id: item.id}, function (result) {
 
@@ -2016,6 +2116,11 @@ function initCommonFunctions($scope, services) {
 
             alert('No se pudo conectar con el servidor');
         });
+            
+        } else {
+            
+            mainNavigator.pushPage('register_fb.html');
+        }
     }
 }
 
