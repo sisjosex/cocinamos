@@ -437,7 +437,7 @@
                 </div>
             </ons-tab>
             <ons-tab page="tutorials.html" ng-click="changeNavigator('tutorialsNavigator')">
-                <div class="tab-bar__icon counsel">
+                <div class="tab-bar__icon tutorials">
                     <div class="img"></div>
                 </div>
             </ons-tab>
@@ -473,7 +473,7 @@
                 </div>
             </ons-tab>
             <ons-tab page="tutorials.html" ng-click="changeNavigator('tutorialsNavigator')">
-                <div class="tab-bar__icon counsel">
+                <div class="tab-bar__icon tutorials">
                     <div class="img"></div>
                 </div>
             </ons-tab>
@@ -510,7 +510,7 @@
             </ons-tab>
         </ons-tabbar>
         <ons-tab page="tutorials.html" ng-click="changeNavigator('tutorialsNavigator')">
-            <div class="tab-bar__icon counsel">
+            <div class="tab-bar__icon tutorials">
                 <div class="img"></div>
             </div>
         </ons-tab>
@@ -546,7 +546,7 @@
                 </div>
             </ons-tab>
             <ons-tab page="tutorials.html" ng-click="changeNavigator('tutorialsNavigator')">
-                <div class="tab-bar__icon counsel">
+                <div class="tab-bar__icon tutorials">
                     <div class="img"></div>
                 </div>
             </ons-tab>
@@ -583,7 +583,7 @@
                 </div>
             </ons-tab>
             <ons-tab page="tutorials.html" ng-click="changeNavigator('tutorialsNavigator')">
-                <div class="tab-bar__icon counsel">
+                <div class="tab-bar__icon tutorials">
                     <div class="img"></div>
                 </div>
             </ons-tab>
@@ -620,7 +620,7 @@
                 </div>
             </ons-tab>
             <ons-tab page="tutorials.html" active ng-click="changeNavigator('tutorialsNavigator')">
-                <div class="tab-bar__icon counsel">
+                <div class="tab-bar__icon tutorials">
                     <div class="img"></div>
                 </div>
             </ons-tab>
@@ -1510,9 +1510,7 @@
 
             <ons-toolbar class="toolbar-big">
                 <div class="left">
-                    <ons-toolbar-button ng-click="goToFavorite()">
-                        <img src="img/new/corazon_green.png" alt="">
-                    </ons-toolbar-button>
+                    <ons-button class="back-button" ng-click="back()"><span class="back-icon"></span></ons-button>
                 </div>
                 <div class="center">
                     Tutoriales
@@ -1557,9 +1555,9 @@
         <div class="menus">
             <div class="menu-box">
                 <figure class="figure">
-                    <div class="preview" src="{{ trustSrc(tip.image) }}"></div>
+                    <div class="preview" src="{{ trustSrc(tutorial.image) }}"></div>
                 </figure>
-                <div class="caption">{{ tutorial.title }}</div>
+                <div class="caption">Tutorial</div>
             </div>
         </div>
 

@@ -2089,6 +2089,15 @@ module.controller('Tutorial', function ($scope, service) {
                             $scope.tips = [];
                             
                             $scope.tutorial = tutorialsNavigator.pages[tutorialsNavigator.pages.length - 1].data.tutorial;
+
+                          setTimeout(function () {
+                              $('.tutorial-page .preview').each(function () {
+
+                                  new ImageLoader($(this), new Image());
+
+                              });
+
+                          }, 100);
                   });
                   
                   });
