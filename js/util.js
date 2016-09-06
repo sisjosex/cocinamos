@@ -61,7 +61,7 @@ function ImageLoader(preview, image) {
         width = parseInt(width + "") + 4;
         height = parseInt(height + "");
 
-        self.preview.css('background-size', (width) + "px" + " " + (height) + "px");
+        //self.preview.css('background-size', (width) + "px" + " " + (height) + "px");
 
         self.preview.addClass('loaded');
     }

@@ -565,6 +565,7 @@ img {
     -webkit-transition: opacity linear 0.5s;
     opacity:0;
     background: #fff;
+    background-size: cover;
 }
 
 .preview.loaded {
