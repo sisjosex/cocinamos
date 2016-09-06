@@ -57,6 +57,11 @@ p {
     background-size: cover;
 }
 
+.bg2 .page__background {
+    background: url('../img/new/bg2.jpg') center center no-repeat;
+    background-size: cover;
+}
+
 .home .page__background {
     background: url('../img/bg-repeat.jpg') center center repeat;
     background-size: 85px;
