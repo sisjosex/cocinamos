@@ -391,7 +391,7 @@ img {
 }
 
 .menu-box .figure i img {
-    max-width:20px;
+    max-width: 50px;
 }
 
 .menu-box .figure i.bookmark {
@@ -399,7 +399,22 @@ img {
 }
 
 .menu-box .figure i.play {
-    bottom:5px;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+}
+
+.play-icon-main {
+    background: url('../img/play-icon-big.png') 0 0 no-repeat transparent;
+    background-size: 100%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
 }
 
 .menu-box .figure i.fino {
@@ -641,7 +656,7 @@ img {
 }
 
 .collapse {
-    top: -44px !important;
+    top: -100px !important;
 }
 
 .search-toolbar .search-input {
@@ -1550,5 +1565,46 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 }
 
 .search-toolbar .search-input {
-    border solid 2px #82bd49;
+    border: solid 2px #82bd49;
+}
+
+.toolbar-button, .toolbar-button--outline, .toolbar-button--quiet {
+    padding: 4px 2px;
+    margin: 0;
+    width: 22px;
+    display: inline-block;
+    line-height: 1px;
+}
+
+.left.navigation-bar__left .button{
+    text-align: left;
+    padding: 0;
+}
+
+.back-icon:before {
+    font-family: 'Ionicons';
+    content: '\f3cf';
+    font-size: 32px;
+    width: 25px;
+    height: 40px;
+    display: block;
+    padding-left: 10px;
+}
+
+.menu-box .figure i.play {
+    top: 50%;
+    left: 50%;
+}
+
+h1 {
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.ingredientes-title2 {
+    color: #82bc49;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left !important;
 }

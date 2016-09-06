@@ -114,6 +114,20 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
             return $sce.trustAsResourceUrl(src);
         };
 
+        $rootScope.reloadPreviews = function() {
+
+            $('.preview').each(function () {
+
+                new ImageLoader($(this), new Image());
+
+            });
+        };
+
+        $rootScope.back = function() {
+
+            mainNavigator.popPage();
+        };
+
 
         $rootScope.ingredient = 'Elige tu alimento...';
         $rootScope.porcion = 'Elige la cantidad de porciones...';
@@ -162,6 +176,8 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
             //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
+
+            API_URL = 'http://cocinamosconfino.com/api/';
 
             setTimeout(onDeviceReady, 500);
 
@@ -423,7 +439,7 @@ module.controller('Dashboard', function ($scope, service) {
             mainNavigator.pushPage('home_recipes.html');
 
             setTimeout(function(){
-                currentNavigator = recipesNavigator;
+                currentNavigator = categoryNavigator;
             }, 500);
         };
 
@@ -639,6 +655,8 @@ module.controller('Home', function ($scope, service, $sce) {
                     MyShoppingScope.getMyShopping();
                 }
             }
+
+            $scope.reloadPreviews();
         };
 
         setTimeout(function(){
@@ -1011,6 +1029,14 @@ module.controller('Subcategory', function ($scope, service, $sce) {
             $('.menus .video').hide();
 
             $('.menus .' + filter).show();
+
+            setTimeout(function () {
+                $('.subcategory-page .preview').each(function () {
+
+                    new ImageLoader($(this), new Image());
+
+                });
+            }, 500);
         };
 
         $scope.getSubcategory = function () {

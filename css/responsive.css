@@ -17,6 +17,10 @@
     .text-bottom {
         font-size: 14px;
     }
+
+    .btn-agregar {
+        font-size: 16px;
+    }
 }
 
 @media all and (max-width:320px) {
@@ -44,7 +48,6 @@
 
     .btn-agregar {
         color: #fff;
-        box-shadow: 0px 5px 0px #929292;
         background-size: 32px;
         padding-top: 7px;
         padding-bottom: 7px;
@@ -90,5 +93,21 @@
 
     .fino-button-container2 {
         position:relative;
+    }
+
+    .internal-tab .page__content {
+        padding-top: 51px;
+    }
+
+    .intro-section .intro-section-content3 {
+        margin-top: 40px;
+    }
+
+    .header-title {
+        font-size: 15px;
+    }
+
+    .delete-shopping {
+        font-size: 17px;
     }
 }
