@@ -243,39 +243,6 @@
     </ons-page>
 </ons-template>
 
-
-<ons-template id="register_fb.html">
-    <ons-page ng-controller="RegisterFB" class="register intro internal-tab login registerfb-page">
-        <ons-toolbar>
-            <div class="left">
-                <ons-back-button><img src="img/new/back_button.png" alt=""></ons-back-button>
-            </div>
-            <div class="center"></div>
-            <div class="right">
-
-            </div>
-        </ons-toolbar>
-
-        <div class="intro-content">
-            <div class="center-content2">
-                <div class="intro-section">
-                    <div class="logo-intro">
-                        <img class="img-logo" src="img/new/logo_cocinamos.png"/>
-                    </div>
-                    <p class="text">La mejor comida es la que se cocina en casa</p>
-
-                    <div class="intro-section-content2">
-
-                        <a href="" ng-click="register()"><img src="img/new/fb_btn.png"></a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </ons-page>
-</ons-template>
-
-
 <ons-template id="forgot.html">
     <ons-page ng-controller="Forgot" class="register intro internal-tab login forgot-page bg2">
         <ons-toolbar>
@@ -689,7 +656,7 @@
             <div class="right">
                 <ons-toolbar-button>
                     <ons-toolbar-button class="header-send" ng-click="shareBy(menu.name, menu.photo)">
-                        <img src="img/send.png" alt="">
+                        <img src="img/new/send.png" alt="">
                     </ons-toolbar-button>
                     <!--<ons-toolbar-button class="header-share">
                         <img src="img/share.png" alt="">
@@ -723,6 +690,15 @@
                 <div class="item">
                     <img src="img/new/clock-white.png" alt="">
                     <span>{{ menu.duration }}</span>
+                </div>
+                <div class="item">
+                    <div class="level">
+                        <div class="level-item white" ng-class="{'filled': menu.level>0}"></div>
+                        <div class="level-item white" ng-class="{'filled': menu.level>1}"></div>
+                        <div class="level-item white" ng-class="{'filled': menu.level>2}"></div>
+                        <div class="level-item white" ng-class="{'filled': menu.level>3}"></div>
+                    </div>
+                    <span>Dificultad</span>
                 </div>
                 <div class="item" style="width:77px;">
                     <div class="img indicator">
@@ -940,11 +916,30 @@
                         <!--<i class="icon fino">
                             <img src="img/fino-logo2.png" alt="">
                         </i>-->
+                        <div class="star-container">
+                            <div class="star">
+                                <div class="star-item" ng-class="{'filled': item.star>0}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>1}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>2}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>3}"></div>
+                            </div>
+                        </div>
                         <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
                             <img src="img/play-icon-big.png" alt="">
                         </i>
                     </figure>
-                    <div class="caption">{{ item.name }}</div>
+                    <div class="caption">
+                        <span class="caption-text">{{ item.name }}</span>
+                        <div class="level-container">
+                            <div class="level">
+                                <div class="level-item" ng-class="{'filled': item.level>0}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>1}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>2}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>3}"></div>
+                            </div>
+                            <span>Dificultad</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -955,11 +950,30 @@
                         <!--<i class="icon fino">
                             <img src="img/fino-logo2.png" alt="">
                         </i>-->
+                        <div class="star-container">
+                            <div class="star">
+                                <div class="star-item" ng-class="{'filled': item.star>0}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>1}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>2}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>3}"></div>
+                            </div>
+                        </div>
                         <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
                             <img src="img/play-icon.png" alt="">
                         </i>
                     </figure>
-                    <div class="caption">{{ item.name }}</div>
+                    <div class="caption">
+                        <span class="caption-text">{{ item.name }}</span>
+                        <div class="level-container">
+                            <div class="level">
+                                <div class="level-item" ng-class="{'filled': item.level>0}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>1}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>2}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>3}"></div>
+                            </div>
+                            <span>Dificultad</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1034,10 +1048,10 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button class="header-send"
+                <!--<ons-toolbar-button class="header-send"
                                     ng-click="shareBy('Calculadora de Nutrientes', 'img/calc-nutrientes.jpg')">
-                    <img src="img/send.png" alt="">
-                </ons-toolbar-button>
+                    <img src="img/new/send.png" alt="">
+                </ons-toolbar-button>-->
                 <!--<ons-toolbar-button class="header-share">
                     <img src="img/share.png" alt="">
                 </ons-toolbar-button>-->
@@ -1133,10 +1147,10 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button class="header-send"
+                <!--<ons-toolbar-button class="header-send"
                                     ng-click="shareBy('Calculadora de Proteinas', 'img/calc-proteinas.jpg')">
-                    <img src="img/send.png" alt="">
-                </ons-toolbar-button>
+                    <img src="img/new/send.png" alt="">
+                </ons-toolbar-button>-->
                 <!--<ons-toolbar-button class="header-share">
                     <img src="img/share.png" alt="">
                 </ons-toolbar-button>-->
@@ -1226,10 +1240,10 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button class="header-send"
+                <!--<ons-toolbar-button class="header-send"
                                     ng-click="shareBy('Calculadora de Calorías', 'img/calc-calorias.jpg')">
-                    <img src="img/send.png" alt="">
-                </ons-toolbar-button>
+                    <img src="img/new/send.png" alt="">
+                </ons-toolbar-button>-->
                 <!--<ons-toolbar-button class="header-share">
                     <img src="img/share.png" alt="">
                 </ons-toolbar-button>-->
@@ -1319,10 +1333,10 @@
             </div>
             <div class="center"></div>
             <div class="right">
-                <ons-toolbar-button class="header-send"
+                <!--<ons-toolbar-button class="header-send"
                                     ng-click="shareBy('Calculadora de Calorías diarias', 'img/calc-calorias-diarias.png')">
-                    <img src="img/send.png" alt="">
-                </ons-toolbar-button>
+                    <img src="img/new/send.png" alt="">
+                </ons-toolbar-button>-->
                 <!--<ons-toolbar-button class="header-share">
                     <img src="img/share.png" alt="">
                 </ons-toolbar-button>-->
@@ -1503,71 +1517,6 @@
     </ons-page>
 </ons-template>
 
-
-<ons-template id="tutorials.html">
-    <ons-navigator animation="slide" id="tutorialsNavigator">
-        <ons-page ng-controller="Tutorials" class="intro internal-tab tutorials-page bg2">
-
-            <ons-toolbar class="toolbar-big">
-                <div class="left">
-                    <ons-button class="back-button" ng-click="back()"><span class="back-icon"></span></ons-button>
-                </div>
-                <div class="center">
-                    Tutoriales
-                </div>
-
-                <div class="right">
-                    <!--<ons-toolbar-button ng-click="goToCategory()">
-                    <img src="img/new/search-yellow.png" alt="">
-                    </ons-toolbar-button>-->
-                </div>
-            </ons-toolbar>
-
-            <div class="menus">
-                <div class="menu-box" ng-repeat="item in tutorials track by $index" ng-click="goToTutorial(item)">
-                    <figure class="figure">
-
-                        <div class="preview" src="{{ trustSrc(item.image) }}"></div>
-                    </figure>
-                    <div class="caption">{{ item.title }}</div>
-                </div>
-            </div>
-
-        </ons-page>
-    </ons-navigator>
-</ons-template>
-
-
-<ons-template id="tutorial.html">
-    <ons-page ng-controller="Tutorial" class="intro white-page internal-tab tutorial-page">
-        <ons-toolbar>
-            <div class="left">
-                <ons-back-button></ons-back-button>
-            </div>
-            <div class="center">
-                {{ tutorial.title }}
-            </div>
-
-            <div class="right">
-            </div>
-        </ons-toolbar>
-
-        <div class="menus">
-            <div class="menu-box">
-                <figure class="figure">
-                    <div class="preview" src="{{ trustSrc(tutorial.image) }}"></div>
-                </figure>
-                <div class="caption">Tutorial</div>
-            </div>
-        </div>
-
-        <div class="ingredients">
-            <div ng-bind-html="tutorial.content"></div>
-        </div>
-
-    </ons-page>
-</ons-template>
-
 <ons-template id="favorite.html">
     <ons-page ng-controller="Favorite" class="intro internal-tab favorite-page bg2">
 
@@ -1699,9 +1648,9 @@
 
             <div class="right">
                 <ons-toolbar-button>
-                    <ons-toolbar-button class="header-send" ng-click="shareBy(menu.name, menu.photo)">
-                        <img src="img/send.png" alt="">
-                    </ons-toolbar-button>
+                    <!--<ons-toolbar-button class="header-send" ng-click="shareBy(menu.name, menu.photo)">
+                        <img src="img/new/send.png" alt="">
+                    </ons-toolbar-button>-->
                     <!--<ons-toolbar-button class="header-share">
                         <img src="img/share.png" alt="">
                     </ons-toolbar-button>-->
@@ -1810,9 +1759,9 @@
 
             <div class="right">
                 <ons-toolbar-button>
-                    <ons-toolbar-button class="header-send" ng-click="shareBy(menu.name, menu.photo)">
-                        <img src="img/send.png" alt="">
-                    </ons-toolbar-button>
+                    <!--<ons-toolbar-button class="header-send" ng-click="shareBy(menu.name, menu.photo)">
+                        <img src="img/new/send.png" alt="">
+                    </ons-toolbar-button>-->
                     <!--<ons-toolbar-button class="header-share">
                         <img src="img/share.png" alt="">
                     </ons-toolbar-button>-->
@@ -2030,6 +1979,101 @@
             </div>
         </ons-list>
 
+    </ons-page>
+</ons-template>
+
+<ons-template id="tutorials.html">
+    <ons-navigator animation="slide" id="tutorialsNavigator">
+        <ons-page ng-controller="Tutorials" class="intro internal-tab tutorials-page bg2">
+
+            <ons-toolbar class="toolbar-big">
+                <div class="left">
+                    <ons-button class="back-button" ng-click="back()"><span class="back-icon"></span></ons-button>
+                </div>
+                <div class="center">
+                    Tutoriales
+                </div>
+
+                <div class="right">
+                    <!--<ons-toolbar-button ng-click="goToCategory()">
+                    <img src="img/new/search-yellow.png" alt="">
+                    </ons-toolbar-button>-->
+                </div>
+            </ons-toolbar>
+
+            <div class="menus">
+                <div class="menu-box" ng-repeat="item in tutorials track by $index" ng-click="goToTutorial(item)">
+                    <figure class="figure">
+
+                        <div class="preview" src="{{ trustSrc(item.image) }}"></div>
+                    </figure>
+                    <div class="caption">{{ item.title }}</div>
+                </div>
+            </div>
+
+        </ons-page>
+    </ons-navigator>
+</ons-template>
+
+
+<ons-template id="tutorial.html">
+    <ons-page ng-controller="Tutorial" class="intro white-page internal-tab tutorial-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center">
+                Tutorial
+            </div>
+
+            <div class="right">
+            </div>
+        </ons-toolbar>
+
+        <div class="menus">
+            <div class="menu-box">
+                <figure class="figure">
+                    <div class="preview" src="{{ trustSrc(tutorial.image) }}"></div>
+                </figure>
+                <div class="caption">Tutorial</div>
+            </div>
+        </div>
+
+        <div class="ingredients">
+            <div ng-bind-html="tutorial.content"></div>
+        </div>
+
+    </ons-page>
+</ons-template>
+
+<ons-template id="register_fb.html">
+    <ons-page ng-controller="RegisterFB" class="intro internal-tab login registerfb-page">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center"></div>
+            <div class="right">
+
+            </div>
+        </ons-toolbar>
+
+        <div class="intro-content">
+            <div class="center-content2">
+                <div class="intro-section">
+                    <div class="logo-intro">
+                        <img class="img-logo" src="img/new/logo_cocinamos.png"/>
+                    </div>
+                    <p class="text">La mejor comida es la que se cocina en casa</p>
+
+                    <div class="intro-section-content2">
+
+                        <a href="" ng-click="register()"><img src="img/new/fb_btn.png"></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </ons-page>
 </ons-template>
 

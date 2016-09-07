@@ -445,7 +445,7 @@ img {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-
+    position:relative;
     background: -webkit-linear-gradient(left, rgba(130, 189, 73, 1), rgba(175, 206, 68, 1), rgba(251, 233, 60, 1));
     background: -o-linear-gradient(right, rgba(130, 189, 73, 1), rgba(175, 206, 68, 1), rgba(251, 233, 60, 1));
     background: -moz-linear-gradient(right, rgba(130, 189, 73, 1), rgba(175, 206, 68, 1), rgba(251, 233, 60, 1));
@@ -1093,20 +1093,20 @@ form, .form2 {
 
 
 .col-dot {
-    max-width: 5%;
+    max-width: 10%;
     color: #ff0700;
     text-align: right;
 }
 
 .col-number {
-    min-width: 15%;
+    min-width: 19%;
     text-align: center;
     max-width: 14%;
     text-align: center;
 }
 
 .col-text {
-    min-width: 75%;
+    min-width: 71%;
     text-align: left;
 }
 
@@ -1612,9 +1612,10 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 21px;
     margin-top: 0px;
     margin-bottom: 0px;
+    line-height: 28px;
 }
 
 .ingredientes-title2 {
@@ -1622,4 +1623,80 @@ h1 {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: left !important;
+}
+
+.toolbar-button.text {
+    width:auto;
+}
+
+.star-container {
+    position:absolute;
+    top:15px;
+    right:15px;
+}
+
+.star {
+    display:block;
+}
+
+.star-item {
+    display: table-cell;
+    width: 20px;
+    height: 21px;
+    background: url('../img/new/icon_star.png') 0 0 no-repeat transparent;
+    background-size: 100% auto !important;
+}
+
+.star-item.filled {
+    background:url('../img/new/icon_star_filled.png') 0 0 no-repeat transparent;
+}
+
+.level-container {
+    display: block;
+    width: auto;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    text-align: center;
+}
+.level-container span {
+    color: #83be4e;
+    display: block;
+    text-align: center;
+    font-size: 8px;
+    margin: 0;
+    padding: 0;
+    line-height: 8px;
+    margin-top: -10px;
+}
+.level {
+    display:inline-block;
+}
+
+.level-item {
+    background: url('../img/new/g_cuchara.png') 0 0 no-repeat transparent;
+    background-size: 100% auto !important;
+    width: 8px;
+    height: 26px;
+    display: table-cell;
+}
+
+.level-item.filled {
+    background:url('../img/new/g_cuchara_filled.png') 0 0 no-repeat transparent;
+}
+
+.level-item.white {
+    background:url('../img/new/w_cuchara.png') 0 0 no-repeat transparent;
+}
+
+.level-item.white.filled {
+    background:url('../img/new/w_cuchara_filled.png') 0 0 no-repeat transparent;
+}
+
+.caption-text {
+    display: block;
+    width: 90%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }

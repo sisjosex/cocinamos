@@ -177,7 +177,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
             //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
 
-            API_URL = 'http://cocinamosconfino.com/api/';
+            //API_URL = 'http://cocinamosconfino.com/api/';
 
             setTimeout(onDeviceReady, 500);
 
@@ -1167,7 +1167,7 @@ module.controller('CalNutrientes', function ($scope, service) {
                     ingredient_id: $scope.ingredient_id,
                     porcion: $scope.porcion_id,
                     table: $scope.table
-                }, function(result){
+                }, function(result) {
 
                     if (result.status == 'success') {
 
@@ -1182,7 +1182,7 @@ module.controller('CalNutrientes', function ($scope, service) {
                         alert(result.message);
                     }
 
-                }, function(err){
+                }, function(err) {
 
                     modal.hide();
 
