@@ -73,38 +73,38 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
     ons.ready(function () {
 
-        $rootScope.playVideo = function(video_id) {
+        $rootScope.playVideo = function (video_id) {
 
             YoutubeVideoPlayer.openVideo(video_id);
         };
 
-        $rootScope.showImage = function(url) {
+        $rootScope.showImage = function (url) {
 
             PhotoViewer.show(url);
         };
 
-        $rootScope.shareByEmail = function(message) {
+        $rootScope.shareByEmail = function (message) {
 
-            shareByEmail(message, function(){
+            shareByEmail(message, function () {
             });
         };
 
-        $rootScope.shareBySMS = function(message) {
-            shareBySMS(message, function(){
+        $rootScope.shareBySMS = function (message) {
+            shareBySMS(message, function () {
             });
         };
 
-        $rootScope.shareByWhatsApp = function(message) {
-            shareByWhatsApp(message, function(){
+        $rootScope.shareByWhatsApp = function (message) {
+            shareByWhatsApp(message, function () {
             });
         };
 
-        $rootScope.shareByFacebook = function(message) {
-            shareByFacebook(message, function(){
+        $rootScope.shareByFacebook = function (message) {
+            shareByFacebook(message, function () {
             });
         };
 
-        $rootScope.shareBy = function(message, url) {
+        $rootScope.shareBy = function (message, url) {
             shareBy(message, url);
         };
 
@@ -114,7 +114,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
             return $sce.trustAsResourceUrl(src);
         };
 
-        $rootScope.reloadPreviews = function() {
+        $rootScope.reloadPreviews = function () {
 
             $('.preview').each(function () {
 
@@ -123,7 +123,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
             });
         };
 
-        $rootScope.back = function() {
+        $rootScope.back = function () {
 
             mainNavigator.popPage();
         };
@@ -131,14 +131,14 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
         $rootScope.ingredient = 'Elige tu alimento...';
         $rootScope.porcion = 'Elige la cantidad de porciones...';
-        $rootScope.categoria =  'Elige tu categoria...';
+        $rootScope.categoria = 'Elige tu categoria...';
         $rootScope.nivel_de_actividad = 'Elige tu nivel...';
 
-        $rootScope.getCalculadoraInformation = function(table) {
+        $rootScope.getCalculadoraInformation = function (table) {
 
             modal.show();
 
-            service.getCalculadoraInformation({app_id: getUserOrAppId(), table: table}, function(result){
+            service.getCalculadoraInformation({app_id: getUserOrAppId(), table: table}, function (result) {
 
                 if (result.status == 'success') {
 
@@ -147,11 +147,11 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
                     $rootScope.calculator_params = result.data;
 
                     /*
-                    $rootScope.ingredient = $rootScope.calculator_params.alimentos[0].name;
-                    $rootScope.porcion = $rootScope.calculator_params.porciones[0].name;
-                    $rootScope.categoria = $rootScope.calculator_params.categorias[0].name;
+                     $rootScope.ingredient = $rootScope.calculator_params.alimentos[0].name;
+                     $rootScope.porcion = $rootScope.calculator_params.porciones[0].name;
+                     $rootScope.categoria = $rootScope.calculator_params.categorias[0].name;
 
-                    console.log($rootScope.ingredient);*/
+                     console.log($rootScope.ingredient);*/
 
                 } else {
 
@@ -160,7 +160,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
                     alert(result.message);
                 }
 
-            }, function() {
+            }, function () {
 
                 modal.hide();
 
@@ -177,7 +177,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
             //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
 
-            API_URL = 'http://cocinamosconfino.com/api/';
+            //API_URL = 'http://cocinamosconfino.com/api/';
 
             setTimeout(onDeviceReady, 500);
 
@@ -205,7 +205,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
                     app_id = device.uuid;
 
-                } catch(error) {
+                } catch (error) {
                     device_name = 'iphone';
                 }
 
@@ -229,7 +229,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
                     StatusBar.hide();
 
-                } catch(error){
+                } catch (error) {
 
                 }
 
@@ -309,7 +309,8 @@ module.controller('Intro', function ($scope) {
 
         try {
             navigator.splashscreen.hide();
-        }catch(error){}
+        } catch (error) {
+        }
 
     });
 });
@@ -427,60 +428,59 @@ module.controller('Dashboard', function ($scope, service) {
 
     ons.ready(function () {
 
-        $scope.gotoPerfil = function() {
+        $scope.gotoPerfil = function () {
             mainNavigator.pushPage('home_perfil.html');
 
-            setTimeout(function(){
+            setTimeout(function () {
                 currentNavigator = perfilNavigator;
             }, 500);
         };
 
-        $scope.gotoRecetas = function() {
+        $scope.gotoRecetas = function () {
             mainNavigator.pushPage('home_recipes.html');
 
-            setTimeout(function(){
+            setTimeout(function () {
                 currentNavigator = categoryNavigator;
             }, 500);
         };
 
-        $scope.gotoCalculadora = function() {
+        $scope.gotoCalculadora = function () {
             mainNavigator.pushPage('home_calculator.html');
 
-            setTimeout(function(){
+            setTimeout(function () {
                 currentNavigator = calculatorNavigator;
             }, 500);
         };
 
-        $scope.gotoCompras = function() {
+        $scope.gotoCompras = function () {
             mainNavigator.pushPage('home_myshopping.html');
 
-            setTimeout(function(){
+            setTimeout(function () {
                 currentNavigator = myshoppingNavigator;
             }, 500);
         };
 
-        $scope.gotoConsejos = function() {
+        $scope.gotoConsejos = function () {
             mainNavigator.pushPage('home_counsel.html');
 
-            setTimeout(function(){
+            setTimeout(function () {
                 currentNavigator = counselNavigator;
             }, 500);
         };
-              
-              $scope.gotoTutorials = function() {
-              mainNavigator.pushPage('home_tutorials.html');
-              
-              setTimeout(function(){
-                         currentNavigator = tutorialsNavigator;
-                         }, 500);
-              };
-              
-              
-              
-              
-              try {
+
+        $scope.gotoTutorials = function () {
+            mainNavigator.pushPage('home_tutorials.html');
+
+            setTimeout(function () {
+                currentNavigator = tutorialsNavigator;
+            }, 500);
+        };
+
+
+        try {
             navigator.splashscreen.hide();
-        }catch(error){}
+        } catch (error) {
+        }
 
     });
 });
@@ -520,7 +520,7 @@ module.controller('Register', function ($scope, service) {
 
                 if (result.status == 'success') {
 
-                    if(!result.message) {
+                    if (!result.message) {
 
                         saveUser(result.user);
 
@@ -561,7 +561,7 @@ module.controller('Perfil', function ($scope, service) {
 
         $scope.user = getUser();
 
-        if(!$scope.user) {
+        if (!$scope.user) {
 
             $scope.user = {
                 name: '',
@@ -602,7 +602,7 @@ module.controller('Perfil', function ($scope, service) {
 
                 if (result.status == 'success') {
 
-                    if(!result.message) {
+                    if (!result.message) {
 
                         saveUser(result.user);
 
@@ -645,13 +645,13 @@ module.controller('Home', function ($scope, service, $sce) {
 
         $scope.top_menu = true;
 
-        $scope.changeNavigator = function(navigator) {
+        $scope.changeNavigator = function (navigator) {
 
             eval('currentNavigator = ' + navigator + ';');
 
-            if(navigator == 'myshoppingNavigator') {
+            if (navigator == 'myshoppingNavigator') {
 
-                if(MyShoppingScope) {
+                if (MyShoppingScope) {
                     MyShoppingScope.getMyShopping();
                 }
             }
@@ -659,8 +659,8 @@ module.controller('Home', function ($scope, service, $sce) {
             $scope.reloadPreviews();
         };
 
-        setTimeout(function(){
-            currentNavigator = recipesNavigator;
+        setTimeout(function () {
+            currentNavigator = categoryNavigator;
         }, 100);
 
         $scope.trustSrc = function (src) {
@@ -696,7 +696,8 @@ module.controller('Home', function ($scope, service, $sce) {
 
                     try {
                         navigator.splashscreen.hide();
-                    }catch(error){}
+                    } catch (error) {
+                    }
 
                     $('.home-page .preview').each(function () {
 
@@ -713,7 +714,8 @@ module.controller('Home', function ($scope, service, $sce) {
 
                 try {
                     navigator.splashscreen.hide();
-                }catch(error){}
+                } catch (error) {
+                }
             }
 
         }, function () {
@@ -742,61 +744,67 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
             service: service
         });
 
-        $scope.addToRecipes =function() {
-              
-              if(getUser()){
-              
-              service.addToRecipes({food_id: $scope.menu.id, app_id: getUserOrAppId(), portions: $scope.porciones}, function (result) {
-                                   
-                                   if (result.status == 'success') {
-                                   
-                                   modal.hide();
-                                   
-                                   alert(result.message);
-                                   
-                                   } else {
-                                   
-                                   modal.hide();
-                                   
-                                   alert(result.message);
-                                   }
-                                   
-                                   }, function (error) {
-                                   
-                                   modal.hide();
-                                   
-                                   alert('No se pudo conectar con el servidor');
-                                   });
-              
-              } else {
-              mainNavigator.pushPage('register_fb.html');
-              }
+        $scope.addToRecipes = function () {
 
-            
+            if (getUser()) {
+
+                service.addToRecipes({
+                    food_id: $scope.menu.id,
+                    app_id: getUserOrAppId(),
+                    portions: $scope.porciones,
+                    menu: $scope.menu
+                }, function (result) {
+
+                    if (result.status == 'success') {
+
+                        modal.hide();
+
+                        alert(result.message);
+
+                    } else {
+
+                        modal.hide();
+
+                        alert(result.message);
+                    }
+
+                }, function (error) {
+
+                    modal.hide();
+
+                    alert('No se pudo conectar con el servidor');
+                });
+
+            } else {
+
+                mainNavigator.pushPage('register_fb.html');
+            }
+
+
         };
 
-        $scope.goToUnits = function() {
+        $scope.goToUnits = function () {
 
-            currentNavigator.pushPage('units.html', {data:{}});
+            currentNavigator.pushPage('units.html', {data: {}});
         };
 
-        $scope.increasePortions = function() {
+        $scope.increasePortions = function () {
 
-            $scope.porciones ++;
+            $scope.porciones++;
 
             $scope.recalculate_portions();
         };
 
-        $scope.decreasePortions = function() {
+        $scope.decreasePortions = function () {
 
-            if($scope.porciones > 1) {
-                $scope.porciones --;
+            if ($scope.porciones > 1) {
+                $scope.porciones--;
                 $scope.recalculate_portions();
             }
         };
 
-        $scope.recalculate_portions = function() {
-            for ( var i in  $scope.menu.ingredients) {
+        $scope.recalculate_portions = function () {
+            for (var i in  $scope.menu.ingredients) {
 
                 eval("var quantity = " + $scope.menu.ingredients[i].quantity + ";");
 
@@ -817,10 +825,10 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
                 setTimeout(function () {
                     $('.menu_detail-page .preview').each(function () {
 
-                        $('.image-list-container').each(function(){
+                        $('.image-list-container').each(function () {
 
-                            $(this).find('.image').css('width', 100/$(this).find('.image').length);
-                            $(this).find('.image:first-child').css('width', 100/$(this).find('.image').length - (15/$(this).find('.image').length));
+                            $(this).find('.image').css('width', 100 / $(this).find('.image').length);
+                            $(this).find('.image:first-child').css('width', 100 / $(this).find('.image').length - (15 / $(this).find('.image').length));
                         });
 
                         new ImageLoader($(this), new Image());
@@ -945,7 +953,7 @@ module.controller('Category', function ($scope, service, $sce) {
             $scope.getCategories();
         };
 
-        $scope.goToMenuDetail = function(item) {
+        $scope.goToMenuDetail = function (item) {
             currentNavigator.pushPage('subcategory.html', {data: {subcategory: item}});
         };
 
@@ -1041,7 +1049,11 @@ module.controller('Subcategory', function ($scope, service, $sce) {
 
         $scope.getSubcategory = function () {
 
-            service.getSubcategory({app_id: getUserOrAppId(), search: $scope.search, subcategory_id: $scope.subcategory.id}, function (result) {
+            service.getSubcategory({
+                app_id: getUserOrAppId(),
+                search: $scope.search,
+                subcategory_id: $scope.subcategory.id
+            }, function (result) {
 
                 if (result.status == 'success') {
 
@@ -1136,9 +1148,9 @@ module.controller('CalNutrientes', function ($scope, service) {
             calculatorNavigator.pushPage(page, {});
         };
 
-        $scope.updateIngredient = function() {
-            for(var i in $scope.calculator_params.alimentos) {
-                if($scope.calculator_params.alimentos[i].id == $scope.ingredient_id) {
+        $scope.updateIngredient = function () {
+            for (var i in $scope.calculator_params.alimentos) {
+                if ($scope.calculator_params.alimentos[i].id == $scope.ingredient_id) {
                     $scope.ingredient = $scope.calculator_params.alimentos[i].name;
                 }
             }
@@ -1146,9 +1158,9 @@ module.controller('CalNutrientes', function ($scope, service) {
             $scope.getCalculatorDetails();
         };
 
-        $scope.updatePorcion = function() {
-            for(var i in $scope.calculator_params.porciones) {
-                if($scope.calculator_params.porciones[i].id == $scope.porcion_id) {
+        $scope.updatePorcion = function () {
+            for (var i in $scope.calculator_params.porciones) {
+                if ($scope.calculator_params.porciones[i].id == $scope.porcion_id) {
                     $scope.porcion = $scope.calculator_params.porciones[i].name;
                 }
             }
@@ -1157,9 +1169,9 @@ module.controller('CalNutrientes', function ($scope, service) {
         };
 
 
-        $scope.getCalculatorDetails = function() {
+        $scope.getCalculatorDetails = function () {
 
-            if($scope.ingredient_id != '' && $scope.porcion_id != '') {
+            if ($scope.ingredient_id != '' && $scope.porcion_id != '') {
 
                 modal.show();
 
@@ -1167,7 +1179,7 @@ module.controller('CalNutrientes', function ($scope, service) {
                     ingredient_id: $scope.ingredient_id,
                     porcion: $scope.porcion_id,
                     table: $scope.table
-                }, function(result){
+                }, function (result) {
 
                     if (result.status == 'success') {
 
@@ -1182,7 +1194,7 @@ module.controller('CalNutrientes', function ($scope, service) {
                         alert(result.message);
                     }
 
-                }, function(err){
+                }, function (err) {
 
                     modal.hide();
 
@@ -1220,9 +1232,9 @@ module.controller('CalcProteinas', function ($scope, service) {
             calculatorNavigator.pushPage(page, {});
         };
 
-        $scope.updateIngredient = function() {
-            for(var i in $scope.calculator_params.alimentos) {
-                if($scope.calculator_params.alimentos[i].id == $scope.ingredient_id) {
+        $scope.updateIngredient = function () {
+            for (var i in $scope.calculator_params.alimentos) {
+                if ($scope.calculator_params.alimentos[i].id == $scope.ingredient_id) {
                     $scope.ingredient = $scope.calculator_params.alimentos[i].name;
                 }
             }
@@ -1230,9 +1242,9 @@ module.controller('CalcProteinas', function ($scope, service) {
             $scope.getCalculatorDetails();
         };
 
-        $scope.updateCategoria = function() {
-            for(var i in $scope.calculator_params.categorias) {
-                if($scope.calculator_params.categorias[i].id == $scope.categoria_id) {
+        $scope.updateCategoria = function () {
+            for (var i in $scope.calculator_params.categorias) {
+                if ($scope.calculator_params.categorias[i].id == $scope.categoria_id) {
                     $scope.categoria = $scope.calculator_params.categorias[i].name;
                 }
             }
@@ -1241,9 +1253,9 @@ module.controller('CalcProteinas', function ($scope, service) {
         };
 
 
-        $scope.getCalculatorDetails = function() {
+        $scope.getCalculatorDetails = function () {
 
-            if($scope.categoria_id != '' && $scope.ingredient_id != '') {
+            if ($scope.categoria_id != '' && $scope.ingredient_id != '') {
 
                 modal.show();
 
@@ -1251,7 +1263,7 @@ module.controller('CalcProteinas', function ($scope, service) {
                     categoria_id: $scope.categoria_id,
                     ingredient_id: $scope.ingredient_id,
                     table: $scope.table
-                }, function(result){
+                }, function (result) {
 
                     if (result.status == 'success') {
 
@@ -1266,7 +1278,7 @@ module.controller('CalcProteinas', function ($scope, service) {
                         alert(result.message);
                     }
 
-                }, function(err){
+                }, function (err) {
 
                     modal.hide();
 
@@ -1304,9 +1316,9 @@ module.controller('CalcCalorias', function ($scope, service) {
             calculatorNavigator.pushPage(page, {});
         };
 
-        $scope.updateIngredient = function() {
-            for(var i in $scope.calculator_params.alimentos) {
-                if($scope.calculator_params.alimentos[i].id == $scope.ingredient_id) {
+        $scope.updateIngredient = function () {
+            for (var i in $scope.calculator_params.alimentos) {
+                if ($scope.calculator_params.alimentos[i].id == $scope.ingredient_id) {
                     $scope.ingredient = $scope.calculator_params.alimentos[i].name;
                 }
             }
@@ -1314,9 +1326,9 @@ module.controller('CalcCalorias', function ($scope, service) {
             $scope.getCalculatorDetails();
         };
 
-        $scope.updateCategoria = function() {
-            for(var i in $scope.calculator_params.categorias) {
-                if($scope.calculator_params.categorias[i].id == $scope.categoria_id) {
+        $scope.updateCategoria = function () {
+            for (var i in $scope.calculator_params.categorias) {
+                if ($scope.calculator_params.categorias[i].id == $scope.categoria_id) {
                     $scope.categoria = $scope.calculator_params.categorias[i].name;
                 }
             }
@@ -1325,9 +1337,9 @@ module.controller('CalcCalorias', function ($scope, service) {
         };
 
 
-        $scope.getCalculatorDetails = function() {
+        $scope.getCalculatorDetails = function () {
 
-            if($scope.categoria_id != '' && $scope.ingredient_id != '') {
+            if ($scope.categoria_id != '' && $scope.ingredient_id != '') {
 
                 modal.show();
 
@@ -1335,7 +1347,7 @@ module.controller('CalcCalorias', function ($scope, service) {
                     categoria_id: $scope.categoria_id,
                     ingredient_id: $scope.ingredient_id,
                     table: $scope.table
-                }, function(result){
+                }, function (result) {
 
                     if (result.status == 'success') {
 
@@ -1350,7 +1362,7 @@ module.controller('CalcCalorias', function ($scope, service) {
                         alert(result.message);
                     }
 
-                }, function(err){
+                }, function (err) {
 
                     modal.hide();
 
@@ -1387,14 +1399,14 @@ module.controller('CalCaloriasDiarias', function ($scope, service) {
             calculatorNavigator.pushPage(page, {});
         };
 
-        $scope.updatePesoCorporal = function() {
+        $scope.updatePesoCorporal = function () {
 
             $scope.getCalculatorDetails(false);
         };
 
-        $scope.updateNivelDeActividad = function() {
-            for(var i in $scope.calculator_params.nivel_de_actividad) {
-                if($scope.calculator_params.nivel_de_actividad[i].id == $scope.nivel_de_actividad_id) {
+        $scope.updateNivelDeActividad = function () {
+            for (var i in $scope.calculator_params.nivel_de_actividad) {
+                if ($scope.calculator_params.nivel_de_actividad[i].id == $scope.nivel_de_actividad_id) {
                     $scope.nivel_de_actividad = $scope.calculator_params.nivel_de_actividad[i].name;
                 }
             }
@@ -1403,11 +1415,11 @@ module.controller('CalCaloriasDiarias', function ($scope, service) {
         };
 
 
-        $scope.getCalculatorDetails = function(showLoader) {
+        $scope.getCalculatorDetails = function (showLoader) {
 
-            if($scope.categoria_id != '' && $scope.ingredient_id != '') {
+            if ($scope.categoria_id != '' && $scope.ingredient_id != '') {
 
-                if(showLoader) {
+                if (showLoader) {
 
                     modal.show();
                 }
@@ -1416,7 +1428,7 @@ module.controller('CalCaloriasDiarias', function ($scope, service) {
                     nivel_de_actividad_id: $scope.nivel_de_actividad_id,
                     peso_corporal: $scope.peso_corporal,
                     table: $scope.table
-                }, function(result){
+                }, function (result) {
 
                     if (result.status == 'success') {
 
@@ -1431,7 +1443,7 @@ module.controller('CalCaloriasDiarias', function ($scope, service) {
                         alert(result.message);
                     }
 
-                }, function(err){
+                }, function (err) {
 
                     modal.hide();
 
@@ -1611,16 +1623,16 @@ module.controller('MyShopping', function ($scope, service, $sce) {
             $scope.getMyShopping();
         };
 
-        $scope.goToShoppingDetail = function(item) {
+        $scope.goToShoppingDetail = function (item) {
 
             currentNavigator.pushPage('myshopping_detail.html', {data: {menu: item}});
         };
 
-        $scope.getMyShopping = function() {
+        $scope.getMyShopping = function () {
 
             modal.show();
 
-            service.getMyShopping({app_id: getUserOrAppId(), search: $scope.search}, function(result){
+            service.getMyShopping({app_id: getUserOrAppId(), search: $scope.search}, function (result) {
 
                 if (result.status == 'success') {
 
@@ -1645,7 +1657,7 @@ module.controller('MyShopping', function ($scope, service, $sce) {
                     //alert(result.message);
                 }
 
-            }, function() {
+            }, function () {
 
                 modal.hide();
 
@@ -1664,8 +1676,8 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
 
         $scope.menu = currentNavigator.pages[currentNavigator.pages.length - 1].data.menu;
 
-        $scope.recalculate_portions = function() {
-            for ( var i in  $scope.menu.ingredients) {
+        $scope.recalculate_portions = function () {
+            for (var i in  $scope.menu.ingredients) {
 
                 eval("var quantity = " + $scope.menu.ingredients[i].quantity + ";");
 
@@ -1673,11 +1685,11 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
             }
         };
 
-        $scope.getMyShoppingDetail = function() {
+        $scope.getMyShoppingDetail = function () {
 
             modal.show();
 
-            service.getMyShoppingDetail({app_id: getUserOrAppId(), id: $scope.menu.id}, function(result){
+            service.getMyShoppingDetail({app_id: getUserOrAppId(), id: $scope.menu.id}, function (result) {
 
                 if (result.status == 'success') {
 
@@ -1704,7 +1716,7 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
                     alert(result.message);
                 }
 
-            }, function() {
+            }, function () {
 
                 modal.hide();
 
@@ -1712,13 +1724,13 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
             });
         };
 
-        $scope.deleteShopping = function() {
+        $scope.deleteShopping = function () {
 
-            confirm('Esta seguro de eliminar esta compra?', function(){
+            confirm('Esta seguro de eliminar esta compra?', function () {
 
                 modal.show();
 
-                service.deleteShopping({app_id: getUserOrAppId(), id: $scope.menu.id}, function(result){
+                service.deleteShopping({app_id: getUserOrAppId(), id: $scope.menu.id}, function (result) {
 
                     if (result.status == 'success') {
 
@@ -1728,7 +1740,7 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
 
                         currentNavigator.popPage();
 
-                        setTimeout(function(){
+                        setTimeout(function () {
                             MyShoppingScope.getMyShopping();
                         }, 200);
 
@@ -1739,7 +1751,7 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
                         alert(result.message);
                     }
 
-                }, function() {
+                }, function () {
 
                     modal.hide();
 
@@ -1766,16 +1778,16 @@ module.controller('Invite', function ($scope, service, $sce) {
             $scope.getInvites();
         };
 
-        $scope.goToShoppingDetail = function(item) {
+        $scope.goToShoppingDetail = function (item) {
 
             currentNavigator.pushPage('invite_detail.html', {data: {menu: item}});
         };
 
-        $scope.getInvites = function() {
+        $scope.getInvites = function () {
 
             modal.show();
 
-            service.getInvites({app_id: getUserOrAppId(), search: $scope.search}, function(result){
+            service.getInvites({app_id: getUserOrAppId(), search: $scope.search}, function (result) {
 
                 if (result.status == 'success') {
 
@@ -1800,7 +1812,7 @@ module.controller('Invite', function ($scope, service, $sce) {
                     //alert(result.message);
                 }
 
-            }, function() {
+            }, function () {
 
                 modal.hide();
 
@@ -1825,8 +1837,8 @@ module.controller('InviteDetail', function ($scope, service, $sce) {
 
         $scope.menu = currentNavigator.pages[currentNavigator.pages.length - 1].data.menu;
 
-        $scope.recalculate_portions = function() {
-            for ( var i in  $scope.menu.ingredients) {
+        $scope.recalculate_portions = function () {
+            for (var i in  $scope.menu.ingredients) {
 
                 eval("var quantity = " + $scope.menu.ingredients[i].quantity + ";");
 
@@ -1835,59 +1847,59 @@ module.controller('InviteDetail', function ($scope, service, $sce) {
         };
 
 
-        $scope.shareByEmail = function() {
+        $scope.shareByEmail = function () {
 
-            if($scope.invitados > 0) {
-                $scope.invitados --;
+            if ($scope.invitados > 0) {
+                $scope.invitados--;
             }
 
             message = 'Te invito para las: ' + $scope.fecha + ', ' + $scope.hora + ' en la direccion: ' + $scope.direccion;
 
-            shareByEmail(message, function(){
+            shareByEmail(message, function () {
             });
         };
 
-        $scope.shareBySMS = function() {
+        $scope.shareBySMS = function () {
 
-            if($scope.invitados > 0) {
-                $scope.invitados --;
+            if ($scope.invitados > 0) {
+                $scope.invitados--;
             }
 
             message = 'Te invito para las: ' + $scope.fecha + ', ' + $scope.hora + ' en la direccion: ' + $scope.direccion;
 
-            shareBySMS(message, function(){
+            shareBySMS(message, function () {
             });
         };
 
-        $scope.shareByWhatsApp = function() {
+        $scope.shareByWhatsApp = function () {
 
-            if($scope.invitados > 0) {
-                $scope.invitados --;
+            if ($scope.invitados > 0) {
+                $scope.invitados--;
             }
 
             message = 'Te invito para las: ' + $scope.fecha + ', ' + $scope.hora + ' en la direccion: ' + $scope.direccion;
 
-            shareByWhatsApp(message, function(){
+            shareByWhatsApp(message, function () {
             });
         };
 
-        $scope.shareByFacebook = function() {
+        $scope.shareByFacebook = function () {
 
-            if($scope.invitados > 0) {
-                $scope.invitados --;
+            if ($scope.invitados > 0) {
+                $scope.invitados--;
             }
 
             message = 'Te invito para las: ' + $scope.fecha + ', ' + $scope.hora + ' en la direccion: ' + $scope.direccion;
 
-            shareByFacebook(message, function(){
+            shareByFacebook(message, function () {
             });
         };
 
-        $scope.getInviteDetail = function() {
+        $scope.getInviteDetail = function () {
 
             modal.show();
 
-            service.getInviteDetail({app_id: getUserOrAppId(), id: $scope.menu.id}, function(result){
+            service.getInviteDetail({app_id: getUserOrAppId(), id: $scope.menu.id}, function (result) {
 
                 if (result.status == 'success') {
 
@@ -1914,7 +1926,7 @@ module.controller('InviteDetail', function ($scope, service, $sce) {
                     alert(result.message);
                 }
 
-            }, function() {
+            }, function () {
 
                 modal.hide();
 
@@ -1940,18 +1952,18 @@ module.controller('Units', function ($scope, service, $sce) {
             $scope.getUnitsType();
         };
 
-        $scope.goToUnit = function(item) {
+        $scope.goToUnit = function (item) {
 
             console.log(item);
 
             currentNavigator.pushPage('unit.html', {data: {unit: item}});
         };
 
-        $scope.getUnitsType = function() {
+        $scope.getUnitsType = function () {
 
             modal.show();
 
-            service.getUnitsType({search: $scope.search}, function(result){
+            service.getUnitsType({search: $scope.search}, function (result) {
 
                 if (result.status == 'success') {
 
@@ -1966,7 +1978,7 @@ module.controller('Units', function ($scope, service, $sce) {
                     alert(result.message);
                 }
 
-            }, function() {
+            }, function () {
 
                 modal.hide();
 
@@ -1994,16 +2006,16 @@ module.controller('Unit', function ($scope, service, $sce) {
             $scope.getUnits();
         };
 
-        $scope.showUnit = function(item) {
+        $scope.showUnit = function (item) {
 
             alert(item.text);
         };
 
-        $scope.getUnits = function() {
+        $scope.getUnits = function () {
 
             modal.show();
 
-            service.getUnits({type: $scope.unitType.id, search: $scope.search}, function(result){
+            service.getUnits({type: $scope.unitType.id, search: $scope.search}, function (result) {
 
                 if (result.status == 'success') {
 
@@ -2018,7 +2030,7 @@ module.controller('Unit', function ($scope, service, $sce) {
                     alert(result.message);
                 }
 
-            }, function() {
+            }, function () {
 
                 modal.hide();
 
@@ -2033,110 +2045,36 @@ module.controller('Unit', function ($scope, service, $sce) {
 
 
 module.controller('Tutorials', function ($scope, service) {
-                  
-                  ons.ready(function () {
-                            
-                            $scope.tutorials = [];
-                            
-                            
-                            modal.show();
-                            
-                            $scope.goToTutorial = function (tutorial) {
-                            
-                            
-                                tutorialsNavigator.pushPage('tutorial.html', {data: {tutorial: tutorial}});
-                            };
-                            
-                            service.getTutorials({}, function (result) {
-                                            
-                                            if (result.status == 'success') {
-                                            
-                                            modal.hide();
-                                            
-                                            $scope.tutorials = result.data;
-                                            
-                                            setTimeout(function () {
-                                                       $('.tutorials-page .preview').each(function () {
-                                                                                         
-                                                                                         new ImageLoader($(this), new Image());
-                                                                                         
-                                                                                         });
-                                                       
-                                                       }, 500);
-                                            
-                                            } else {
-                                            
-                                            modal.hide();
-                                            
-                                            alert(result.message);
-                                            }
-                                            
-                                            }, function () {
-                                            
-                                            modal.hide();
-                                            
-                                            alert('No se pudo conectar con el servidor');
-                                            });
-                            });
-                  });
+
+    ons.ready(function () {
+
+        $scope.tutorials = [];
 
 
+        modal.show();
 
-module.controller('Tutorial', function ($scope, service) {
-                  
-                  ons.ready(function () {
-                            
-                            $scope.tips = [];
-                            
-                            $scope.tutorial = tutorialsNavigator.pages[tutorialsNavigator.pages.length - 1].data.tutorial;
-
-                          setTimeout(function () {
-                              $('.tutorial-page .preview').each(function () {
-
-                                  new ImageLoader($(this), new Image());
-
-                              });
-
-                          }, 100);
-                  });
-                  
-                  });
+        $scope.goToTutorial = function (tutorial) {
 
 
-module.controller('RegisterFB', function ($scope, service) {
-                  
-                  ons.ready(function () {
-                            
-                            $scope.register = function() {
-                            modal.show();
-                            setTimeout(function(){
-                                       modal.hide();
-                                       mainNavigator.popPage();
-                                       }, 3000);
-                            };
-                  
-                  });
-                  
-                  });
+            tutorialsNavigator.pushPage('tutorial.html', {data: {tutorial: tutorial}});
+        };
 
-
-/* Common function*/
-
-function initCommonFunctions($scope, services) {
-
-    $scope.makeFavorite = function (item) {
-        
-        if(getUser()) {
-            
-            modal.show();
-
-        services.service.addToFavorite({app_id: getUserOrAppId(), food_id: item.id}, function (result) {
+        service.getTutorials({}, function (result) {
 
             if (result.status == 'success') {
 
                 modal.hide();
 
-                alert(result.message);
+                $scope.tutorials = result.data;
+
+                setTimeout(function () {
+                    $('.tutorials-page .preview').each(function () {
+
+                        new ImageLoader($(this), new Image());
+
+                    });
+
+                }, 500);
 
             } else {
 
@@ -2145,15 +2083,117 @@ function initCommonFunctions($scope, services) {
                 alert(result.message);
             }
 
-        }, function (error) {
+        }, function () {
 
             modal.hide();
 
             alert('No se pudo conectar con el servidor');
         });
-            
+    });
+});
+
+
+module.controller('Tutorial', function ($scope, service) {
+
+    ons.ready(function () {
+
+        $scope.tips = [];
+
+        $scope.tutorial = tutorialsNavigator.pages[tutorialsNavigator.pages.length - 1].data.tutorial;
+
+        setTimeout(function () {
+            $('.tutorial-page .preview').each(function () {
+
+                new ImageLoader($(this), new Image());
+
+            });
+
+        }, 100);
+    });
+
+});
+
+
+module.controller('RegisterFB', function ($scope, service) {
+
+    ons.ready(function () {
+
+        $scope.register = function () {
+
+            modal.show();
+            setTimeout(function () {
+
+                $scope.user = {
+                    name: '',
+                    email: '',
+                    password: '',
+                    token: '',
+                    app_id: app_id,
+                    device: device_name
+                };
+
+                service.registerUser($scope.user, function (result) {
+
+                    if (result.status == 'success') {
+
+                        saveUser(result.user);
+
+                        modal.hide();
+                        mainNavigator.popPage();
+
+                    } else {
+
+                        modal.hide();
+
+                        alert(result.message);
+                    }
+
+                });
+
+
+            }, 100);
+
+        };
+
+    });
+
+});
+
+
+/* Common function*/
+
+function initCommonFunctions($scope, services) {
+
+    $scope.makeFavorite = function (item) {
+
+        if (getUser()) {
+
+            modal.show();
+
+            services.service.addToFavorite({app_id: getUserOrAppId(), food_id: item.id}, function (result) {
+
+                if (result.status == 'success') {
+
+                    modal.hide();
+
+                    alert(result.message);
+
+                } else {
+
+                    modal.hide();
+
+                    alert(result.message);
+                }
+
+            }, function (error) {
+
+                modal.hide();
+
+                alert('No se pudo conectar con el servidor');
+            });
+
         } else {
-            
+
             mainNavigator.pushPage('register_fb.html');
         }
     }
@@ -2220,9 +2260,7 @@ function getUser() {
         }
     }
 
-    console.log(user);
-
-    if( user && (user.app_id==undefined || user.app_id==null || user.app_id=='') ) {
+    if (user && (user.app_id == undefined || user.app_id == null || user.app_id == '')) {
         user = undefined;
     }
 
@@ -2286,7 +2324,7 @@ function confirm(message, callback) {
         callback: function (index) {
             // -1: Cancel
             // 0-: Button index from the left
-            if(index == 0) {
+            if (index == 0) {
                 callback ? callback(index) : '';
             }
         }
@@ -2306,7 +2344,7 @@ function getUserOrAppId() {
 
     user = getUser();
 
-    if(!user) {
+    if (!user) {
 
         return app_id;
 
@@ -2326,20 +2364,28 @@ function shareByEmail(message, callback) {
         null, // BCC: must be null or an array
         [], // FILES: can be null, a string, or an array
         callback, // called when sharing worked, but also when the user cancelled sharing via email (I've found no way to detect the difference)
-        function(error){alert(error)} // called when sh*t hits the fan
+        function (error) {
+            alert(error)
+        } // called when sh*t hits the fan
     );
 }
 
 function shareBySMS(message, callback) {
-    window.plugins.socialsharing.shareViaSMS(message, null /* see the note below */, callback, function(msg) {alert('error: ' + msg)});
+    window.plugins.socialsharing.shareViaSMS(message, null /* see the note below */, callback, function (msg) {
+        alert('error: ' + msg)
+    });
 }
 
 function shareByWhatsApp(message, callback) {
-    window.plugins.socialsharing.shareViaWhatsApp(message, null /* img */, null /* url */, callback, function(errormsg){alert(errormsg)});
+    window.plugins.socialsharing.shareViaWhatsApp(message, null /* img */, null /* url */, callback, function (errormsg) {
+        alert(errormsg)
+    });
 }
 
 function shareByFacebook(message, callback) {
-    window.plugins.socialsharing.shareViaFacebook(message, null /* img */, null /* url */, callback, function(errormsg){alert(errormsg)})
+    window.plugins.socialsharing.shareViaFacebook(message, null /* img */, null /* url */, callback, function (errormsg) {
+        alert(errormsg)
+    })
 }
 
 function shareBy(message, img) {

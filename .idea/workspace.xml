@@ -1,113 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="982fff58-3371-4dab-9d32-f016f2bc3da0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/MyriadPro-Light.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/MyriadPro-Light.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/MyriadPro-Light.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/MyriadPro-Light.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/MyriadPro-Light.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Bold.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Bold.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Bold.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-BoldItalic.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-BoldItalic.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-BoldItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-BoldItalic.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Extrabold.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Extrabold.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Extrabold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Extrabold.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-ExtraboldItalic.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-ExtraboldItalic.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-ExtraboldItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-ExtraboldItalic.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Italic.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Italic.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Italic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Italic.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Light.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Light.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Light.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Light.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Semibold.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Semibold.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Semibold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-Semibold.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-SemiboldItalic.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-SemiboldItalic.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-SemiboldItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans-SemiboldItalic.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSans.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSansLight-Italic.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSansLight-Italic.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSansLight-Italic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/OpenSansLight-Italic.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/bg-repeat.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/bookmark-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/calc-calorias-diarias.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/calc-calorias-diarias.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/calc-calorias.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/calc-calorias.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/calc-nutrientes.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/calc-nutrientes.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/calc-proteinas.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/calc-proteinas.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/calculator-icon-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/calculator-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/chef-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/counsel-icon-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/counsel-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/detail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/facebook.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/fino-button.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/fino-logo2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/heart-blue-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/heart-icon-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/heart-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/home-bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/info-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ingredients.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/invite-icon-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/invite-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/logo-header.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/mail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/mensjae.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/menu-chef.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/menu-color.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/myshopping-icon-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/myshopping-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/plato.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/play-icon-big.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/play-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/porciones.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/preparacion.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/recipe-icon-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/recipe-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/sample/food-preview-sample.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/sample/sample1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/sample/sample2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/sample/top-menu-sample.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/send.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/share.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/tiempo-preparacion.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/tip_image.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/tips/tips-de-cocina.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/tips/tips-de-compras.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/tips/tips-de-higiene.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/tips/tips-de-parrilla.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/tips/tips-de-salud.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/tips/tips-especiales.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/tips/tips-fino.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/whatsapp.png" afterPath="" />
-    </list>
+    <list default="true" id="982fff58-3371-4dab-9d32-f016f2bc3da0" name="Default" comment="" />
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -189,8 +83,8 @@
       <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6289238">
-              <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.4383408">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -316,7 +210,6 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="FullScreen" value="false" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -469,8 +362,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6289238">
-          <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.4383408">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
           <folding />
         </state>
       </provider>
