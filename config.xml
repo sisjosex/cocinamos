@@ -122,6 +122,12 @@
 
     <plugin name="com.bunkerpalace.cordova.youtubevideoplayer" source="pgb" />
     <plugin name="com-sarriaroman-photoviewer" />
+
+    <plugin name="com.phonegap.plugins.facebookconnect" spec="0.9.0"> source="pgb">
+        <param name="APP_ID" value="1129872310422559" />
+        <param name="APP_NAME" value="COCINAMOS" />
+    </plugin>
+
     <!--<plugin name="nl.x-services.plugins.socialsharing" source="pgb" />-->
 
     <allow-intent href="http://*/*" />

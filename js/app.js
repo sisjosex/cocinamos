@@ -2120,7 +2120,19 @@ module.controller('RegisterFB', function ($scope, service) {
 
         $scope.register = function () {
 
-            modal.show();
+            $scope.fbLoginSuccess = function (userData) {
+
+                alert("UserInfo: " + JSON.stringify(userData));
+            };
+
+            facebookConnectPlugin.login(["public_profile"],
+                $scope.fbLoginSuccess,
+                function (error) {
+                    alert("" + error)
+                }
+            );
+
+            /*modal.show();
             setTimeout(function () {
 
                 $scope.user = {
@@ -2151,7 +2163,7 @@ module.controller('RegisterFB', function ($scope, service) {
                 });
 
 
-            }, 100);
+            }, 100);*/
 
         };
 
