@@ -2122,10 +2122,55 @@ module.controller('RegisterFB', function ($scope, service) {
 
             $scope.fbLoginSuccess = function (userData) {
 
-                alert("UserInfo: " + JSON.stringify(userData));
+                facebookConnectPlugin.api("me/?fields=id,first_name,last_name,email", ["email"],
+
+                    function onSuccess (result) {
+                        alert(JSON.stringify(result));
+
+                        /*$scope.user = {
+                            name: '',
+                            email: '',
+                            password: '',
+                            token: '',
+                            app_id: app_id,
+                            device: device_name
+                        };
+
+                        service.registerUser($scope.user, function (result) {
+
+                            if (result.status == 'success') {
+
+                                saveUser(result.user);
+
+                                modal.hide();
+                                mainNavigator.popPage();
+
+                            } else {
+
+                                modal.hide();
+
+                                alert(result.message);
+                            }
+                        });*/
+
+                    }, function onError (error) {
+                        console.error("Failed: ", error);
+                    }
+                );
+
+                //var token;
+
+                /*facebookConnectPlugin.getAccessToken(function(token) {
+
+                    token = token;
+
+                    console.log("Token: " + token);
+                });*/
+
+                //alert("UserInfo: " + JSON.stringify(userData));
             };
 
-            facebookConnectPlugin.login(["public_profile"],
+            facebookConnectPlugin.login(["public_profile", "email"],
                 $scope.fbLoginSuccess,
                 function (error) {
                     alert("" + error)
