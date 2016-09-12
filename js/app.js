@@ -2125,11 +2125,12 @@ module.controller('RegisterFB', function ($scope, service) {
                 facebookConnectPlugin.api("me/?fields=id,first_name,last_name,email", ["email"],
 
                     function onSuccess (result) {
-                        alert(JSON.stringify(result));
 
-                        /*$scope.user = {
-                            name: '',
-                            email: '',
+                        //alert(JSON.stringify(result));
+
+                        $scope.user = {
+                            name: result.first_name + ' ' + result.last_name,
+                            email: result.email,
                             password: '',
                             token: '',
                             app_id: app_id,
@@ -2151,7 +2152,7 @@ module.controller('RegisterFB', function ($scope, service) {
 
                                 alert(result.message);
                             }
-                        });*/
+                        });
 
                     }, function onError (error) {
                         console.error("Failed: ", error);
