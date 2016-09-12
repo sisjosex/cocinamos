@@ -2141,6 +2141,8 @@ module.controller('RegisterFB', function ($scope, service) {
 
                             if (result.status == 'success') {
 
+                                alert('El registro se realizó exitosamente')
+
                                 saveUser(result.user);
 
                                 modal.hide();
