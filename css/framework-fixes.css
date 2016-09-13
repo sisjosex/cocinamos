@@ -6,7 +6,7 @@
 }
 
 div.navigation-bar {
-    background: #rgba(234, 243, 220, 0.7);
+    background: rgba(234, 243, 220, 0.7);
 }
 
 .navigation-bar {
@@ -192,4 +192,6 @@ div.navigation-bar {
 
 .button {
     background-color: transparent;
+    padding: 4px 4px;
+    color: #000;
 }

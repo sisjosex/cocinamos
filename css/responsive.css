@@ -21,6 +21,15 @@
     .btn-agregar {
         font-size: 16px;
     }
+
+    .col-text {
+        font-size: 14px;
+    }
+
+    .delete-shopping {
+        font-size: 14px;
+        line-height: 25px;
+    }
 }
 
 @media all and (max-width:320px) {
@@ -105,9 +114,5 @@
 
     .header-title {
         font-size: 15px;
-    }
-
-    .delete-shopping {
-        font-size: 17px;
     }
 }

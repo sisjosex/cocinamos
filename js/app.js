@@ -1760,10 +1760,101 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
             });
         };
 
-        $scope.getMyShoppingDetail();
+        $scope.showAddItemDialog = function () {
+            ons.notification.prompt({
+                title: 'Agregar Item',
+                message: 'Nombre:',
+                buttonLabel: 'Agregar',
+                cancelable: true,
+                callback: function (value) {
 
-    });
+                    if(value != null) {
+
+                        if(!$scope.menu.extras) {
+                            $scope.menu.extras = [];
+                        }
+
+                        $scope.menu.extras.push({
+                            name: value
+                        });
+
+                        service.addToRecipes({
+                            food_id: $scope.menu.id,
+                            app_id: getUserOrAppId(),
+                            portions: $scope.menu.portions,
+                            menu: $scope.menu
+                        }, function (result) {
+
+                            if (result.status == 'success') {
+
+                                modal.hide();
+
+                                //alert(result.message);
+
+                            } else {
+
+                                modal.hide();
+
+                                alert(result.message);
+                            }
+
+                        }, function (error) {
+
+                            modal.hide();
+
+                            alert('No se pudo conectar con el servidor');
+                        });
+
+                        $scope.$digest();
+                    }
+                }
+            });
+        };
+
+    $scope.addExtra = function () {
+
+        if (getUser()) {
+
+            service.addToRecipes({
+                food_id: $scope.menu.id,
+                app_id: getUserOrAppId(),
+                portions: $scope.menu.portions,
+                menu: $scope.menu
+            }, function (result) {
+
+                if (result.status == 'success') {
+
+                    modal.hide();
+
+                    alert(result.message);
+
+                } else {
+
+                    modal.hide();
+
+                    alert(result.message);
+                }
+
+            }, function (error) {
+
+                modal.hide();
+
+                alert('No se pudo conectar con el servidor');
+            });
+
+        } else {
+
+            mainNavigator.pushPage('register_fb.html');
+        }
+
+
+    };
+
+    $scope.getMyShoppingDetail();
+
 });
+})
+;
 
 module.controller('Invite', function ($scope, service, $sce) {
 
@@ -2043,7 +2134,6 @@ module.controller('Unit', function ($scope, service, $sce) {
     });
 });
 
-
 module.controller('Tutorials', function ($scope, service) {
 
     ons.ready(function () {
@@ -2092,7 +2182,6 @@ module.controller('Tutorials', function ($scope, service) {
     });
 });
 
-
 module.controller('Tutorial', function ($scope, service) {
 
     ons.ready(function () {
@@ -2113,107 +2202,115 @@ module.controller('Tutorial', function ($scope, service) {
 
 });
 
-
 module.controller('RegisterFB', function ($scope, service) {
 
     ons.ready(function () {
 
-        $scope.register = function () {
 
-            $scope.fbLoginSuccess = function (userData) {
+        if (!document.location.protocol == 'http:') {
 
-                facebookConnectPlugin.api("me/?fields=id,first_name,last_name,email", ["email"],
+            $scope.register = function () {
 
-                    function onSuccess (result) {
+                $scope.fbLoginSuccess = function (userData) {
 
-                        //alert(JSON.stringify(result));
+                    facebookConnectPlugin.api("me/?fields=id,first_name,last_name,email", ["email"],
 
-                        $scope.user = {
-                            name: result.first_name + ' ' + result.last_name,
-                            email: result.email,
-                            password: '',
-                            token: '',
-                            app_id: app_id,
-                            device: device_name
-                        };
+                        function onSuccess(result) {
 
-                        service.registerUser($scope.user, function (result) {
+                            //alert(JSON.stringify(result));
 
-                            if (result.status == 'success') {
+                            $scope.user = {
+                                name: result.first_name + ' ' + result.last_name,
+                                email: result.email,
+                                password: '',
+                                token: '',
+                                app_id: app_id,
+                                device: device_name
+                            };
 
-                                alert('El registro se realizó exitosamente')
+                            service.registerUser($scope.user, function (result) {
 
-                                saveUser(result.user);
+                                if (result.status == 'success') {
 
-                                modal.hide();
-                                mainNavigator.popPage();
+                                    alert('El registro se realizó exitosamente')
 
-                            } else {
+                                    saveUser(result.user);
 
-                                modal.hide();
+                                    modal.hide();
+                                    mainNavigator.popPage();
 
-                                alert(result.message);
-                            }
-                        });
+                                } else {
 
-                    }, function onError (error) {
-                        console.error("Failed: ", error);
+                                    modal.hide();
+
+                                    alert(result.message);
+                                }
+                            });
+
+                        }, function onError(error) {
+                            console.error("Failed: ", error);
+                        }
+                    );
+
+                    //var token;
+
+                    /*facebookConnectPlugin.getAccessToken(function(token) {
+
+                     token = token;
+
+                     console.log("Token: " + token);
+                     });*/
+
+                    //alert("UserInfo: " + JSON.stringify(userData));
+                };
+
+                facebookConnectPlugin.login(["public_profile", "email"],
+                    $scope.fbLoginSuccess,
+                    function (error) {
+                        alert("" + error)
                     }
                 );
 
-                //var token;
-
-                /*facebookConnectPlugin.getAccessToken(function(token) {
-
-                    token = token;
-
-                    console.log("Token: " + token);
-                });*/
-
-                //alert("UserInfo: " + JSON.stringify(userData));
             };
 
-            facebookConnectPlugin.login(["public_profile", "email"],
-                $scope.fbLoginSuccess,
-                function (error) {
-                    alert("" + error)
-                }
-            );
+        } else {
 
-            /*modal.show();
-            setTimeout(function () {
+            $scope.register = function () {
 
-                $scope.user = {
-                    name: '',
-                    email: '',
-                    password: '',
-                    token: '',
-                    app_id: app_id,
-                    device: device_name
-                };
+                modal.show();
+                setTimeout(function () {
 
-                service.registerUser($scope.user, function (result) {
+                    $scope.user = {
+                        name: '',
+                        email: '',
+                        password: '',
+                        token: '',
+                        app_id: app_id,
+                        device: device_name
+                    };
 
-                    if (result.status == 'success') {
+                    service.registerUser($scope.user, function (result) {
 
-                        saveUser(result.user);
+                        if (result.status == 'success') {
 
-                        modal.hide();
-                        mainNavigator.popPage();
+                            saveUser(result.user);
 
-                    } else {
+                            modal.hide();
+                            mainNavigator.popPage();
 
-                        modal.hide();
+                        } else {
 
-                        alert(result.message);
-                    }
+                            modal.hide();
 
-                });
+                            alert(result.message);
+                        }
+
+                    });
 
 
-            }, 100);*/
-
-        };
+                }, 200);
+            }
+        }
 
     });
 

@@ -1648,6 +1648,9 @@
 
             <div class="right">
                 <ons-toolbar-button>
+                    <ons-button class="header-send" ng-click="showAddItemDialog()">
+                        <i class="btn fa fa-plus"></i>
+                    </ons-button>
                     <!--<ons-toolbar-button class="header-send" ng-click="shareBy(menu.name, menu.photo)">
                         <img src="img/new/send.png" alt="">
                     </ons-toolbar-button>-->
@@ -1689,63 +1692,28 @@
                 </ons-row>
             </div>
 
+            <div class="recipe-section" ng-show="menu.extras.length > 0">
+                <div class="item item-title1" style="width:80%;">
+                    <h3>Extras</h3>
+                </div>
+                <div class="item" style="width:77px;">
+                </div>
+            </div>
+
+            <div class="ingredients extras" ng-show="menu.extras.length > 0">
+                <ons-row ng-repeat="extra in menu.extras" class="ingredient-row">
+                    <ons-col class="col-dot">
+                        <ons-input type="checkbox"></ons-input>
+                    </ons-col>
+                    <ons-col class="col-text">{{ extra.name }}</ons-col>
+                </ons-row>
+            </div>
+
             <h1 class="delete-shopping btn-yellow" ng-click="deleteShopping()">Eliminar de la lista</h1>
 
         </div>
 
     </ons-page>
-</ons-template>
-
-<ons-template id="invite.html">
-    <ons-navigator animation="slide" id="inviteNavigator">
-        <ons-page ng-controller="Invite" class="internal-tab secondary-toolbar invite-page bg2">
-            <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
-                <div class="left">
-                    <input type="search" class="search-input" placeholder="" ng-model="search"/>
-                    <ons-toolbar-button ng-click="buscar()">
-                        Buscar
-                    </ons-toolbar-button>
-                </div>
-            </ons-toolbar>
-
-            <ons-toolbar>
-                <div class="left">
-                    <ons-toolbar-button ng-click="goToFavorite()">
-                        <img src="img/heart-blue-icon.png" alt="">
-                    </ons-toolbar-button>
-                </div>
-                <div class="center">Mis Invitaciones</div>
-                <div class="right">
-                    <ons-toolbar-button ng-click="toggleSearch()">
-                        <img src="img/new/search-yellow.png" alt="">
-                    </ons-toolbar-button>
-                </div>
-            </ons-toolbar>
-
-            <ons-list>
-                <ons-list-item modifier="chevron" ng-repeat="item in recipes track by $index"
-                               ng-click="goToShoppingDetail(item)">
-                    <div class="left">
-                        <div class="list__item__thumbnail myshopping-item">
-                            <div class="preview" src="{{ trustSrc(item.photo) }}">
-                            </div>
-                        </div>
-
-                        <div class="center">
-                            <div class="list__item__title">{{ item.name }}</div>
-                            <div class="list__item__subtitle">Para {{ item.portions }} invitados</div>
-                            <div class="list__item__subtitle"><b ng-show="item.caducado != '1'" class="fecha">Fecha:</b>
-                                {{ item.fecha }} <b>Horas:</b> {{ item.hora }}
-                            </div>
-                            <div class="list__item__subtitle"><b ng-show="item.caducado == '1'" class="caducada">Invitacion
-                                Caducada</b></div>
-                        </div>
-                    </div>
-                </ons-list-item>
-            </ons-list>
-
-        </ons-page>
-    </ons-navigator>
 </ons-template>
 
 <ons-template id="invite_detail.html">

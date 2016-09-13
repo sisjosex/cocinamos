@@ -1700,3 +1700,7 @@ h1 {
     white-space: nowrap;
     overflow: hidden;
 }
+
+i.btn {
+    color:#000;
+}

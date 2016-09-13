@@ -145,10 +145,10 @@ angular.module("services", []).factory("service", ["$http", "$q", function ($htt
             var position = false;
             var menu = params.menu;
             menu.portions = params.portions;
-
+            
             for(var i in my_shopping) {
 
-                if(params.id == my_shopping[i].id) {
+                if(menu.id == my_shopping[i].id) {
 
                     position = i;
                     break;
@@ -161,7 +161,7 @@ angular.module("services", []).factory("service", ["$http", "$q", function ($htt
 
             } else {
 
-                my_shopping[i] = (menu);
+                my_shopping[position] = menu;
             }
 
             setItem('my_shopping', my_shopping);
