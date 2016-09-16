@@ -15,6 +15,9 @@
     <author href="http://josex.info" email="sisjosex@gmail.com">
         Jose L. Perez
     </author>
+	
+	<preference name="android-targetSdkVersion" value="19" />
+    <preference name="android-minSdkVersion" value="19" />
 
     <!--
         If you do not want any permissions to be added to your app, add the
