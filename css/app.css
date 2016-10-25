@@ -500,7 +500,7 @@ img {
     background-size:auto 100%;
 }
 .tab-bar__item.active .perfil .img {
-    background: url('../img/new/tab_perfil.png') 0 0 no-repeat;
+    background: url('../img/new/tab_perfil_hover.png') 0 0 no-repeat;
     background-size:auto 100%;
 }
 
@@ -509,7 +509,7 @@ img {
     background-size:auto 100%;
 }
 .tab-bar__item.active .recipe .img {
-    background: url('../img/new/tab_recipes.png') 0 0 no-repeat;
+    background: url('../img/new/tab_recipes_hover.png') 0 0 no-repeat;
     background-size:auto 100%;
 }
 
@@ -518,7 +518,7 @@ img {
     background-size:auto 100%;
 }
 .tab-bar__item.active .calculator .img {
-    background: url('../img/new/tab_calculator.png') 0 0 no-repeat;
+    background: url('../img/new/tab_calculator_hover.png') 0 0 no-repeat;
     background-size:auto 100%;
 }
 
@@ -527,7 +527,7 @@ img {
     background-size:auto 100%;
 }
 .tab-bar__item.active .counsel .img {
-    background: url('../img/new/tab_counsel.png') 0 0 no-repeat;
+    background: url('../img/new/tab_counsel_hover.png') 0 0 no-repeat;
     background-size:auto 100%;
 }
 
@@ -536,7 +536,7 @@ img {
     background-size:auto 100%;
 }
 .tab-bar__item.active .myshopping .img {
-    background: url('../img/new/tab_shopping.png') 0 0 no-repeat;
+    background: url('../img/new/tab_shopping_hover.png') 0 0 no-repeat;
     background-size:auto 100%;
 }
 
@@ -545,7 +545,7 @@ img {
     background-size:auto 100%;
 }
 .tab-bar__item.active .tutorials .img {
-    background: url('../img/new/tab_tutorials.png') 0 0 no-repeat;
+    background: url('../img/new/tab_tutorials_hover.png') 0 0 no-repeat;
     background-size:auto 100%;
 }
 
@@ -730,7 +730,7 @@ img {
 
 .calc-item .caption {
     background: rgba(220, 226, 70, 0.5);
-    color: #a5a11e;
+    color: #44b010;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     height: 26px;
@@ -853,7 +853,7 @@ img {
 
 
 .calc-content h4 {
-    color: #ffffff;
+    color: #44b010;
     font-size: 20px;
     display: block;
     width: auto;
@@ -873,7 +873,7 @@ img {
 }
 
 .calc-content h5 {
-    color: #9f9f23;
+    color: #44b010;
     font-size: 17px;
     display: block;
     width: auto;
@@ -963,7 +963,7 @@ form, .form2 {
     display: block;
     padding-left: 10px;
     padding-right: 10px;
-    color: #9f9f23;
+    color: #000;
     font-family: 'SFUIText-Light';
 }
 
@@ -998,7 +998,7 @@ form, .form2 {
     text-align: right;
     font-size: 14px;
     display:table-cell;
-    color:#9f9f23;
+    color:#44b010;
 }
 
 .form .form-element .select-inline {
@@ -1116,12 +1116,12 @@ form, .form2 {
 }
 
 .btn-yellow2 {
-    background: #8bc53f;
+    background: #39ac08;
 }
 
 .btn-agregar {
     color: #fff;
-    background: url(../img/new/canasta-white.png) 8px center no-repeat #8bc53f;
+    background: url(../img/new/canasta-white.png) 8px center no-repeat #39ac08;
     background-size: 33px;
     font-size: 18px;
     text-align: right;
@@ -1518,7 +1518,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 }
 
 .select {
-    color: #dcdcb2;
+    color: #000;
 }
 
 .calc-content h3 {
@@ -1703,4 +1703,17 @@ h1 {
 
 i.btn {
     color:#000;
+}
+
+.intro .intro-section-content{
+    margin-top:20px;
+}
+
+.logo-fino {
+    width:100px;
+    margin:0 auto;
+}
+
+.register-page .intro-section {
+    margin-top:40px;
 }

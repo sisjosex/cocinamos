@@ -12,7 +12,7 @@ var applicationLanguage = 'es';
 var user;
 var user_storage_key = 'finoapp_user';
 
-var app_id = 123;
+var app_id = 123456;
 var recipe_share_text = 'Te invito a participar';
 var currentNavigator = undefined;
 var MyShoppingScope;
@@ -172,7 +172,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
         if (document.location.protocol == 'http:') {
 
-            API_URL = 'http://localhost/fino/admin/api/';
+            API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
@@ -222,7 +222,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
                 } else {
 
-                    mainNavigator.pushPage('dashboard.html', {animation: 'none'});
+                    mainNavigator.pushPage('intro.html', {animation: 'none'});
                 }
 
                 try {
@@ -279,7 +279,7 @@ function onResize() {
     }
 }
 
-module.controller('Intro', function ($scope) {
+module.controller('Intro', function ($scope, service) {
 
     ons.ready(function () {
 
@@ -292,10 +292,10 @@ module.controller('Intro', function ($scope) {
             mainNavigator.pushPage('login.html');
         };
 
-        $scope.register = function () {
+        /*$scope.register = function () {
             //mainNavigator.popPage();
             mainNavigator.pushPage('register.html');
-        };
+        };*/
 
         $scope.saltar = function () {
             //mainNavigator.popPage();
@@ -306,6 +306,116 @@ module.controller('Intro', function ($scope) {
 
             mainNavigator.pushPage('forgot.html');
         };
+
+
+
+
+        if (!document.location.protocol == 'http:') {
+
+            $scope.register = function () {
+
+                $scope.fbLoginSuccess = function (userData) {
+
+                    facebookConnectPlugin.api("me/?fields=id,first_name,last_name,email", ["email"],
+
+                        function onSuccess(result) {
+
+                            //alert(JSON.stringify(result));
+
+                            $scope.user = {
+                                name: result.first_name + ' ' + result.last_name,
+                                email: result.email,
+                                password: '',
+                                token: '',
+                                app_id: app_id,
+                                device: device_name
+                            };
+
+                            service.registerUser($scope.user, function (result) {
+
+                                if (result.status == 'success') {
+
+                                    alert('El registro se realizó exitosamente')
+
+                                    saveUser(result.user);
+
+                                    modal.hide();
+                                    mainNavigator.pushPage('dashboard.html');
+
+                                } else {
+
+                                    modal.hide();
+
+                                    alert(result.message);
+                                }
+                            });
+
+                        }, function onError(error) {
+                            console.error("Failed: ", error);
+                        }
+                    );
+
+                    //var token;
+
+                    /*facebookConnectPlugin.getAccessToken(function(token) {
+
+                     token = token;
+
+                     console.log("Token: " + token);
+                     });*/
+
+                    //alert("UserInfo: " + JSON.stringify(userData));
+                };
+
+                facebookConnectPlugin.login(["public_profile", "email"],
+                    $scope.fbLoginSuccess,
+                    function (error) {
+                        alert("" + error)
+                    }
+                );
+
+            };
+
+        } else {
+
+            $scope.register = function () {
+
+                modal.show();
+                setTimeout(function () {
+
+                    $scope.user = {
+                        name: '',
+                        email: '',
+                        password: '',
+                        token: '',
+                        app_id: app_id,
+                        device: device_name
+                    };
+
+                    service.registerUser($scope.user, function (result) {
+
+                        if (result.status == 'success') {
+
+                            saveUser(result.user);
+
+                            modal.hide();
+                            mainNavigator.pushPage('dashboard.html');
+
+                        } else {
+
+                            modal.hide();
+
+                            alert(result.message);
+                        }
+
+                    });
+
+
+                }, 200);
+            }
+        }
+
+
 
         try {
             navigator.splashscreen.hide();
