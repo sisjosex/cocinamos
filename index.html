@@ -138,23 +138,29 @@
         <div class="intro-content">
             <div class="center-content2">
                 <div class="intro-section">
-                    <div class="logo-intro">
-                        <img src="img/new/logo_cocinamos.png" alt="">
+                    <div class="logo-fino">
+                        <img src="img/new/logo_fino.png" alt="">
                     </div>
 
-                    <div class="intro-section-content2">
+                    <div class="intro-section-content border-box-green">
+                        <div class="intro-section">
+                            <!--<h1 class="intro-title">Modifica tus datos</h1>-->
+                            <!--<input type="text" class="text-input--underbar input-text" placeholder="Nombre completo"
+                                   ng-model="user.name" autocomplete="off">-->
 
-                        <h1 class="intro-title">Modifica tus datos</h1>
-                        <input type="text" class="text-input--underbar input-text" placeholder="Nombre completo"
-                               ng-model="user.name" autocomplete="off">
-                        <input type="text" class="text-input--underbar input-text" placeholder="Correo electrónico"
-                               ng-model="user.email" autocomplete="off">
-                        <input type="text" class="text-input--underbar input-text" placeholder="Contraseña antigua"
-                               ng-model="user.password_old" autocomplete="off">
-                        <input type="password" class="text-input--underbar input-text"
-                               placeholder="Contraseña nueva" ng-model="user.password" autocomplete="off">
-                        <ons-button class="btn-yellow" ng-click="register()">Guardar</ons-button>
-                        <!--<p class="text text3">Condiciones del servicio y <br> pol&iacute;ticas de privacidad</p>-->
+                            <div type="text" class="text-input--underbar input-text" placeholder="Nombre completo"
+                                 ng-model="user.name" autocomplete="off"><span>Nombre Completo</span></div>
+
+                            <div type="text" class="text-input--underbar input-text" placeholder="Nombre completo"
+                                 ng-model="user.name" autocomplete="off"><span>Recetas Favoritas</span> <span class="green">(15)</span></div>
+
+                            <div type="text" class="text-input--underbar input-text" placeholder="Nombre completo"
+                                 ng-model="user.name" autocomplete="off"><span>Compras Pendientes</span> <span class="green">(15)</span></div>
+
+                            <a modifier="large" class="button" ng-click="cerrar_session()">
+                                <img src="img/new/btn_cerrar_session.png" alt=""></a>
+                            <!--<p class="text text3">Condiciones del servicio y <br> pol&iacute;ticas de privacidad</p>-->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -329,6 +335,11 @@
                                 <img src="img/new/icon_tutorials.png" alt="">
 
                                 <div class="icon-text">Tutoriales</div>
+                            </div>
+                            <div class="dashboard-icon" ng-click="gotoPerfil()" ng-show="user.id != undefined">
+                                <img src="img/new/icon_perfil.png" alt="">
+
+                                <div class="icon-text">Perfil</div>
                             </div>
                             <div class="dashboard-icon">
                                 <div class="icon-text"></div>

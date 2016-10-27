@@ -335,7 +335,7 @@ module.controller('Intro', function ($scope, service) {
 
                                 if (result.status == 'success') {
 
-                                    alert('El registro se realizó exitosamente')
+                                    //alert('El registro se realizó exitosamente')
 
                                     saveUser(result.user);
 
@@ -538,8 +538,10 @@ module.controller('Dashboard', function ($scope, service) {
 
     ons.ready(function () {
 
+        $scope.user = getUser();
+
         $scope.gotoPerfil = function () {
-            mainNavigator.pushPage('home_perfil.html');
+            mainNavigator.pushPage('perfil.html');
 
             setTimeout(function () {
                 currentNavigator = perfilNavigator;
