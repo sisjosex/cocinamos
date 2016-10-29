@@ -836,12 +836,12 @@
             <ons-toolbar class="toolbar-big">
                 <div class="left">
                     <ons-button class="back-button" ng-click="back()"><span class="back-icon"></span></ons-button>
-                </div>
-                <div class="center">Recetas</div>
-                <div class="right">
                     <ons-toolbar-button ng-click="goToFavorite()">
                         <img src="img/new/corazon_green.png" alt="">
                     </ons-toolbar-button>
+                </div>
+                <div class="center">Recetas</div>
+                <div class="right">
                     <ons-toolbar-button ng-click="toggleSearch()">
                         <img src="img/new/search-yellow.png" alt="">
                     </ons-toolbar-button>
@@ -863,18 +863,15 @@
 
                 <div class="category-container">
 
-                    <div>
-                        <img src="img/new/logo_cocinamos.png" alt="">
-                    </div>
-
-                    <h3 class="ingredientes-title">CATEGORIAS</h3>
-
-                    <div class="calc-item" ng-repeat="item in subcategories track by $index"
-                         ng-click="goToMenuDetail(item)">
-                        <figure>
-                            <div class="preview" src="{{ trustSrc(item.photo) }}"></div>
+                    <div class="menu-box" ng-repeat="item in subcategories track by $index">
+                        <figure class="figure">
+                            <div class="preview" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                                <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                            </div>
                         </figure>
-                        <div class="caption">{{ item.name }}</div>
+                        <div class="caption">
+                            <span class="caption-text">{{ item.name }}</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -899,7 +896,7 @@
             <div class="left">
                 <ons-back-button></ons-back-button>
             </div>
-            <div class="center">Recetas</div>
+            <div class="center title-green">Recetas</div>
             <div class="right">
                 <ons-toolbar-button ng-click="toggleSearch()">
                     <img src="img/new/search-yellow.png" alt="">
@@ -909,17 +906,23 @@
 
         <div class="toolbar-secondary">
             <div class="navigation-bar">
-                <div class="navigation-bar__center">
-                    <div class="button-bar" style="width:200px; margin:8px auto 0;">
+                <div class="navigation-bar__center has-subtitle">
+                    <h3 class="subtitle-menu">{{ subcategory.name }}</h3>
+                    <div class="button-bar" style="width: 260px; margin:8px auto 0;">
+                        <div class="button-bar__item" ng-click="filter('todos')">
+                            <input type="radio" name="navi-segment-a" checked>
+
+                            <div class="button-bar__button">TODOS ({{ total }})</div>
+                        </div>
                         <div class="button-bar__item" ng-click="filter('normal')">
                             <input type="radio" name="navi-segment-a" checked>
 
-                            <div class="button-bar__button">Recetas ({{ total_menus }})</div>
+                            <div class="button-bar__button">IMÁGENES ({{ total_menus }})</div>
                         </div>
                         <div class="button-bar__item" ng-click="filter('video')">
                             <input type="radio" name="navi-segment-a">
 
-                            <div class="button-bar__button">Videos ({{ total_videos }})</div>
+                            <div class="button-bar__button">VIDEOS ({{ total_videos }})</div>
                         </div>
                     </div>
                 </div>
@@ -927,6 +930,43 @@
         </div>
 
         <div class="menus">
+
+            <div class="todos">
+                <div class="menu-box" ng-repeat="item in menus track by $index">
+                    <figure class="figure">
+                        <div class="preview" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                        </div>
+                        <!--<i class="icon fino">
+                            <img src="img/fino-logo2.png" alt="">
+                        </i>-->
+                        <div class="star-container">
+                            <div class="star">
+                                <div class="star-item" ng-class="{'filled': item.star>0}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>1}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>2}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>3}"></div>
+                            </div>
+                        </div>
+                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
+                            <img src="img/play-icon-big.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption">
+                        <span class="caption-text">{{ item.name }}</span>
+                        <div class="level-container">
+                            <div class="level">
+                                <div class="level-item" ng-class="{'filled': item.level>0}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>1}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>2}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>3}"></div>
+                            </div>
+                            <span>Dificultad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="normal">
                 <div class="menu-box" ng-repeat="item in normal track by $index">
                     <figure class="figure">
@@ -1559,7 +1599,7 @@
             <div class="left">
                 <ons-back-button></ons-back-button>
             </div>
-            <div class="center">Recetas favoritas</div>
+            <div class="center title-green">Recetas favoritas</div>
             <div class="right">
                 <ons-toolbar-button ng-click="toggleSearch()">
                     <img src="img/new/search-yellow.png" alt="">

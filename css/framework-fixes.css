@@ -14,7 +14,9 @@ div.navigation-bar {
 }
 
 .button-bar__button:active, :active + .button-bar__button {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: transparent;
+    border:none;
+    font-size: 10px;
 }
 
 .button-bar__button {
@@ -22,6 +24,7 @@ div.navigation-bar {
     border-color:#929292;
     background: none;
     border:none;
+    font-size: 10px;
 }
 
 .button-bar__item:last-child > .button-bar__button {

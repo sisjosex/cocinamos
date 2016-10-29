@@ -1121,6 +1121,8 @@ module.controller('Subcategory', function ($scope, service, $sce) {
 
         $scope.normal = [];
         $scope.videos = [];
+        $scope.menus = [];
+        $scope.total = 0;
         $scope.total_menus = 0;
         $scope.total_videos = 0;
         $scope.search = '';
@@ -1132,8 +1134,9 @@ module.controller('Subcategory', function ($scope, service, $sce) {
 
         modal.show();
 
-        $('.menus .normal').show();
+        $('.menus .normal').hide();
         $('.menus .video').hide();
+        $('.menus .todos').show();
 
 
         $scope.buscar = function () {
@@ -1147,6 +1150,7 @@ module.controller('Subcategory', function ($scope, service, $sce) {
 
             $('.menus .normal').hide();
             $('.menus .video').hide();
+            $('.menus .todos').hide();
 
             $('.menus .' + filter).show();
 
@@ -1173,6 +1177,8 @@ module.controller('Subcategory', function ($scope, service, $sce) {
 
                     $scope.normal = result.normal;
                     $scope.videos = result.videos;
+                    $scope.menus = result.menus;
+                    $scope.total = result.total;
                     $scope.total_menus = result.total_menus;
                     $scope.total_videos = result.total_videos;
 
