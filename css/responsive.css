@@ -2,6 +2,11 @@
     .toolbar-big .navigation-bar__center {
         font-size: 22px;
     }
+
+    .agregar-section .col-time img {
+        max-width:51px;
+        min-width:51px;
+    }
 }
 
 @media all and (max-width:375px) {
@@ -29,6 +34,11 @@
     .delete-shopping {
         font-size: 14px;
         line-height: 25px;
+    }
+
+    .agregar-section .col-time img {
+        max-width: 46px;
+        min-width: 46px;
     }
 }
 
@@ -114,5 +124,10 @@
 
     .header-title {
         font-size: 15px;
+    }
+
+    .agregar-section .col-time img {
+        max-width:36px;
+        min-width:36px;
     }
 }

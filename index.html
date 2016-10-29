@@ -752,18 +752,15 @@
                     <ons-col class="col-text">{{ ingredient.name }}</ons-col>
                 </ons-row>
 
-                <ons-row class="agregar-section">
-                    <ons-col class="col-dot col-time" width="15%">
-                        <ons-button class="btn-yellow btn-yellow2" ng-click="goToUnits()"><img
-                                style="padding-top: 6px;padding-bottom: 6px;" src="img/new/clock2-white.png" alt="">
-                        </ons-button>
+                <ons-row class="agregar-section" style="width: 108%;">
+                    <ons-col class="col-dot col-time" width="20%">
+                        <a modifier="large" class="button" ng-click="goToUnits()">
+                            <img src="img/new/btn-reloj.png" alt=""></a>
                     </ons-col>
-                    <ons-col class="col-number col-button-agregar" width="85%" style="padding-left:10px;">
-                        <ons-button class="btn-yellow btn-agregar" style="width: 100%;" ng-click="addToRecipes()">
-                            Agregar a
-                            mis
-                            compras
-                        </ons-button>
+                    <ons-col class="col-number col-button-agregar" width="80%" style="padding-left:10px;">
+
+                        <a modifier="large" class="button" ng-click="addToRecipes()">
+                            <img src="img/new/btn-agregar.png" alt=""></a>
                     </ons-col>
                 </ons-row>
 
