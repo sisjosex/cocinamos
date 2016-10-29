@@ -573,13 +573,28 @@ img {
     -mz-transition: opacity linear 0.5s;
     -o-transition: opacity linear 0.5s;
     -webkit-transition: opacity linear 0.5s;
-    opacity:0;
+    opacity: 1;
     background: #fff;
-    background-size: cover !important;
+    background-size: 137px auto !important;
+    background: url(../img/new/loading.png) center 20px no-repeat #e8e8e8;
+}
+
+.preview .loading {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    margin-left: -12px;
+    font-size: 32px;
+    color: #a2a2a2;
 }
 
 .preview.loaded {
     opacity:1;
+    background-size: cover !important;
+}
+
+.preview.loaded .loading {
+    display:none;
 }
 
 .top-menu .preview {

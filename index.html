@@ -636,7 +636,10 @@
                 <div class="menu-box" ng-repeat="item in menus track by $index" ng-click="goToMenuDetail(item)">
                     <figure class="figure">
 
-                        <div class="preview" src="{{ trustSrc(item.photo) }}"></div>
+                        <div class="preview" src="{{ trustSrc(item.photo) }}">
+                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                        </div>
+
                         <!--
                         <i ng-show="item.in_recipes" class="icon bookmark">
                             <img src="img/bookmark-icon.png" alt="">
@@ -896,7 +899,7 @@
             <div class="left">
                 <ons-back-button></ons-back-button>
             </div>
-            <div class="center">Menús</div>
+            <div class="center">Recetas</div>
             <div class="right">
                 <ons-toolbar-button ng-click="toggleSearch()">
                     <img src="img/new/search-yellow.png" alt="">
@@ -927,7 +930,9 @@
             <div class="normal">
                 <div class="menu-box" ng-repeat="item in normal track by $index">
                     <figure class="figure">
-                        <div class="preview" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)"></div>
+                        <div class="preview" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                        </div>
                         <!--<i class="icon fino">
                             <img src="img/fino-logo2.png" alt="">
                         </i>-->
@@ -1451,7 +1456,9 @@
                     <div class="menu-box calc-item" ng-repeat="item in tip_categories track by $index"
                          ng-click="goToTipList(item)">
                         <figure class="figure">
-                            <div class="preview" ng-src="{{ trustSrc(item.image) }}"></div>
+                            <div class="preview" ng-src="{{ trustSrc(item.image) }}">
+                                <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                            </div>
                         </figure>
                         <div class="caption"><span>{{ item.title }}</span></div>
                     </div>
@@ -1480,7 +1487,9 @@
             <div class="menu-box" ng-repeat="item in tips track by $index" ng-click="goToTip(item)">
                 <figure class="figure">
 
-                    <div class="preview" src="{{ trustSrc(item.image) }}"></div>
+                    <div class="preview" src="{{ trustSrc(item.image) }}">
+                        <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                    </div>
                     <!--
                     <i ng-show="item.in_recipes" class="icon bookmark">
                         <img src="img/bookmark-icon.png" alt="">
@@ -1519,7 +1528,9 @@
         <div class="menus">
             <div class="menu-box">
                 <figure class="figure">
-                    <div class="preview" src="{{ trustSrc(tip.image) }}"></div>
+                    <div class="preview" src="{{ trustSrc(tip.image) }}">
+                        <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                    </div>
                 </figure>
                 <div class="caption">{{ tip.title }}</div>
             </div>
@@ -1580,7 +1591,9 @@
             <div class="menu-box" ng-repeat="item in menus track by $index" ng-click="goToMenuDetail(item)">
                 <figure class="figure">
 
-                    <div class="preview" src="{{ trustSrc(item.photo) }}"></div>
+                    <div class="preview" src="{{ trustSrc(item.photo) }}">
+                        <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                    </div>
                     <!--
                     <i ng-show="item.in_recipes" class="icon bookmark">
                         <img src="img/bookmark-icon.png" alt="">
@@ -1637,6 +1650,7 @@
                     <div class="left">
                         <div class="list__item__thumbnail myshopping-item">
                             <div class="preview" src="{{ trustSrc(item.photo) }}">
+                                <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
                             </div>
                         </div>
 
@@ -1678,7 +1692,9 @@
 
         <div class="calc-header">
             <figure class="figure">
-                <div class="preview" src="{{ trustSrc(menu.photo) }}" ng-click="showImage(menu.photo)"></div>
+                <div class="preview" src="{{ trustSrc(menu.photo) }}" ng-click="showImage(menu.photo)">
+                    <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                </div>
             </figure>
             <div ng-click="playVideo(menu.video)" ng-show="menu.type=='video'" class="play-icon-main"></div>
         </div>
@@ -1988,7 +2004,9 @@
                 <div class="menu-box" ng-repeat="item in tutorials track by $index" ng-click="goToTutorial(item)">
                     <figure class="figure">
 
-                        <div class="preview" src="{{ trustSrc(item.image) }}"></div>
+                        <div class="preview" src="{{ trustSrc(item.image) }}">
+                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                        </div>
                     </figure>
                     <div class="caption">{{ item.title }}</div>
                 </div>
@@ -2016,7 +2034,9 @@
         <div class="menus">
             <div class="menu-box">
                 <figure class="figure">
-                    <div class="preview" src="{{ trustSrc(tutorial.image) }}"></div>
+                    <div class="preview" src="{{ trustSrc(tutorial.image) }}">
+                        <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                    </div>
                 </figure>
                 <div class="caption">Tutorial</div>
             </div>
