@@ -1052,13 +1052,14 @@ form, .form2 {
     max-height:30px;
     max-width:30px;
     vertical-align: middle;
+    margin-top: 8px;
 }
 
 .recipe-section .item span {
     white-space: nowrap;
-    font-size:12px;
     display:block;
-    color:#fff;
+    color: #39ac08;
+    font-size: 11px;
 }
 
 .recipe-section .item .img1 {
@@ -1087,7 +1088,7 @@ form, .form2 {
     width:100px;
     height: 30px;
     border-radius: 5px;
-    border: solid 2px #82bc49;
+    border: solid 2px #39ac08;
 }
 
 .nav-bar-plus-minus .button-bar {
@@ -1096,7 +1097,7 @@ form, .form2 {
 }
 
 .nav-bar-plus-minus .button-bar__item:first-child {
-    border-right:solid 2px #82bc49;
+    border-right:solid 2px #39ac08;
 }
 
 .nav-bar-plus-minus .button-bar__item:active {
@@ -1190,7 +1191,7 @@ h2 {
 }
 
 .menu-detail .nav-bar-plus-minus .button-bar__item:first-child {
-    border-right: solid 2px #82bc49;
+    border-right: solid 2px #39ac08;
 }
 
 .menu-detail i {
@@ -1479,9 +1480,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 }
 
 .indicator {
-    border: solid 2px #82bc49;
+    border: solid 2px #39ac08;
     font-weight: bold;
-    color: #82bc49;
+    color: #39ac08;
     border-radius: 5px;
     background: #fff;
     max-width: 40px;
@@ -1491,7 +1492,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 }
 
 .ingredientes-title {
-    color: #82bc49;
+    color: #39ac08;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -1539,9 +1540,10 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 .calc-content h3 {
     text-align: center;
-    color: #67696b;
+    color: #39ac08;
     font-family: 'Poppins-Regular';
     font-size: 19px;
+    font-weight: normal;
 }
 
 .calc-content .style1 {
@@ -1625,13 +1627,15 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .menu-box .figure i.play {
     top: 50%;
     left: 50%;
+    right: 42%;
 }
 
 h1 {
-    font-size: 21px;
+    font-size: 19px;
     margin-top: 0px;
     margin-bottom: 0px;
-    line-height: 28px;
+    line-height: 22px;
+    color: #58595b;
 }
 
 .ingredientes-title2 {
@@ -1671,7 +1675,7 @@ h1 {
     display: block;
     width: auto;
     position: absolute;
-    top: 10px;
+    top: -5px;
     right: 2px;
     text-align: center;
 }
@@ -1684,18 +1688,20 @@ h1 {
     padding: 0;
     line-height: 8px;
     vertical-align: middle;
+    margin-top: 10px;
 }
 .level {
     display:inline-block;
     vertical-align: middle;
+    margin-top: 8px;
 }
 
 .level-item {
     background: url('../img/new/g_cuchara.png') 0 0 no-repeat transparent;
     background-size: 100% auto !important;
-    width: 8px;
-    height: 26px;
     display: table-cell;
+    width: 10px;
+    height: 30px;
 }
 
 .level-item.filled {
@@ -1712,7 +1718,7 @@ h1 {
 
 .caption-text {
     display: block;
-    width: 75%;
+    width: 74%;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
