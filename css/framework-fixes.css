@@ -200,7 +200,7 @@ div.navigation-bar {
 }
 
 .page[status-bar-fill] > .navigation-bar + .page__background + .page__content {
-    top: 15px;
+    top: 20px;
 }
 
 .navigation-bar__title {

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="982fff58-3371-4dab-9d32-f016f2bc3da0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/framework-fixes.css" afterPath="$PROJECT_DIR$/css/framework-fixes.css" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="framework-fixes.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="framework-fixes.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/framework-fixes.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.7986577">
+              <caret line="201" column="79" selection-start-line="201" selection-start-column="79" selection-end-line="201" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -108,73 +108,75 @@
       <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../admin/controllers/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="11.541667">
-              <caret line="191" column="25" selection-start-line="191" selection-start-column="25" selection-end-line="191" selection-end-column="25" />
+            <state vertical-scroll-proportion="-19.708334">
+              <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
               <folding>
-                <marker date="1477844288000" expanded="true" signature="519:622" placeholder="SELECT * FRO..user..." />
-                <marker date="1477844288000" expanded="true" signature="1820:1860" placeholder="SELECT * FRO..user..." />
-                <marker date="1477844288000" expanded="true" signature="2002:2355" placeholder="SELECT count..category..." />
-                <marker date="1477844288000" expanded="true" signature="2256:2337" placeholder="SELECT food_..user_favorite..." />
-                <marker date="1477844288000" expanded="true" signature="2490:2891" placeholder="SELECT count..category..." />
-                <marker date="1477844288000" expanded="true" signature="3948:4022" placeholder="update user ..." />
-                <marker date="1477844288000" expanded="true" signature="4496:4636" placeholder="update user ..." />
-                <marker date="1477844288000" expanded="true" signature="4683:4742" placeholder="SELECT * FRO..user..." />
-                <marker date="1477844288000" expanded="true" signature="5883:5956" placeholder="SELECT * FRO..user..." />
-                <marker date="1477844288000" expanded="true" signature="6058:6156" placeholder="SELECT * FRO..user..." />
-                <marker date="1477844288000" expanded="true" signature="6414:6465" placeholder="SELECT * FRO..user..." />
-                <marker date="1477844288000" expanded="true" signature="7330:7408" placeholder="SELECT email..user..." />
-                <marker date="1477844288000" expanded="true" signature="9008:9049" placeholder="SELECT * FRO..user..." />
-                <marker date="1477844288000" expanded="true" signature="9898:10186" placeholder="SELECT categ..category..." />
-                <marker date="1477844288000" expanded="true" signature="11419:11842" placeholder="SELECT tip_c..tip_category..." />
-                <marker date="1477844288000" expanded="true" signature="13205:13443" placeholder="SELECT tip.i..tip..." />
-                <marker date="1477844288000" expanded="true" signature="14546:14783" placeholder="SELECT tutor..tutorial..." />
-                <marker date="1477844288000" expanded="true" signature="15973:16211" placeholder="SELECT tip.i..tip..." />
-                <marker date="1477844288000" expanded="true" signature="17272:17897" placeholder="SELECT categ..category..." />
-                <marker date="1477844288000" expanded="true" signature="18743:19473" placeholder="SELECT categ..category..." />
-                <marker date="1477844288000" expanded="true" signature="21102:21143" placeholder="SELECT * FRO..user..." />
-                <marker date="1477844288000" expanded="true" signature="21440:22306" placeholder="SELECT categ..category..." />
-                <marker date="1477844288000" expanded="true" signature="23963:24004" placeholder="SELECT * FRO..user..." />
-                <marker date="1477844288000" expanded="true" signature="24248:25151" placeholder="SELECT user_..category..." />
-                <marker date="1477844288000" expanded="true" signature="26060:26596" placeholder="SELECT ingre..ingredient..." />
-                <marker date="1477844288000" expanded="true" signature="27837:27875" placeholder="DELETE FROM ..." />
-                <marker date="1477844288000" expanded="true" signature="28176:28217" placeholder="SELECT * FRO..user..." />
-                <marker date="1477844288000" expanded="true" signature="28514:29512" placeholder="SELECT categ..category..." />
-                <marker date="1477844288000" expanded="true" signature="32064:32226" placeholder="SELECT categ..categoria..." />
-                <marker date="1477844288000" expanded="true" signature="32276:32431" placeholder="SELECT ingre..ingredient..." />
-                <marker date="1477844288000" expanded="true" signature="32481:32606" placeholder="SELECT porci..calculadora_nutrientes..." />
-                <marker date="1477844288000" expanded="true" signature="32665:32840" placeholder="SELECT nivel..calculadora_calorias_diarias..." />
-                <marker date="1477844288000" expanded="true" signature="34232:34695" placeholder="SELECT calcu..calculadora_calorias..." />
-                <marker date="1477844288000" expanded="true" signature="34966:35239" placeholder="SELECT calcu..calculadora_calorias_diarias..." />
-                <marker date="1477844288000" expanded="true" signature="35728:36215" placeholder="SELECT calcu..calculadora_nutrientes..." />
-                <marker date="1477844288000" expanded="true" signature="36395:36867" placeholder="SELECT calcu..calculadora_proteinas..." />
-                <marker date="1477844288000" expanded="true" signature="38357:39284" placeholder="SELECT medid..medidas_caseras..." />
-                <marker date="1477844288000" expanded="true" signature="40672:41409" placeholder="SELECT medid..medidas..." />
-                <marker date="1477844288000" expanded="true" signature="42533:42574" placeholder="SELECT * FRO..user..." />
-                <marker date="1477844288000" expanded="true" signature="42814:43681" placeholder="SELECT categ..category..." />
-                <marker date="1477844288000" expanded="true" signature="44549:45090" placeholder="SELECT ingre..ingredient..." />
-                <marker date="1477844288000" expanded="true" signature="46450:46761" placeholder="SELECT food...category..." />
-                <marker date="1477844288000" expanded="true" signature="46906:47600" placeholder="SELECT categ..category..." />
-                <marker date="1477844288000" expanded="true" signature="48665:49211" placeholder="SELECT ingre..ingredient..." />
-                <marker date="1477844288000" expanded="true" signature="50064:50281" placeholder="SELECT food_..food_step..." />
-                <marker date="1477844288000" expanded="true" signature="50812:51119" placeholder="SELECT food_..food_step_media..." />
-                <marker date="1477844288000" expanded="true" signature="51868:52175" placeholder="SELECT food_..food_step_media..." />
-                <marker date="1477844288000" expanded="true" signature="53477:53532" placeholder="SELECT * FRO..user..." />
-                <marker date="1477844288000" expanded="true" signature="53669:54450" placeholder="SELECT categ..category..." />
-                <marker date="1477844288000" expanded="true" signature="54547:55327" placeholder="SELECT categ..category..." />
-                <marker date="1477844288000" expanded="true" signature="55426:55763" placeholder="SELECT count..category..." />
-                <marker date="1477844288000" expanded="true" signature="55902:56238" placeholder="SELECT count..category..." />
-                <marker date="1477844288000" expanded="true" signature="60564:60875" placeholder="SELECT food...category..." />
-                <marker date="1477844288000" expanded="true" signature="60971:61281" placeholder="SELECT food...category..." />
-                <marker date="1477844288000" expanded="true" signature="61498:62215" placeholder="SELECT categ..category..." />
-                <marker date="1477844288000" expanded="true" signature="62312:63028" placeholder="SELECT categ..category..." />
-                <marker date="1477844288000" expanded="true" signature="63127:63360" placeholder="SELECT count..category..." />
-                <marker date="1477844288000" expanded="true" signature="63499:63731" placeholder="SELECT count..category..." />
-                <marker date="1477844288000" expanded="true" signature="68395:68436" placeholder="SELECT * FRO..user..." />
-                <marker date="1477844288000" expanded="true" signature="68607:68731" placeholder="SELECT id FR..user_favorite..." />
-                <marker date="1477844288000" expanded="true" signature="68831:68894" placeholder="UPDATE food ..." />
-                <marker date="1477844288000" expanded="true" signature="69404:69445" placeholder="SELECT * FRO..user..." />
-                <marker date="1477844288000" expanded="true" signature="69671:69836" placeholder="SELECT id FR..user_recipe..." />
-                <marker date="1477844288000" expanded="true" signature="70071:70138" placeholder="UPDATE food ..." />
+                <marker date="1477849314000" expanded="true" signature="519:622" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="1820:1860" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="2002:2355" placeholder="SELECT count..category..." />
+                <marker date="1477849314000" expanded="true" signature="2256:2337" placeholder="SELECT food_..user_favorite..." />
+                <marker date="1477849314000" expanded="true" signature="2490:2891" placeholder="SELECT count..category..." />
+                <marker date="1477849314000" expanded="true" signature="3948:4022" placeholder="update user ..." />
+                <marker date="1477849314000" expanded="true" signature="4496:4636" placeholder="update user ..." />
+                <marker date="1477849314000" expanded="true" signature="4683:4742" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="5885:5958" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="6060:6158" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="6193:6244" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="6193:6245" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="6492:6543" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="7408:7486" placeholder="SELECT email..user..." />
+                <marker date="1477849314000" expanded="true" signature="9084:9125" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="9974:10262" placeholder="SELECT categ..category..." />
+                <marker date="1477849314000" expanded="true" signature="11495:11918" placeholder="SELECT tip_c..tip_category..." />
+                <marker date="1477849314000" expanded="true" signature="13281:13519" placeholder="SELECT tip.i..tip..." />
+                <marker date="1477849314000" expanded="true" signature="14622:14859" placeholder="SELECT tutor..tutorial..." />
+                <marker date="1477849314000" expanded="true" signature="16049:16287" placeholder="SELECT tip.i..tip..." />
+                <marker date="1477849314000" expanded="true" signature="17348:17973" placeholder="SELECT categ..category..." />
+                <marker date="1477849314000" expanded="true" signature="18819:19549" placeholder="SELECT categ..category..." />
+                <marker date="1477849314000" expanded="true" signature="21178:21219" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="21516:22382" placeholder="SELECT categ..category..." />
+                <marker date="1477849314000" expanded="true" signature="24039:24080" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="24324:25227" placeholder="SELECT user_..category..." />
+                <marker date="1477849314000" expanded="true" signature="26136:26672" placeholder="SELECT ingre..ingredient..." />
+                <marker date="1477849314000" expanded="true" signature="27913:27951" placeholder="DELETE FROM ..." />
+                <marker date="1477849314000" expanded="true" signature="28252:28293" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="28590:29588" placeholder="SELECT categ..category..." />
+                <marker date="1477849314000" expanded="true" signature="32140:32302" placeholder="SELECT categ..categoria..." />
+                <marker date="1477849314000" expanded="true" signature="32352:32507" placeholder="SELECT ingre..ingredient..." />
+                <marker date="1477849314000" expanded="true" signature="32557:32682" placeholder="SELECT porci..calculadora_nutrientes..." />
+                <marker date="1477849314000" expanded="true" signature="32741:32916" placeholder="SELECT nivel..calculadora_calorias_diarias..." />
+                <marker date="1477849314000" expanded="true" signature="34308:34771" placeholder="SELECT calcu..calculadora_calorias..." />
+                <marker date="1477849314000" expanded="true" signature="35042:35315" placeholder="SELECT calcu..calculadora_calorias_diarias..." />
+                <marker date="1477849314000" expanded="true" signature="35804:36291" placeholder="SELECT calcu..calculadora_nutrientes..." />
+                <marker date="1477849314000" expanded="true" signature="36471:36943" placeholder="SELECT calcu..calculadora_proteinas..." />
+                <marker date="1477849314000" expanded="true" signature="38433:39360" placeholder="SELECT medid..medidas_caseras..." />
+                <marker date="1477849314000" expanded="true" signature="40748:41485" placeholder="SELECT medid..medidas..." />
+                <marker date="1477849314000" expanded="true" signature="42609:42650" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="42890:43757" placeholder="SELECT categ..category..." />
+                <marker date="1477849314000" expanded="true" signature="44625:45166" placeholder="SELECT ingre..ingredient..." />
+                <marker date="1477849314000" expanded="true" signature="46526:46837" placeholder="SELECT food...category..." />
+                <marker date="1477849314000" expanded="true" signature="46982:47676" placeholder="SELECT categ..category..." />
+                <marker date="1477849314000" expanded="true" signature="48741:49287" placeholder="SELECT ingre..ingredient..." />
+                <marker date="1477849314000" expanded="true" signature="50140:50357" placeholder="SELECT food_..food_step..." />
+                <marker date="1477849314000" expanded="true" signature="50888:51195" placeholder="SELECT food_..food_step_media..." />
+                <marker date="1477849314000" expanded="true" signature="51944:52251" placeholder="SELECT food_..food_step_media..." />
+                <marker date="1477849314000" expanded="true" signature="53553:53608" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="53745:54526" placeholder="SELECT categ..category..." />
+                <marker date="1477849314000" expanded="true" signature="54623:55403" placeholder="SELECT categ..category..." />
+                <marker date="1477849314000" expanded="true" signature="55502:55839" placeholder="SELECT count..category..." />
+                <marker date="1477849314000" expanded="true" signature="55978:56314" placeholder="SELECT count..category..." />
+                <marker date="1477849314000" expanded="true" signature="60640:60951" placeholder="SELECT food...category..." />
+                <marker date="1477849314000" expanded="true" signature="61047:61357" placeholder="SELECT food...category..." />
+                <marker date="1477849314000" expanded="true" signature="61574:62291" placeholder="SELECT categ..category..." />
+                <marker date="1477849314000" expanded="true" signature="62388:63104" placeholder="SELECT categ..category..." />
+                <marker date="1477849314000" expanded="true" signature="63203:63436" placeholder="SELECT count..category..." />
+                <marker date="1477849314000" expanded="true" signature="63575:63807" placeholder="SELECT count..category..." />
+                <marker date="1477849314000" expanded="true" signature="68471:68512" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="68683:68807" placeholder="SELECT id FR..user_favorite..." />
+                <marker date="1477849314000" expanded="true" signature="68907:68970" placeholder="UPDATE food ..." />
+                <marker date="1477849314000" expanded="true" signature="69480:69521" placeholder="SELECT * FRO..user..." />
+                <marker date="1477849314000" expanded="true" signature="69747:69912" placeholder="SELECT id FR..user_recipe..." />
+                <marker date="1477849314000" expanded="true" signature="70147:70214" placeholder="UPDATE food ..." />
               </folding>
             </state>
           </provider>
@@ -190,10 +192,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56473213">
+            <state vertical-scroll-proportion="0.0">
               <caret line="354" column="42" selection-start-line="354" selection-start-column="42" selection-end-line="354" selection-end-column="42" />
               <folding>
                 <element signature="e#10998#12328#0" expanded="false" />
@@ -254,7 +256,7 @@
         <entry file="file://$PROJECT_DIR$/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="742" column="22" selection-start-line="742" selection-start-column="22" selection-end-line="742" selection-end-column="22" />
+              <caret line="119" column="111" selection-start-line="116" selection-start-column="4" selection-end-line="119" selection-end-column="111" />
               <folding />
             </state>
           </provider>
@@ -272,12 +274,12 @@
         <option value="$PROJECT_DIR$/../../admin/config/database.php" />
         <option value="$PROJECT_DIR$/css/responsive.css" />
         <option value="$PROJECT_DIR$/js/services.js" />
-        <option value="$PROJECT_DIR$/../../admin/controllers/api.php" />
-        <option value="$PROJECT_DIR$/css/framework-fixes.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/css/app.css" />
         <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/../../admin/controllers/api.php" />
+        <option value="$PROJECT_DIR$/css/framework-fixes.css" />
       </list>
     </option>
   </component>
@@ -376,7 +378,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../queplan/QuePlan/www" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../queplan/admin" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
@@ -596,70 +598,72 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="218" column="0" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
           <folding>
-            <marker date="1477844288000" expanded="true" signature="519:622" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="1820:1860" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="2002:2355" placeholder="SELECT count..category..." />
-            <marker date="1477844288000" expanded="true" signature="2256:2337" placeholder="SELECT food_..user_favorite..." />
-            <marker date="1477844288000" expanded="true" signature="2490:2891" placeholder="SELECT count..category..." />
-            <marker date="1477844288000" expanded="true" signature="3948:4022" placeholder="update user ..." />
-            <marker date="1477844288000" expanded="true" signature="4496:4636" placeholder="update user ..." />
-            <marker date="1477844288000" expanded="true" signature="4683:4742" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="5883:5956" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="6058:6156" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="6414:6465" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="7330:7408" placeholder="SELECT email..user..." />
-            <marker date="1477844288000" expanded="true" signature="9008:9049" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="9898:10186" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="11419:11842" placeholder="SELECT tip_c..tip_category..." />
-            <marker date="1477844288000" expanded="true" signature="13205:13443" placeholder="SELECT tip.i..tip..." />
-            <marker date="1477844288000" expanded="true" signature="14546:14783" placeholder="SELECT tutor..tutorial..." />
-            <marker date="1477844288000" expanded="true" signature="15973:16211" placeholder="SELECT tip.i..tip..." />
-            <marker date="1477844288000" expanded="true" signature="17272:17897" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="18743:19473" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="21102:21143" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="21440:22306" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="23963:24004" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="24248:25151" placeholder="SELECT user_..category..." />
-            <marker date="1477844288000" expanded="true" signature="26060:26596" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477844288000" expanded="true" signature="27837:27875" placeholder="DELETE FROM ..." />
-            <marker date="1477844288000" expanded="true" signature="28176:28217" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="28514:29512" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="32064:32226" placeholder="SELECT categ..categoria..." />
-            <marker date="1477844288000" expanded="true" signature="32276:32431" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477844288000" expanded="true" signature="32481:32606" placeholder="SELECT porci..calculadora_nutrientes..." />
-            <marker date="1477844288000" expanded="true" signature="32665:32840" placeholder="SELECT nivel..calculadora_calorias_diarias..." />
-            <marker date="1477844288000" expanded="true" signature="34232:34695" placeholder="SELECT calcu..calculadora_calorias..." />
-            <marker date="1477844288000" expanded="true" signature="34966:35239" placeholder="SELECT calcu..calculadora_calorias_diarias..." />
-            <marker date="1477844288000" expanded="true" signature="35728:36215" placeholder="SELECT calcu..calculadora_nutrientes..." />
-            <marker date="1477844288000" expanded="true" signature="36395:36867" placeholder="SELECT calcu..calculadora_proteinas..." />
-            <marker date="1477844288000" expanded="true" signature="38357:39284" placeholder="SELECT medid..medidas_caseras..." />
-            <marker date="1477844288000" expanded="true" signature="40672:41409" placeholder="SELECT medid..medidas..." />
-            <marker date="1477844288000" expanded="true" signature="42533:42574" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="42814:43681" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="44549:45090" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477844288000" expanded="true" signature="46450:46761" placeholder="SELECT food...category..." />
-            <marker date="1477844288000" expanded="true" signature="46906:47600" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="48665:49211" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477844288000" expanded="true" signature="50064:50281" placeholder="SELECT food_..food_step..." />
-            <marker date="1477844288000" expanded="true" signature="50812:51119" placeholder="SELECT food_..food_step_media..." />
-            <marker date="1477844288000" expanded="true" signature="51868:52175" placeholder="SELECT food_..food_step_media..." />
-            <marker date="1477844288000" expanded="true" signature="53477:53532" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="53669:54450" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="54547:55327" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="55426:55763" placeholder="SELECT count..category..." />
-            <marker date="1477844288000" expanded="true" signature="55902:56238" placeholder="SELECT count..category..." />
-            <marker date="1477844288000" expanded="true" signature="60564:60875" placeholder="SELECT food...category..." />
-            <marker date="1477844288000" expanded="true" signature="60971:61281" placeholder="SELECT food...category..." />
-            <marker date="1477844288000" expanded="true" signature="61498:62215" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="62312:63028" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="63127:63360" placeholder="SELECT count..category..." />
-            <marker date="1477844288000" expanded="true" signature="63499:63731" placeholder="SELECT count..category..." />
-            <marker date="1477844288000" expanded="true" signature="68395:68436" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="68607:68731" placeholder="SELECT id FR..user_favorite..." />
-            <marker date="1477844288000" expanded="true" signature="68831:68894" placeholder="UPDATE food ..." />
-            <marker date="1477844288000" expanded="true" signature="69404:69445" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="69671:69836" placeholder="SELECT id FR..user_recipe..." />
-            <marker date="1477844288000" expanded="true" signature="70071:70138" placeholder="UPDATE food ..." />
+            <marker date="1477849314000" expanded="true" signature="519:622" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="1820:1860" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="2002:2355" placeholder="SELECT count..category..." />
+            <marker date="1477849314000" expanded="true" signature="2256:2337" placeholder="SELECT food_..user_favorite..." />
+            <marker date="1477849314000" expanded="true" signature="2490:2891" placeholder="SELECT count..category..." />
+            <marker date="1477849314000" expanded="true" signature="3948:4022" placeholder="update user ..." />
+            <marker date="1477849314000" expanded="true" signature="4496:4636" placeholder="update user ..." />
+            <marker date="1477849314000" expanded="true" signature="4683:4742" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="5885:5958" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="6060:6158" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="6193:6244" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="6193:6245" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="6492:6543" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="7408:7486" placeholder="SELECT email..user..." />
+            <marker date="1477849314000" expanded="true" signature="9084:9125" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="9974:10262" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="11495:11918" placeholder="SELECT tip_c..tip_category..." />
+            <marker date="1477849314000" expanded="true" signature="13281:13519" placeholder="SELECT tip.i..tip..." />
+            <marker date="1477849314000" expanded="true" signature="14622:14859" placeholder="SELECT tutor..tutorial..." />
+            <marker date="1477849314000" expanded="true" signature="16049:16287" placeholder="SELECT tip.i..tip..." />
+            <marker date="1477849314000" expanded="true" signature="17348:17973" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="18819:19549" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="21178:21219" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="21516:22382" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="24039:24080" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="24324:25227" placeholder="SELECT user_..category..." />
+            <marker date="1477849314000" expanded="true" signature="26136:26672" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477849314000" expanded="true" signature="27913:27951" placeholder="DELETE FROM ..." />
+            <marker date="1477849314000" expanded="true" signature="28252:28293" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="28590:29588" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="32140:32302" placeholder="SELECT categ..categoria..." />
+            <marker date="1477849314000" expanded="true" signature="32352:32507" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477849314000" expanded="true" signature="32557:32682" placeholder="SELECT porci..calculadora_nutrientes..." />
+            <marker date="1477849314000" expanded="true" signature="32741:32916" placeholder="SELECT nivel..calculadora_calorias_diarias..." />
+            <marker date="1477849314000" expanded="true" signature="34308:34771" placeholder="SELECT calcu..calculadora_calorias..." />
+            <marker date="1477849314000" expanded="true" signature="35042:35315" placeholder="SELECT calcu..calculadora_calorias_diarias..." />
+            <marker date="1477849314000" expanded="true" signature="35804:36291" placeholder="SELECT calcu..calculadora_nutrientes..." />
+            <marker date="1477849314000" expanded="true" signature="36471:36943" placeholder="SELECT calcu..calculadora_proteinas..." />
+            <marker date="1477849314000" expanded="true" signature="38433:39360" placeholder="SELECT medid..medidas_caseras..." />
+            <marker date="1477849314000" expanded="true" signature="40748:41485" placeholder="SELECT medid..medidas..." />
+            <marker date="1477849314000" expanded="true" signature="42609:42650" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="42890:43757" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="44625:45166" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477849314000" expanded="true" signature="46526:46837" placeholder="SELECT food...category..." />
+            <marker date="1477849314000" expanded="true" signature="46982:47676" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="48741:49287" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477849314000" expanded="true" signature="50140:50357" placeholder="SELECT food_..food_step..." />
+            <marker date="1477849314000" expanded="true" signature="50888:51195" placeholder="SELECT food_..food_step_media..." />
+            <marker date="1477849314000" expanded="true" signature="51944:52251" placeholder="SELECT food_..food_step_media..." />
+            <marker date="1477849314000" expanded="true" signature="53553:53608" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="53745:54526" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="54623:55403" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="55502:55839" placeholder="SELECT count..category..." />
+            <marker date="1477849314000" expanded="true" signature="55978:56314" placeholder="SELECT count..category..." />
+            <marker date="1477849314000" expanded="true" signature="60640:60951" placeholder="SELECT food...category..." />
+            <marker date="1477849314000" expanded="true" signature="61047:61357" placeholder="SELECT food...category..." />
+            <marker date="1477849314000" expanded="true" signature="61574:62291" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="62388:63104" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="63203:63436" placeholder="SELECT count..category..." />
+            <marker date="1477849314000" expanded="true" signature="63575:63807" placeholder="SELECT count..category..." />
+            <marker date="1477849314000" expanded="true" signature="68471:68512" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="68683:68807" placeholder="SELECT id FR..user_favorite..." />
+            <marker date="1477849314000" expanded="true" signature="68907:68970" placeholder="UPDATE food ..." />
+            <marker date="1477849314000" expanded="true" signature="69480:69521" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="69747:69912" placeholder="SELECT id FR..user_recipe..." />
+            <marker date="1477849314000" expanded="true" signature="70147:70214" placeholder="UPDATE food ..." />
           </folding>
         </state>
       </provider>
@@ -1421,14 +1425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/framework-fixes.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.333333">
@@ -1488,79 +1484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../admin/controllers/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.541667">
-          <caret line="191" column="25" selection-start-line="191" selection-start-column="25" selection-end-line="191" selection-end-column="25" />
-          <folding>
-            <marker date="1477844288000" expanded="true" signature="519:622" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="1820:1860" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="2002:2355" placeholder="SELECT count..category..." />
-            <marker date="1477844288000" expanded="true" signature="2256:2337" placeholder="SELECT food_..user_favorite..." />
-            <marker date="1477844288000" expanded="true" signature="2490:2891" placeholder="SELECT count..category..." />
-            <marker date="1477844288000" expanded="true" signature="3948:4022" placeholder="update user ..." />
-            <marker date="1477844288000" expanded="true" signature="4496:4636" placeholder="update user ..." />
-            <marker date="1477844288000" expanded="true" signature="4683:4742" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="5883:5956" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="6058:6156" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="6414:6465" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="7330:7408" placeholder="SELECT email..user..." />
-            <marker date="1477844288000" expanded="true" signature="9008:9049" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="9898:10186" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="11419:11842" placeholder="SELECT tip_c..tip_category..." />
-            <marker date="1477844288000" expanded="true" signature="13205:13443" placeholder="SELECT tip.i..tip..." />
-            <marker date="1477844288000" expanded="true" signature="14546:14783" placeholder="SELECT tutor..tutorial..." />
-            <marker date="1477844288000" expanded="true" signature="15973:16211" placeholder="SELECT tip.i..tip..." />
-            <marker date="1477844288000" expanded="true" signature="17272:17897" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="18743:19473" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="21102:21143" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="21440:22306" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="23963:24004" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="24248:25151" placeholder="SELECT user_..category..." />
-            <marker date="1477844288000" expanded="true" signature="26060:26596" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477844288000" expanded="true" signature="27837:27875" placeholder="DELETE FROM ..." />
-            <marker date="1477844288000" expanded="true" signature="28176:28217" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="28514:29512" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="32064:32226" placeholder="SELECT categ..categoria..." />
-            <marker date="1477844288000" expanded="true" signature="32276:32431" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477844288000" expanded="true" signature="32481:32606" placeholder="SELECT porci..calculadora_nutrientes..." />
-            <marker date="1477844288000" expanded="true" signature="32665:32840" placeholder="SELECT nivel..calculadora_calorias_diarias..." />
-            <marker date="1477844288000" expanded="true" signature="34232:34695" placeholder="SELECT calcu..calculadora_calorias..." />
-            <marker date="1477844288000" expanded="true" signature="34966:35239" placeholder="SELECT calcu..calculadora_calorias_diarias..." />
-            <marker date="1477844288000" expanded="true" signature="35728:36215" placeholder="SELECT calcu..calculadora_nutrientes..." />
-            <marker date="1477844288000" expanded="true" signature="36395:36867" placeholder="SELECT calcu..calculadora_proteinas..." />
-            <marker date="1477844288000" expanded="true" signature="38357:39284" placeholder="SELECT medid..medidas_caseras..." />
-            <marker date="1477844288000" expanded="true" signature="40672:41409" placeholder="SELECT medid..medidas..." />
-            <marker date="1477844288000" expanded="true" signature="42533:42574" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="42814:43681" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="44549:45090" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477844288000" expanded="true" signature="46450:46761" placeholder="SELECT food...category..." />
-            <marker date="1477844288000" expanded="true" signature="46906:47600" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="48665:49211" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477844288000" expanded="true" signature="50064:50281" placeholder="SELECT food_..food_step..." />
-            <marker date="1477844288000" expanded="true" signature="50812:51119" placeholder="SELECT food_..food_step_media..." />
-            <marker date="1477844288000" expanded="true" signature="51868:52175" placeholder="SELECT food_..food_step_media..." />
-            <marker date="1477844288000" expanded="true" signature="53477:53532" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="53669:54450" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="54547:55327" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="55426:55763" placeholder="SELECT count..category..." />
-            <marker date="1477844288000" expanded="true" signature="55902:56238" placeholder="SELECT count..category..." />
-            <marker date="1477844288000" expanded="true" signature="60564:60875" placeholder="SELECT food...category..." />
-            <marker date="1477844288000" expanded="true" signature="60971:61281" placeholder="SELECT food...category..." />
-            <marker date="1477844288000" expanded="true" signature="61498:62215" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="62312:63028" placeholder="SELECT categ..category..." />
-            <marker date="1477844288000" expanded="true" signature="63127:63360" placeholder="SELECT count..category..." />
-            <marker date="1477844288000" expanded="true" signature="63499:63731" placeholder="SELECT count..category..." />
-            <marker date="1477844288000" expanded="true" signature="68395:68436" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="68607:68731" placeholder="SELECT id FR..user_favorite..." />
-            <marker date="1477844288000" expanded="true" signature="68831:68894" placeholder="UPDATE food ..." />
-            <marker date="1477844288000" expanded="true" signature="69404:69445" placeholder="SELECT * FRO..user..." />
-            <marker date="1477844288000" expanded="true" signature="69671:69836" placeholder="SELECT id FR..user_recipe..." />
-            <marker date="1477844288000" expanded="true" signature="70071:70138" placeholder="UPDATE food ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1569,17 +1492,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="742" column="22" selection-start-line="742" selection-start-column="22" selection-end-line="742" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56473213">
+        <state vertical-scroll-proportion="0.0">
           <caret line="354" column="42" selection-start-line="354" selection-start-column="42" selection-end-line="354" selection-end-column="42" />
           <folding>
             <element signature="e#10998#12328#0" expanded="false" />
@@ -1612,6 +1527,97 @@
             <element signature="e#65253#65595#0" expanded="false" />
             <element signature="e#65658#68779#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../admin/controllers/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.708334">
+          <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
+          <folding>
+            <marker date="1477849314000" expanded="true" signature="519:622" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="1820:1860" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="2002:2355" placeholder="SELECT count..category..." />
+            <marker date="1477849314000" expanded="true" signature="2256:2337" placeholder="SELECT food_..user_favorite..." />
+            <marker date="1477849314000" expanded="true" signature="2490:2891" placeholder="SELECT count..category..." />
+            <marker date="1477849314000" expanded="true" signature="3948:4022" placeholder="update user ..." />
+            <marker date="1477849314000" expanded="true" signature="4496:4636" placeholder="update user ..." />
+            <marker date="1477849314000" expanded="true" signature="4683:4742" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="5885:5958" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="6060:6158" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="6193:6244" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="6193:6245" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="6492:6543" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="7408:7486" placeholder="SELECT email..user..." />
+            <marker date="1477849314000" expanded="true" signature="9084:9125" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="9974:10262" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="11495:11918" placeholder="SELECT tip_c..tip_category..." />
+            <marker date="1477849314000" expanded="true" signature="13281:13519" placeholder="SELECT tip.i..tip..." />
+            <marker date="1477849314000" expanded="true" signature="14622:14859" placeholder="SELECT tutor..tutorial..." />
+            <marker date="1477849314000" expanded="true" signature="16049:16287" placeholder="SELECT tip.i..tip..." />
+            <marker date="1477849314000" expanded="true" signature="17348:17973" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="18819:19549" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="21178:21219" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="21516:22382" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="24039:24080" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="24324:25227" placeholder="SELECT user_..category..." />
+            <marker date="1477849314000" expanded="true" signature="26136:26672" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477849314000" expanded="true" signature="27913:27951" placeholder="DELETE FROM ..." />
+            <marker date="1477849314000" expanded="true" signature="28252:28293" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="28590:29588" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="32140:32302" placeholder="SELECT categ..categoria..." />
+            <marker date="1477849314000" expanded="true" signature="32352:32507" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477849314000" expanded="true" signature="32557:32682" placeholder="SELECT porci..calculadora_nutrientes..." />
+            <marker date="1477849314000" expanded="true" signature="32741:32916" placeholder="SELECT nivel..calculadora_calorias_diarias..." />
+            <marker date="1477849314000" expanded="true" signature="34308:34771" placeholder="SELECT calcu..calculadora_calorias..." />
+            <marker date="1477849314000" expanded="true" signature="35042:35315" placeholder="SELECT calcu..calculadora_calorias_diarias..." />
+            <marker date="1477849314000" expanded="true" signature="35804:36291" placeholder="SELECT calcu..calculadora_nutrientes..." />
+            <marker date="1477849314000" expanded="true" signature="36471:36943" placeholder="SELECT calcu..calculadora_proteinas..." />
+            <marker date="1477849314000" expanded="true" signature="38433:39360" placeholder="SELECT medid..medidas_caseras..." />
+            <marker date="1477849314000" expanded="true" signature="40748:41485" placeholder="SELECT medid..medidas..." />
+            <marker date="1477849314000" expanded="true" signature="42609:42650" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="42890:43757" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="44625:45166" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477849314000" expanded="true" signature="46526:46837" placeholder="SELECT food...category..." />
+            <marker date="1477849314000" expanded="true" signature="46982:47676" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="48741:49287" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477849314000" expanded="true" signature="50140:50357" placeholder="SELECT food_..food_step..." />
+            <marker date="1477849314000" expanded="true" signature="50888:51195" placeholder="SELECT food_..food_step_media..." />
+            <marker date="1477849314000" expanded="true" signature="51944:52251" placeholder="SELECT food_..food_step_media..." />
+            <marker date="1477849314000" expanded="true" signature="53553:53608" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="53745:54526" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="54623:55403" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="55502:55839" placeholder="SELECT count..category..." />
+            <marker date="1477849314000" expanded="true" signature="55978:56314" placeholder="SELECT count..category..." />
+            <marker date="1477849314000" expanded="true" signature="60640:60951" placeholder="SELECT food...category..." />
+            <marker date="1477849314000" expanded="true" signature="61047:61357" placeholder="SELECT food...category..." />
+            <marker date="1477849314000" expanded="true" signature="61574:62291" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="62388:63104" placeholder="SELECT categ..category..." />
+            <marker date="1477849314000" expanded="true" signature="63203:63436" placeholder="SELECT count..category..." />
+            <marker date="1477849314000" expanded="true" signature="63575:63807" placeholder="SELECT count..category..." />
+            <marker date="1477849314000" expanded="true" signature="68471:68512" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="68683:68807" placeholder="SELECT id FR..user_favorite..." />
+            <marker date="1477849314000" expanded="true" signature="68907:68970" placeholder="UPDATE food ..." />
+            <marker date="1477849314000" expanded="true" signature="69480:69521" placeholder="SELECT * FRO..user..." />
+            <marker date="1477849314000" expanded="true" signature="69747:69912" placeholder="SELECT id FR..user_recipe..." />
+            <marker date="1477849314000" expanded="true" signature="70147:70214" placeholder="UPDATE food ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="111" selection-start-line="116" selection-start-column="4" selection-end-line="119" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/framework-fixes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7986577">
+          <caret line="201" column="79" selection-start-line="201" selection-start-column="79" selection-end-line="201" selection-end-column="79" />
+          <folding />
         </state>
       </provider>
     </entry>
