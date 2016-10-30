@@ -741,7 +741,7 @@ img {
     display: inline-block;
     margin-left: 5px;
     margin-right: 5px;
-    border-radius: 0px;
+    border-radius: 10px;
 }
 
 .tip-category .caption, .tip-list .caption, .calc-item .caption {
