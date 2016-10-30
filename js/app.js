@@ -951,12 +951,6 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
 
             if (result.status == 'success') {
 
-                modal.hide();
-
-                $scope.menu = result.data;
-
-                $scope.recalculate_portions();
-
                 setTimeout(function () {
                     $('.preview').each(function () {
 
@@ -964,6 +958,12 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
 
                     });
                 }, 500);
+
+                modal.hide();
+
+                $scope.menu = result.data;
+
+                $scope.recalculate_portions();
 
             } else {
 

@@ -4,6 +4,7 @@
     <list default="true" id="982fff58-3371-4dab-9d32-f016f2bc3da0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/app.css" afterPath="$PROJECT_DIR$/css/app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/framework-fixes.css" afterPath="$PROJECT_DIR$/css/framework-fixes.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,8 +31,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27931035">
-              <caret line="1232" column="66" selection-start-line="1232" selection-start-column="66" selection-end-line="1232" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.5022936">
+              <caret line="2085" column="80" selection-start-line="2085" selection-start-column="80" selection-end-line="2085" selection-end-column="80" />
               <folding>
                 <element signature="n#ons-page#0;n#ons-template#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-page#0;n#ons-template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -57,9 +58,12 @@
                 <element signature="n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-page#0;n#ons-template#22;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-page#0;n#ons-template#23;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -69,8 +73,7 @@
                 <element signature="n#ons-page#0;n#ons-template#26;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-page#0;n#ons-template#27;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-page#0;n#ons-template#28;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#29;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#ons-page#0;n#ons-template#32;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -80,7 +83,7 @@
                 <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#36;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-page#0;n#ons-template#37;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-page#0;n#ons-template#38;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1477840024000" expanded="true" signature="6017:6092" placeholder="..." />
+                <marker date="1477845453000" expanded="true" signature="6017:6092" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -90,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/css/framework-fixes.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="206" column="17" selection-start-line="206" selection-start-column="17" selection-end-line="206" selection-end-column="17" />
+              <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -109,79 +112,73 @@
       <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../admin/controllers/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.958333">
-              <caret line="1802" column="5" selection-start-line="1802" selection-start-column="5" selection-end-line="1802" selection-end-column="5" />
+            <state vertical-scroll-proportion="-6.098039">
+              <caret line="889" column="71" selection-start-line="889" selection-start-column="71" selection-end-line="889" selection-end-column="71" />
               <folding>
-                <element signature="n#getTips#0;n#Api#0;n#!!top" expanded="false" />
-                <element signature="n#getTutorials#0;n#Api#0;n#!!top" expanded="false" />
-                <element signature="n#getTip#0;n#Api#0;n#!!top" expanded="false" />
-                <element signature="n#getMenus#0;n#Api#0;n#!!top" expanded="false" />
-                <element signature="n#getMyShopping#0;n#Api#0;n#!!top" expanded="false" />
-                <element signature="n#getMyShoppingDetail#0;n#Api#0;n#!!top" expanded="false" />
-                <marker date="1477837408000" expanded="true" signature="519:622" placeholder="SELECT * FRO..user..." />
-                <marker date="1477837408000" expanded="true" signature="1820:1860" placeholder="SELECT * FRO..user..." />
-                <marker date="1477837408000" expanded="true" signature="2002:2355" placeholder="SELECT count..category..." />
-                <marker date="1477837408000" expanded="true" signature="2256:2337" placeholder="SELECT food_..user_favorite..." />
-                <marker date="1477837408000" expanded="true" signature="2490:2891" placeholder="SELECT count..category..." />
-                <marker date="1477837408000" expanded="true" signature="3948:4022" placeholder="update user ..." />
-                <marker date="1477837408000" expanded="true" signature="4496:4636" placeholder="update user ..." />
-                <marker date="1477837408000" expanded="true" signature="4683:4742" placeholder="SELECT * FRO..user..." />
-                <marker date="1477837408000" expanded="true" signature="5883:5956" placeholder="SELECT * FRO..user..." />
-                <marker date="1477837408000" expanded="true" signature="6058:6156" placeholder="SELECT * FRO..user..." />
-                <marker date="1477837408000" expanded="true" signature="6414:6465" placeholder="SELECT * FRO..user..." />
-                <marker date="1477837408000" expanded="true" signature="7330:7408" placeholder="SELECT email..user..." />
-                <marker date="1477837408000" expanded="true" signature="9008:9049" placeholder="SELECT * FRO..user..." />
-                <marker date="1477837408000" expanded="true" signature="9898:10188" placeholder="SELECT categ..category..." />
-                <marker date="1477837408000" expanded="true" signature="11421:11844" placeholder="SELECT tip_c..tip_category..." />
-                <marker date="1477837408000" expanded="true" signature="13207:13448" placeholder="SELECT tip.i..tip..." />
-                <marker date="1477837408000" expanded="true" signature="14551:14791" placeholder="SELECT tutor..tutorial..." />
-                <marker date="1477837408000" expanded="true" signature="15981:16222" placeholder="SELECT tip.i..tip..." />
-                <marker date="1477837408000" expanded="true" signature="17283:17908" placeholder="SELECT categ..category..." />
-                <marker date="1477837408000" expanded="true" signature="18754:19486" placeholder="SELECT categ..category..." />
-                <marker date="1477837408000" expanded="true" signature="21115:21156" placeholder="SELECT * FRO..user..." />
-                <marker date="1477837408000" expanded="true" signature="21453:22321" placeholder="SELECT categ..category..." />
-                <marker date="1477837408000" expanded="true" signature="23978:24019" placeholder="SELECT * FRO..user..." />
-                <marker date="1477837408000" expanded="true" signature="24263:25168" placeholder="SELECT user_..category..." />
-                <marker date="1477837408000" expanded="true" signature="26077:26615" placeholder="SELECT ingre..ingredient..." />
-                <marker date="1477837408000" expanded="true" signature="27634:27672" placeholder="DELETE FROM ..." />
-                <marker date="1477837408000" expanded="true" signature="27973:28014" placeholder="SELECT * FRO..user..." />
-                <marker date="1477837408000" expanded="true" signature="28311:29311" placeholder="SELECT categ..category..." />
-                <marker date="1477837408000" expanded="true" signature="31863:32025" placeholder="SELECT categ..categoria..." />
-                <marker date="1477837408000" expanded="true" signature="32075:32230" placeholder="SELECT ingre..ingredient..." />
-                <marker date="1477837408000" expanded="true" signature="32280:32405" placeholder="SELECT porci..calculadora_nutrientes..." />
-                <marker date="1477837408000" expanded="true" signature="32464:32639" placeholder="SELECT nivel..calculadora_calorias_diarias..." />
-                <marker date="1477837408000" expanded="true" signature="34031:34494" placeholder="SELECT calcu..calculadora_calorias..." />
-                <marker date="1477837408000" expanded="true" signature="34765:35038" placeholder="SELECT calcu..calculadora_calorias_diarias..." />
-                <marker date="1477837408000" expanded="true" signature="35527:36014" placeholder="SELECT calcu..calculadora_nutrientes..." />
-                <marker date="1477837408000" expanded="true" signature="36194:36666" placeholder="SELECT calcu..calculadora_proteinas..." />
-                <marker date="1477837408000" expanded="true" signature="38156:39083" placeholder="SELECT medid..medidas_caseras..." />
-                <marker date="1477837408000" expanded="true" signature="40471:41208" placeholder="SELECT medid..medidas..." />
-                <marker date="1477837408000" expanded="true" signature="42332:42373" placeholder="SELECT * FRO..user..." />
-                <marker date="1477837408000" expanded="true" signature="42613:43482" placeholder="SELECT categ..category..." />
-                <marker date="1477837408000" expanded="true" signature="44350:44893" placeholder="SELECT ingre..ingredient..." />
-                <marker date="1477837408000" expanded="true" signature="46031:46342" placeholder="SELECT food...category..." />
-                <marker date="1477837408000" expanded="true" signature="46487:47183" placeholder="SELECT categ..category..." />
-                <marker date="1477837408000" expanded="true" signature="48248:48791" placeholder="SELECT ingre..ingredient..." />
-                <marker date="1477837408000" expanded="true" signature="49416:49633" placeholder="SELECT food_..food_step..." />
-                <marker date="1477837408000" expanded="true" signature="50164:50471" placeholder="SELECT food_..food_step_media..." />
-                <marker date="1477837408000" expanded="true" signature="51220:51527" placeholder="SELECT food_..food_step_media..." />
-                <marker date="1477837408000" expanded="true" signature="52829:52884" placeholder="SELECT * FRO..user..." />
-                <marker date="1477837408000" expanded="true" signature="53021:53804" placeholder="SELECT categ..category..." />
-                <marker date="1477837408000" expanded="true" signature="53901:54683" placeholder="SELECT categ..category..." />
-                <marker date="1477837408000" expanded="true" signature="54782:55119" placeholder="SELECT count..category..." />
-                <marker date="1477837408000" expanded="true" signature="55258:55594" placeholder="SELECT count..category..." />
-                <marker date="1477837408000" expanded="true" signature="59920:60231" placeholder="SELECT food...category..." />
-                <marker date="1477837408000" expanded="true" signature="60327:60637" placeholder="SELECT food...category..." />
-                <marker date="1477837408000" expanded="true" signature="60854:61573" placeholder="SELECT categ..category..." />
-                <marker date="1477837408000" expanded="true" signature="61670:62388" placeholder="SELECT categ..category..." />
-                <marker date="1477837408000" expanded="true" signature="62487:62720" placeholder="SELECT count..category..." />
-                <marker date="1477837408000" expanded="true" signature="62859:63091" placeholder="SELECT count..category..." />
-                <marker date="1477837408000" expanded="true" signature="67755:67796" placeholder="SELECT * FRO..user..." />
-                <marker date="1477837408000" expanded="true" signature="67967:68091" placeholder="SELECT id FR..user_favorite..." />
-                <marker date="1477837408000" expanded="true" signature="68191:68254" placeholder="UPDATE food ..." />
-                <marker date="1477837408000" expanded="true" signature="68764:68805" placeholder="SELECT * FRO..user..." />
-                <marker date="1477837408000" expanded="true" signature="69031:69196" placeholder="SELECT id FR..user_recipe..." />
-                <marker date="1477837408000" expanded="true" signature="69431:69498" placeholder="UPDATE food ..." />
+                <marker date="1477844288000" expanded="true" signature="519:622" placeholder="SELECT * FRO..user..." />
+                <marker date="1477844288000" expanded="true" signature="1820:1860" placeholder="SELECT * FRO..user..." />
+                <marker date="1477844288000" expanded="true" signature="2002:2355" placeholder="SELECT count..category..." />
+                <marker date="1477844288000" expanded="true" signature="2256:2337" placeholder="SELECT food_..user_favorite..." />
+                <marker date="1477844288000" expanded="true" signature="2490:2891" placeholder="SELECT count..category..." />
+                <marker date="1477844288000" expanded="true" signature="3948:4022" placeholder="update user ..." />
+                <marker date="1477844288000" expanded="true" signature="4496:4636" placeholder="update user ..." />
+                <marker date="1477844288000" expanded="true" signature="4683:4742" placeholder="SELECT * FRO..user..." />
+                <marker date="1477844288000" expanded="true" signature="5883:5956" placeholder="SELECT * FRO..user..." />
+                <marker date="1477844288000" expanded="true" signature="6058:6156" placeholder="SELECT * FRO..user..." />
+                <marker date="1477844288000" expanded="true" signature="6414:6465" placeholder="SELECT * FRO..user..." />
+                <marker date="1477844288000" expanded="true" signature="7330:7408" placeholder="SELECT email..user..." />
+                <marker date="1477844288000" expanded="true" signature="9008:9049" placeholder="SELECT * FRO..user..." />
+                <marker date="1477844288000" expanded="true" signature="9898:10186" placeholder="SELECT categ..category..." />
+                <marker date="1477844288000" expanded="true" signature="11419:11842" placeholder="SELECT tip_c..tip_category..." />
+                <marker date="1477844288000" expanded="true" signature="13205:13443" placeholder="SELECT tip.i..tip..." />
+                <marker date="1477844288000" expanded="true" signature="14546:14783" placeholder="SELECT tutor..tutorial..." />
+                <marker date="1477844288000" expanded="true" signature="15973:16211" placeholder="SELECT tip.i..tip..." />
+                <marker date="1477844288000" expanded="true" signature="17272:17897" placeholder="SELECT categ..category..." />
+                <marker date="1477844288000" expanded="true" signature="18743:19473" placeholder="SELECT categ..category..." />
+                <marker date="1477844288000" expanded="true" signature="21102:21143" placeholder="SELECT * FRO..user..." />
+                <marker date="1477844288000" expanded="true" signature="21440:22306" placeholder="SELECT categ..category..." />
+                <marker date="1477844288000" expanded="true" signature="23963:24004" placeholder="SELECT * FRO..user..." />
+                <marker date="1477844288000" expanded="true" signature="24248:25151" placeholder="SELECT user_..category..." />
+                <marker date="1477844288000" expanded="true" signature="26060:26596" placeholder="SELECT ingre..ingredient..." />
+                <marker date="1477844288000" expanded="true" signature="27837:27875" placeholder="DELETE FROM ..." />
+                <marker date="1477844288000" expanded="true" signature="28176:28217" placeholder="SELECT * FRO..user..." />
+                <marker date="1477844288000" expanded="true" signature="28514:29512" placeholder="SELECT categ..category..." />
+                <marker date="1477844288000" expanded="true" signature="32064:32226" placeholder="SELECT categ..categoria..." />
+                <marker date="1477844288000" expanded="true" signature="32276:32431" placeholder="SELECT ingre..ingredient..." />
+                <marker date="1477844288000" expanded="true" signature="32481:32606" placeholder="SELECT porci..calculadora_nutrientes..." />
+                <marker date="1477844288000" expanded="true" signature="32665:32840" placeholder="SELECT nivel..calculadora_calorias_diarias..." />
+                <marker date="1477844288000" expanded="true" signature="34232:34695" placeholder="SELECT calcu..calculadora_calorias..." />
+                <marker date="1477844288000" expanded="true" signature="34966:35239" placeholder="SELECT calcu..calculadora_calorias_diarias..." />
+                <marker date="1477844288000" expanded="true" signature="35728:36215" placeholder="SELECT calcu..calculadora_nutrientes..." />
+                <marker date="1477844288000" expanded="true" signature="36395:36867" placeholder="SELECT calcu..calculadora_proteinas..." />
+                <marker date="1477844288000" expanded="true" signature="38357:39284" placeholder="SELECT medid..medidas_caseras..." />
+                <marker date="1477844288000" expanded="true" signature="40672:41409" placeholder="SELECT medid..medidas..." />
+                <marker date="1477844288000" expanded="true" signature="42533:42574" placeholder="SELECT * FRO..user..." />
+                <marker date="1477844288000" expanded="true" signature="42814:43681" placeholder="SELECT categ..category..." />
+                <marker date="1477844288000" expanded="true" signature="44549:45090" placeholder="SELECT ingre..ingredient..." />
+                <marker date="1477844288000" expanded="true" signature="46450:46761" placeholder="SELECT food...category..." />
+                <marker date="1477844288000" expanded="true" signature="46906:47600" placeholder="SELECT categ..category..." />
+                <marker date="1477844288000" expanded="true" signature="48665:49211" placeholder="SELECT ingre..ingredient..." />
+                <marker date="1477844288000" expanded="true" signature="50064:50281" placeholder="SELECT food_..food_step..." />
+                <marker date="1477844288000" expanded="true" signature="50812:51119" placeholder="SELECT food_..food_step_media..." />
+                <marker date="1477844288000" expanded="true" signature="51868:52175" placeholder="SELECT food_..food_step_media..." />
+                <marker date="1477844288000" expanded="true" signature="53477:53532" placeholder="SELECT * FRO..user..." />
+                <marker date="1477844288000" expanded="true" signature="53669:54450" placeholder="SELECT categ..category..." />
+                <marker date="1477844288000" expanded="true" signature="54547:55327" placeholder="SELECT categ..category..." />
+                <marker date="1477844288000" expanded="true" signature="55426:55763" placeholder="SELECT count..category..." />
+                <marker date="1477844288000" expanded="true" signature="55902:56238" placeholder="SELECT count..category..." />
+                <marker date="1477844288000" expanded="true" signature="60564:60875" placeholder="SELECT food...category..." />
+                <marker date="1477844288000" expanded="true" signature="60971:61281" placeholder="SELECT food...category..." />
+                <marker date="1477844288000" expanded="true" signature="61498:62215" placeholder="SELECT categ..category..." />
+                <marker date="1477844288000" expanded="true" signature="62312:63028" placeholder="SELECT categ..category..." />
+                <marker date="1477844288000" expanded="true" signature="63127:63360" placeholder="SELECT count..category..." />
+                <marker date="1477844288000" expanded="true" signature="63499:63731" placeholder="SELECT count..category..." />
+                <marker date="1477844288000" expanded="true" signature="68395:68436" placeholder="SELECT * FRO..user..." />
+                <marker date="1477844288000" expanded="true" signature="68607:68731" placeholder="SELECT id FR..user_favorite..." />
+                <marker date="1477844288000" expanded="true" signature="68831:68894" placeholder="UPDATE food ..." />
+                <marker date="1477844288000" expanded="true" signature="69404:69445" placeholder="SELECT * FRO..user..." />
+                <marker date="1477844288000" expanded="true" signature="69671:69836" placeholder="SELECT id FR..user_recipe..." />
+                <marker date="1477844288000" expanded="true" signature="70071:70138" placeholder="UPDATE food ..." />
               </folding>
             </state>
           </provider>
@@ -201,7 +198,7 @@
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1296" column="35" selection-start-line="1296" selection-start-column="35" selection-end-line="1296" selection-end-column="35" />
+              <caret line="959" column="24" selection-start-line="959" selection-start-column="24" selection-end-line="959" selection-end-column="24" />
               <folding>
                 <element signature="e#2324#7622#0" expanded="false" />
                 <element signature="e#8190#12068#0" expanded="false" />
@@ -211,7 +208,6 @@
                 <element signature="e#16428#18066#0" expanded="false" />
                 <element signature="e#18125#19611#0" expanded="false" />
                 <element signature="e#19674#21665#0" expanded="false" />
-                <element signature="e#21734#24602#0" expanded="false" />
                 <element signature="e#24669#27145#0" expanded="false" />
                 <element signature="e#27212#28557#0" expanded="false" />
                 <element signature="e#28627#31156#0" expanded="false" />
@@ -264,7 +260,7 @@
         <entry file="file://$PROJECT_DIR$/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1635" column="31" selection-start-line="1635" selection-start-column="31" selection-end-line="1635" selection-end-column="31" />
+              <caret line="1212" column="17" selection-start-line="1212" selection-start-column="17" selection-end-line="1212" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -282,11 +278,11 @@
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/../../admin/config/database.php" />
         <option value="$PROJECT_DIR$/css/responsive.css" />
-        <option value="$PROJECT_DIR$/css/framework-fixes.css" />
         <option value="$PROJECT_DIR$/js/services.js" />
-        <option value="$PROJECT_DIR$/css/app.css" />
         <option value="$PROJECT_DIR$/../../admin/controllers/api.php" />
         <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/css/app.css" />
+        <option value="$PROJECT_DIR$/css/framework-fixes.css" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -386,7 +382,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../queplan/QuePlan/www" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
@@ -437,7 +433,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973376" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25239617" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12939297" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -509,9 +505,12 @@
             <element signature="n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#22;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#23;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -521,8 +520,7 @@
             <element signature="n#ons-page#0;n#ons-template#26;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#27;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#28;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#29;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#32;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -532,7 +530,7 @@
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#36;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#37;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#38;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1477840024000" expanded="true" signature="6017:6092" placeholder="..." />
+            <marker date="1477845453000" expanded="true" signature="6017:6092" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -574,7 +572,6 @@
             <element signature="e#16428#18066#0" expanded="false" />
             <element signature="e#18125#19611#0" expanded="false" />
             <element signature="e#19674#21665#0" expanded="false" />
-            <element signature="e#21734#24602#0" expanded="false" />
             <element signature="e#24669#27145#0" expanded="false" />
             <element signature="e#27212#28557#0" expanded="false" />
             <element signature="e#28627#31156#0" expanded="false" />
@@ -607,76 +604,70 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="218" column="0" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
           <folding>
-            <element signature="n#getTips#0;n#Api#0;n#!!top" expanded="false" />
-            <element signature="n#getTutorials#0;n#Api#0;n#!!top" expanded="false" />
-            <element signature="n#getTip#0;n#Api#0;n#!!top" expanded="false" />
-            <element signature="n#getMenus#0;n#Api#0;n#!!top" expanded="false" />
-            <element signature="n#getMyShopping#0;n#Api#0;n#!!top" expanded="false" />
-            <element signature="n#getMyShoppingDetail#0;n#Api#0;n#!!top" expanded="false" />
-            <marker date="1477837408000" expanded="true" signature="519:622" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="1820:1860" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="2002:2355" placeholder="SELECT count..category..." />
-            <marker date="1477837408000" expanded="true" signature="2256:2337" placeholder="SELECT food_..user_favorite..." />
-            <marker date="1477837408000" expanded="true" signature="2490:2891" placeholder="SELECT count..category..." />
-            <marker date="1477837408000" expanded="true" signature="3948:4022" placeholder="update user ..." />
-            <marker date="1477837408000" expanded="true" signature="4496:4636" placeholder="update user ..." />
-            <marker date="1477837408000" expanded="true" signature="4683:4742" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="5883:5956" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="6058:6156" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="6414:6465" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="7330:7408" placeholder="SELECT email..user..." />
-            <marker date="1477837408000" expanded="true" signature="9008:9049" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="9898:10188" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="11421:11844" placeholder="SELECT tip_c..tip_category..." />
-            <marker date="1477837408000" expanded="true" signature="13207:13448" placeholder="SELECT tip.i..tip..." />
-            <marker date="1477837408000" expanded="true" signature="14551:14791" placeholder="SELECT tutor..tutorial..." />
-            <marker date="1477837408000" expanded="true" signature="15981:16222" placeholder="SELECT tip.i..tip..." />
-            <marker date="1477837408000" expanded="true" signature="17283:17908" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="18754:19486" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="21115:21156" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="21453:22321" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="23978:24019" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="24263:25168" placeholder="SELECT user_..category..." />
-            <marker date="1477837408000" expanded="true" signature="26077:26615" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477837408000" expanded="true" signature="27634:27672" placeholder="DELETE FROM ..." />
-            <marker date="1477837408000" expanded="true" signature="27973:28014" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="28311:29311" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="31863:32025" placeholder="SELECT categ..categoria..." />
-            <marker date="1477837408000" expanded="true" signature="32075:32230" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477837408000" expanded="true" signature="32280:32405" placeholder="SELECT porci..calculadora_nutrientes..." />
-            <marker date="1477837408000" expanded="true" signature="32464:32639" placeholder="SELECT nivel..calculadora_calorias_diarias..." />
-            <marker date="1477837408000" expanded="true" signature="34031:34494" placeholder="SELECT calcu..calculadora_calorias..." />
-            <marker date="1477837408000" expanded="true" signature="34765:35038" placeholder="SELECT calcu..calculadora_calorias_diarias..." />
-            <marker date="1477837408000" expanded="true" signature="35527:36014" placeholder="SELECT calcu..calculadora_nutrientes..." />
-            <marker date="1477837408000" expanded="true" signature="36194:36666" placeholder="SELECT calcu..calculadora_proteinas..." />
-            <marker date="1477837408000" expanded="true" signature="38156:39083" placeholder="SELECT medid..medidas_caseras..." />
-            <marker date="1477837408000" expanded="true" signature="40471:41208" placeholder="SELECT medid..medidas..." />
-            <marker date="1477837408000" expanded="true" signature="42332:42373" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="42613:43482" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="44350:44893" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477837408000" expanded="true" signature="46031:46342" placeholder="SELECT food...category..." />
-            <marker date="1477837408000" expanded="true" signature="46487:47183" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="48248:48791" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477837408000" expanded="true" signature="49416:49633" placeholder="SELECT food_..food_step..." />
-            <marker date="1477837408000" expanded="true" signature="50164:50471" placeholder="SELECT food_..food_step_media..." />
-            <marker date="1477837408000" expanded="true" signature="51220:51527" placeholder="SELECT food_..food_step_media..." />
-            <marker date="1477837408000" expanded="true" signature="52829:52884" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="53021:53804" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="53901:54683" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="54782:55119" placeholder="SELECT count..category..." />
-            <marker date="1477837408000" expanded="true" signature="55258:55594" placeholder="SELECT count..category..." />
-            <marker date="1477837408000" expanded="true" signature="59920:60231" placeholder="SELECT food...category..." />
-            <marker date="1477837408000" expanded="true" signature="60327:60637" placeholder="SELECT food...category..." />
-            <marker date="1477837408000" expanded="true" signature="60854:61573" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="61670:62388" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="62487:62720" placeholder="SELECT count..category..." />
-            <marker date="1477837408000" expanded="true" signature="62859:63091" placeholder="SELECT count..category..." />
-            <marker date="1477837408000" expanded="true" signature="67755:67796" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="67967:68091" placeholder="SELECT id FR..user_favorite..." />
-            <marker date="1477837408000" expanded="true" signature="68191:68254" placeholder="UPDATE food ..." />
-            <marker date="1477837408000" expanded="true" signature="68764:68805" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="69031:69196" placeholder="SELECT id FR..user_recipe..." />
-            <marker date="1477837408000" expanded="true" signature="69431:69498" placeholder="UPDATE food ..." />
+            <marker date="1477844288000" expanded="true" signature="519:622" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="1820:1860" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="2002:2355" placeholder="SELECT count..category..." />
+            <marker date="1477844288000" expanded="true" signature="2256:2337" placeholder="SELECT food_..user_favorite..." />
+            <marker date="1477844288000" expanded="true" signature="2490:2891" placeholder="SELECT count..category..." />
+            <marker date="1477844288000" expanded="true" signature="3948:4022" placeholder="update user ..." />
+            <marker date="1477844288000" expanded="true" signature="4496:4636" placeholder="update user ..." />
+            <marker date="1477844288000" expanded="true" signature="4683:4742" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="5883:5956" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="6058:6156" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="6414:6465" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="7330:7408" placeholder="SELECT email..user..." />
+            <marker date="1477844288000" expanded="true" signature="9008:9049" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="9898:10186" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="11419:11842" placeholder="SELECT tip_c..tip_category..." />
+            <marker date="1477844288000" expanded="true" signature="13205:13443" placeholder="SELECT tip.i..tip..." />
+            <marker date="1477844288000" expanded="true" signature="14546:14783" placeholder="SELECT tutor..tutorial..." />
+            <marker date="1477844288000" expanded="true" signature="15973:16211" placeholder="SELECT tip.i..tip..." />
+            <marker date="1477844288000" expanded="true" signature="17272:17897" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="18743:19473" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="21102:21143" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="21440:22306" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="23963:24004" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="24248:25151" placeholder="SELECT user_..category..." />
+            <marker date="1477844288000" expanded="true" signature="26060:26596" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477844288000" expanded="true" signature="27837:27875" placeholder="DELETE FROM ..." />
+            <marker date="1477844288000" expanded="true" signature="28176:28217" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="28514:29512" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="32064:32226" placeholder="SELECT categ..categoria..." />
+            <marker date="1477844288000" expanded="true" signature="32276:32431" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477844288000" expanded="true" signature="32481:32606" placeholder="SELECT porci..calculadora_nutrientes..." />
+            <marker date="1477844288000" expanded="true" signature="32665:32840" placeholder="SELECT nivel..calculadora_calorias_diarias..." />
+            <marker date="1477844288000" expanded="true" signature="34232:34695" placeholder="SELECT calcu..calculadora_calorias..." />
+            <marker date="1477844288000" expanded="true" signature="34966:35239" placeholder="SELECT calcu..calculadora_calorias_diarias..." />
+            <marker date="1477844288000" expanded="true" signature="35728:36215" placeholder="SELECT calcu..calculadora_nutrientes..." />
+            <marker date="1477844288000" expanded="true" signature="36395:36867" placeholder="SELECT calcu..calculadora_proteinas..." />
+            <marker date="1477844288000" expanded="true" signature="38357:39284" placeholder="SELECT medid..medidas_caseras..." />
+            <marker date="1477844288000" expanded="true" signature="40672:41409" placeholder="SELECT medid..medidas..." />
+            <marker date="1477844288000" expanded="true" signature="42533:42574" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="42814:43681" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="44549:45090" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477844288000" expanded="true" signature="46450:46761" placeholder="SELECT food...category..." />
+            <marker date="1477844288000" expanded="true" signature="46906:47600" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="48665:49211" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477844288000" expanded="true" signature="50064:50281" placeholder="SELECT food_..food_step..." />
+            <marker date="1477844288000" expanded="true" signature="50812:51119" placeholder="SELECT food_..food_step_media..." />
+            <marker date="1477844288000" expanded="true" signature="51868:52175" placeholder="SELECT food_..food_step_media..." />
+            <marker date="1477844288000" expanded="true" signature="53477:53532" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="53669:54450" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="54547:55327" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="55426:55763" placeholder="SELECT count..category..." />
+            <marker date="1477844288000" expanded="true" signature="55902:56238" placeholder="SELECT count..category..." />
+            <marker date="1477844288000" expanded="true" signature="60564:60875" placeholder="SELECT food...category..." />
+            <marker date="1477844288000" expanded="true" signature="60971:61281" placeholder="SELECT food...category..." />
+            <marker date="1477844288000" expanded="true" signature="61498:62215" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="62312:63028" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="63127:63360" placeholder="SELECT count..category..." />
+            <marker date="1477844288000" expanded="true" signature="63499:63731" placeholder="SELECT count..category..." />
+            <marker date="1477844288000" expanded="true" signature="68395:68436" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="68607:68731" placeholder="SELECT id FR..user_favorite..." />
+            <marker date="1477844288000" expanded="true" signature="68831:68894" placeholder="UPDATE food ..." />
+            <marker date="1477844288000" expanded="true" signature="69404:69445" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="69671:69836" placeholder="SELECT id FR..user_recipe..." />
+            <marker date="1477844288000" expanded="true" signature="70071:70138" placeholder="UPDATE food ..." />
           </folding>
         </state>
       </provider>
@@ -726,9 +717,12 @@
             <element signature="n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#22;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#23;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -738,8 +732,7 @@
             <element signature="n#ons-page#0;n#ons-template#26;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#27;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#28;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#29;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#32;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -749,7 +742,7 @@
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#36;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#37;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#38;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1477840024000" expanded="true" signature="6017:6092" placeholder="..." />
+            <marker date="1477845453000" expanded="true" signature="6017:6092" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -791,7 +784,6 @@
             <element signature="e#16428#18066#0" expanded="false" />
             <element signature="e#18125#19611#0" expanded="false" />
             <element signature="e#19674#21665#0" expanded="false" />
-            <element signature="e#21734#24602#0" expanded="false" />
             <element signature="e#24669#27145#0" expanded="false" />
             <element signature="e#27212#28557#0" expanded="false" />
             <element signature="e#28627#31156#0" expanded="false" />
@@ -864,9 +856,12 @@
             <element signature="n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#22;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#23;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -876,8 +871,7 @@
             <element signature="n#ons-page#0;n#ons-template#26;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#27;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#28;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#29;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#32;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -887,7 +881,7 @@
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#36;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#37;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#38;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1477840024000" expanded="true" signature="6017:6092" placeholder="..." />
+            <marker date="1477845453000" expanded="true" signature="6017:6092" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -929,7 +923,6 @@
             <element signature="e#16428#18066#0" expanded="false" />
             <element signature="e#18125#19611#0" expanded="false" />
             <element signature="e#19674#21665#0" expanded="false" />
-            <element signature="e#21734#24602#0" expanded="false" />
             <element signature="e#24669#27145#0" expanded="false" />
             <element signature="e#27212#28557#0" expanded="false" />
             <element signature="e#28627#31156#0" expanded="false" />
@@ -1002,9 +995,12 @@
             <element signature="n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#22;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#23;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1014,8 +1010,7 @@
             <element signature="n#ons-page#0;n#ons-template#26;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#27;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#28;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#29;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#32;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1025,7 +1020,7 @@
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#36;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#37;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#38;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1477840024000" expanded="true" signature="6017:6092" placeholder="..." />
+            <marker date="1477845453000" expanded="true" signature="6017:6092" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1067,7 +1062,6 @@
             <element signature="e#16428#18066#0" expanded="false" />
             <element signature="e#18125#19611#0" expanded="false" />
             <element signature="e#19674#21665#0" expanded="false" />
-            <element signature="e#21734#24602#0" expanded="false" />
             <element signature="e#24669#27145#0" expanded="false" />
             <element signature="e#27212#28557#0" expanded="false" />
             <element signature="e#28627#31156#0" expanded="false" />
@@ -1140,9 +1134,12 @@
             <element signature="n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#22;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#23;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1152,8 +1149,7 @@
             <element signature="n#ons-page#0;n#ons-template#26;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#27;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#28;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#29;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#32;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1163,7 +1159,7 @@
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#36;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#37;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#38;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1477840024000" expanded="true" signature="6017:6092" placeholder="..." />
+            <marker date="1477845453000" expanded="true" signature="6017:6092" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1189,7 +1185,6 @@
             <element signature="e#16428#18066#0" expanded="false" />
             <element signature="e#18125#19611#0" expanded="false" />
             <element signature="e#19674#21665#0" expanded="false" />
-            <element signature="e#21734#24602#0" expanded="false" />
             <element signature="e#24669#27145#0" expanded="false" />
             <element signature="e#27212#28557#0" expanded="false" />
             <element signature="e#28627#31156#0" expanded="false" />
@@ -1246,9 +1241,12 @@
             <element signature="n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#22;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#23;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1258,8 +1256,7 @@
             <element signature="n#ons-page#0;n#ons-template#26;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#27;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#28;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#29;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#32;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1269,7 +1266,7 @@
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#36;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#37;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#38;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1477840024000" expanded="true" signature="6017:6092" placeholder="..." />
+            <marker date="1477845453000" expanded="true" signature="6017:6092" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1295,7 +1292,6 @@
             <element signature="e#16428#18066#0" expanded="false" />
             <element signature="e#18125#19611#0" expanded="false" />
             <element signature="e#19674#21665#0" expanded="false" />
-            <element signature="e#21734#24602#0" expanded="false" />
             <element signature="e#24669#27145#0" expanded="false" />
             <element signature="e#27212#28557#0" expanded="false" />
             <element signature="e#28627#31156#0" expanded="false" />
@@ -1367,9 +1363,12 @@
             <element signature="n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#22;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#23;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1379,8 +1378,7 @@
             <element signature="n#ons-page#0;n#ons-template#26;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#27;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#28;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#29;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#32;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1390,7 +1388,7 @@
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#36;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#37;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#38;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1477840024000" expanded="true" signature="6017:6092" placeholder="..." />
+            <marker date="1477845453000" expanded="true" signature="6017:6092" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1425,14 +1423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/framework-fixes.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="206" column="17" selection-start-line="206" selection-start-column="17" selection-end-line="206" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1457,89 +1447,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1635" column="31" selection-start-line="1635" selection-start-column="31" selection-end-line="1635" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../admin/controllers/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.958333">
-          <caret line="1802" column="5" selection-start-line="1802" selection-start-column="5" selection-end-line="1802" selection-end-column="5" />
+        <state vertical-scroll-proportion="-6.098039">
+          <caret line="889" column="71" selection-start-line="889" selection-start-column="71" selection-end-line="889" selection-end-column="71" />
           <folding>
-            <element signature="n#getTips#0;n#Api#0;n#!!top" expanded="false" />
-            <element signature="n#getTutorials#0;n#Api#0;n#!!top" expanded="false" />
-            <element signature="n#getTip#0;n#Api#0;n#!!top" expanded="false" />
-            <element signature="n#getMenus#0;n#Api#0;n#!!top" expanded="false" />
-            <element signature="n#getMyShopping#0;n#Api#0;n#!!top" expanded="false" />
-            <element signature="n#getMyShoppingDetail#0;n#Api#0;n#!!top" expanded="false" />
-            <marker date="1477837408000" expanded="true" signature="519:622" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="1820:1860" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="2002:2355" placeholder="SELECT count..category..." />
-            <marker date="1477837408000" expanded="true" signature="2256:2337" placeholder="SELECT food_..user_favorite..." />
-            <marker date="1477837408000" expanded="true" signature="2490:2891" placeholder="SELECT count..category..." />
-            <marker date="1477837408000" expanded="true" signature="3948:4022" placeholder="update user ..." />
-            <marker date="1477837408000" expanded="true" signature="4496:4636" placeholder="update user ..." />
-            <marker date="1477837408000" expanded="true" signature="4683:4742" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="5883:5956" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="6058:6156" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="6414:6465" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="7330:7408" placeholder="SELECT email..user..." />
-            <marker date="1477837408000" expanded="true" signature="9008:9049" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="9898:10188" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="11421:11844" placeholder="SELECT tip_c..tip_category..." />
-            <marker date="1477837408000" expanded="true" signature="13207:13448" placeholder="SELECT tip.i..tip..." />
-            <marker date="1477837408000" expanded="true" signature="14551:14791" placeholder="SELECT tutor..tutorial..." />
-            <marker date="1477837408000" expanded="true" signature="15981:16222" placeholder="SELECT tip.i..tip..." />
-            <marker date="1477837408000" expanded="true" signature="17283:17908" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="18754:19486" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="21115:21156" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="21453:22321" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="23978:24019" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="24263:25168" placeholder="SELECT user_..category..." />
-            <marker date="1477837408000" expanded="true" signature="26077:26615" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477837408000" expanded="true" signature="27634:27672" placeholder="DELETE FROM ..." />
-            <marker date="1477837408000" expanded="true" signature="27973:28014" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="28311:29311" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="31863:32025" placeholder="SELECT categ..categoria..." />
-            <marker date="1477837408000" expanded="true" signature="32075:32230" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477837408000" expanded="true" signature="32280:32405" placeholder="SELECT porci..calculadora_nutrientes..." />
-            <marker date="1477837408000" expanded="true" signature="32464:32639" placeholder="SELECT nivel..calculadora_calorias_diarias..." />
-            <marker date="1477837408000" expanded="true" signature="34031:34494" placeholder="SELECT calcu..calculadora_calorias..." />
-            <marker date="1477837408000" expanded="true" signature="34765:35038" placeholder="SELECT calcu..calculadora_calorias_diarias..." />
-            <marker date="1477837408000" expanded="true" signature="35527:36014" placeholder="SELECT calcu..calculadora_nutrientes..." />
-            <marker date="1477837408000" expanded="true" signature="36194:36666" placeholder="SELECT calcu..calculadora_proteinas..." />
-            <marker date="1477837408000" expanded="true" signature="38156:39083" placeholder="SELECT medid..medidas_caseras..." />
-            <marker date="1477837408000" expanded="true" signature="40471:41208" placeholder="SELECT medid..medidas..." />
-            <marker date="1477837408000" expanded="true" signature="42332:42373" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="42613:43482" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="44350:44893" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477837408000" expanded="true" signature="46031:46342" placeholder="SELECT food...category..." />
-            <marker date="1477837408000" expanded="true" signature="46487:47183" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="48248:48791" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1477837408000" expanded="true" signature="49416:49633" placeholder="SELECT food_..food_step..." />
-            <marker date="1477837408000" expanded="true" signature="50164:50471" placeholder="SELECT food_..food_step_media..." />
-            <marker date="1477837408000" expanded="true" signature="51220:51527" placeholder="SELECT food_..food_step_media..." />
-            <marker date="1477837408000" expanded="true" signature="52829:52884" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="53021:53804" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="53901:54683" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="54782:55119" placeholder="SELECT count..category..." />
-            <marker date="1477837408000" expanded="true" signature="55258:55594" placeholder="SELECT count..category..." />
-            <marker date="1477837408000" expanded="true" signature="59920:60231" placeholder="SELECT food...category..." />
-            <marker date="1477837408000" expanded="true" signature="60327:60637" placeholder="SELECT food...category..." />
-            <marker date="1477837408000" expanded="true" signature="60854:61573" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="61670:62388" placeholder="SELECT categ..category..." />
-            <marker date="1477837408000" expanded="true" signature="62487:62720" placeholder="SELECT count..category..." />
-            <marker date="1477837408000" expanded="true" signature="62859:63091" placeholder="SELECT count..category..." />
-            <marker date="1477837408000" expanded="true" signature="67755:67796" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="67967:68091" placeholder="SELECT id FR..user_favorite..." />
-            <marker date="1477837408000" expanded="true" signature="68191:68254" placeholder="UPDATE food ..." />
-            <marker date="1477837408000" expanded="true" signature="68764:68805" placeholder="SELECT * FRO..user..." />
-            <marker date="1477837408000" expanded="true" signature="69031:69196" placeholder="SELECT id FR..user_recipe..." />
-            <marker date="1477837408000" expanded="true" signature="69431:69498" placeholder="UPDATE food ..." />
+            <marker date="1477844288000" expanded="true" signature="519:622" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="1820:1860" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="2002:2355" placeholder="SELECT count..category..." />
+            <marker date="1477844288000" expanded="true" signature="2256:2337" placeholder="SELECT food_..user_favorite..." />
+            <marker date="1477844288000" expanded="true" signature="2490:2891" placeholder="SELECT count..category..." />
+            <marker date="1477844288000" expanded="true" signature="3948:4022" placeholder="update user ..." />
+            <marker date="1477844288000" expanded="true" signature="4496:4636" placeholder="update user ..." />
+            <marker date="1477844288000" expanded="true" signature="4683:4742" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="5883:5956" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="6058:6156" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="6414:6465" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="7330:7408" placeholder="SELECT email..user..." />
+            <marker date="1477844288000" expanded="true" signature="9008:9049" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="9898:10186" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="11419:11842" placeholder="SELECT tip_c..tip_category..." />
+            <marker date="1477844288000" expanded="true" signature="13205:13443" placeholder="SELECT tip.i..tip..." />
+            <marker date="1477844288000" expanded="true" signature="14546:14783" placeholder="SELECT tutor..tutorial..." />
+            <marker date="1477844288000" expanded="true" signature="15973:16211" placeholder="SELECT tip.i..tip..." />
+            <marker date="1477844288000" expanded="true" signature="17272:17897" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="18743:19473" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="21102:21143" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="21440:22306" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="23963:24004" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="24248:25151" placeholder="SELECT user_..category..." />
+            <marker date="1477844288000" expanded="true" signature="26060:26596" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477844288000" expanded="true" signature="27837:27875" placeholder="DELETE FROM ..." />
+            <marker date="1477844288000" expanded="true" signature="28176:28217" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="28514:29512" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="32064:32226" placeholder="SELECT categ..categoria..." />
+            <marker date="1477844288000" expanded="true" signature="32276:32431" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477844288000" expanded="true" signature="32481:32606" placeholder="SELECT porci..calculadora_nutrientes..." />
+            <marker date="1477844288000" expanded="true" signature="32665:32840" placeholder="SELECT nivel..calculadora_calorias_diarias..." />
+            <marker date="1477844288000" expanded="true" signature="34232:34695" placeholder="SELECT calcu..calculadora_calorias..." />
+            <marker date="1477844288000" expanded="true" signature="34966:35239" placeholder="SELECT calcu..calculadora_calorias_diarias..." />
+            <marker date="1477844288000" expanded="true" signature="35728:36215" placeholder="SELECT calcu..calculadora_nutrientes..." />
+            <marker date="1477844288000" expanded="true" signature="36395:36867" placeholder="SELECT calcu..calculadora_proteinas..." />
+            <marker date="1477844288000" expanded="true" signature="38357:39284" placeholder="SELECT medid..medidas_caseras..." />
+            <marker date="1477844288000" expanded="true" signature="40672:41409" placeholder="SELECT medid..medidas..." />
+            <marker date="1477844288000" expanded="true" signature="42533:42574" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="42814:43681" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="44549:45090" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477844288000" expanded="true" signature="46450:46761" placeholder="SELECT food...category..." />
+            <marker date="1477844288000" expanded="true" signature="46906:47600" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="48665:49211" placeholder="SELECT ingre..ingredient..." />
+            <marker date="1477844288000" expanded="true" signature="50064:50281" placeholder="SELECT food_..food_step..." />
+            <marker date="1477844288000" expanded="true" signature="50812:51119" placeholder="SELECT food_..food_step_media..." />
+            <marker date="1477844288000" expanded="true" signature="51868:52175" placeholder="SELECT food_..food_step_media..." />
+            <marker date="1477844288000" expanded="true" signature="53477:53532" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="53669:54450" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="54547:55327" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="55426:55763" placeholder="SELECT count..category..." />
+            <marker date="1477844288000" expanded="true" signature="55902:56238" placeholder="SELECT count..category..." />
+            <marker date="1477844288000" expanded="true" signature="60564:60875" placeholder="SELECT food...category..." />
+            <marker date="1477844288000" expanded="true" signature="60971:61281" placeholder="SELECT food...category..." />
+            <marker date="1477844288000" expanded="true" signature="61498:62215" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="62312:63028" placeholder="SELECT categ..category..." />
+            <marker date="1477844288000" expanded="true" signature="63127:63360" placeholder="SELECT count..category..." />
+            <marker date="1477844288000" expanded="true" signature="63499:63731" placeholder="SELECT count..category..." />
+            <marker date="1477844288000" expanded="true" signature="68395:68436" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="68607:68731" placeholder="SELECT id FR..user_favorite..." />
+            <marker date="1477844288000" expanded="true" signature="68831:68894" placeholder="UPDATE food ..." />
+            <marker date="1477844288000" expanded="true" signature="69404:69445" placeholder="SELECT * FRO..user..." />
+            <marker date="1477844288000" expanded="true" signature="69671:69836" placeholder="SELECT id FR..user_recipe..." />
+            <marker date="1477844288000" expanded="true" signature="70071:70138" placeholder="UPDATE food ..." />
           </folding>
         </state>
       </provider>
@@ -1547,7 +1523,7 @@
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1296" column="35" selection-start-line="1296" selection-start-column="35" selection-end-line="1296" selection-end-column="35" />
+          <caret line="959" column="24" selection-start-line="959" selection-start-column="24" selection-end-line="959" selection-end-column="24" />
           <folding>
             <element signature="e#2324#7622#0" expanded="false" />
             <element signature="e#8190#12068#0" expanded="false" />
@@ -1557,7 +1533,6 @@
             <element signature="e#16428#18066#0" expanded="false" />
             <element signature="e#18125#19611#0" expanded="false" />
             <element signature="e#19674#21665#0" expanded="false" />
-            <element signature="e#21734#24602#0" expanded="false" />
             <element signature="e#24669#27145#0" expanded="false" />
             <element signature="e#27212#28557#0" expanded="false" />
             <element signature="e#28627#31156#0" expanded="false" />
@@ -1585,10 +1560,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1212" column="17" selection-start-line="1212" selection-start-column="17" selection-end-line="1212" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/framework-fixes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27931035">
-          <caret line="1232" column="66" selection-start-line="1232" selection-start-column="66" selection-end-line="1232" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.5022936">
+          <caret line="2085" column="80" selection-start-line="2085" selection-start-column="80" selection-end-line="2085" selection-end-column="80" />
           <folding>
             <element signature="n#ons-page#0;n#ons-template#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1614,9 +1605,12 @@
             <element signature="n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ons-toolbar#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#21;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#22;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#23;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1626,8 +1620,7 @@
             <element signature="n#ons-page#0;n#ons-template#26;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#27;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#28;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#29;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ons-page#0;n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ons-template#30;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#ons-page#0;n#ons-template#31;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#ons-page#0;n#ons-template#32;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1637,7 +1630,7 @@
             <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#36;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#37;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#38;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1477840024000" expanded="true" signature="6017:6092" placeholder="..." />
+            <marker date="1477845453000" expanded="true" signature="6017:6092" placeholder="..." />
           </folding>
         </state>
       </provider>

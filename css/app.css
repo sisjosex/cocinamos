@@ -1217,8 +1217,8 @@ h2 {
 }
 
 .menu-detail .nav-bar-plus-minus {
-    height: 30px;
-    margin-bottom: 11px;
+    height: 45px;
+    margin-bottom: -1px;
 }
 
 .menu-detail .nav-bar-plus-minus .button-bar__item:first-child {

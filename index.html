@@ -1107,7 +1107,7 @@
             </div>
         </ons-toolbar>
 
-        <div class="menus">
+        <div class="menus" style="margin-top: 10px;">
 
             <div class="todos">
                 <div class="menu-box" ng-repeat="item in menus track by $index">
@@ -1409,7 +1409,7 @@
 
             <div class="calculadoras custom">
 
-                <div class="category-container">
+                <div class="category-container" style="margin-top:20px;">
                     <div class="logo-fino">
                         <img class="img-logo" src="img/new/logo_fino.png"/>
                     </div>
@@ -2084,14 +2084,6 @@
 
                         <div class="center">
                             <div class="list__item__title">{{ item.name }}</div>
-                            <div class="list__item__subtitle">
-                                <div class="star">
-                                    <div class="star-item" ng-class="{'filled': item.star>0}"></div>
-                                    <div class="star-item" ng-class="{'filled': item.star>1}"></div>
-                                    <div class="star-item" ng-class="{'filled': item.star>2}"></div>
-                                    <div class="star-item" ng-class="{'filled': item.star>3}"></div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </ons-list-item>
@@ -2334,14 +2326,6 @@
 
 <ons-template id="units.html">
     <ons-page ng-controller="Units" class="intro internal-tab secondary-toolbar units-page bg2">
-        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
-            <div class="left">
-                <input type="search" class="search-input" placeholder="" ng-model="search"/>
-                <ons-toolbar-button ng-click="buscar()">
-                    Buscar
-                </ons-toolbar-button>
-            </div>
-        </ons-toolbar>
 
         <ons-toolbar>
             <div class="left">
@@ -2349,9 +2333,9 @@
             </div>
             <div class="center">Medidas de Cocina</div>
             <div class="right">
-                <ons-toolbar-button ng-click="toggleSearch()">
+                <!--<ons-toolbar-button ng-click="toggleSearch()">
                     <img src="img/new/search-yellow.png" alt="">
-                </ons-toolbar-button>
+                </ons-toolbar-button>-->
             </div>
         </ons-toolbar>
 
@@ -2371,14 +2355,6 @@
 
 <ons-template id="unit.html">
     <ons-page ng-controller="Unit" class="intro internal-tab secondary-toolbar unit-page bg2">
-        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
-            <div class="left">
-                <input type="search" class="search-input" placeholder="" ng-model="search"/>
-                <ons-toolbar-button ng-click="buscar()">
-                    Buscar
-                </ons-toolbar-button>
-            </div>
-        </ons-toolbar>
 
         <ons-toolbar>
             <div class="left">
@@ -2389,9 +2365,9 @@
                 <span class="header-subtitle red span-block">{{ unitType.name }}</span>
             </div>
             <div class="right">
-                <ons-toolbar-button ng-click="toggleSearch()">
+                <!--<ons-toolbar-button ng-click="toggleSearch()">
                     Buscador
-                </ons-toolbar-button>
+                </ons-toolbar-button>-->
             </div>
         </ons-toolbar>
 
@@ -2414,14 +2390,6 @@
 
 <ons-template id="unit_cocina.html">
     <ons-page ng-controller="Unit" class="intro internal-tab secondary-toolbar unit_cocina-page bg2">
-        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
-            <div class="left">
-                <input type="search" class="search-input" placeholder="" ng-model="search"/>
-                <ons-toolbar-button ng-click="buscar()">
-                    Buscar
-                </ons-toolbar-button>
-            </div>
-        </ons-toolbar>
 
         <ons-toolbar>
             <div class="left">
@@ -2432,9 +2400,9 @@
                 <span class="red span-block">{{ unitType.name }}</span>
             </div>
             <div class="right">
-                <ons-toolbar-button ng-click="toggleSearch()">
+                <!--<ons-toolbar-button ng-click="toggleSearch()">
                     Buscador
-                </ons-toolbar-button>
+                </ons-toolbar-button>-->
             </div>
         </ons-toolbar>
 
