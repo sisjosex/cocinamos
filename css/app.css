@@ -1607,6 +1607,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     margin: 0 auto !important;
     text-align: center;
     color: #fff !important;
+    background: #39ac08;
+    font-family: 'Poppins';
+    padding: 10px;
 }
 
 .recipe-section .item-title1 {

@@ -184,18 +184,76 @@ angular.module("services", []).factory("service", ["$http", "$q", function ($htt
                 params: params
             }).success(success).error(error);*/
         },
-        getMyShopping: function (params, success, error) {
+        addToRecipesCustom: function (params, success, error) {
 
-            var my_shopping = getItem('my_shopping');
+            var my_shopping = getItem('my_shopping_custom');
 
             if(!my_shopping) {
 
                 my_shopping = [];
             }
 
+            var position = false;
+            var menu = params.menu;
+            menu.portions = params.portions;
+
+            for(var i in my_shopping) {
+
+                if(menu.id == my_shopping[i].id) {
+
+                    position = i;
+                    break;
+                }
+            }
+
+            if(!position) {
+
+                my_shopping.push(menu);
+
+            } else {
+
+                my_shopping[position] = menu;
+            }
+
+            setItem('my_shopping_custom', my_shopping);
+
             success({
                 status: 'success',
-                data: my_shopping
+                message: 'Se agregó la receta exitosamente a tu lista de compras.'
+            });
+
+            /*$http({
+             method: 'JSONP',
+             url: API_URL + 'addToRecipes?callback=JSON_CALLBACK',
+             params: params
+             }).success(success).error(error);*/
+        },
+        getMyShopping: function (params, success, error) {
+
+            var my_shopping = getItem('my_shopping');
+            var custom = getItem('my_shopping_custom');
+
+            if(!my_shopping) {
+
+                my_shopping = [];
+            }
+
+            if(!custom) {
+
+                custom = [{
+                    id: '-1',
+                    name: 'Compras personalizadas por el usuario',
+                    photo: 'img/new/custom.jpg',
+                    extra: [],
+                    quantity: 0,
+                    items: []
+                }];
+            }
+
+            success({
+                status: 'success',
+                data: my_shopping,
+                custom: custom
             });
 
             /*$http({
@@ -244,6 +302,56 @@ angular.module("services", []).factory("service", ["$http", "$q", function ($htt
                 params: params
             }).success(success).error(error);*/
         },
+        getMyShoppingDetailCustom: function (params, success, error) {
+
+            var my_shopping = getItem('my_shopping_custom');
+
+            if(!my_shopping) {
+
+                success({
+                    status: 'success',
+                    data: {
+                        id: '-1',
+                        name: 'Compras personalizadas por el usuario',
+                        photo: 'img/new/custom.jpg',
+                        extra: [],
+                        quantity: 0,
+                        items: []
+                    }
+                });
+
+            } else {
+
+                var menu = false;
+
+                for(var i in my_shopping) {
+
+                    if(params.id == my_shopping[i].id) {
+
+                        menu = my_shopping[i];
+                        break;
+                    }
+                }
+
+                if(menu) {
+
+                    success({
+                        status: 'success',
+                        data: menu
+                    });
+
+                } else {
+
+                    error();
+                }
+            }
+
+            /*$http({
+             method: 'JSONP',
+             url: API_URL + 'getMyShoppingDetail?callback=JSON_CALLBACK',
+             params: params
+             }).success(success).error(error);*/
+        },
         deleteShopping: function (params, success, error) {
 
             var my_shopping = getItem('my_shopping');
@@ -269,6 +377,46 @@ angular.module("services", []).factory("service", ["$http", "$q", function ($htt
                 my_shopping.splice(position, 1);
 
                 setItem('my_shopping', my_shopping);
+
+                success({
+                    status:'success'
+                });
+            }
+
+            /*$http({
+             method: 'JSONP',
+             url: API_URL + 'deleteShopping?callback=JSON_CALLBACK',
+             params: params
+             }).success(success).error(error);*/
+
+        },
+        deleteShoppingCustom: function (params, success, error) {
+
+            var my_shopping = getItem('my_shopping_custom');
+
+            if(!my_shopping) {
+
+                my_shopping = [];
+            }
+
+            var position = false;
+
+            for (var i in my_shopping) {
+
+                if (params.id == my_shopping[i].id) {
+
+                    position = i;
+                    break;
+                }
+            }
+
+            if(position) {
+
+                //my_shopping.splice(position, 1);
+
+                my_shopping[position].extras = [];
+
+                setItem('my_shopping_custom', my_shopping);
 
                 success({
                     status:'success'

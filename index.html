@@ -1908,9 +1908,9 @@
 
             <div class="right">
                 <ons-toolbar-button>
-                    <ons-button class="header-send" ng-click="showAddItemDialog()">
+                    <!--<ons-button class="header-send" ng-click="showAddItemDialog()">
                         <i class="btn fa fa-plus"></i>
-                    </ons-button>
+                    </ons-button>-->
                     <!--<ons-toolbar-button class="header-send" ng-click="shareBy(menu.name, menu.photo)">
                         <img src="img/new/send.png" alt="">
                     </ons-toolbar-button>-->
@@ -1935,7 +1935,6 @@
             <div class="recipe-section">
                 <div class="item item-title1" style="width:80%;">
                     <h2>{{ menu.name }}</h2>
-
                     <h3>Lista de Ingredientes</h3>
                 </div>
                 <div class="item" style="width:77px;">
@@ -1951,13 +1950,49 @@
                     </ons-col>
                     <ons-col class="col-text">{{ ingredient.quantity_calculated }} {{ ingredient.name }}</ons-col>
                 </ons-row>
+
+                <h1 class="delete-shopping btn-yellow" ng-click="deleteShopping()">Eliminar de la lista</h1>
             </div>
 
-            <div class="recipe-section" ng-show="menu.extras.length > 0">
+        </div>
+
+    </ons-page>
+</ons-template>
+
+<ons-template id="myshopping_detail_custom.html">
+    <ons-page ng-controller="MyshoppingDetailCustom" class="intro white-page menu-detail myshopping_detail_custom-page bg2">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center">
+            </div>
+
+            <div class="right">
+                <ons-toolbar-button>
+                    <ons-button class="header-send" ng-click="showAddItemDialog()">
+                        <i class="btn fa fa-plus"></i>
+                    </ons-button>
+                    <!--<ons-toolbar-button class="header-send" ng-click="shareBy(menu.name, menu.photo)">
+                        <img src="img/new/send.png" alt="">
+                    </ons-toolbar-button>-->
+                    <!--<ons-toolbar-button class="header-share">
+                        <img src="img/share.png" alt="">
+                    </ons-toolbar-button>-->
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="logo-fino" style="margin-top: 81px; margin-bottom: 14px;">
+            <img class="img-logo" src="img/new/logo_fino.png"/>
+        </div>
+
+        <div class="calc-content shopping-detail">
+
+            <div class="recipe-section">
                 <div class="item item-title1" style="width:80%;">
-                    <h3>Extras</h3>
-                </div>
-                <div class="item" style="width:77px;">
+                    <h2>Lista de compras adicionales</h2>
+                    <h3>ingredientes personalizados</h3>
                 </div>
             </div>
 
@@ -1968,9 +2003,9 @@
                     </ons-col>
                     <ons-col class="col-text">{{ extra.name }}</ons-col>
                 </ons-row>
-            </div>
 
-            <h1 class="delete-shopping btn-yellow" ng-click="deleteShopping()">Eliminar de la lista</h1>
+                <h1 class="delete-shopping btn-yellow" ng-click="deleteShoppingCustom()">Eliminar de la lista</h1>
+            </div>
 
         </div>
 

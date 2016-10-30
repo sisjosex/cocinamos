@@ -303,9 +303,9 @@ module.controller('Intro', function ($scope, service) {
         };
 
         /*$scope.register = function () {
-            //mainNavigator.popPage();
-            mainNavigator.pushPage('register.html');
-        };*/
+         //mainNavigator.popPage();
+         mainNavigator.pushPage('register.html');
+         };*/
 
         $scope.saltar = function () {
             //mainNavigator.popPage();
@@ -316,8 +316,6 @@ module.controller('Intro', function ($scope, service) {
 
             mainNavigator.pushPage('forgot.html');
         };
-
-
 
 
         if (!document.location.protocol == 'http:') {
@@ -424,7 +422,6 @@ module.controller('Intro', function ($scope, service) {
                 }, 200);
             }
         }
-
 
 
         try {
@@ -567,15 +564,17 @@ module.controller('Dashboard', function ($scope, service) {
         };
 
         $scope.gotoCalculadora = function () {
-            mainNavigator.pushPage('home_calculator.html', {onTransitionEnd: function(){
-                console.log('asignado');
-                currentNavigator = calculatorNavigator;
-            }});
+            mainNavigator.pushPage('home_calculator.html', {
+                onTransitionEnd: function () {
+                    console.log('asignado');
+                    currentNavigator = calculatorNavigator;
+                }
+            });
 
             /*
-            setTimeout(function () {
-                currentNavigator = calculatorNavigator;
-            }, 800);*/
+             setTimeout(function () {
+             currentNavigator = calculatorNavigator;
+             }, 800);*/
         };
 
         $scope.gotoCompras = function () {
@@ -708,11 +707,11 @@ module.controller('Perfil', function ($scope, service) {
             currentNavigator.pushPage('myshopping.html');
         };
 
-        $scope.logout = function() {
+        $scope.logout = function () {
 
             deleteUser();
 
-            mainNavigator.resetToPage('intro.html', { animation: 'slide' });
+            mainNavigator.resetToPage('intro.html', {animation: 'slide'});
         };
 
         $scope.getProfile = function () {
@@ -851,7 +850,7 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
 
         try {
             $scope.menu = currentNavigator.pages[currentNavigator.pages.length - 1].data.menu;
-        } catch(error){
+        } catch (error) {
             $scope.menu = mainNavigator.pages[mainNavigator.pages.length - 1].data.menu;
             currentNavigator = mainNavigator;
         }
@@ -970,7 +969,7 @@ module.controller('Favorite', function ($scope, service, $sce) {
 
     ons.ready(function () {
 
-        if(currentNavigator == undefined) {
+        if (currentNavigator == undefined) {
             currentNavigator = mainNavigator;
         }
 
@@ -1763,6 +1762,11 @@ module.controller('MyShopping', function ($scope, service, $sce) {
             currentNavigator.pushPage('myshopping_detail.html', {data: {menu: item}});
         };
 
+        $scope.goToShoppingDetailCustom = function (item) {
+
+            currentNavigator.pushPage('myshopping_detail_custom.html', {data: {menu: item}});
+        };
+
         $scope.getMyShopping = function () {
 
             modal.show();
@@ -1907,9 +1911,9 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
                 cancelable: true,
                 callback: function (value) {
 
-                    if(value != null) {
+                    if (value != null) {
 
-                        if(!$scope.menu.extras) {
+                        if (!$scope.menu.extras) {
                             $scope.menu.extras = [];
                         }
 
@@ -1950,22 +1954,77 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
             });
         };
 
-    $scope.addExtra = function () {
+        $scope.addExtra = function () {
 
-        if (getUser()) {
+            if (getUser()) {
 
-            service.addToRecipes({
-                food_id: $scope.menu.id,
-                app_id: getUserOrAppId(),
-                portions: $scope.menu.portions,
-                menu: $scope.menu
-            }, function (result) {
+                service.addToRecipes({
+                    food_id: $scope.menu.id,
+                    app_id: getUserOrAppId(),
+                    portions: $scope.menu.portions,
+                    menu: $scope.menu
+                }, function (result) {
+
+                    if (result.status == 'success') {
+
+                        modal.hide();
+
+                        alert(result.message);
+
+                    } else {
+
+                        modal.hide();
+
+                        alert(result.message);
+                    }
+
+                }, function (error) {
+
+                    modal.hide();
+
+                    alert('No se pudo conectar con el servidor');
+                });
+
+            } else {
+
+                mainNavigator.pushPage('register_fb.html');
+            }
+
+
+        };
+
+        $scope.getMyShoppingDetail();
+
+    });
+});
+
+
+module.controller('MyshoppingDetailCustom', function ($scope, service, $sce) {
+
+    ons.ready(function () {
+
+        $scope.menu = currentNavigator.pages[currentNavigator.pages.length - 1].data.menu;
+
+        $scope.getMyShoppingDetailCustom = function () {
+
+            modal.show();
+
+            service.getMyShoppingDetailCustom({app_id: getUserOrAppId(), id: $scope.menu.id}, function (result) {
 
                 if (result.status == 'success') {
 
                     modal.hide();
 
-                    alert(result.message);
+                    $scope.menu = result.data;
+
+                    setTimeout(function () {
+                        $('.preview').each(function () {
+
+                            new ImageLoader($(this), new Image());
+
+                        });
+
+                    }, 500);
 
                 } else {
 
@@ -1974,26 +2033,145 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
                     alert(result.message);
                 }
 
-            }, function (error) {
+            }, function () {
 
                 modal.hide();
 
-                alert('No se pudo conectar con el servidor');
+                //alert('No se pudo conectar con el servidor');
             });
+        };
 
-        } else {
+        $scope.deleteShoppingCustom = function () {
 
-            mainNavigator.pushPage('register_fb.html');
-        }
+            confirm('Esta seguro de eliminar esta compra?', function () {
+
+                modal.show();
+
+                service.deleteShoppingCustom({app_id: getUserOrAppId(), id: $scope.menu.id}, function (result) {
+
+                    if (result.status == 'success') {
+
+                        modal.hide();
+
+                        //alert(result.message);
+
+                        currentNavigator.popPage();
+
+                        setTimeout(function () {
+                            MyShoppingScope.getMyShopping();
+                        }, 200);
+
+                    } else {
+
+                        modal.hide();
+
+                        alert(result.message);
+                    }
+
+                }, function () {
+
+                    modal.hide();
+
+                    alert('No se pudo conectar con el servidor');
+                });
+            });
+        };
+
+        $scope.showAddItemDialog = function () {
+            ons.notification.prompt({
+                title: 'Agregar Item',
+                message: 'Nombre:',
+                buttonLabel: 'Agregar',
+                cancelable: true,
+                callback: function (value) {
+
+                    if (value != null) {
+
+                        if (!$scope.menu.extras) {
+                            $scope.menu.extras = [];
+                        }
+
+                        $scope.menu.extras.push({
+                            name: value
+                        });
+
+                        service.addToRecipesCustom({
+                            food_id: $scope.menu.id,
+                            app_id: getUserOrAppId(),
+                            portions: $scope.menu.portions,
+                            menu: $scope.menu
+                        }, function (result) {
+
+                            if (result.status == 'success') {
+
+                                modal.hide();
+
+                                //alert(result.message);
+
+                            } else {
+
+                                modal.hide();
+
+                                alert(result.message);
+                            }
+
+                        }, function (error) {
+
+                            modal.hide();
+
+                            alert('No se pudo conectar con el servidor');
+                        });
+
+                        $scope.$digest();
+                    }
+                }
+            });
+        };
+
+        $scope.addExtra = function () {
+
+            if (getUser()) {
+
+                service.addToRecipesCustom({
+                    food_id: $scope.menu.id,
+                    app_id: getUserOrAppId(),
+                    portions: $scope.menu.portions,
+                    menu: $scope.menu
+                }, function (result) {
+
+                    if (result.status == 'success') {
+
+                        modal.hide();
+
+                        alert(result.message);
+
+                    } else {
+
+                        modal.hide();
+
+                        alert(result.message);
+                    }
+
+                }, function (error) {
+
+                    modal.hide();
+
+                    alert('No se pudo conectar con el servidor');
+                });
+
+            } else {
+
+                mainNavigator.pushPage('register_fb.html');
+            }
 
 
-    };
+        };
 
-    $scope.getMyShoppingDetail();
+        $scope.getMyShoppingDetailCustom();
 
+    });
 });
-})
-;
+
 
 module.controller('Invite', function ($scope, service, $sce) {
 
