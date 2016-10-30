@@ -334,110 +334,69 @@ module.controller('Intro', function ($scope, service) {
         };
 
 
-        if (!document.location.protocol == 'http:') {
+        $scope.register = function () {
 
-            $scope.register = function () {
+            $scope.fbLoginSuccess = function (userData) {
 
-                $scope.fbLoginSuccess = function (userData) {
+                facebookConnectPlugin.api("me/?fields=id,first_name,last_name,email", ["email"],
 
-                    facebookConnectPlugin.api("me/?fields=id,first_name,last_name,email", ["email"],
+                    function onSuccess(result) {
 
-                        function onSuccess(result) {
+                        //alert(JSON.stringify(result));
 
-                            //alert(JSON.stringify(result));
+                        $scope.user = {
+                            name: result.first_name + ' ' + result.last_name,
+                            email: result.email,
+                            password: '',
+                            token: '',
+                            app_id: app_id,
+                            device: device_name
+                        };
 
-                            $scope.user = {
-                                name: result.first_name + ' ' + result.last_name,
-                                email: result.email,
-                                password: '',
-                                token: '',
-                                app_id: app_id,
-                                device: device_name
-                            };
+                        service.registerUser($scope.user, function (result) {
 
-                            service.registerUser($scope.user, function (result) {
+                            if (result.status == 'success') {
 
-                                if (result.status == 'success') {
+                                //alert('El registro se realizó exitosamente')
 
-                                    //alert('El registro se realizó exitosamente')
+                                saveUser(result.user);
 
-                                    saveUser(result.user);
+                                modal.hide();
+                                mainNavigator.pushPage('dashboard.html');
 
-                                    modal.hide();
-                                    mainNavigator.pushPage('dashboard.html');
+                            } else {
 
-                                } else {
+                                modal.hide();
 
-                                    modal.hide();
+                                alert(result.message);
+                            }
+                        });
 
-                                    alert(result.message);
-                                }
-                            });
-
-                        }, function onError(error) {
-                            console.error("Failed: ", error);
-                        }
-                    );
-
-                    //var token;
-
-                    /*facebookConnectPlugin.getAccessToken(function(token) {
-
-                     token = token;
-
-                     console.log("Token: " + token);
-                     });*/
-
-                    //alert("UserInfo: " + JSON.stringify(userData));
-                };
-
-                facebookConnectPlugin.login(["public_profile", "email"],
-                    $scope.fbLoginSuccess,
-                    function (error) {
-                        alert("" + error)
+                    }, function onError(error) {
+                        console.error("Failed: ", error);
                     }
                 );
 
+                //var token;
+
+                /*facebookConnectPlugin.getAccessToken(function(token) {
+
+                 token = token;
+
+                 console.log("Token: " + token);
+                 });*/
+
+                //alert("UserInfo: " + JSON.stringify(userData));
             };
 
-        } else {
+            facebookConnectPlugin.login(["public_profile", "email"],
+                $scope.fbLoginSuccess,
+                function (error) {
+                    alert("" + error)
+                }
+            );
 
-            $scope.register = function () {
-
-                modal.show();
-                setTimeout(function () {
-
-                    $scope.user = {
-                        name: '',
-                        email: '',
-                        password: '',
-                        token: '',
-                        app_id: app_id,
-                        device: device_name
-                    };
-
-                    service.registerUser($scope.user, function (result) {
-
-                        if (result.status == 'success') {
-
-                            saveUser(result.user);
-
-                            modal.hide();
-                            mainNavigator.pushPage('dashboard.html');
-
-                        } else {
-
-                            modal.hide();
-
-                            alert(result.message);
-                        }
-
-                    });
-
-
-                }, 200);
-            }
-        }
+        };
 
 
         try {
