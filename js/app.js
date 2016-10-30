@@ -363,8 +363,12 @@ module.controller('Intro', function ($scope, service) {
 
                                 saveUser(result.user);
 
-                                modal.hide();
-                                mainNavigator.pushPage('dashboard.html');
+                                setTimeout(function(){
+
+                                    modal.hide();
+                                    mainNavigator.pushPage('dashboard.html');
+                                    
+                                }, 500);
 
                             } else {
 
