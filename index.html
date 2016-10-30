@@ -301,7 +301,7 @@
             </div>
             <div class="center">MENÚ</div>
             <div class="right">
-                <a class="button" ng-click="goToSearch()">
+                <a class="button" ng-click="goToSearchRecipes(true)">
                     <img class="header-icon" src="img/new/search-yellow.png" alt="">
                 </a>
             </div>
@@ -831,18 +831,183 @@
     </ons-page>
 </ons-template>
 
+<ons-template id="favorite.html">
+    <ons-page ng-controller="Favorite" class="intro internal-tab favorite-page bg2">
+
+        <!--
+        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
+            <div class="left">
+                <input type="search" class="search-input" placeholder="" ng-model="search"/>
+                <ons-toolbar-button ng-click="buscar()">
+                    Buscar
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>-->
+
+        <ons-toolbar class="toolbar-big" style="height: 100px;">
+            <div class="left">
+                <ons-back-button></ons-back-button>
+            </div>
+            <div class="center">
+                Recetas Favoritas
+
+                <div class="toolbar-secondary">
+                    <div class="navigation-bar transparent">
+                        <div class="navigation-bar__center">
+                            <h3 class="subtitle-menu">{{ subcategory.name }}</h3>
+
+                            <div class="button-bar" style="width: 260px; margin:8px auto 0;">
+                                <div class="button-bar__item" ng-click="filter('todos')">
+                                    <input type="radio" name="navi-segment-a" checked>
+
+                                    <div class="button-bar__button">TODOS ({{ total }})</div>
+                                </div>
+                                <div class="button-bar__item" ng-click="filter('normal')">
+                                    <input type="radio" name="navi-segment-a">
+
+                                    <div class="button-bar__button">IMÁGENES ({{ total_menus }})</div>
+                                </div>
+                                <div class="button-bar__item" ng-click="filter('video')">
+                                    <input type="radio" name="navi-segment-a">
+
+                                    <div class="button-bar__button">VIDEOS ({{ total_videos }})</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right">
+                <ons-toolbar-button ng-click="goToSearchRecipes()">
+                    <img src="img/new/search-yellow.png" alt="">
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="menus favorite-page-content">
+
+            <div class="todos">
+                <div class="menu-box" ng-repeat="item in menus track by $index">
+                    <figure class="figure">
+                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                        </div>
+                        <!--<i class="icon fino">
+                            <img src="img/fino-logo2.png" alt="">
+                        </i>-->
+                        <div class="star-container">
+                            <div class="star">
+                                <div class="star-item" ng-class="{'filled': item.star>0}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>1}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>2}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>3}"></div>
+                            </div>
+                        </div>
+                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
+                            <img src="img/play-icon-big.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption">
+                        <span class="caption-text">{{ item.name }}</span>
+
+                        <div class="level-container">
+                            <span>Dificultad</span>
+
+                            <div class="level">
+                                <div class="level-item" ng-class="{'filled': item.level>0}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>1}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>2}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>3}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="normal">
+                <div class="menu-box" ng-repeat="item in normal track by $index">
+                    <figure class="figure">
+                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                        </div>
+                        <!--<i class="icon fino">
+                            <img src="img/fino-logo2.png" alt="">
+                        </i>-->
+                        <div class="star-container">
+                            <div class="star">
+                                <div class="star-item" ng-class="{'filled': item.star>0}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>1}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>2}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>3}"></div>
+                            </div>
+                        </div>
+                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
+                            <img src="img/play-icon-big.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption">
+                        <span class="caption-text">{{ item.name }}</span>
+
+                        <div class="level-container">
+                            <span>Dificultad</span>
+
+                            <div class="level">
+                                <div class="level-item" ng-class="{'filled': item.level>0}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>1}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>2}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>3}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video">
+                <div class="menu-box" ng-repeat="item in videos track by $index">
+                    <figure class="figure">
+                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                        </div>
+                        <!--<i class="icon fino">
+                            <img src="img/fino-logo2.png" alt="">
+                        </i>-->
+                        <div class="star-container">
+                            <div class="star">
+                                <div class="star-item" ng-class="{'filled': item.star>0}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>1}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>2}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>3}"></div>
+                            </div>
+                        </div>
+                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
+                            <img src="img/play-icon.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption">
+                        <span class="caption-text">{{ item.name }}</span>
+
+                        <div class="level-container">
+                            <span>Dificultad</span>
+
+                            <div class="level">
+                                <div class="level-item" ng-class="{'filled': item.level>0}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>1}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>2}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>3}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ons-page>
+</ons-template>
+
 <ons-template id="category.html">
     <ons-navigator animation="slide" id="categoryNavigator">
         <ons-page ng-controller="Category" class="intro internal-tab category-page bg2">
-
-            <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
-                <div class="left">
-                    <input type="search" ng-model="search" class="search-input" placeholder="Buscador"/>
-                    <ons-toolbar-button ng-click="buscar()">
-                        Buscar
-                    </ons-toolbar-button>
-                </div>
-            </ons-toolbar>
 
             <ons-toolbar class="toolbar-big">
                 <div class="left">
@@ -853,7 +1018,7 @@
                 </div>
                 <div class="center">Recetas</div>
                 <div class="right">
-                    <ons-toolbar-button ng-click="toggleSearch()">
+                    <ons-toolbar-button ng-click="goToSearchRecipes()">
                         <img src="img/new/search-yellow.png" alt="">
                     </ons-toolbar-button>
                 </div>
@@ -901,15 +1066,6 @@
 <ons-template id="subcategory.html">
     <ons-page ng-controller="Subcategory" class="intro internal-tab secondary-toolbar subcategory-page bg2">
 
-        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
-            <div class="left">
-                <input type="search" class="search-input" placeholder="" ng-model="search"/>
-                <ons-toolbar-button ng-click="buscar()">
-                    Buscar
-                </ons-toolbar-button>
-            </div>
-        </ons-toolbar>
-
         <ons-toolbar class="toolbar-big" style="height: 100px;">
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -945,9 +1101,171 @@
 
             </div>
             <div class="right">
-                <ons-toolbar-button ng-click="toggleSearch()">
+                <ons-toolbar-button ng-click="goToSearchRecipes()">
                     <img src="img/new/search-yellow.png" alt="">
                 </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="menus">
+
+            <div class="todos">
+                <div class="menu-box" ng-repeat="item in menus track by $index">
+                    <figure class="figure">
+                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                        </div>
+                        <!--<i class="icon fino">
+                            <img src="img/fino-logo2.png" alt="">
+                        </i>-->
+                        <div class="star-container">
+                            <div class="star">
+                                <div class="star-item" ng-class="{'filled': item.star>0}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>1}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>2}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>3}"></div>
+                            </div>
+                        </div>
+                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
+                            <img src="img/play-icon-big.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption">
+                        <span class="caption-text">{{ item.name }}</span>
+
+                        <div class="level-container">
+                            <span>Dificultad</span>
+
+                            <div class="level">
+                                <div class="level-item" ng-class="{'filled': item.level>0}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>1}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>2}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>3}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="normal">
+                <div class="menu-box" ng-repeat="item in normal track by $index">
+                    <figure class="figure">
+                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                        </div>
+                        <!--<i class="icon fino">
+                            <img src="img/fino-logo2.png" alt="">
+                        </i>-->
+                        <div class="star-container">
+                            <div class="star">
+                                <div class="star-item" ng-class="{'filled': item.star>0}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>1}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>2}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>3}"></div>
+                            </div>
+                        </div>
+                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
+                            <img src="img/play-icon-big.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption">
+                        <span class="caption-text">{{ item.name }}</span>
+
+                        <div class="level-container">
+                            <span>Dificultad</span>
+
+                            <div class="level">
+                                <div class="level-item" ng-class="{'filled': item.level>0}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>1}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>2}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>3}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video">
+                <div class="menu-box" ng-repeat="item in videos track by $index">
+                    <figure class="figure">
+                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                        </div>
+                        <!--<i class="icon fino">
+                            <img src="img/fino-logo2.png" alt="">
+                        </i>-->
+                        <div class="star-container">
+                            <div class="star">
+                                <div class="star-item" ng-class="{'filled': item.star>0}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>1}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>2}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>3}"></div>
+                            </div>
+                        </div>
+                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
+                            <img src="img/play-icon.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption">
+                        <span class="caption-text">{{ item.name }}</span>
+
+                        <div class="level-container">
+                            <span>Dificultad</span>
+
+                            <div class="level">
+                                <div class="level-item" ng-class="{'filled': item.level>0}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>1}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>2}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>3}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ons-page>
+</ons-template>
+
+<ons-template id="recipes_search.html">
+    <ons-page ng-controller="RecipesSearch" class="intro internal-tab secondary-toolbar subcategory-page bg2">
+
+        <ons-toolbar class="search-toolbar navigation-bar" style="height: 100px;">
+            <div class="left">
+                <ons-back-button></ons-back-button>
+                <input type="search" class="search-input" placeholder="" ng-model="text">
+                <ons-toolbar-button ng-click="search()" class="toolbar-button search-btn" _compiled="">
+                    <img src="img/new/btn_search.png" alt="">
+                </ons-toolbar-button>
+
+                <div class="toolbar-secondary">
+                    <div class="navigation-bar transparent">
+                        <div class="navigation-bar__center has-subtitle">
+                            <h3 class="subtitle-menu">{{ subcategory.name }}</h3>
+
+                            <div class="button-bar" style="width: 260px; margin:8px auto 0;">
+                                <div class="button-bar__item" ng-click="filter('todos')">
+                                    <input type="radio" name="navi-segment-a" checked>
+
+                                    <div class="button-bar__button">TODOS ({{ total }})</div>
+                                </div>
+                                <div class="button-bar__item" ng-click="filter('normal')">
+                                    <input type="radio" name="navi-segment-a">
+
+                                    <div class="button-bar__button">IMÁGENES ({{ total_menus }})</div>
+                                </div>
+                                <div class="button-bar__item" ng-click="filter('video')">
+                                    <input type="radio" name="navi-segment-a">
+
+                                    <div class="button-bar__button">VIDEOS ({{ total_videos }})</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center"></div>
+            <div class="right">
             </div>
         </ons-toolbar>
 
@@ -1529,13 +1847,13 @@
                 <div class="left">
                     <ons-button class="back-button" ng-click="back()"><span class="back-icon"></span></ons-button>
                 </div>
-                <div class="center">
+                <div class="center title-green">
                     Tips & Consejos
                 </div>
 
                 <div class="right">
-                    <ons-toolbar-button ng-click="goToFavorite()">
-                        <img src="img/new/corazon_green.png" alt="">
+                    <ons-toolbar-button ng-click="goToSearchCounsel()" class="toolbar-button" _compiled="">
+                        <img src="img/new/search-yellow.png" alt="">
                     </ons-toolbar-button>
                 </div>
             </ons-toolbar>
@@ -1564,15 +1882,72 @@
 </ons-template>
 
 <ons-template id="tip_list.html">
-    <ons-page ng-controller="TipList" class="intro internal-tab tip_list-page bg2">
-        <ons-toolbar class="toolbar-big">
+    <ons-page ng-controller="TipList" class="intro internal-tab tip_list-page bg2 width-secondary-bar">
+        <ons-toolbar class="toolbar-big ">
             <div class="left">
                 <ons-back-button></ons-back-button>
             </div>
-            <div class="center">
-                {{ category.title }}
+            <div class="center title-green">
+                Tips & Consejos
+
+                <div class="toolbar-secondary">
+                    <div class="counsel-title">
+                        {{ category.title }}
+                    </div>
+                </div>
             </div>
 
+            <div class="right">
+                <ons-toolbar-button ng-click="goToSearchCounsel(category)" class="toolbar-button" _compiled="">
+                    <img src="img/new/search-yellow.png" alt="">
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="menus">
+            <div class="menu-box" ng-repeat="item in tips track by $index" ng-click="goToTip(item)">
+                <figure class="figure">
+
+                    <div class="preview recipes" src="{{ trustSrc(item.image) }}">
+                        <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                    </div>
+                    <!--
+                    <i ng-show="item.in_recipes" class="icon bookmark">
+                        <img src="img/bookmark-icon.png" alt="">
+                    </i>
+                    <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
+                        <img src="img/play-icon.png" alt="">
+                    </i>-->
+                </figure>
+                <div class="caption"><span>{{ item.title }}</span></div>
+                <!--<div class="menu-box-footer">
+                    <div class="heart" ng-click="makeFavorite(item)"><img src="img/heart-icon.png" alt=""></div>
+                    <div class="">{{ item.likes }}</div>
+                    <div class="recipe"><img src="img/recipe-icon.png" alt=""></div>
+                    <div class="">{{ item.recipes }}</div>
+                </div>-->
+            </div>
+        </div>
+
+    </ons-page>
+</ons-template>
+
+<ons-template id="tip_list_search.html">
+    <ons-page ng-controller="TipListSearch" class="intro internal-tab tip_list-page bg2 width-secondary-bar">
+
+        <ons-toolbar class="search-toolbar navigation-bar">
+            <div class="left">
+                <ons-back-button></ons-back-button>
+                <input type="search" class="search-input" placeholder="" ng-model="text">
+                <ons-toolbar-button ng-click="search()" class="toolbar-button search-btn" _compiled="">
+                    <img src="img/new/btn_search.png" alt="">
+                </ons-toolbar-button>
+
+                <div class="search-result-title">
+                    Encontramos <span class="green">{{ total_tips }}</span> Tips & Consejos
+                </div>
+            </div>
+            <div class="center"></div>
             <div class="right">
             </div>
         </ons-toolbar>
@@ -1607,7 +1982,7 @@
 
 <ons-template id="tip.html">
     <ons-page ng-controller="Tip" class="intro white-page internal-tab tip-page bg2">
-        <ons-toolbar>
+        <ons-toolbar class="title-green">
             <div class="left">
                 <ons-back-button></ons-back-button>
             </div>
@@ -1637,182 +2012,10 @@
     </ons-page>
 </ons-template>
 
-<ons-template id="favorite.html">
-    <ons-page ng-controller="Favorite" class="intro internal-tab favorite-page bg2">
-
-        <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
-            <div class="left">
-                <input type="search" class="search-input" placeholder="" ng-model="search"/>
-                <ons-toolbar-button ng-click="buscar()">
-                    Buscar
-                </ons-toolbar-button>
-            </div>
-        </ons-toolbar>
-
-        <ons-toolbar class="toolbar-big" style="height: 100px;">
-            <div class="left">
-                <ons-back-button></ons-back-button>
-            </div>
-            <div class="center">
-                Recetas Favoritas
-
-                <div class="toolbar-secondary">
-                    <div class="navigation-bar transparent">
-                        <div class="navigation-bar__center">
-                            <h3 class="subtitle-menu">{{ subcategory.name }}</h3>
-
-                            <div class="button-bar" style="width: 260px; margin:8px auto 0;">
-                                <div class="button-bar__item" ng-click="filter('todos')">
-                                    <input type="radio" name="navi-segment-a" checked>
-
-                                    <div class="button-bar__button">TODOS ({{ total }})</div>
-                                </div>
-                                <div class="button-bar__item" ng-click="filter('normal')">
-                                    <input type="radio" name="navi-segment-a">
-
-                                    <div class="button-bar__button">IMÁGENES ({{ total_menus }})</div>
-                                </div>
-                                <div class="button-bar__item" ng-click="filter('video')">
-                                    <input type="radio" name="navi-segment-a">
-
-                                    <div class="button-bar__button">VIDEOS ({{ total_videos }})</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="right">
-                <!--<ons-toolbar-button ng-click="toggleSearch()">
-                    <img src="img/new/search-yellow.png" alt="">
-                </ons-toolbar-button>-->
-            </div>
-        </ons-toolbar>
-
-        <div class="menus favorite-page-content">
-
-            <div class="todos">
-                <div class="menu-box" ng-repeat="item in menus track by $index">
-                    <figure class="figure">
-                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
-                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
-                        </div>
-                        <!--<i class="icon fino">
-                            <img src="img/fino-logo2.png" alt="">
-                        </i>-->
-                        <div class="star-container">
-                            <div class="star">
-                                <div class="star-item" ng-class="{'filled': item.star>0}"></div>
-                                <div class="star-item" ng-class="{'filled': item.star>1}"></div>
-                                <div class="star-item" ng-class="{'filled': item.star>2}"></div>
-                                <div class="star-item" ng-class="{'filled': item.star>3}"></div>
-                            </div>
-                        </div>
-                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
-                            <img src="img/play-icon-big.png" alt="">
-                        </i>
-                    </figure>
-                    <div class="caption">
-                        <span class="caption-text">{{ item.name }}</span>
-
-                        <div class="level-container">
-                            <span>Dificultad</span>
-
-                            <div class="level">
-                                <div class="level-item" ng-class="{'filled': item.level>0}"></div>
-                                <div class="level-item" ng-class="{'filled': item.level>1}"></div>
-                                <div class="level-item" ng-class="{'filled': item.level>2}"></div>
-                                <div class="level-item" ng-class="{'filled': item.level>3}"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="normal">
-                <div class="menu-box" ng-repeat="item in normal track by $index">
-                    <figure class="figure">
-                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
-                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
-                        </div>
-                        <!--<i class="icon fino">
-                            <img src="img/fino-logo2.png" alt="">
-                        </i>-->
-                        <div class="star-container">
-                            <div class="star">
-                                <div class="star-item" ng-class="{'filled': item.star>0}"></div>
-                                <div class="star-item" ng-class="{'filled': item.star>1}"></div>
-                                <div class="star-item" ng-class="{'filled': item.star>2}"></div>
-                                <div class="star-item" ng-class="{'filled': item.star>3}"></div>
-                            </div>
-                        </div>
-                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
-                            <img src="img/play-icon-big.png" alt="">
-                        </i>
-                    </figure>
-                    <div class="caption">
-                        <span class="caption-text">{{ item.name }}</span>
-
-                        <div class="level-container">
-                            <span>Dificultad</span>
-
-                            <div class="level">
-                                <div class="level-item" ng-class="{'filled': item.level>0}"></div>
-                                <div class="level-item" ng-class="{'filled': item.level>1}"></div>
-                                <div class="level-item" ng-class="{'filled': item.level>2}"></div>
-                                <div class="level-item" ng-class="{'filled': item.level>3}"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="video">
-                <div class="menu-box" ng-repeat="item in videos track by $index">
-                    <figure class="figure">
-                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
-                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
-                        </div>
-                        <!--<i class="icon fino">
-                            <img src="img/fino-logo2.png" alt="">
-                        </i>-->
-                        <div class="star-container">
-                            <div class="star">
-                                <div class="star-item" ng-class="{'filled': item.star>0}"></div>
-                                <div class="star-item" ng-class="{'filled': item.star>1}"></div>
-                                <div class="star-item" ng-class="{'filled': item.star>2}"></div>
-                                <div class="star-item" ng-class="{'filled': item.star>3}"></div>
-                            </div>
-                        </div>
-                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
-                            <img src="img/play-icon.png" alt="">
-                        </i>
-                    </figure>
-                    <div class="caption">
-                        <span class="caption-text">{{ item.name }}</span>
-
-                        <div class="level-container">
-                            <span>Dificultad</span>
-
-                            <div class="level">
-                                <div class="level-item" ng-class="{'filled': item.level>0}"></div>
-                                <div class="level-item" ng-class="{'filled': item.level>1}"></div>
-                                <div class="level-item" ng-class="{'filled': item.level>2}"></div>
-                                <div class="level-item" ng-class="{'filled': item.level>3}"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </ons-page>
-</ons-template>
-
 <ons-template id="myshopping.html">
     <ons-navigator animation="slide" id="myshoppingNavigator">
         <ons-page ng-controller="MyShopping" class="intro internal-tab secondary-toolbar myshopping-page bg2">
+            <!--
             <ons-toolbar class="search-toolbar animate-toolbar" ng-class="{'collapse': !showingSearch}">
                 <div class="left">
                     <input type="search" class="search-input" placeholder="" ng-model="search"/>
@@ -1822,7 +2025,7 @@
                 </div>
                 <div class="right">
                 </div>
-            </ons-toolbar>
+            </ons-toolbar>-->
 
             <ons-toolbar>
                 <div class="left">
@@ -1833,9 +2036,10 @@
                     <ons-toolbar-button ng-click="goToFavorite()">
                         <img src="img/new/corazon_green.png" alt="">
                     </ons-toolbar-button>
+                    <!--
                     <ons-toolbar-button ng-click="toggleSearch()">
                         <img src="img/new/search-yellow.png" alt="">
-                    </ons-toolbar-button>
+                    </ons-toolbar-button>-->
                 </div>
             </ons-toolbar>
 
@@ -1935,6 +2139,7 @@
             <div class="recipe-section">
                 <div class="item item-title1" style="width:80%;">
                     <h2>{{ menu.name }}</h2>
+
                     <h3>Lista de Ingredientes</h3>
                 </div>
                 <div class="item" style="width:77px;">
@@ -1960,7 +2165,8 @@
 </ons-template>
 
 <ons-template id="myshopping_detail_custom.html">
-    <ons-page ng-controller="MyshoppingDetailCustom" class="intro white-page menu-detail myshopping_detail_custom-page bg2">
+    <ons-page ng-controller="MyshoppingDetailCustom"
+              class="intro white-page menu-detail myshopping_detail_custom-page bg2">
         <ons-toolbar>
             <div class="left">
                 <ons-back-button></ons-back-button>
@@ -1992,6 +2198,7 @@
             <div class="recipe-section">
                 <div class="item item-title1" style="width:80%;">
                     <h2>Lista de compras adicionales</h2>
+
                     <h3>ingredientes personalizados</h3>
                 </div>
             </div>
@@ -2282,7 +2489,6 @@
         </ons-page>
     </ons-navigator>
 </ons-template>
-
 
 <ons-template id="tutorial.html">
     <ons-page ng-controller="Tutorial" class="intro white-page internal-tab tutorial-page">

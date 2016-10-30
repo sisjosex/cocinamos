@@ -1,4 +1,5 @@
 var API_URL = 'http://localhost/fino/admin/api/';
+var API_URL = 'http://localhost/fino/admin/api/';
 var WEB_URL = 'http://cocinamosconfino.com/';
 
 //var API_URL = 'http://cocinamosconfino.com/api/'
@@ -136,6 +137,21 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
         $rootScope.back = function () {
 
             mainNavigator.popPage();
+        };
+
+
+        $rootScope.goToSearchRecipes = function (userMainNavigator) {
+
+
+            if (userMainNavigator) {
+
+                mainNavigator.pushPage('recipes_search.html');
+
+            } else {
+
+                currentNavigator.pushPage('recipes_search.html');
+            }
+
         };
 
 
@@ -1220,6 +1236,105 @@ module.controller('Subcategory', function ($scope, service, $sce) {
     });
 });
 
+module.controller('RecipesSearch', function ($scope, service, $sce) {
+
+    ons.ready(function () {
+
+        $scope.text = '';
+
+        $scope.trustSrc = function (src) {
+            return $sce.trustAsResourceUrl(src);
+        };
+
+        initSearch($scope);
+
+        $scope.normal = [];
+        $scope.videos = [];
+        $scope.menus = [];
+        $scope.total = 0;
+        $scope.total_menus = 0;
+        $scope.total_videos = 0;
+
+        $scope.goToMenuDetail = function (menu) {
+            currentNavigator.pushPage('menu_detail.html', {data: {menu: menu}});
+        };
+
+        $('.menus .normal').hide();
+        $('.menus .video').hide();
+        $('.menus .todos').show();
+
+
+        $scope.buscar = function () {
+            $scope.toggleSearch();
+            $scope.getSubcategory();
+        };
+
+        $scope.filter = function (filter) {
+
+            console.log(filter);
+
+            $('.menus .normal').hide();
+            $('.menus .video').hide();
+            $('.menus .todos').hide();
+
+            $('.menus .' + filter).show();
+
+            setTimeout(function () {
+                $('.preview').each(function () {
+
+                    new ImageLoader($(this), new Image());
+
+                });
+            }, 500);
+        };
+
+        $scope.search = function () {
+
+            modal.show();
+
+            service.getSubcategory({
+                app_id: getUserOrAppId(),
+                search: $scope.text//,
+                //subcategory_id: $scope.subcategory.id
+            }, function (result) {
+
+                if (result.status == 'success') {
+
+                    modal.hide();
+
+                    $scope.normal = result.normal;
+                    $scope.videos = result.videos;
+                    $scope.menus = result.menus;
+                    $scope.total = result.total;
+                    $scope.total_menus = result.total_menus;
+                    $scope.total_videos = result.total_videos;
+
+                    setTimeout(function () {
+                        $('.preview').each(function () {
+
+                            new ImageLoader($(this), new Image());
+
+                        });
+                    }, 500);
+
+                } else {
+
+                    modal.hide();
+
+                    alert(result.message);
+                }
+
+            }, function (error) {
+
+                modal.hide();
+
+                alert('No se pudo conectar con el servidor');
+            });
+        };
+
+    });
+});
+
 module.controller('Recipes', function ($scope, service, $sce) {
 
     ons.ready(function () {
@@ -1612,6 +1727,11 @@ module.controller('Counsel', function ($scope, service) {
             counselNavigator.pushPage('tip_list.html', {data: {category: tip_category}});
         };
 
+        $scope.goToSearchCounsel = function (category) {
+
+            counselNavigator.pushPage('tip_list_search.html');
+        };
+
         service.getTipCategories({}, function (result) {
 
             if (result.status == 'success') {
@@ -1663,6 +1783,11 @@ module.controller('TipList', function ($scope, service) {
             counselNavigator.pushPage('tip.html', {data: {tip: tip, category: $scope.category}});
         };
 
+        $scope.goToSearchCounsel = function (category) {
+
+            counselNavigator.pushPage('tip_list_search.html', {data: {category: $scope.category}});
+        };
+
         service.getTips({tip_category_id: $scope.category.id}, function (result) {
 
             if (result.status == 'success') {
@@ -1693,6 +1818,65 @@ module.controller('TipList', function ($scope, service) {
 
             alert('No se pudo conectar con el servidor');
         });
+    });
+});
+
+module.controller('TipListSearch', function ($scope, service) {
+
+    ons.ready(function () {
+
+        $scope.tips = [];
+
+        //$scope.category = counselNavigator.pages[counselNavigator.pages.length - 1].data.category;
+
+        $scope.text = '';
+
+        $scope.total_tips = 0;
+
+        $scope.goToTip = function (tip) {
+
+            console.log(tip);
+
+            counselNavigator.pushPage('tip.html', {data: {tip: tip, category: $scope.category}});
+        };
+
+        $scope.search = function () {
+
+            modal.show();
+
+            service.getTips({search: $scope.text}, function (result) {
+
+                if (result.status == 'success') {
+
+                    modal.hide();
+
+                    $scope.tips = result.data;
+
+                    $scope.total_tips = result.total;
+
+                    setTimeout(function () {
+                        $('.preview').each(function () {
+
+                            new ImageLoader($(this), new Image());
+
+                        });
+
+                    }, 500);
+
+                } else {
+
+                    modal.hide();
+
+                    alert(result.message);
+                }
+
+            }, function () {
+
+                modal.hide();
+
+                alert('No se pudo conectar con el servidor');
+            });
+        }
     });
 });
 
@@ -1998,7 +2182,6 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
     });
 });
 
-
 module.controller('MyshoppingDetailCustom', function ($scope, service, $sce) {
 
     ons.ready(function () {
@@ -2079,8 +2262,8 @@ module.controller('MyshoppingDetailCustom', function ($scope, service, $sce) {
 
         $scope.showAddItemDialog = function () {
             ons.notification.prompt({
-                title: 'Agregar Item',
-                message: 'Nombre:',
+                title: '',
+                message: 'Escriba un ítem para agregar a sus compras adicionales',
                 buttonLabel: 'Agregar',
                 cancelable: true,
                 callback: function (value) {
@@ -2171,7 +2354,6 @@ module.controller('MyshoppingDetailCustom', function ($scope, service, $sce) {
 
     });
 });
-
 
 module.controller('Invite', function ($scope, service, $sce) {
 
