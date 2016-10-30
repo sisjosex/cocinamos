@@ -576,6 +576,10 @@ img {
     opacity: 1;
     background: #fff;
     background-size: 137px auto !important;
+    background: url(../img/new/loading.png) center center no-repeat #e8e8e8;
+}
+
+.preview.recipes {
     background: url(../img/new/loading.png) center 20px no-repeat #e8e8e8;
 }
 
@@ -586,6 +590,10 @@ img {
     margin-left: -12px;
     font-size: 32px;
     color: #a2a2a2;
+}
+
+.preview.recipes .loading{
+    bottom: 22px;
 }
 
 .preview.loaded {
@@ -857,7 +865,7 @@ img {
 }
 
 .calc-content {
-    background: rgba(255,255,255,0.8);
+    /*background: rgba(255,255,255,0.8);*/
     padding-top: 0px;
     margin-top: 0px;
     position: relative;
@@ -865,6 +873,16 @@ img {
     padding-left: 0px;
     padding-right: 0px;
     margin-top: -27px;
+}
+
+.calc-rounded {
+    border: solid 1px #44b010;
+    margin: 15px;
+    padding: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 10px;
+    background: rgba(255,255,255,1);
 }
 
 
@@ -927,7 +945,7 @@ form, .form2 {
 }
 
 .form .form-element {
-    border: solid 1px #f7faf3;
+    border: solid 1px #44b010;
     border-radius: 5px;
     margin-right: 0px;
     height: 100%;
@@ -963,11 +981,12 @@ form, .form2 {
     font-family: 'SFUIText-Semibold';
     font-size: 15px;
     vertical-align: top;
+    color: #44b010;
 }
 
 .form2 .form-control .value {
     text-align: left;
-    border: solid 1px #f7faf3;
+    border: solid 1px #44b010;
     border-radius: 5px;
     background: #fff;
     font-size: 15px;
@@ -1167,7 +1186,7 @@ h2 {
 }
 
 .pasos h1 {
-    color:#8bc53f;
+    color:#39ac08;
     text-align: left;
 }
 
@@ -1203,7 +1222,7 @@ h2 {
     margin-top:0px;
     margin-bottom:15px;
     border-radius: 15px;
-    border: solid 2px #82bd49;
+    border: solid 1px #39ac08;
     margin:15px;
     padding: 15px;
 }
@@ -1505,7 +1524,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     display: block;
     text-align: center;
     width: 100%;
-    /*margin-top: 60px;*/
+    margin-top: 7px;
 }
 
 .category-container img {
@@ -1540,7 +1559,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 .calc-content h3 {
     text-align: center;
-    color: #39ac08;
+    color: #929292;
     font-family: 'Poppins-Regular';
     font-size: 19px;
     font-weight: normal;
@@ -1778,4 +1797,57 @@ i.btn {
 
 .navigation-bar__center.has-subtitle {
     padding-top:10px;
+}
+
+.navigation-bar.transparent {
+    background: none;
+}
+
+.navigation-bar__left, .navigation-bar__right {
+    padding-right:10px;
+}
+
+.right-arrow {
+    width: 15px;
+    margin-right:10px;
+}
+
+.favorite-page-content {
+    margin-top: 57px;
+}
+
+.shopping-row {
+    background: -webkit-linear-gradient(left, rgba(130, 189, 73, 0.7), rgba(178, 207, 68, 0.7), rgba(251, 242, 138, 0.7));
+    background: -o-linear-gradient(right, rgba(130, 189, 73, 0.7), rgba(178, 207, 68, 0.7), rgba(251, 242, 138, 0.7));
+    background: -moz-linear-gradient(right, rgba(130, 189, 73, 0.7), rgba(178, 207, 68, 0.7), rgba(251, 242, 138, 0.7));
+    background: linear-gradient(to right, rgba(130, 189, 73, 0.7), rgba(178, 207, 68, 0.7) , rgba(251, 242, 138, 0.7));
+    margin-bottom: 5px;
+}
+
+.shopping-row.list__item--chevron:before {
+    content: '';
+    width: 58px;
+    height: 75px;
+    background: url(../img/new/icon-shop.png) 0 0 no-repeat transparent;
+    background-size: 45px auto;
+    background-position: 0 26px;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+}
+
+.shopping-row .list__item__title{
+    color:#39ac08;
+    margin-right: 100px;
+}
+
+.myshopping-header {
+    color: #989897 !important;
+    border: none !important;
+    text-align: center;
+    text-transform: none !important;
+    font-family: 'Poppins' !important;
+    font-weight: normal !important;
+    font-size: 15px !important;
+    box-shadow: none;
 }

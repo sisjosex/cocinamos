@@ -99,8 +99,8 @@
         <div class="intro-content">
             <div class="center-content2">
                 <div class="intro-section">
-                    <div class="logo-intro">
-                        <img src="img/new/logo_cocinamos.png" alt="">
+                    <div class="logo-fino">
+                        <img class="img-logo" src="img/new/logo_fino.png"/>
                     </div>
 
                     <div class="intro-section-content2">
@@ -149,15 +149,19 @@
                                    ng-model="user.name" autocomplete="off">-->
 
                             <div type="text" class="text-input--underbar input-text" placeholder="Nombre completo"
-                                 ng-model="user.name" autocomplete="off"><span>Nombre Completo</span></div>
+                                 ng-model="user.name" autocomplete="off"><span>{{ user.name }}</span></div>
 
-                            <div type="text" class="text-input--underbar input-text" placeholder="Nombre completo"
-                                 ng-model="user.name" autocomplete="off"><span>Recetas Favoritas</span> <span class="green">(15)</span></div>
+                            <div ng-click="goToFavorite()" type="text" class="text-input--underbar input-text"
+                                 placeholder="Nombre completo"
+                                 ng-model="user.name" autocomplete="off"><span>Recetas Favoritas</span> <span
+                                    class="green">({{ user.favorites }})</span></div>
 
-                            <div type="text" class="text-input--underbar input-text" placeholder="Nombre completo"
-                                 ng-model="user.name" autocomplete="off"><span>Compras Pendientes</span> <span class="green">(15)</span></div>
+                            <div ng-click="goToMyShopping()" type="text" class="text-input--underbar input-text"
+                                 placeholder="Nombre completo"
+                                 ng-model="user.name" autocomplete="off"><span>Compras Pendientes</span> <span
+                                    class="green">({{ user.shopping }})</span></div>
 
-                            <a modifier="large" class="button" ng-click="cerrar_session()">
+                            <a ng-click="logout()" modifier="large" class="button" ng-click="cerrar_session()">
                                 <img src="img/new/btn_cerrar_session.png" alt=""></a>
                             <!--<p class="text text3">Condiciones del servicio y <br> pol&iacute;ticas de privacidad</p>-->
                         </div>
@@ -184,8 +188,8 @@
             <div class="intro-content">
                 <div class="center-content2">
                     <div class="intro-section">
-                        <div class="logo-intro">
-                            <img src="img/new/logo_cocinamos.png" alt="">
+                        <div class="logo-fino">
+                            <img class="img-logo" src="img/new/logo_fino.png"/>
                         </div>
 
                         <div class="intro-section-content2">
@@ -291,11 +295,15 @@
     <ons-page ng-controller="Dashboard" class="register intro internal-tab register-page bg2">
         <ons-toolbar class="toolbar-green">
             <div class="left">
-                <img class="header-icon" src="img/new/corazon-yellow.png" alt="">
+                <a class="button" ng-click="goToFavorite()">
+                    <img class="header-icon" src="img/new/corazon-yellow.png" alt="">
+                </a>
             </div>
             <div class="center">MENÚ</div>
             <div class="right">
-                <img class="header-icon" src="img/new/search-yellow.png" alt="">
+                <a class="button" ng-click="goToSearch()">
+                    <img class="header-icon" src="img/new/search-yellow.png" alt="">
+                </a>
             </div>
         </ons-toolbar>
 
@@ -386,7 +394,6 @@
                 </div>
             </ons-tab>
         </ons-tabbar>
-
     </ons-page>
 </ons-template>
 
@@ -423,6 +430,7 @@
                     <div class="img"></div>
                 </div>
             </ons-tab>
+        </ons-tabbar>
     </ons-page>
 </ons-template>
 
@@ -459,6 +467,7 @@
                     <div class="img"></div>
                 </div>
             </ons-tab>
+        </ons-tabbar>
     </ons-page>
 </ons-template>
 
@@ -490,12 +499,12 @@
                     <div class="img"></div>
                 </div>
             </ons-tab>
+            <ons-tab page="tutorials.html" ng-click="changeNavigator('tutorialsNavigator')">
+                <div class="tab-bar__icon tutorials">
+                    <div class="img"></div>
+                </div>
+            </ons-tab>
         </ons-tabbar>
-        <ons-tab page="tutorials.html" ng-click="changeNavigator('tutorialsNavigator')">
-            <div class="tab-bar__icon tutorials">
-                <div class="img"></div>
-            </div>
-        </ons-tab>
     </ons-page>
 </ons-template>
 
@@ -636,7 +645,7 @@
                 <div class="menu-box" ng-repeat="item in menus track by $index" ng-click="goToMenuDetail(item)">
                     <figure class="figure">
 
-                        <div class="preview" src="{{ trustSrc(item.photo) }}">
+                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}">
                             <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
                         </div>
 
@@ -685,7 +694,9 @@
 
         <div class="calc-header">
             <figure class="figure">
-                <div class="preview" src="{{ trustSrc(menu.photo) }}" ng-click="showImage(menu.photo)"></div>
+                <div class="preview recipes" src="{{ trustSrc(menu.photo) }}" ng-click="showImage(menu.photo)">
+                    <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                </div>
             </figure>
             <div ng-click="playVideo(menu.video)" ng-show="menu.type=='video'" class="play-icon-main"></div>
         </div>
@@ -748,8 +759,7 @@
                 <h3 class="ingredientes-title2">Ingredientes</h3>
                 <ons-row ng-repeat="ingredient in menu.ingredients" class="ingredient-row">
                     <ons-col class="col-dot"><span class="red">·</span></ons-col>
-                    <ons-col class="col-number">{{ ingredient.quantity_calculated }}</ons-col>
-                    <ons-col class="col-text">{{ ingredient.name }}</ons-col>
+                    <ons-col class="col-text">{{ ingredient.quantity_calculated }} {{ ingredient.name }}</ons-col>
                 </ons-row>
 
                 <ons-row class="agregar-section" style="width: 108%;">
@@ -775,15 +785,19 @@
                         {{ item.description }}
                     </p>
 
-                    <div class="image-list-container">
+                    <div class="image-list-container" ng-show="item.images.length > 0">
                         <div class="image" ng-repeat="image in item.images">
-                            <div class="preview" src="{{ image.image }}" alt="" ng-click="showImage(image.image)"></div>
+                            <div class="preview" src="{{ image.image }}" alt="" ng-click="showImage(image.image)">
+                                <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="video-container" ng-repeat="video in item.videos">
+                    <div class="video-container" ng-repeat="video in item.videos" ng-show="item.videos.length > 0">
                         <div class="video">
-                            <div class="preview" src="{{ trustSrc(video.video) }}" alt=""></div>
+                            <div class="preview" src="{{ trustSrc(video.video) }}" alt="">
+                                <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                            </div>
                             <div ng-click="playVideo(video.video_id)" class="play-video-button"></div>
                         </div>
                     </div>
@@ -862,12 +876,19 @@
 
                     <div class="menu-box" ng-repeat="item in subcategories track by $index">
                         <figure class="figure">
-                            <div class="preview" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                            <div class="preview recipes" src="{{ trustSrc(item.photo) }}"
+                                 ng-click="goToMenuDetail(item)">
                                 <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
                             </div>
                         </figure>
                         <div class="caption">
                             <span class="caption-text">{{ item.name }}</span>
+
+                            <div class="level-container">
+                                <span>
+                                    <img class="right-arrow" src="img/new/icon-arrow-right.png" alt="">
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -889,11 +910,40 @@
             </div>
         </ons-toolbar>
 
-        <ons-toolbar class="toolbar-big">
+        <ons-toolbar class="toolbar-big" style="height: 100px;">
             <div class="left">
                 <ons-back-button></ons-back-button>
             </div>
-            <div class="center title-green">Recetas</div>
+            <div class="center title-green">
+                Recetas
+
+                <div class="toolbar-secondary">
+                    <div class="navigation-bar transparent">
+                        <div class="navigation-bar__center has-subtitle">
+                            <h3 class="subtitle-menu">{{ subcategory.name }}</h3>
+
+                            <div class="button-bar" style="width: 260px; margin:8px auto 0;">
+                                <div class="button-bar__item" ng-click="filter('todos')">
+                                    <input type="radio" name="navi-segment-a" checked>
+
+                                    <div class="button-bar__button">TODOS ({{ total }})</div>
+                                </div>
+                                <div class="button-bar__item" ng-click="filter('normal')">
+                                    <input type="radio" name="navi-segment-a">
+
+                                    <div class="button-bar__button">IMÁGENES ({{ total_menus }})</div>
+                                </div>
+                                <div class="button-bar__item" ng-click="filter('video')">
+                                    <input type="radio" name="navi-segment-a">
+
+                                    <div class="button-bar__button">VIDEOS ({{ total_videos }})</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             <div class="right">
                 <ons-toolbar-button ng-click="toggleSearch()">
                     <img src="img/new/search-yellow.png" alt="">
@@ -901,37 +951,12 @@
             </div>
         </ons-toolbar>
 
-        <div class="toolbar-secondary">
-            <div class="navigation-bar">
-                <div class="navigation-bar__center has-subtitle">
-                    <h3 class="subtitle-menu">{{ subcategory.name }}</h3>
-                    <div class="button-bar" style="width: 260px; margin:8px auto 0;">
-                        <div class="button-bar__item" ng-click="filter('todos')">
-                            <input type="radio" name="navi-segment-a" checked>
-
-                            <div class="button-bar__button">TODOS ({{ total }})</div>
-                        </div>
-                        <div class="button-bar__item" ng-click="filter('normal')">
-                            <input type="radio" name="navi-segment-a" checked>
-
-                            <div class="button-bar__button">IMÁGENES ({{ total_menus }})</div>
-                        </div>
-                        <div class="button-bar__item" ng-click="filter('video')">
-                            <input type="radio" name="navi-segment-a">
-
-                            <div class="button-bar__button">VIDEOS ({{ total_videos }})</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="menus">
 
             <div class="todos">
                 <div class="menu-box" ng-repeat="item in menus track by $index">
                     <figure class="figure">
-                        <div class="preview" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
                             <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
                         </div>
                         <!--<i class="icon fino">
@@ -951,8 +976,10 @@
                     </figure>
                     <div class="caption">
                         <span class="caption-text">{{ item.name }}</span>
+
                         <div class="level-container">
                             <span>Dificultad</span>
+
                             <div class="level">
                                 <div class="level-item" ng-class="{'filled': item.level>0}"></div>
                                 <div class="level-item" ng-class="{'filled': item.level>1}"></div>
@@ -967,7 +994,7 @@
             <div class="normal">
                 <div class="menu-box" ng-repeat="item in normal track by $index">
                     <figure class="figure">
-                        <div class="preview" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
                             <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
                         </div>
                         <!--<i class="icon fino">
@@ -987,8 +1014,10 @@
                     </figure>
                     <div class="caption">
                         <span class="caption-text">{{ item.name }}</span>
+
                         <div class="level-container">
                             <span>Dificultad</span>
+
                             <div class="level">
                                 <div class="level-item" ng-class="{'filled': item.level>0}"></div>
                                 <div class="level-item" ng-class="{'filled': item.level>1}"></div>
@@ -1003,7 +1032,9 @@
             <div class="video">
                 <div class="menu-box" ng-repeat="item in videos track by $index">
                     <figure class="figure">
-                        <div class="preview" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)"></div>
+                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                        </div>
                         <!--<i class="icon fino">
                             <img src="img/fino-logo2.png" alt="">
                         </i>-->
@@ -1021,8 +1052,10 @@
                     </figure>
                     <div class="caption">
                         <span class="caption-text">{{ item.name }}</span>
+
                         <div class="level-container">
                             <span>Dificultad</span>
+
                             <div class="level">
                                 <div class="level-item" ng-class="{'filled': item.level>0}"></div>
                                 <div class="level-item" ng-class="{'filled': item.level>1}"></div>
@@ -1059,34 +1092,42 @@
             <div class="calculadoras custom">
 
                 <div class="category-container">
-                    <div>
-                        <img src="img/new/logo_cocinamos.png" alt="">
+                    <div class="logo-fino">
+                        <img class="img-logo" src="img/new/logo_fino.png"/>
                     </div>
 
                     <div class="menu-box calc-item" ng-click="goToPage('calc-nutrientes.html')">
                         <figure class="figure">
-                            <div class="preview" src="img/new/calc-nutrientes.jpg"></div>
+                            <div class="preview" src="img/new/calc-nutrientes.jpg">
+                                <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                            </div>
                         </figure>
                         <div class="caption"><span>Calculadora de Nutrientes</span></div>
                     </div>
 
                     <div class="menu-box calc-item" ng-click="goToPage('calc-proteinas.html')">
                         <figure class="figure">
-                            <div class="preview" src="img/new/calc-proteinas.jpg"></div>
+                            <div class="preview" src="img/new/calc-proteinas.jpg">
+                                <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                            </div>
                         </figure>
                         <div class="caption"><span>Calculadora de Proteínas</span></div>
                     </div>
 
                     <div class="menu-box calc-item" ng-click="goToPage('calc-calorias.html')">
                         <figure class="figure">
-                            <div class="preview" src="img/new/calc-calorias.jpg"></div>
+                            <div class="preview" src="img/new/calc-calorias.jpg">
+                                <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                            </div>
                         </figure>
                         <div class="caption"><span>Calculadora de Calorías</span></div>
                     </div>
 
                     <div class="menu-box calc-item" ng-click="goToPage('calc-calorias-diarias.html')">
                         <figure class="figure">
-                            <div class="preview" src="img/new/calc-calorias-diarias.jpg"></div>
+                            <div class="preview" src="img/new/calc-calorias-diarias.jpg">
+                                <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                            </div>
                         </figure>
                         <div class="caption"><span>Calculo de Calorías Diarias</span></div>
                     </div>
@@ -1117,77 +1158,81 @@
 
         <div class="calc-header">
             <figure class="figure">
-                <div class="preview" src="img/calc-nutrientes.jpg"></div>
+                <div class="preview" src="img/new/calc-nutrientes.jpg">
+                    <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                </div>
             </figure>
         </div>
 
         <div class="calc-content">
             <h4 class="calculadora-title">Calcula los nutrientes</h4>
 
-            <div class="form">
-                <div class="form-control">
-                    <div class="form-element">
-                        <label for="">Alimento:</label>
+            <div class="calc-rounded">
+                <div class="form">
+                    <div class="form-control">
+                        <div class="form-element">
+                            <label for="">Alimento:</label>
 
-                        <div class="select-inline">
-                            <select ng-change="updateIngredient()" ng-model="ingredient_id"
-                                    ng-options="item.id as item.name for item in calculator_params.alimentos"></select>
+                            <div class="select-inline">
+                                <select ng-change="updateIngredient()" ng-model="ingredient_id"
+                                        ng-options="item.id as item.name for item in calculator_params.alimentos"></select>
 
-                            <div class="select">
-                                <span>{{ ingredient }}<!-- Elige tu alimento... --></span>
+                                <div class="select">
+                                    <span>{{ ingredient }}<!-- Elige tu alimento... --></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-control">
+                        <div class="form-element">
+                            <label for="">Porciones:</label>
+
+                            <div class="select-inline">
+                                <select ng-change="updatePorcion()" ng-model="porcion_id"
+                                        ng-options="item.id as item.name for item in calculator_params.porciones"></select>
+
+                                <div class="select">
+                                    <span>{{ porcion }}<!-- Elige la cantidad de porciones... --></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="form-control">
-                    <div class="form-element">
-                        <label for="">Porciones:</label>
+                <h5>Información Nutricional</h5>
 
-                        <div class="select-inline">
-                            <select ng-change="updatePorcion()" ng-model="porcion_id"
-                                    ng-options="item.id as item.name for item in calculator_params.porciones"></select>
+                <div class="form2">
+                    <div class="form-control">
+                        <div class="form-element">
+                            <label for="">Calorias:</label>
 
-                            <div class="select">
-                                <span>{{ porcion }}<!-- Elige la cantidad de porciones... --></span>
-                            </div>
+                            <div class="value"><span>{{ result.calorias }} cal</span></div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <h5>Información Nutricional</h5>
+                    <div class="form-control">
+                        <div class="form-element">
+                            <label for="">Carbohidratos:</label>
 
-            <div class="form2">
-                <div class="form-control">
-                    <div class="form-element">
-                        <label for="">Calorias:</label>
-
-                        <div class="value"><span>{{ result.calorias }} cal</span></div>
+                            <div class="value"><span>{{ result.carbohidratos }} gramos</span></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-control">
-                    <div class="form-element">
-                        <label for="">Carbohidratos:</label>
+                    <div class="form-control">
+                        <div class="form-element">
+                            <label for="">Proteínas:</label>
 
-                        <div class="value"><span>{{ result.carbohidratos }} gramos</span></div>
+                            <div class="value"><span>{{ result.proteinas }} gramos</span></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-control">
-                    <div class="form-element">
-                        <label for="">Proteínas:</label>
+                    <div class="form-control">
+                        <div class="form-element">
+                            <label for="">Grasas:</label>
 
-                        <div class="value"><span>{{ result.proteinas }} gramos</span></div>
-                    </div>
-                </div>
-
-                <div class="form-control">
-                    <div class="form-element">
-                        <label for="">Grasas:</label>
-
-                        <div class="value"><span>{{ result.grasas }} gramos</span></div>
+                            <div class="value"><span>{{ result.grasas }} gramos</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1216,71 +1261,75 @@
 
         <div class="calc-header">
             <figure class="figure">
-                <div class="preview" src="img/calc-proteinas.jpg"></div>
+                <div class="preview" src="img/new/calc-proteinas.jpg">
+                    <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                </div>
             </figure>
         </div>
 
         <div class="calc-content">
             <h4>Calculadora de Proteínas</h4>
 
-            <div class="form">
-                <div class="form-control">
-                    <div class="form-element">
-                        <label for="">Categoría:</label>
+            <div class="calc-rounded">
+                <div class="form">
+                    <div class="form-control">
+                        <div class="form-element">
+                            <label for="">Categoría:</label>
 
-                        <div class="select-inline">
-                            <select ng-change="updateCategoria()" ng-model="categoria_id"
-                                    ng-options="item.id as item.name for item in calculator_params.categorias"></select>
+                            <div class="select-inline">
+                                <select ng-change="updateCategoria()" ng-model="categoria_id"
+                                        ng-options="item.id as item.name for item in calculator_params.categorias"></select>
 
-                            <div class="select">
-                                <span>{{ categoria }}<!-- Elige tu alimento... --></span>
+                                <div class="select">
+                                    <span>{{ categoria }}<!-- Elige tu alimento... --></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-control">
+                        <div class="form-element">
+                            <label for="">Alimento:</label>
+
+                            <div class="select-inline">
+                                <select ng-change="updateIngredient()" ng-model="ingredient_id"
+                                        ng-options="item.id as item.name for item in calculator_params.alimentos"></select>
+
+                                <div class="select">
+                                    <span>{{ ingredient }}<!-- Elige tu alimento... --></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="form-control">
-                    <div class="form-element">
-                        <label for="">Alimento:</label>
+                <h5>Cantidad de Proteínas</h5>
 
-                        <div class="select-inline">
-                            <select ng-change="updateIngredient()" ng-model="ingredient_id"
-                                    ng-options="item.id as item.name for item in calculator_params.alimentos"></select>
+                <h3>{{ ingredient }}</h3>
 
-                            <div class="select">
-                                <span>{{ ingredient }}<!-- Elige tu alimento... --></span>
-                            </div>
+                <div class="form2">
+                    <div class="form-control">
+                        <div class="form-element">
+                            <label for="">Por cada 100gr:</label>
+
+                            <div class="value"><span>{{ result.proteinas_por_kcal }} kcal</span></div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <h5>Cantidad de Proteínas</h5>
+                    <div class="form-control">
+                        <div class="form-element">
+                            <label for="">Peso de la ración:</label>
 
-            <h3>{{ ingredient }}</h3>
-
-            <div class="form2">
-                <div class="form-control">
-                    <div class="form-element">
-                        <label for="">Por cada 100gr:</label>
-
-                        <div class="value"><span>{{ result.proteinas_por_kcal }} kcal</span></div>
+                            <div class="value"><span>{{ result.peso_racion }} gramos</span></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-control">
-                    <div class="form-element">
-                        <label for="">Peso de la ración:</label>
+                    <div class="form-control">
+                        <div class="form-element">
+                            <label for="">Por cada ración:</label>
 
-                        <div class="value"><span>{{ result.peso_racion }} gramos</span></div>
-                    </div>
-                </div>
-
-                <div class="form-control">
-                    <div class="form-element">
-                        <label for="">Por cada ración:</label>
-
-                        <div class="value"><span>{{ result.proteinas }} kcal</span></div>
+                            <div class="value"><span>{{ result.proteinas }} kcal</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1309,71 +1358,75 @@
 
         <div class="calc-header">
             <figure class="figure">
-                <div class="preview" src="img/new/calc-calorias.jpg"></div>
+                <div class="preview" src="img/new/calc-calorias.jpg">
+                    <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                </div>
             </figure>
         </div>
 
         <div class="calc-content">
             <h4>Calculadora de CalorÍas</h4>
 
-            <div class="form">
-                <div class="form-control">
-                    <div class="form-element">
-                        <label>Categoría:</label>
+            <div class="calc-rounded">
+                <div class="form">
+                    <div class="form-control">
+                        <div class="form-element">
+                            <label>Categoría:</label>
 
-                        <div class="select-inline">
-                            <select ng-change="updateCategoria()" ng-model="categoria_id"
-                                    ng-options="item.id as item.name for item in calculator_params.categorias"></select>
+                            <div class="select-inline">
+                                <select ng-change="updateCategoria()" ng-model="categoria_id"
+                                        ng-options="item.id as item.name for item in calculator_params.categorias"></select>
 
-                            <div class="select">
-                                <span>{{ categoria }}<!-- Elige tu alimento... --></span>
+                                <div class="select">
+                                    <span>{{ categoria }}<!-- Elige tu alimento... --></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-control">
+                        <div class="form-element">
+                            <label>Alimento:</label>
+
+                            <div class="select-inline">
+                                <select ng-change="updateIngredient()" ng-model="ingredient_id"
+                                        ng-options="item.id as item.name for item in calculator_params.alimentos"></select>
+
+                                <div class="select">
+                                    <span>{{ ingredient }}<!-- Elige tu alimento... --></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="form-control">
-                    <div class="form-element">
-                        <label>Alimento:</label>
+                <h5>Cantidad de Calorías</h5>
 
-                        <div class="select-inline">
-                            <select ng-change="updateIngredient()" ng-model="ingredient_id"
-                                    ng-options="item.id as item.name for item in calculator_params.alimentos"></select>
+                <h3>{{ ingredient }}</h3>
 
-                            <div class="select">
-                                <span>{{ ingredient }}<!-- Elige tu alimento... --></span>
-                            </div>
+                <div class="form2">
+                    <div class="form-control">
+                        <div class="form-element" style="text-align: center;">
+                            <label for="">Por cada 100gr:</label>
+
+                            <div class="value"><span>{{ result.calorias }} calorías</span></div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <h5>Cantidad de Calorías</h5>
+                    <div class="form-control">
+                        <div class="form-element" style="text-align: center;">
+                            <label for="">Peso de la ración:</label>
 
-            <h3>{{ ingredient }}</h3>
-
-            <div class="form2">
-                <div class="form-control">
-                    <div class="form-element" style="text-align: center;">
-                        <label for="">Por cada 100gr:</label>
-
-                        <div class="value"><span>{{ result.calorias }} calorías</span></div>
+                            <div class="value"><span>{{ result.peso_racion }} gramos</span></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-control">
-                    <div class="form-element" style="text-align: center;">
-                        <label for="">Peso de la ración:</label>
+                    <div class="form-control">
+                        <div class="form-element" style="text-align: center;">
+                            <label for="">Por cada ración:</label>
 
-                        <div class="value"><span>{{ result.peso_racion }} gramos</span></div>
-                    </div>
-                </div>
-
-                <div class="form-control">
-                    <div class="form-element" style="text-align: center;">
-                        <label for="">Por cada ración:</label>
-
-                        <div class="value"><span>{{ result.calorias_por_kcal }} kcal</span></div>
+                            <div class="value"><span>{{ result.calorias_por_kcal }} kcal</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1402,61 +1455,65 @@
 
         <div class="calc-header">
             <figure class="figure">
-                <div class="preview" src="{{ trustSrc('img/calc-calorias-diarias.png') }}"></div>
+                <div class="preview" src="img/new/calc-calorias-diarias.jpg">
+                    <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                </div>
             </figure>
         </div>
 
         <div class="calc-content">
             <h4>Calculadora de Calorías diarias</h4>
 
-            <div class="form2">
-                <div class="form-control">
-                    <div class="form-element">
-                        <label for="" style="width: 150px;">Peso corporal (kg.):</label>
+            <div class="calc-rounded">
+                <div class="form2">
+                    <div class="form-control">
+                        <div class="form-element">
+                            <label for="" style="width: 150px;">Peso corporal (kg.):</label>
 
-                        <input style="padding-left:10px;padding-right:10px;" type="number" class="value"
-                               ng-model="peso_corporal"
-                               placeholder="999 kg" ng-change="updatePesoCorporal()">
+                            <input style="padding-left:10px;padding-right:10px;" type="number" class="value"
+                                   ng-model="peso_corporal"
+                                   placeholder="999 kg" ng-change="updatePesoCorporal()">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="form">
-                <div class="form-control">
-                    <div class="form-element">
-                        <label for="" style="width: 150px;">Nivel de Actividad:</label>
+                <div class="form">
+                    <div class="form-control">
+                        <div class="form-element">
+                            <label for="" style="width: 150px;">Nivel de Actividad:</label>
 
-                        <div class="select-inline">
-                            <select ng-change="updateNivelDeActividad()" ng-model="nivel_de_actividad_id"
-                                    ng-options="item.id as item.name for item in calculator_params.nivel_de_actividad"></select>
+                            <div class="select-inline">
+                                <select ng-change="updateNivelDeActividad()" ng-model="nivel_de_actividad_id"
+                                        ng-options="item.id as item.name for item in calculator_params.nivel_de_actividad"></select>
 
-                            <div class="select">
-                                <span>{{ nivel_de_actividad }}<!-- Elige tu alimento... --></span>
+                                <div class="select">
+                                    <span>{{ nivel_de_actividad }}<!-- Elige tu alimento... --></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <h5>Consumo de calorías necesario (al día)</h5>
+                <h5>Consumo de calorías necesario (al día)</h5>
 
-            <h3 class="style1">Calorías necesarias para mantener tu peso:</h3>
+                <h3 class="style1">Calorías necesarias para mantener tu peso:</h3>
 
-            <div class="form2">
-                <div class="form-control">
-                    <div class="form-element" style="text-align: center;">
-                        <div class="value"><span>{{ result.calorias_mantener }} calorías</span></div>
+                <div class="form2">
+                    <div class="form-control">
+                        <div class="form-element" style="text-align: center;">
+                            <div class="value"><span>{{ result.calorias_mantener }} calorías</span></div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <h3 class="style2">Calorías necesarias para perder medio kilo a la
-                semana:</h3>
+                <h3 class="style2">Calorías necesarias para perder medio kilo a la
+                    semana:</h3>
 
-            <div class="form2">
-                <div class="form-control">
-                    <div class="form-element" style="text-align: center;">
-                        <div class="value"><span>{{ result.calorias_bajar }} calorías</span></div>
+                <div class="form2">
+                    <div class="form-control">
+                        <div class="form-element" style="text-align: center;">
+                            <div class="value"><span>{{ result.calorias_bajar }} calorías</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1486,8 +1543,8 @@
             <div class="calculadoras custom">
 
                 <div class="category-container">
-                    <div>
-                        <img src="img/new/logo_cocinamos.png" alt="">
+                    <div class="logo-fino">
+                        <img class="img-logo" src="img/new/logo_fino.png"/>
                     </div>
 
                     <div class="menu-box calc-item" ng-repeat="item in tip_categories track by $index"
@@ -1524,7 +1581,7 @@
             <div class="menu-box" ng-repeat="item in tips track by $index" ng-click="goToTip(item)">
                 <figure class="figure">
 
-                    <div class="preview" src="{{ trustSrc(item.image) }}">
+                    <div class="preview recipes" src="{{ trustSrc(item.image) }}">
                         <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
                     </div>
                     <!--
@@ -1565,7 +1622,7 @@
         <div class="menus">
             <div class="menu-box">
                 <figure class="figure">
-                    <div class="preview" src="{{ trustSrc(tip.image) }}">
+                    <div class="preview recipes" src="{{ trustSrc(tip.image) }}">
                         <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
                     </div>
                 </figure>
@@ -1592,60 +1649,161 @@
             </div>
         </ons-toolbar>
 
-        <ons-toolbar class="toolbar-big">
+        <ons-toolbar class="toolbar-big" style="height: 100px;">
             <div class="left">
                 <ons-back-button></ons-back-button>
             </div>
-            <div class="center title-green">Recetas favoritas</div>
+            <div class="center">
+                Recetas Favoritas
+
+                <div class="toolbar-secondary">
+                    <div class="navigation-bar transparent">
+                        <div class="navigation-bar__center">
+                            <h3 class="subtitle-menu">{{ subcategory.name }}</h3>
+
+                            <div class="button-bar" style="width: 260px; margin:8px auto 0;">
+                                <div class="button-bar__item" ng-click="filter('todos')">
+                                    <input type="radio" name="navi-segment-a" checked>
+
+                                    <div class="button-bar__button">TODOS ({{ total }})</div>
+                                </div>
+                                <div class="button-bar__item" ng-click="filter('normal')">
+                                    <input type="radio" name="navi-segment-a">
+
+                                    <div class="button-bar__button">IMÁGENES ({{ total_menus }})</div>
+                                </div>
+                                <div class="button-bar__item" ng-click="filter('video')">
+                                    <input type="radio" name="navi-segment-a">
+
+                                    <div class="button-bar__button">VIDEOS ({{ total_videos }})</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             <div class="right">
-                <ons-toolbar-button ng-click="toggleSearch()">
+                <!--<ons-toolbar-button ng-click="toggleSearch()">
                     <img src="img/new/search-yellow.png" alt="">
-                </ons-toolbar-button>
+                </ons-toolbar-button>-->
             </div>
         </ons-toolbar>
 
-        <!--
-        <div class="toolbar-secondary">
-            <div class="navigation-bar">
-                <div class="navigation-bar__center">
-                    <div class="button-bar" style="width:200px; margin:8px auto 0;">
-                        <div class="button-bar__item" ng-click="filter('normal')">
-                            <input type="radio" name="navi-segment-a" checked>
+        <div class="menus favorite-page-content">
 
-                            <div class="button-bar__button">Recetas ({{ total_menus }})</div>
+            <div class="todos">
+                <div class="menu-box" ng-repeat="item in menus track by $index">
+                    <figure class="figure">
+                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
                         </div>
-                        <div class="button-bar__item" ng-click="filter('video')">
-                            <input type="radio" name="navi-segment-a">
+                        <!--<i class="icon fino">
+                            <img src="img/fino-logo2.png" alt="">
+                        </i>-->
+                        <div class="star-container">
+                            <div class="star">
+                                <div class="star-item" ng-class="{'filled': item.star>0}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>1}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>2}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>3}"></div>
+                            </div>
+                        </div>
+                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
+                            <img src="img/play-icon-big.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption">
+                        <span class="caption-text">{{ item.name }}</span>
 
-                            <div class="button-bar__button">Videos ({{ total_videos }})</div>
+                        <div class="level-container">
+                            <span>Dificultad</span>
+
+                            <div class="level">
+                                <div class="level-item" ng-class="{'filled': item.level>0}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>1}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>2}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>3}"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>-->
 
-        <div class="menus">
-            <div class="menu-box" ng-repeat="item in menus track by $index" ng-click="goToMenuDetail(item)">
-                <figure class="figure">
+            <div class="normal">
+                <div class="menu-box" ng-repeat="item in normal track by $index">
+                    <figure class="figure">
+                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                        </div>
+                        <!--<i class="icon fino">
+                            <img src="img/fino-logo2.png" alt="">
+                        </i>-->
+                        <div class="star-container">
+                            <div class="star">
+                                <div class="star-item" ng-class="{'filled': item.star>0}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>1}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>2}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>3}"></div>
+                            </div>
+                        </div>
+                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
+                            <img src="img/play-icon-big.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption">
+                        <span class="caption-text">{{ item.name }}</span>
 
-                    <div class="preview" src="{{ trustSrc(item.photo) }}">
-                        <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                        <div class="level-container">
+                            <span>Dificultad</span>
+
+                            <div class="level">
+                                <div class="level-item" ng-class="{'filled': item.level>0}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>1}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>2}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>3}"></div>
+                            </div>
+                        </div>
                     </div>
-                    <!--
-                    <i ng-show="item.in_recipes" class="icon bookmark">
-                        <img src="img/bookmark-icon.png" alt="">
-                    </i>
-                    <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
-                        <img src="img/play-icon.png" alt="">
-                    </i>-->
-                </figure>
-                <div class="caption">{{ item.name }}</div>
-                <!--<div class="menu-box-footer">
-                    <div class="heart" ng-click="makeFavorite(item)"><img src="img/heart-icon.png" alt=""></div>
-                    <div class="">{{ item.likes }}</div>
-                    <div class="recipe"><img src="img/recipe-icon.png" alt=""></div>
-                    <div class="">{{ item.recipes }}</div>
-                </div>-->
+                </div>
+            </div>
+
+            <div class="video">
+                <div class="menu-box" ng-repeat="item in videos track by $index">
+                    <figure class="figure">
+                        <div class="preview recipes" src="{{ trustSrc(item.photo) }}" ng-click="goToMenuDetail(item)">
+                            <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                        </div>
+                        <!--<i class="icon fino">
+                            <img src="img/fino-logo2.png" alt="">
+                        </i>-->
+                        <div class="star-container">
+                            <div class="star">
+                                <div class="star-item" ng-class="{'filled': item.star>0}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>1}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>2}"></div>
+                                <div class="star-item" ng-class="{'filled': item.star>3}"></div>
+                            </div>
+                        </div>
+                        <i ng-show="item.type=='video'" class="icon play" ng-click="playVideo(item.video)">
+                            <img src="img/play-icon.png" alt="">
+                        </i>
+                    </figure>
+                    <div class="caption">
+                        <span class="caption-text">{{ item.name }}</span>
+
+                        <div class="level-container">
+                            <span>Dificultad</span>
+
+                            <div class="level">
+                                <div class="level-item" ng-class="{'filled': item.level>0}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>1}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>2}"></div>
+                                <div class="level-item" ng-class="{'filled': item.level>3}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1682,8 +1840,11 @@
             </ons-toolbar>
 
             <ons-list>
+                <ons-list-header class="myshopping-header">
+                    Listado de compras de recetas
+                </ons-list-header>
                 <ons-list-item modifier="chevron" ng-repeat="item in recipes track by $index"
-                               ng-click="goToShoppingDetail(item)">
+                               ng-click="goToShoppingDetail(item)" class="shopping-row">
                     <div class="left">
                         <div class="list__item__thumbnail myshopping-item">
                             <div class="preview" src="{{ trustSrc(item.photo) }}">
@@ -1693,7 +1854,40 @@
 
                         <div class="center">
                             <div class="list__item__title">{{ item.name }}</div>
-                            <div class="list__item__subtitle">Para {{ item.portions }} invitados</div>
+                            <div class="list__item__subtitle">
+                                <div class="star">
+                                    <div class="star-item" ng-class="{'filled': item.star>0}"></div>
+                                    <div class="star-item" ng-class="{'filled': item.star>1}"></div>
+                                    <div class="star-item" ng-class="{'filled': item.star>2}"></div>
+                                    <div class="star-item" ng-class="{'filled': item.star>3}"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ons-list-item>
+
+                <ons-list-header class="myshopping-header">
+                    Listado de compras adicionales
+                </ons-list-header>
+                <ons-list-item modifier="chevron" ng-repeat="item in custom track by $index"
+                               ng-click="goToShoppingDetailCustom(item)" class="shopping-row">
+                    <div class="left">
+                        <div class="list__item__thumbnail myshopping-item">
+                            <div class="preview" src="{{ trustSrc(item.photo) }}">
+                                <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                            </div>
+                        </div>
+
+                        <div class="center">
+                            <div class="list__item__title">{{ item.name }}</div>
+                            <div class="list__item__subtitle">
+                                <div class="star">
+                                    <div class="star-item" ng-class="{'filled': item.star>0}"></div>
+                                    <div class="star-item" ng-class="{'filled': item.star>1}"></div>
+                                    <div class="star-item" ng-class="{'filled': item.star>2}"></div>
+                                    <div class="star-item" ng-class="{'filled': item.star>3}"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </ons-list-item>
@@ -1755,8 +1949,7 @@
                     <ons-col class="col-dot">
                         <ons-input type="checkbox"></ons-input>
                     </ons-col>
-                    <ons-col class="col-number">{{ ingredient.quantity_calculated }}</ons-col>
-                    <ons-col class="col-text">{{ ingredient.name }}</ons-col>
+                    <ons-col class="col-text">{{ ingredient.quantity_calculated }} {{ ingredient.name }}</ons-col>
                 </ons-row>
             </div>
 
@@ -1807,7 +2000,9 @@
 
         <div class="calc-header">
             <figure class="figure">
-                <div class="preview" src="{{ trustSrc(menu.photo) }}" ng-click="showImage(menu.photo)"></div>
+                <div class="preview" src="{{ trustSrc(menu.photo) }}" ng-click="showImage(menu.photo)">
+                    <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
+                </div>
             </figure>
             <div class="chef-icon">
                 <img ng-src="img/chef-icon.png" alt="">
@@ -2041,7 +2236,7 @@
                 <div class="menu-box" ng-repeat="item in tutorials track by $index" ng-click="goToTutorial(item)">
                     <figure class="figure">
 
-                        <div class="preview" src="{{ trustSrc(item.image) }}">
+                        <div class="preview recipes" src="{{ trustSrc(item.image) }}">
                             <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
                         </div>
                     </figure>
@@ -2071,7 +2266,7 @@
         <div class="menus">
             <div class="menu-box">
                 <figure class="figure">
-                    <div class="preview" src="{{ trustSrc(tutorial.image) }}">
+                    <div class="preview recipes" src="{{ trustSrc(tutorial.image) }}">
                         <ons-icon icon="ion-load-d" spin="true" class="loading"></ons-icon>
                     </div>
                 </figure>
@@ -2101,13 +2296,13 @@
         <div class="intro-content">
             <div class="center-content2">
                 <div class="intro-section">
-                    <div class="logo-intro">
-                        <img class="img-logo" src="img/new/logo_cocinamos.png"/>
+                    <div class="logo-fino">
+                        <img class="img-logo" src="img/new/logo_fino.png"/>
                     </div>
 
                     <div class="intro-section-content2">
 
-                        <a href="" ng-click="register()"><img src="img/new/fb_btn.png"></a>
+                        <a href="" ng-click="register()"><img src="img/new/btn_facebook.png"></a>
 
                     </div>
                 </div>

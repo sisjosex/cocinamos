@@ -7,6 +7,13 @@ angular.module("services", []).factory("service", ["$http", "$q", function ($htt
                 params: params
             }).success(success).error(error);
         },
+        getProfile: function (params, success, error) {
+            $http({
+                method: 'JSONP',
+                url: API_URL + 'getProfile?callback=JSON_CALLBACK',
+                params: params
+            }).success(success).error(error);
+        },
         retrievePassword: function (params, success, error) {
             $http({
                 method: 'JSONP',

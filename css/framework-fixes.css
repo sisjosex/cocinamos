@@ -198,3 +198,11 @@ div.navigation-bar {
     padding: 4px 4px;
     color: #000;
 }
+
+.page[status-bar-fill] > .navigation-bar + .page__background + .page__content {
+    top: 15px;
+}
+
+.navigation-bar__title {
+    color:#39ac08;
+}

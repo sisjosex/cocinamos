@@ -108,6 +108,16 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
             shareBy(message, url);
         };
 
+        $scope.goToFavorite = function () {
+            currentNavigator = mainNavigator;
+            mainNavigator.pushPage('favorite.html');
+        };
+
+        $scope.goToSearch = function () {
+            currentNavigator = mainNavigator;
+            mainNavigator.pushPage('search.html');
+        };
+
         $rootScope.calculator_params = {};
 
         $rootScope.trustSrc = function (src) {
@@ -544,8 +554,8 @@ module.controller('Dashboard', function ($scope, service) {
             mainNavigator.pushPage('perfil.html');
 
             setTimeout(function () {
-                currentNavigator = perfilNavigator;
-            }, 500);
+                currentNavigator = mainNavigator;
+            }, 800);
         };
 
         $scope.gotoRecetas = function () {
@@ -553,15 +563,19 @@ module.controller('Dashboard', function ($scope, service) {
 
             setTimeout(function () {
                 currentNavigator = categoryNavigator;
-            }, 500);
+            }, 800);
         };
 
         $scope.gotoCalculadora = function () {
-            mainNavigator.pushPage('home_calculator.html');
+            mainNavigator.pushPage('home_calculator.html', {onTransitionEnd: function(){
+                console.log('asignado');
+                currentNavigator = calculatorNavigator;
+            }});
 
+            /*
             setTimeout(function () {
                 currentNavigator = calculatorNavigator;
-            }, 500);
+            }, 800);*/
         };
 
         $scope.gotoCompras = function () {
@@ -569,7 +583,7 @@ module.controller('Dashboard', function ($scope, service) {
 
             setTimeout(function () {
                 currentNavigator = myshoppingNavigator;
-            }, 500);
+            }, 800);
         };
 
         $scope.gotoConsejos = function () {
@@ -577,7 +591,7 @@ module.controller('Dashboard', function ($scope, service) {
 
             setTimeout(function () {
                 currentNavigator = counselNavigator;
-            }, 500);
+            }, 800);
         };
 
         $scope.gotoTutorials = function () {
@@ -585,7 +599,7 @@ module.controller('Dashboard', function ($scope, service) {
 
             setTimeout(function () {
                 currentNavigator = tutorialsNavigator;
-            }, 500);
+            }, 800);
         };
 
 
@@ -686,45 +700,36 @@ module.controller('Perfil', function ($scope, service) {
             };
         }
 
-        $scope.register = function () {
+        $scope.goToFavorite = function () {
+            currentNavigator.pushPage('favorite.html');
+        };
 
-            if ($scope.user.name == '') {
-                alert(t('name_required'));
-                return;
-            } else if ($scope.user.email == '') {
-                alert(t('email_required'));
-                return;
-            } else if (!$.trim($scope.user.email).match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/)) {
-                alert(t('email_invalid'));
-                return;
-            }
+        $scope.goToMyShopping = function () {
+            currentNavigator.pushPage('myshopping.html');
+        };
 
-            if ($scope.user.password != '') {
+        $scope.logout = function() {
 
-                if ($scope.user.password_old == '') {
+            deleteUser();
 
-                    alert(t('password_old_required'));
-                    return;
-                }
-            }
+            mainNavigator.resetToPage('intro.html', { animation: 'slide' });
+        };
+
+        $scope.getProfile = function () {
 
             modal.show();
 
-            service.registerUser($scope.user, function (result) {
+            service.getProfile({user_id: getUser().id}, function (result) {
 
                 if (result.status == 'success') {
 
                     if (!result.message) {
 
-                        saveUser(result.user);
-
-                        //mainNavigator.pushPage('home.html');
-
-                        alert('Se actualizaron sus datos correctamente.');
+                        $scope.user = result.user;
 
                     } else {
 
-                        alert(result.message);
+                        //alert(result.message);
                     }
 
                     modal.hide();
@@ -744,9 +749,7 @@ module.controller('Perfil', function ($scope, service) {
             });
         };
 
-        $scope.login = function () {
-            mainNavigator.pushPage('login.html');
-        };
+        $scope.getProfile();
 
     });
 });
@@ -811,7 +814,7 @@ module.controller('Home', function ($scope, service, $sce) {
                     } catch (error) {
                     }
 
-                    $('.home-page .preview').each(function () {
+                    $('.preview').each(function () {
 
                         new ImageLoader($(this), new Image());
 
@@ -846,7 +849,12 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
 
         $scope.porciones = 1;
 
-        $scope.menu = currentNavigator.pages[currentNavigator.pages.length - 1].data.menu;
+        try {
+            $scope.menu = currentNavigator.pages[currentNavigator.pages.length - 1].data.menu;
+        } catch(error){
+            $scope.menu = mainNavigator.pages[mainNavigator.pages.length - 1].data.menu;
+            currentNavigator = mainNavigator;
+        }
 
         $scope.trustSrc = function (src) {
             return $sce.trustAsResourceUrl(src);
@@ -935,13 +943,7 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
                 $scope.recalculate_portions();
 
                 setTimeout(function () {
-                    $('.menu_detail-page .preview').each(function () {
-
-                        $('.image-list-container').each(function () {
-
-                            $(this).find('.image').css('width', 100 / $(this).find('.image').length);
-                            $(this).find('.image:first-child').css('width', 100 / $(this).find('.image').length - (15 / $(this).find('.image').length));
-                        });
+                    $('.preview').each(function () {
 
                         new ImageLoader($(this), new Image());
 
@@ -968,12 +970,17 @@ module.controller('Favorite', function ($scope, service, $sce) {
 
     ons.ready(function () {
 
+        if(currentNavigator == undefined) {
+            currentNavigator = mainNavigator;
+        }
+
         $scope.trustSrc = function (src) {
             return $sce.trustAsResourceUrl(src);
         };
 
         initSearch($scope);
 
+        $scope.menus = [];
         $scope.normal = [];
         $scope.videos = [];
         $scope.total_menus = 0;
@@ -987,8 +994,9 @@ module.controller('Favorite', function ($scope, service, $sce) {
 
         modal.show();
 
-        $('.menus .normal').show();
-        $('.menus .video').hide();
+        $(currentNavigator.topPage).find('.menus .normal').hide();
+        $(currentNavigator.topPage).find('.menus .video').hide();
+        $(currentNavigator.topPage).find('.menus .todos').show();
 
 
         $scope.buscar = function () {
@@ -998,12 +1006,11 @@ module.controller('Favorite', function ($scope, service, $sce) {
 
         $scope.filter = function (filter) {
 
-            console.log(filter);
+            $(currentNavigator.topPage).find('.menus .todos').hide();
+            $(currentNavigator.topPage).find('.menus .normal').hide();
+            $(currentNavigator.topPage).find('.menus .video').hide();
 
-            $('.menus .normal').hide();
-            $('.menus .video').hide();
-
-            $('.menus .' + filter).show();
+            $(currentNavigator.topPage).find('.menus .' + filter).show();
         };
 
         $scope.getFavorites = function () {
@@ -1014,13 +1021,18 @@ module.controller('Favorite', function ($scope, service, $sce) {
 
                     modal.hide();
 
+                    $scope.menus = result.menus;
                     $scope.normal = result.normal;
                     $scope.videos = result.videos;
+
+                    $scope.total = result.total;
                     $scope.total_menus = result.total_menus;
                     $scope.total_videos = result.total_videos;
 
+                    console.log($scope);
+
                     setTimeout(function () {
-                        $('.favorite-page .preview').each(function () {
+                        $('.preview').each(function () {
 
                             new ImageLoader($(this), new Image());
 
@@ -1081,7 +1093,7 @@ module.controller('Category', function ($scope, service, $sce) {
                     $scope.subcategories = result.data;
 
                     setTimeout(function () {
-                        $('.category-page .preview').each(function () {
+                        $('.preview').each(function () {
 
                             new ImageLoader($(this), new Image());
 
@@ -1155,7 +1167,7 @@ module.controller('Subcategory', function ($scope, service, $sce) {
             $('.menus .' + filter).show();
 
             setTimeout(function () {
-                $('.subcategory-page .preview').each(function () {
+                $('.preview').each(function () {
 
                     new ImageLoader($(this), new Image());
 
@@ -1183,7 +1195,7 @@ module.controller('Subcategory', function ($scope, service, $sce) {
                     $scope.total_videos = result.total_videos;
 
                     setTimeout(function () {
-                        $('.subcategory-page .preview').each(function () {
+                        $('.preview').each(function () {
 
                             new ImageLoader($(this), new Image());
 
@@ -1218,7 +1230,7 @@ module.controller('Recipes', function ($scope, service, $sce) {
         };
 
         setTimeout(function () {
-            $('.recipes-page .preview').each(function () {
+            $('.preview').each(function () {
 
                 new ImageLoader($(this), new Image());
 
@@ -1236,13 +1248,18 @@ module.controller('Calculator', function ($scope) {
 
     ons.ready(function () {
 
+        //currentNavigator = calculatorNavigator;
+
+        console.log(currentNavigator);
+
         $scope.goToPage = function (page) {
 
             calculatorNavigator.pushPage(page, {});
         };
 
         setTimeout(function () {
-            $('.calculator-page .preview').each(function () {
+
+            $('.preview').each(function () {
 
                 new ImageLoader($(this), new Image());
 
@@ -1322,7 +1339,7 @@ module.controller('CalNutrientes', function ($scope, service) {
         };
 
         setTimeout(function () {
-            $('.calc-nutrientes-page .preview').each(function () {
+            $('.preview').each(function () {
 
                 new ImageLoader($(this), new Image());
 
@@ -1406,7 +1423,7 @@ module.controller('CalcProteinas', function ($scope, service) {
         };
 
         setTimeout(function () {
-            $('.calc-proteinas-page .preview').each(function () {
+            $('.preview').each(function () {
 
                 new ImageLoader($(this), new Image());
 
@@ -1490,7 +1507,7 @@ module.controller('CalcCalorias', function ($scope, service) {
         };
 
         setTimeout(function () {
-            $('.calc-calorias-page .preview').each(function () {
+            $('.preview').each(function () {
 
                 new ImageLoader($(this), new Image());
 
@@ -1571,7 +1588,7 @@ module.controller('CalCaloriasDiarias', function ($scope, service) {
         };
 
         setTimeout(function () {
-            $('.calc-calorias-diarias-page .preview').each(function () {
+            $('.preview').each(function () {
 
                 new ImageLoader($(this), new Image());
 
@@ -1605,7 +1622,7 @@ module.controller('Counsel', function ($scope, service) {
                 $scope.tip_categories = result.data;
 
                 setTimeout(function () {
-                    $('.counsel-page .preview').each(function () {
+                    $('.preview').each(function () {
 
                         new ImageLoader($(this), new Image());
 
@@ -1656,7 +1673,7 @@ module.controller('TipList', function ($scope, service) {
                 $scope.tips = result.data;
 
                 setTimeout(function () {
-                    $('.tip_list-page .preview').each(function () {
+                    $('.preview').each(function () {
 
                         new ImageLoader($(this), new Image());
 
@@ -1702,7 +1719,7 @@ module.controller('Tip', function ($scope, service) {
                 $scope.tip.content = $('<div>' + $scope.tip.content + '</div>').html();
 
                 setTimeout(function () {
-                    $('.tip-page .preview').each(function () {
+                    $('.preview').each(function () {
 
                         new ImageLoader($(this), new Image());
 
@@ -1757,13 +1774,16 @@ module.controller('MyShopping', function ($scope, service, $sce) {
                     modal.hide();
 
                     $scope.recipes = result.data;
+                    $scope.custom = result.custom;
 
                     setTimeout(function () {
-                        $('.myshopping-page .preview').each(function () {
+
+                        $('.preview').each(function () {
 
                             new ImageLoader($(this), new Image());
 
                         });
+
                     }, 500);
 
                 } else {
@@ -1820,11 +1840,12 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
                     $scope.recalculate_portions();
 
                     setTimeout(function () {
-                        $('.myshopping_detail-page .preview').each(function () {
+                        $('.preview').each(function () {
 
                             new ImageLoader($(this), new Image());
 
                         });
+
                     }, 500);
 
                 } else {
@@ -2005,11 +2026,12 @@ module.controller('Invite', function ($scope, service, $sce) {
                     $scope.recipes = result.data;
 
                     setTimeout(function () {
-                        $('.invite-page .preview').each(function () {
+                        $('.preview').each(function () {
 
                             new ImageLoader($(this), new Image());
 
                         });
+
                     }, 500);
 
                 } else {
@@ -2121,11 +2143,12 @@ module.controller('InviteDetail', function ($scope, service, $sce) {
                     $scope.invitados = $scope.menu.portions;
 
                     setTimeout(function () {
-                        $('.invite_detail-page .preview').each(function () {
+                        $('.preview').each(function () {
 
                             new ImageLoader($(this), new Image());
 
                         });
+
                     }, 500);
 
                 } else {
@@ -2276,7 +2299,7 @@ module.controller('Tutorials', function ($scope, service) {
                 $scope.tutorials = result.data;
 
                 setTimeout(function () {
-                    $('.tutorials-page .preview').each(function () {
+                    $('.preview').each(function () {
 
                         new ImageLoader($(this), new Image());
 
@@ -2309,7 +2332,7 @@ module.controller('Tutorial', function ($scope, service) {
         $scope.tutorial = tutorialsNavigator.pages[tutorialsNavigator.pages.length - 1].data.tutorial;
 
         setTimeout(function () {
-            $('.tutorial-page .preview').each(function () {
+            $('.preview').each(function () {
 
                 new ImageLoader($(this), new Image());
 
@@ -2549,7 +2572,8 @@ function saveUser(user) {
 
 function deleteUser() {
 
-    localStorage.setItem(user_storage_key, undefined);
+    localStorage.removeItem(user_storage_key);
+    user = undefined;
 }
 
 function updateLanguage(l) {
