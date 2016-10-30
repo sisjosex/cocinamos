@@ -342,6 +342,8 @@ module.controller('Intro', function ($scope, service) {
 
                     function onSuccess(result) {
 
+                        console.log(result);
+
                         //alert(JSON.stringify(result));
 
                         $scope.user = {
