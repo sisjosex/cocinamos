@@ -805,7 +805,7 @@ module.controller('Home', function ($scope, service, $sce) {
 
                 modal.hide();
 
-                alert(result.message);
+                //alert(result.message);
 
                 try {
                     navigator.splashscreen.hide();
@@ -934,7 +934,7 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
 
                 modal.hide();
 
-                alert(result.message);
+                //alert(result.message);
             }
 
         }, function (error) {
@@ -1774,7 +1774,7 @@ module.controller('TipList', function ($scope, service) {
 
                 modal.hide();
 
-                alert(result.message);
+                //alert(result.message);
             }
 
         }, function () {
