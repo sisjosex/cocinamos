@@ -367,7 +367,7 @@ module.controller('Intro', function ($scope, service) {
 
                                     modal.hide();
                                     mainNavigator.pushPage('dashboard.html');
-                                    
+
                                 }, 500);
 
                             } else {
@@ -1718,7 +1718,7 @@ module.controller('Counsel', function ($scope, service) {
 
                 modal.hide();
 
-                alert(result.message);
+                //alert(result.message);
             }
 
         }, function () {
@@ -2636,7 +2636,7 @@ module.controller('Tutorials', function ($scope, service) {
 
                 modal.hide();
 
-                alert(result.message);
+                //alert(result.message);
             }
 
         }, function () {
