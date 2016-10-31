@@ -759,7 +759,9 @@
                 <h3 class="ingredientes-title2">Ingredientes</h3>
                 <ons-row ng-repeat="ingredient in menu.ingredients" class="ingredient-row">
                     <ons-col class="col-dot"><span class="red">·</span></ons-col>
-                    <ons-col class="col-text">{{ ingredient.quantity_calculated }} <span class="is-html" ng-bind-html="ingredient.name"></span></ons-col>
+                    <ons-col class="col-text">{{ ingredient.quantity_calculated }}
+                        <span ng-class="{'bold': ingredient.bold=='1','italic': ingredient.italic=='1','underline': ingredient.underline=='1'}">{{ ingredient.name }}</span>
+                    </ons-col>
                 </ons-row>
 
                 <ons-row class="agregar-section" style="width: 108%;">
@@ -2143,7 +2145,9 @@
                     <ons-col class="col-dot">
                         <ons-input type="checkbox"></ons-input>
                     </ons-col>
-                    <ons-col class="col-text">{{ ingredient.quantity_calculated }} {{ ingredient.name }}</ons-col>
+                    <ons-col class="col-text">{{ ingredient.quantity_calculated }}
+                        <span ng-class="{'bold': ingredient.bold=='1','italic': ingredient.italic=='1','underline': ingredient.underline=='1'}">{{ ingredient.name }}</span>
+                    </ons-col>
                 </ons-row>
 
                 <h1 class="delete-shopping btn-yellow" ng-click="deleteShopping()">Eliminar de la lista</h1>

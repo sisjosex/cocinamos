@@ -1939,3 +1939,16 @@ i.btn {
     display:inline-block;
     white-space: pre-line;
 }
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
