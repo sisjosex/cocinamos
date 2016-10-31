@@ -759,7 +759,7 @@
                 <h3 class="ingredientes-title2">Ingredientes</h3>
                 <ons-row ng-repeat="ingredient in menu.ingredients" class="ingredient-row">
                     <ons-col class="col-dot"><span class="red">·</span></ons-col>
-                    <ons-col class="col-text">{{ ingredient.quantity_calculated }} {{ ingredient.name }}</ons-col>
+                    <ons-col class="col-text">{{ ingredient.quantity_calculated }} <span class="is-html" ng-bind-html="ingredient.name"></span></ons-col>
                 </ons-row>
 
                 <ons-row class="agregar-section" style="width: 108%;">
@@ -779,11 +779,9 @@
                 </div>
 
                 <div class="tip pasos" ng-repeat="item in menu.steps">
-                    <h1>{{ item.name }}</h1>
+                    <h1 ng-bind-html="item.name"></h1>
 
-                    <p>
-                        {{ item.description }}
-                    </p>
+                    <div class="is-html" ng-bind-html="item.description"></div>
 
                     <div class="image-list-container" ng-show="item.images.length > 0">
                         <div class="image" ng-repeat="image in item.images">

@@ -1391,6 +1391,11 @@ h2 {
 .caducada, .red {
     color: #82bc49;
     font-weight: bold;
+    font-size: 22px;
+    margin-right: 8px;
+    line-height: 13px;
+    padding-top: 14px;
+    display: block;
 }
 
 .subtitle {
@@ -1928,4 +1933,9 @@ i.btn {
     text-align: center;
     color: #59575d;
     font-size: 13px;
+}
+
+.is-html * {
+    display:inline-block;
+    white-space: pre-line;
 }
