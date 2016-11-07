@@ -198,7 +198,8 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
         if (document.location.protocol == 'http:') {
 
-            API_URL = 'http://localhost/fino/admin/api/';
+            //API_URL = 'http://localhost/fino/admin/api/';
+            API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
