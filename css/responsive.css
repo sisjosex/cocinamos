@@ -131,10 +131,3 @@
         min-width:36px;
     }
 }
-
-
-@media screen and (min-width:0px) {
-    .search-btn {
-        top: 28px;
-    }
-}

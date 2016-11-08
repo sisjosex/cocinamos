@@ -715,7 +715,7 @@ img {
 .search-toolbar .search-input {
     vertical-align: middle;
     display: inline-block;
-    width: 253%;
+    width: 265%;
     margin-left: 10px;
 }
 
@@ -1911,9 +1911,6 @@ i.btn {
 .search-btn {
     max-width: 32px;
     min-width: 32px;
-    position: absolute;
-    right: 10px;
-    top: 28px;
 }
 
 .search-toolbar .left {
