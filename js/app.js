@@ -243,6 +243,10 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
                 localStorage.setItem('lang', applicationLanguage);
 
+
+                //try { StatusBar.hide(); } catch(error) {}
+
+
                 if (getUser()) {
 
                     mainNavigator.pushPage('dashboard.html', {animation: 'none'});
