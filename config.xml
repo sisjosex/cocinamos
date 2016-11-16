@@ -92,6 +92,8 @@
     <preference name="StatusBarBackgroundColor" value="#e12d5a" />
     <preference name="StatusBarStyle" value="blackopaque" />
 
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     <!--
