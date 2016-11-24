@@ -911,9 +911,29 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
         $scope.recalculate_portions = function () {
             for (var i in  $scope.menu.ingredients) {
 
-                eval("var quantity = " + $scope.menu.ingredients[i].quantity + ";");
+                if( $scope.menu.ingredients[i]['has_quantity'] ) {
 
-                $scope.menu.ingredients[i].quantity_calculated = quantity * $scope.porciones;
+                    eval("var quantity = " + $scope.menu.ingredients[i].has_quantity + ";");
+
+                    if ($scope.menu.ingredients[i].has_quantity) {
+
+                        quantity = quantity * $scope.porciones;
+
+                        quantity = new Fraction(quantity).toString();
+
+                        $scope.menu.ingredients[i].name = quantity + ' ' + $scope.menu.ingredients[i].unit_name + ' de ' + $scope.menu.ingredients[i].original_name;
+
+                    } else {
+
+                        $scope.menu.ingredients[i].name = $scope.menu.ingredients[i].original_name + ' ' + $scope.menu.ingredients[i].unit_name;
+                    }
+
+                    console.log($scope.menu.ingredients[i].name);
+
+                    $scope.menu.ingredients[i].quantity_calculated = '';
+
+                    //$scope.menu.ingredients[i].quantity_calculated = quantity * $scope.porciones;
+                }
             }
         };
 
@@ -932,7 +952,7 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
                 modal.hide();
 
                 $scope.menu = result.data;
-
+                $scope.porciones = result.data.portions;
                 $scope.recalculate_portions();
 
             } else {
@@ -1972,12 +1992,44 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
 
         $scope.menu = currentNavigator.pages[currentNavigator.pages.length - 1].data.menu;
 
+        /*
         $scope.recalculate_portions = function () {
             for (var i in  $scope.menu.ingredients) {
 
                 eval("var quantity = " + $scope.menu.ingredients[i].quantity + ";");
 
                 $scope.menu.ingredients[i].quantity_calculated = quantity * $scope.menu.portions;
+            }
+        };*/
+
+        $scope.recalculate_portions = function () {
+            for (var i in  $scope.menu.ingredients) {
+
+                console.log( $scope.menu.ingredients[i] );
+
+                if( $scope.menu.ingredients[i]['has_quantity'] ) {
+
+                    eval("var quantity = " + $scope.menu.ingredients[i].has_quantity + ";");
+
+                    if ($scope.menu.ingredients[i].has_quantity) {
+
+                        quantity = quantity * $scope.menu.portions;
+
+                        quantity = new Fraction(quantity).toString();
+
+                        $scope.menu.ingredients[i].name = quantity + ' ' + $scope.menu.ingredients[i].unit_name + ' de ' + $scope.menu.ingredients[i].original_name;
+
+                    } else {
+
+                        $scope.menu.ingredients[i].name = $scope.menu.ingredients[i].original_name + ' ' + $scope.menu.ingredients[i].unit_name;
+                    }
+
+                    console.log($scope.menu.ingredients[i].name);
+
+                    $scope.menu.ingredients[i].quantity_calculated = '';
+
+                    //$scope.menu.ingredients[i].quantity_calculated = quantity * $scope.porciones;
+                }
             }
         };
 
