@@ -368,7 +368,7 @@ module.controller('Intro', function ($scope, service) {
 
                                 saveUser(result.user);
 
-                                setTimeout(function(){
+                                setTimeout(function () {
 
                                     modal.hide();
                                     mainNavigator.pushPage('dashboard.html');
@@ -911,7 +911,7 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
         $scope.recalculate_portions = function () {
             for (var i in  $scope.menu.ingredients) {
 
-                if( $scope.menu.ingredients[i]['has_quantity'] ) {
+                if ($scope.menu.ingredients[i]['has_quantity']) {
 
                     eval("var quantity = " + $scope.menu.ingredients[i].has_quantity + ";");
 
@@ -1410,7 +1410,7 @@ module.controller('CalNutrientes', function ($scope, service) {
 
         $scope.getCalculatorDetails = function () {
 
-            if ($scope.ingredient_id != '' && $scope.porcion_id != '') {
+            if ($scope.ingredient_id != '') {
 
                 modal.show();
 
@@ -1496,6 +1496,9 @@ module.controller('CalcProteinas', function ($scope, service) {
 
             if ($scope.categoria_id != '' && $scope.ingredient_id != '') {
 
+                $scope.result = {};
+                $scope.calculator_params.alimentos = [];
+
                 modal.show();
 
                 service.getCalculadoraDetalle({
@@ -1509,6 +1512,41 @@ module.controller('CalcProteinas', function ($scope, service) {
                         modal.hide();
 
                         $scope.result = result.data;
+
+                        $scope.calculator_params.alimentos = result.alimentos;
+
+                    } else {
+
+                        modal.hide();
+
+                        alert(result.message);
+                    }
+
+                }, function (err) {
+
+                    modal.hide();
+
+                    alert('No se pudo conectar con el servidor');
+                });
+
+            } else {
+
+                $scope.result = {};
+                $scope.calculator_params.alimentos = [];
+
+                modal.show();
+
+                service.getCalculadoraDetalle({
+                    categoria_id: $scope.categoria_id,
+                    ingredient_id: $scope.ingredient_id,
+                    table: $scope.table
+                }, function (result) {
+
+                    if (result.status == 'success') {
+
+                        modal.hide();
+
+                        $scope.calculator_params.alimentos = result.alimentos;
 
                     } else {
 
@@ -1580,6 +1618,10 @@ module.controller('CalcCalorias', function ($scope, service) {
 
             if ($scope.categoria_id != '' && $scope.ingredient_id != '') {
 
+                $scope.result = {};
+                $scope.calculator_params.alimentos = [];
+                $scope.ingredient_id = '';
+
                 modal.show();
 
                 service.getCalculadoraDetalle({
@@ -1594,6 +1636,8 @@ module.controller('CalcCalorias', function ($scope, service) {
 
                         $scope.result = result.data;
 
+                        $scope.calculator_params.alimentos = result.alimentos;
+
                     } else {
 
                         modal.hide();
@@ -1607,6 +1651,41 @@ module.controller('CalcCalorias', function ($scope, service) {
 
                     alert('No se pudo conectar con el servidor');
                 });
+
+            } else {
+
+                $scope.result = {};
+                $scope.calculator_params.alimentos = [];
+                $scope.ingredient_id = '';
+
+                modal.show();
+
+                service.getCalculadoraDetalle({
+                    categoria_id: $scope.categoria_id,
+                    ingredient_id: $scope.ingredient_id,
+                    table: $scope.table
+                }, function (result) {
+
+                    if (result.status == 'success') {
+
+                        modal.hide();
+
+                        $scope.calculator_params.alimentos = result.alimentos;
+
+                    } else {
+
+                        modal.hide();
+
+                        alert(result.message);
+                    }
+
+                }, function (err) {
+
+                    modal.hide();
+
+                    alert('No se pudo conectar con el servidor');
+                });
+
             }
         };
 
@@ -1993,21 +2072,21 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
         $scope.menu = currentNavigator.pages[currentNavigator.pages.length - 1].data.menu;
 
         /*
+         $scope.recalculate_portions = function () {
+         for (var i in  $scope.menu.ingredients) {
+
+         eval("var quantity = " + $scope.menu.ingredients[i].quantity + ";");
+
+         $scope.menu.ingredients[i].quantity_calculated = quantity * $scope.menu.portions;
+         }
+         };*/
+
         $scope.recalculate_portions = function () {
             for (var i in  $scope.menu.ingredients) {
 
-                eval("var quantity = " + $scope.menu.ingredients[i].quantity + ";");
+                console.log($scope.menu.ingredients[i]);
 
-                $scope.menu.ingredients[i].quantity_calculated = quantity * $scope.menu.portions;
-            }
-        };*/
-
-        $scope.recalculate_portions = function () {
-            for (var i in  $scope.menu.ingredients) {
-
-                console.log( $scope.menu.ingredients[i] );
-
-                if( $scope.menu.ingredients[i]['has_quantity'] ) {
+                if ($scope.menu.ingredients[i]['has_quantity']) {
 
                     eval("var quantity = " + $scope.menu.ingredients[i].has_quantity + ";");
 

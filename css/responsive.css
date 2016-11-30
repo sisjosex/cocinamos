@@ -62,7 +62,7 @@
     }
 
     .form2 .form-control .value, .form2 .form-element input {
-        width: 82px;
+        width: 150px;
     }
 
     .btn-agregar {
@@ -129,5 +129,17 @@
     .agregar-section .col-time img {
         max-width:36px;
         min-width:36px;
+    }
+
+    .value-fixed {
+        width:50px !important;
+    }
+
+    .calc-content h5 {
+        font-size: 13px;
+    }
+
+    .calc-content h4 {
+        font-size: 17px;
     }
 }

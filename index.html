@@ -1503,7 +1503,7 @@
                         </div>
                     </div>
 
-                    <div class="form-control">
+                    <!--<div class="form-control">
                         <div class="form-element">
                             <label for="">Porciones:</label>
 
@@ -1512,11 +1512,11 @@
                                         ng-options="item.id as item.name for item in calculator_params.porciones"></select>
 
                                 <div class="select">
-                                    <span>{{ porcion }}<!-- Elige la cantidad de porciones... --></span>
+                                    <span>{{ porcion }}</span>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
 
                 <h5>Información Nutricional</h5>
@@ -1789,9 +1789,9 @@
                         <div class="form-element">
                             <label for="" style="width: 150px;">Peso corporal (kg.):</label>
 
-                            <input style="padding-left:10px;padding-right:10px;" type="number" class="value"
+                            <input style="padding-left:10px;padding-right:10px;" type="number" class="value value-fixed"
                                    ng-model="peso_corporal"
-                                   placeholder="999 kg" ng-change="updatePesoCorporal()">
+                                   placeholder="0 kg" ng-change="updatePesoCorporal()">
                         </div>
                     </div>
                 </div>
@@ -1815,7 +1815,7 @@
 
                 <h5>Consumo de calorías necesario (al día)</h5>
 
-                <h3 class="style1">Calorías necesarias para mantener tu peso:</h3>
+                <h3 class="style1">Calorías necesarias para <br> mantener tu peso:</h3>
 
                 <div class="form2">
                     <div class="form-control">
@@ -1825,7 +1825,7 @@
                     </div>
                 </div>
 
-                <h3 class="style2">Calorías necesarias para perder medio kilo a la
+                <h3 class="style2">Calorías necesarias para <br> perder medio kilo a la
                     semana:</h3>
 
                 <div class="form2">
