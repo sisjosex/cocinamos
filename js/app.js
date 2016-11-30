@@ -1410,7 +1410,9 @@ module.controller('CalNutrientes', function ($scope, service) {
 
         $scope.getCalculatorDetails = function () {
 
-            if ($scope.ingredient_id != '') {
+            if ($scope.ingredient_id != '' && $scope.porcion_id != '') {
+
+                $scope.calculator_params.porciones = [];
 
                 modal.show();
 
@@ -1425,6 +1427,40 @@ module.controller('CalNutrientes', function ($scope, service) {
                         modal.hide();
 
                         $scope.result = result.data;
+
+                        $scope.calculator_params.porciones = result.porciones;
+
+                    } else {
+
+                        modal.hide();
+
+                        alert(result.message);
+                    }
+
+                }, function (err) {
+
+                    modal.hide();
+
+                    alert('No se pudo conectar con el servidor');
+                });
+
+            } else {
+
+                $scope.calculator_params.porciones = [];
+
+                modal.show();
+
+                service.getCalculadoraDetalle({
+                    ingredient_id: $scope.ingredient_id,
+                    porcion: $scope.porcion_id,
+                    table: $scope.table
+                }, function (result) {
+
+                    if (result.status == 'success') {
+
+                        modal.hide();
+
+                        $scope.calculator_params.porciones = result.porciones;
 
                     } else {
 
