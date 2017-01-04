@@ -105,8 +105,8 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
             });
         };
 
-        $rootScope.shareBy = function (message, url) {
-            shareBy(message, url);
+        $rootScope.shareBy = function (menu) {
+            shareBy(menu);
         };
 
         $scope.goToFavorite = function () {
@@ -244,9 +244,6 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
                 localStorage.setItem('lang', applicationLanguage);
 
 
-                //try { StatusBar.hide(); } catch(error) {}
-
-
                 if (getUser()) {
 
                     mainNavigator.pushPage('dashboard.html', {animation: 'none'});
@@ -256,13 +253,16 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
                     mainNavigator.pushPage('intro.html', {animation: 'none'});
                 }
 
-                try {
+                setTimeout(function () {
+                    try {
 
-                    StatusBar.hide();
+                        StatusBar.styleDefault()
+                        StatusBar.show();
 
-                } catch (error) {
+                    } catch (error) {
 
-                }
+                    }
+                }, 800);
 
             });
         }
@@ -347,7 +347,7 @@ module.controller('Intro', function ($scope, service) {
 
                     function onSuccess(result) {
 
-                        console.log(result);
+                        //console.log(result);
 
                         //alert(JSON.stringify(result));
 
@@ -415,6 +415,17 @@ module.controller('Intro', function ($scope, service) {
         } catch (error) {
         }
 
+        setTimeout(function () {
+            try {
+
+                StatusBar.styleDefault()
+                StatusBar.show();
+
+            } catch (error) {
+
+            }
+        }, 800);
+
     });
 });
 
@@ -473,6 +484,17 @@ module.controller('Login', function ($scope, service) {
                 alert('No se pudo conectar con el servidor');
             });
         };
+
+        setTimeout(function () {
+            try {
+
+                StatusBar.styleDefault()
+                StatusBar.show();
+
+            } catch (error) {
+
+            }
+        }, 800);
 
     });
 });
@@ -592,6 +614,18 @@ module.controller('Dashboard', function ($scope, service) {
             navigator.splashscreen.hide();
         } catch (error) {
         }
+
+
+        setTimeout(function () {
+            try {
+
+                StatusBar.styleDefault()
+                StatusBar.show();
+
+            } catch (error) {
+
+            }
+        }, 800);
 
     });
 });
@@ -825,6 +859,18 @@ module.controller('Home', function ($scope, service, $sce) {
             alert('No se pudo conectar con el servidor');
         });
 
+
+        setTimeout(function () {
+            try {
+
+                StatusBar.styleDefault()
+                StatusBar.show();
+
+            } catch (error) {
+
+            }
+        }, 800);
+
     });
 });
 
@@ -895,23 +941,33 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
 
         $scope.increasePortions = function () {
 
-            $scope.porciones++;
+            $scope.porciones += 2;
+
+            if ($scope.porciones > 8) {
+                $scope.porciones = 8;
+            }
 
             $scope.recalculate_portions();
         };
 
         $scope.decreasePortions = function () {
 
-            if ($scope.porciones > 1) {
-                $scope.porciones--;
-                $scope.recalculate_portions();
+
+            $scope.porciones -= 2;
+
+            if ($scope.porciones < 4) {
+                $scope.porciones = 4;
             }
+
+            $scope.recalculate_portions();
+
         };
 
         $scope.recalculate_portions = function () {
             for (var i in  $scope.menu.ingredients) {
 
-                if ($scope.menu.ingredients[i]['has_quantity']) {
+                //if ($scope.menu.ingredients[i]['has_quantity'])
+                {
 
                     eval("var quantity = " + $scope.menu.ingredients[i].has_quantity + ";");
 
@@ -928,7 +984,7 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
                         $scope.menu.ingredients[i].name = $scope.menu.ingredients[i].original_name + ' ' + $scope.menu.ingredients[i].unit_name;
                     }
 
-                    console.log($scope.menu.ingredients[i].name);
+                    console.log($scope.menu.ingredients[i]);
 
                     $scope.menu.ingredients[i].quantity_calculated = '';
 
@@ -1034,7 +1090,7 @@ module.controller('Favorite', function ($scope, service, $sce) {
                     $scope.total_menus = result.total_menus;
                     $scope.total_videos = result.total_videos;
 
-                    console.log($scope);
+                    //console.log($scope);
 
                     setTimeout(function () {
                         $('.preview').each(function () {
@@ -1163,7 +1219,7 @@ module.controller('Subcategory', function ($scope, service, $sce) {
 
         $scope.filter = function (filter) {
 
-            console.log(filter);
+            //console.log(filter);
 
             $('.menus .normal').hide();
             $('.menus .video').hide();
@@ -1261,7 +1317,7 @@ module.controller('RecipesSearch', function ($scope, service, $sce) {
 
         $scope.filter = function (filter) {
 
-            console.log(filter);
+            //console.log(filter);
 
             $('.menus .normal').hide();
             $('.menus .video').hide();
@@ -1354,7 +1410,7 @@ module.controller('Calculator', function ($scope) {
 
         //currentNavigator = calculatorNavigator;
 
-        console.log(currentNavigator);
+        //console.log(currentNavigator);
 
         $scope.goToPage = function (page) {
 
@@ -1883,7 +1939,7 @@ module.controller('TipList', function ($scope, service) {
 
         $scope.goToTip = function (tip) {
 
-            console.log(tip);
+            //console.log(tip);
 
             counselNavigator.pushPage('tip.html', {data: {tip: tip, category: $scope.category}});
         };
@@ -1940,7 +1996,7 @@ module.controller('TipListSearch', function ($scope, service) {
 
         $scope.goToTip = function (tip) {
 
-            console.log(tip);
+            //console.log(tip);
 
             counselNavigator.pushPage('tip.html', {data: {tip: tip, category: $scope.category}});
         };
@@ -2031,6 +2087,7 @@ module.controller('Tip', function ($scope, service) {
     });
 });
 
+
 module.controller('MyShopping', function ($scope, service, $sce) {
 
     ons.ready(function () {
@@ -2056,7 +2113,7 @@ module.controller('MyShopping', function ($scope, service, $sce) {
             currentNavigator.pushPage('myshopping_detail_custom.html', {data: {menu: item}});
         };
 
-        $scope.getMyShopping = function () {
+        $scope.getMyShopping = function (callback) {
 
             modal.show();
 
@@ -2078,6 +2135,8 @@ module.controller('MyShopping', function ($scope, service, $sce) {
                         });
 
                     }, 500);
+
+                    callback ? callback() : '';
 
                 } else {
 
@@ -2120,9 +2179,10 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
         $scope.recalculate_portions = function () {
             for (var i in  $scope.menu.ingredients) {
 
-                console.log($scope.menu.ingredients[i]);
+                //console.log($scope.menu.ingredients[i]);
 
-                if ($scope.menu.ingredients[i]['has_quantity']) {
+                //if ($scope.menu.ingredients[i]['has_quantity'])
+                {
 
                     eval("var quantity = " + $scope.menu.ingredients[i].has_quantity + ";");
 
@@ -2205,7 +2265,9 @@ module.controller('MyshoppingDetail', function ($scope, service, $sce) {
                         currentNavigator.popPage();
 
                         setTimeout(function () {
-                            MyShoppingScope.getMyShopping();
+                            MyShoppingScope.getMyShopping(function(){
+                                MyShoppingScope.$digest();
+                            });
                         }, 200);
 
                     } else {
@@ -3184,10 +3246,15 @@ function shareByFacebook(message, callback) {
     })
 }
 
-function shareBy(message, img) {
+function shareBy(menu, img) {
+
+    url = menu.url;
+    message = 'Estoy preparando una rica receta gracias a FINO';
+    img = menu.photo;
+
     window.plugins.socialsharing.share(
         message,
         'Compartir',
-        [img],
-        WEB_URL);
+        [],//[img],
+        url);
 }

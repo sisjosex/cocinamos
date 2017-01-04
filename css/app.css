@@ -1217,7 +1217,7 @@ h2 {
 }
 
 .menu-detail .nav-bar-plus-minus {
-    height: 45px;
+    height: auto;
     margin-bottom: -1px;
 }
 
@@ -1394,8 +1394,9 @@ h2 {
     font-size: 22px;
     margin-right: 8px;
     line-height: 13px;
-    padding-top: 14px;
+    padding-top: 6px;
     display: block;
+    padding-bottom: 10px;
 }
 
 .subtitle {

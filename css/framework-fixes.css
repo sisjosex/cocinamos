@@ -129,7 +129,7 @@ div.navigation-bar {
 
 .nav-bar-plus-minus .navigation-bar__item, .nav-bar-plus-minus .navigation-bar__left, .nav-bar-plus-minus .navigation-bar__right, .nav-bar-plus-minus .navigation-bar__center {
     height: 30px;
-    line-height: 43px;
+    line-height: 32px;
 }
 
 .input-text {
@@ -205,4 +205,8 @@ div.navigation-bar {
 
 .navigation-bar__title {
     color:#39ac08;
+}
+
+.nav-bar-plus-minus input[type=radio]{
+    padding-top: 20px !important;
 }
