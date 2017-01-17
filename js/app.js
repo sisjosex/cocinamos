@@ -77,7 +77,10 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
         $rootScope.playVideo = function (video_id) {
 
             //YoutubeVideoPlayer.openVideo(video_id);
-            window.plugins.videoPlayer.play("https://www.youtube.com/watch?v=" + video_id);
+            //window.plugins.videoPlayer.play("https://www.youtube.com/watch?v=" + video_id);
+
+            YoutubeVideoPlayer.openVideo(video_id);
+
         };
 
         $rootScope.showImage = function (url) {
