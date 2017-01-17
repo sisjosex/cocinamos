@@ -150,8 +150,8 @@
 
     <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
 
-    <plugin name="https://github.com/Glitchbone/CordovaYoutubeVideoPlayer.git" source="git" />
-    <plugin name="https://github.com/sarriaroman/photoviewer.git" source="git" />
+    <plugin spec="https://github.com/Glitchbone/CordovaYoutubeVideoPlayer.git" source="git" />
+    <plugin spec="https://github.com/sarriaroman/photoviewer.git" source="git" />
 
     <plugin name="cordova-plugin-facebook4">
         <param name="APP_ID" value="1129872310422559" />
