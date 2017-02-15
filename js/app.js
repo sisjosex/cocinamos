@@ -1,5 +1,5 @@
 var API_URL = 'http://localhost/fino/admin/api/';
-var API_URL = 'http://localhost/fino/admin/api/';
+//var API_URL = 'http://localhost/fino/admin/api/';
 var WEB_URL = 'http://cocinamosconfino.com/';
 
 //var API_URL = 'http://cocinamosconfino.com/api/'
@@ -18,6 +18,53 @@ var recipe_share_text = 'Te invito a participar';
 var currentNavigator = undefined;
 var MyShoppingScope;
 var device_name = 'iphone';
+
+var SECTION_INTRO = 'intro';
+var SECTION_DASHBOARD = 'dashboard';
+var SECTION_LOGIN = 'login';
+var SECTION_WITH_FACEBOOK = 'login_facebook';
+var SECTION_WITHOUT_LOGIN = 'login_empty';
+
+var SECTION_FORGOT_PASSWORD = 'forgot_password';
+
+var SECTION_PROFILE = 'profile';
+var SECTION_RECIPES = 'recipes';
+var SECTION_RECIPES_SUBCATEGORY = 'recipes_subcategory';
+var SECTION_RECIPES_DETAIL = 'recipes_detail';
+var SECTION_RECIPES_ADD_TO_FAVORITE = 'recipes_add_to_favorite';
+var SECTION_RECIPES_ADD_TO_SHOPPING = 'recipes_add_to_shopping';
+var SECTION_RECIPES_MEASURES_CATEGORY = 'recipes_measures_category';
+var SECTION_RECIPES_MEASURES_SUBCATEGORY = 'recipes_measures_subcategory';
+var SECTION_RECIPES_SHARE = 'recipes_share';
+var SECTION_RECIPES_SHARE_EMAIL = 'recipes_share_email';
+var SECTION_RECIPES_SHARE_FACEBOOK = 'recipes_share_facebook';
+var SECTION_RECIPES_SHARE_SMS = 'recipes_share_sms';
+var SECTION_RECIPES_SHARE_WHATSAPP = 'recipes_share_whatsapp';
+var SECTION_RECIPES_SEARCH = 'recipes_search';
+var SECTION_RECIPES_SHOW_IMAGE = 'recipes_show_image';
+var SECTION_RECIPES_PLAY_VIDEO = 'recipes_play_video';
+var SECTION_RECIPES_FAVORITES = 'recipes_favorites';
+
+var SECTION_CALCULATORS = 'calculators';
+var SECTION_CALCULATORS_NUTRIENTES = 'calculators_nutrientes';
+var SECTION_CALCULATORS_NUTRIENTES_CALCULATE = 'calculators_nutrientes_calculate';
+var SECTION_CALCULATORS_PROTEINAS = 'calculators_proteinas';
+var SECTION_CALCULATORS_PROTEINAS_CALCULATE = 'calculators_proteinas_calculate';
+var SECTION_CALCULATORS_CALORIAS = 'calculators_calorias';
+var SECTION_CALCULATORS_CALORIAS_CALCULATE = 'calculators_calorias_calculate';
+var SECTION_CALCULATORS_CALORIAS_DIARIAS = 'calculators_calorias_diarias';
+var SECTION_CALCULATORS_CALORIAS_DIARIAS_CALCULATE = 'calculators_calorias_diarias_calculate';
+
+var SECTION_MY_SHOPPING = 'my_shopping';
+var SECTION_MY_SHOPPING_DETAIL = 'my_shopping_detail';
+var SECTION_MY_SHOPPING_DETAIL_CUSTOM = 'my_shopping_detail_custom';
+
+var SECTION_TIPS_CATEGORY = 'tips_category';
+var SECTION_TIPS_SUBCATEGORY = 'tips_subcategory';
+var SECTION_TIPS_DETAIL = 'tips_detail';
+
+var SECTION_TUTORIALS = 'tutorials';
+var SECTION_TUTORIALS_DETAIL = 'tutorials_detail';
 
 var lang = {
     en: {
@@ -79,46 +126,88 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
             //YoutubeVideoPlayer.openVideo(video_id);
             //window.plugins.videoPlayer.play("https://www.youtube.com/watch?v=" + video_id);
 
+            service.trackVisit({
+                section: SECTION_RECIPES_PLAY_VIDEO
+            });
+
             YoutubeVideoPlayer.openVideo(video_id);
 
         };
 
         $rootScope.showImage = function (url) {
 
+            service.trackVisit({
+                section: SECTION_RECIPES_SHOW_IMAGE
+            });
+
             PhotoViewer.show(url);
         };
 
         $rootScope.shareByEmail = function (message) {
+
+            service.trackVisit({
+                section: SECTION_RECIPES_SHARE_EMAIL
+            });
 
             shareByEmail(message, function () {
             });
         };
 
         $rootScope.shareBySMS = function (message) {
+
+            service.trackVisit({
+                section: SECTION_RECIPES_SHARE_SMS
+            });
+
             shareBySMS(message, function () {
             });
         };
 
         $rootScope.shareByWhatsApp = function (message) {
+
+            service.trackVisit({
+                section: SECTION_RECIPES_SHARE_WHATSAPP
+            });
+
             shareByWhatsApp(message, function () {
             });
         };
 
         $rootScope.shareByFacebook = function (message) {
+
+            service.trackVisit({
+                section: SECTION_RECIPES_SHARE_FACEBOOK
+            });
+
             shareByFacebook(message, function () {
             });
         };
 
         $rootScope.shareBy = function (menu) {
+
+            service.trackVisit({
+                section: SECTION_RECIPES_SHARE
+            });
+
             shareBy(menu);
         };
 
         $scope.goToFavorite = function () {
+
+            service.trackVisit({
+                section: SECTION_RECIPES_FAVORITES
+            });
+
             currentNavigator = mainNavigator;
             mainNavigator.pushPage('favorite.html');
         };
 
         $scope.goToSearch = function () {
+
+            service.trackVisit({
+                section: SECTION_RECIPES_SEARCH
+            });
+
             currentNavigator = mainNavigator;
             mainNavigator.pushPage('search.html');
         };
@@ -145,6 +234,10 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
 
         $rootScope.goToSearchRecipes = function (userMainNavigator) {
+
+            service.trackVisit({
+                section: SECTION_RECIPES_SEARCH
+            });
 
 
             if (userMainNavigator) {
@@ -202,8 +295,8 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
         if (document.location.protocol == 'http:') {
 
-            //API_URL = 'http://localhost/fino/admin/api/';
-            API_URL = 'http://cocinamosconfino.com/api/';
+            API_URL = 'http://localhost/fino/admin/api/';
+            //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
@@ -256,6 +349,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
 
                     mainNavigator.pushPage('intro.html', {animation: 'none'});
                 }
+
 
                 setTimeout(function () {
                     try {
@@ -318,6 +412,10 @@ module.controller('Intro', function ($scope, service) {
 
     ons.ready(function () {
 
+        service.trackVisit({
+            section: SECTION_INTRO
+        });
+
         $scope.labels = lang[applicationLanguage];
 
         $scope.updateLanguage = updateLanguage;
@@ -335,9 +433,17 @@ module.controller('Intro', function ($scope, service) {
         $scope.saltar = function () {
             //mainNavigator.popPage();
             mainNavigator.pushPage('dashboard.html');
+
+            service.trackVisit({
+                section: SECTION_WITHOUT_LOGIN
+            });
         };
 
         $scope.forgot = function () {
+
+            service.trackVisit({
+                section: SECTION_FORGOT_PASSWORD
+            });
 
             mainNavigator.pushPage('forgot.html');
         };
@@ -346,6 +452,11 @@ module.controller('Intro', function ($scope, service) {
         $scope.register = function () {
 
             $scope.fbLoginSuccess = function (userData) {
+
+                service.trackVisit({
+                    section: SECTION_WITH_FACEBOOK
+                });
+
 
                 facebookConnectPlugin.api("me/?fields=id,first_name,last_name,email", ["email"],
 
@@ -404,6 +515,7 @@ module.controller('Intro', function ($scope, service) {
                 //alert("UserInfo: " + JSON.stringify(userData));
             };
 
+            // TODO
             facebookConnectPlugin.login(["public_profile", "email"],
                 $scope.fbLoginSuccess,
                 function (error) {
@@ -436,6 +548,12 @@ module.controller('Intro', function ($scope, service) {
 module.controller('Login', function ($scope, service) {
 
     ons.ready(function () {
+
+
+        service.trackVisit({
+            section: SECTION_LOGIN
+        });
+
 
         $scope.user = {
             email: '',
@@ -511,6 +629,10 @@ module.controller('Forgot', function ($scope, service) {
             email: ''
         };
 
+        service.trackVisit({
+            section: SECTION_FORGOT_PASSWORD
+        });
+
         $scope.retrieve_password = function () {
 
             if ($scope.user.email == '') {
@@ -557,6 +679,10 @@ module.controller('Dashboard', function ($scope, service) {
 
     ons.ready(function () {
 
+        service.trackVisit({
+            section: SECTION_DASHBOARD
+        });
+
         $scope.user = getUser();
 
         $scope.gotoPerfil = function () {
@@ -565,6 +691,11 @@ module.controller('Dashboard', function ($scope, service) {
             setTimeout(function () {
                 currentNavigator = mainNavigator;
             }, 800);
+
+            service.trackVisit({
+                section: SECTION_PROFILE
+            });
+
         };
 
         $scope.gotoRecetas = function () {
@@ -573,6 +704,10 @@ module.controller('Dashboard', function ($scope, service) {
             setTimeout(function () {
                 currentNavigator = categoryNavigator;
             }, 800);
+
+            service.trackVisit({
+                section: SECTION_RECIPES
+            });
         };
 
         $scope.gotoCalculadora = function () {
@@ -583,10 +718,9 @@ module.controller('Dashboard', function ($scope, service) {
                 }
             });
 
-            /*
-             setTimeout(function () {
-             currentNavigator = calculatorNavigator;
-             }, 800);*/
+            service.trackVisit({
+                section: SECTION_CALCULATORS
+            });
         };
 
         $scope.gotoCompras = function () {
@@ -595,6 +729,10 @@ module.controller('Dashboard', function ($scope, service) {
             setTimeout(function () {
                 currentNavigator = myshoppingNavigator;
             }, 800);
+
+            service.trackVisit({
+                section: SECTION_MY_SHOPPING
+            });
         };
 
         $scope.gotoConsejos = function () {
@@ -603,6 +741,10 @@ module.controller('Dashboard', function ($scope, service) {
             setTimeout(function () {
                 currentNavigator = counselNavigator;
             }, 800);
+
+            service.trackVisit({
+                section: SECTION_TIPS_CATEGORY
+            });
         };
 
         $scope.gotoTutorials = function () {
@@ -611,6 +753,10 @@ module.controller('Dashboard', function ($scope, service) {
             setTimeout(function () {
                 currentNavigator = tutorialsNavigator;
             }, 800);
+
+            service.trackVisit({
+                section: SECTION_TUTORIALS
+            });
         };
 
 
@@ -707,6 +853,10 @@ module.controller('Register', function ($scope, service) {
 module.controller('Perfil', function ($scope, service) {
 
     ons.ready(function () {
+
+        service.trackVisit({
+            section: SECTION_PROFILE
+        });
 
         $scope.user = getUser();
 
@@ -807,14 +957,27 @@ module.controller('Home', function ($scope, service, $sce) {
 
         $scope.goToCategory = function () {
             currentNavigator.pushPage('category.html');
+
+            service.trackVisit({
+                section: SECTION_RECIPES
+            });
         };
 
         $scope.goToFavorite = function () {
             currentNavigator.pushPage('favorite.html');
+
+            service.trackVisit({
+                section: SECTION_RECIPES_FAVORITES
+            });
         };
 
         $scope.goToMenuDetail = function (menu) {
             currentNavigator.pushPage('menu_detail.html', {data: {menu: menu}});
+
+            service.trackVisit({
+                section: SECTION_RECIPES_DETAIL,
+                value: menu
+            });
         };
 
         modal.show();
@@ -903,6 +1066,11 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
 
             if (getUser()) {
 
+                service.trackVisit({
+                    section: SECTION_RECIPES_ADD_TO_SHOPPING,
+                    value: $scope.menu
+                });
+
                 service.addToRecipes({
                     food_id: $scope.menu.id,
                     app_id: getUserOrAppId(),
@@ -939,6 +1107,11 @@ module.controller('MenuDetail', function ($scope, service, $sce) {
         };
 
         $scope.goToUnits = function () {
+
+            service.trackVisit({
+                section: SECTION_RECIPES_MEASURES_CATEGORY,
+                value: $scope.menu
+            });
 
             currentNavigator.pushPage('units.html', {data: {}});
         };
@@ -1053,6 +1226,12 @@ module.controller('Favorite', function ($scope, service, $sce) {
         $scope.search = '';
 
         $scope.goToMenuDetail = function (menu) {
+
+            service.trackVisit({
+                section: SECTION_RECIPES_DETAIL,
+                value: menu
+            });
+
             currentNavigator.pushPage('menu_detail.html', {data: {menu: menu}});
         };
 
@@ -1127,6 +1306,10 @@ module.controller('Category', function ($scope, service, $sce) {
 
     ons.ready(function () {
 
+        service.trackVisit({
+            section: SECTION_RECIPES
+        });
+
         initSearch($scope);
 
         $scope.subcategories = [];
@@ -1190,6 +1373,11 @@ module.controller('Subcategory', function ($scope, service, $sce) {
 
         $scope.subcategory = currentNavigator.pages[currentNavigator.pages.length - 1].data.subcategory;
 
+        service.trackVisit({
+            section: SECTION_RECIPES_SUBCATEGORY,
+            value: $scope.subcategory
+        });
+
         $scope.trustSrc = function (src) {
             return $sce.trustAsResourceUrl(src);
         };
@@ -1206,6 +1394,12 @@ module.controller('Subcategory', function ($scope, service, $sce) {
 
         $scope.goToMenuDetail = function (menu) {
             currentNavigator.pushPage('menu_detail.html', {data: {menu: menu}});
+
+            service.trackVisit({
+                section: SECTION_RECIPES_DETAIL,
+                value: menu
+            });
+
         };
 
 
@@ -1408,9 +1602,13 @@ module.controller('Recipes', function ($scope, service, $sce) {
     });
 });
 
-module.controller('Calculator', function ($scope) {
+module.controller('Calculator', function ($scope, service) {
 
     ons.ready(function () {
+
+        service.trackVisit({
+            section: SECTION_CALCULATORS
+        });
 
         //currentNavigator = calculatorNavigator;
 
@@ -1435,6 +1633,10 @@ module.controller('Calculator', function ($scope) {
 module.controller('CalNutrientes', function ($scope, service) {
 
     ons.ready(function () {
+
+        service.trackVisit({
+            section: SECTION_CALCULATORS_NUTRIENTES
+        });
 
         calNutrientesScope = $scope;
 
@@ -1490,6 +1692,10 @@ module.controller('CalNutrientes', function ($scope, service) {
 
                         $scope.calculator_params.porciones = result.porciones;
 
+                        service.trackVisit({
+                            section: SECTION_CALCULATORS_NUTRIENTES_CALCULATE
+                        });
+
                     } else {
 
                         modal.hide();
@@ -1521,6 +1727,10 @@ module.controller('CalNutrientes', function ($scope, service) {
                         modal.hide();
 
                         $scope.calculator_params.porciones = result.porciones;
+
+                        service.trackVisit({
+                            section: SECTION_CALCULATORS_NUTRIENTES_CALCULATE
+                        });
 
                     } else {
 
@@ -1554,6 +1764,10 @@ module.controller('CalNutrientes', function ($scope, service) {
 module.controller('CalcProteinas', function ($scope, service) {
 
     ons.ready(function () {
+
+        service.trackVisit({
+            section: SECTION_CALCULATORS_PROTEINAS
+        });
 
         calNutrientesScope = $scope;
 
@@ -1611,6 +1825,10 @@ module.controller('CalcProteinas', function ($scope, service) {
 
                         $scope.calculator_params.alimentos = result.alimentos;
 
+                        service.trackVisit({
+                            section: SECTION_CALCULATORS_PROTEINAS_CALCULATE
+                        });
+
                     } else {
 
                         modal.hide();
@@ -1643,6 +1861,10 @@ module.controller('CalcProteinas', function ($scope, service) {
                         modal.hide();
 
                         $scope.calculator_params.alimentos = result.alimentos;
+
+                        service.trackVisit({
+                            section: SECTION_CALCULATORS_PROTEINAS_CALCULATE
+                        });
 
                     } else {
 
@@ -1683,6 +1905,10 @@ module.controller('CalcCalorias', function ($scope, service) {
         $scope.ingredient_id = '';
         $scope.porcion_id = '';
         $scope.table = 'calculadora_calorias';
+
+        service.trackVisit({
+            section: SECTION_CALCULATORS_CALORIAS
+        });
 
         $scope.goToPage = function (page) {
 
@@ -1734,6 +1960,10 @@ module.controller('CalcCalorias', function ($scope, service) {
 
                         $scope.calculator_params.alimentos = result.alimentos;
 
+                        service.trackVisit({
+                            section: SECTION_CALCULATORS_CALORIAS_CALCULATE
+                        });
+
                     } else {
 
                         modal.hide();
@@ -1767,6 +1997,10 @@ module.controller('CalcCalorias', function ($scope, service) {
                         modal.hide();
 
                         $scope.calculator_params.alimentos = result.alimentos;
+
+                        service.trackVisit({
+                            section: SECTION_CALCULATORS_CALORIAS_CALCULATE
+                        });
 
                     } else {
 
@@ -1807,6 +2041,10 @@ module.controller('CalCaloriasDiarias', function ($scope, service) {
         $scope.peso_corporal = '';
         $scope.nivel_de_actividad_id = '';
         $scope.table = 'calculadora_calorias_diarias';
+
+        service.trackVisit({
+            section: SECTION_CALCULATORS_CALORIAS_DIARIAS
+        });
 
         $scope.goToPage = function (page) {
 
@@ -1850,6 +2088,11 @@ module.controller('CalCaloriasDiarias', function ($scope, service) {
 
                         $scope.result = result.data;
 
+
+                        service.trackVisit({
+                            section: SECTION_CALCULATORS_CALORIAS_DIARIAS_CALCULATE
+                        });
+
                     } else {
 
                         modal.hide();
@@ -1887,9 +2130,17 @@ module.controller('Counsel', function ($scope, service) {
 
         modal.show();
 
+        service.trackVisit({
+            section: SECTION_TIPS_CATEGORY
+        });
+
         $scope.goToTipList = function (tip_category) {
 
             counselNavigator.pushPage('tip_list.html', {data: {category: tip_category}});
+
+            service.trackVisit({
+                section: SECTION_TIPS_SUBCATEGORY
+            });
         };
 
         $scope.goToSearchCounsel = function (category) {
@@ -1946,6 +2197,10 @@ module.controller('TipList', function ($scope, service) {
             //console.log(tip);
 
             counselNavigator.pushPage('tip.html', {data: {tip: tip, category: $scope.category}});
+
+            service.trackVisit({
+                section: SECTION_TIPS_DETAIL
+            });
         };
 
         $scope.goToSearchCounsel = function (category) {
@@ -2003,6 +2258,10 @@ module.controller('TipListSearch', function ($scope, service) {
             //console.log(tip);
 
             counselNavigator.pushPage('tip.html', {data: {tip: tip, category: $scope.category}});
+
+            service.trackVisit({
+                section: SECTION_TIPS_DETAIL
+            });
         };
 
         $scope.search = function () {
@@ -2098,6 +2357,10 @@ module.controller('MyShopping', function ($scope, service, $sce) {
 
         MyShoppingScope = $scope;
 
+        service.trackVisit({
+            section: SECTION_MY_SHOPPING
+        });
+
         $scope.search = '';
 
         initSearch($scope);
@@ -2110,11 +2373,19 @@ module.controller('MyShopping', function ($scope, service, $sce) {
         $scope.goToShoppingDetail = function (item) {
 
             currentNavigator.pushPage('myshopping_detail.html', {data: {menu: item}});
+
+            service.trackVisit({
+                section: SECTION_MY_SHOPPING_DETAIL
+            });
         };
 
         $scope.goToShoppingDetailCustom = function (item) {
 
             currentNavigator.pushPage('myshopping_detail_custom.html', {data: {menu: item}});
+
+            service.trackVisit({
+                section: SECTION_MY_SHOPPING_DETAIL_CUSTOM
+            });
         };
 
         $scope.getMyShopping = function (callback) {
@@ -2742,6 +3013,10 @@ module.controller('Units', function ($scope, service, $sce) {
 
         initSearch($scope);
 
+        service.trackVisit({
+            section: SECTION_RECIPES_MEASURES_CATEGORY
+        });
+
         $scope.buscar = function () {
             $scope.toggleSearch();
             $scope.getUnitsType();
@@ -2796,6 +3071,10 @@ module.controller('Unit', function ($scope, service, $sce) {
 
         initSearch($scope);
 
+        service.trackVisit({
+            section: SECTION_RECIPES_MEASURES_SUBCATEGORY
+        });
+
         $scope.buscar = function () {
             $scope.toggleSearch();
             $scope.getUnits();
@@ -2844,6 +3123,10 @@ module.controller('Tutorials', function ($scope, service) {
 
         $scope.tutorials = [];
 
+        service.trackVisit({
+            section: SECTION_TUTORIALS
+        });
+
 
         modal.show();
 
@@ -2851,6 +3134,10 @@ module.controller('Tutorials', function ($scope, service) {
 
 
             tutorialsNavigator.pushPage('tutorial.html', {data: {tutorial: tutorial}});
+
+            service.trackVisit({
+                section: SECTION_TUTORIALS_DETAIL
+            });
         };
 
         service.getTutorials({}, function (result) {
@@ -2909,6 +3196,10 @@ module.controller('Tutorial', function ($scope, service) {
 module.controller('RegisterFB', function ($scope, service) {
 
     ons.ready(function () {
+
+        service.trackVisit({
+            section: SECTION_WITH_FACEBOOK
+        });
 
 
         if (!document.location.protocol == 'http:') {
@@ -3038,6 +3329,11 @@ function initCommonFunctions($scope, services) {
                     modal.hide();
 
                     alert(result.message);
+
+                    services.service.trackVisit({
+                        section: SECTION_RECIPES_ADD_TO_FAVORITE,
+                        value: item
+                    });
 
                 } else {
 

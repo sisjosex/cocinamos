@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="982fff58-3371-4dab-9d32-f016f2bc3da0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/services.js" afterPath="$PROJECT_DIR$/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,109 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="responsive.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/responsive.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="138" column="23" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../admin/controllers/api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1070" column="38" selection-start-line="1070" selection-start-column="38" selection-end-line="1070" selection-end-column="38" />
-              <folding>
-                <marker date="1480499946000" expanded="true" signature="519:622" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="1820:1860" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="2002:2355" placeholder="SELECT count..category..." />
-                <marker date="1480499946000" expanded="true" signature="2256:2337" placeholder="SELECT food_..user_favorite..." />
-                <marker date="1480499946000" expanded="true" signature="2490:2891" placeholder="SELECT count..category..." />
-                <marker date="1480499946000" expanded="true" signature="3948:4022" placeholder="update user ..." />
-                <marker date="1480499946000" expanded="true" signature="4496:4636" placeholder="update user ..." />
-                <marker date="1480499946000" expanded="true" signature="4683:4742" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="5885:5958" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="6060:6158" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="6193:6244" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="6193:6245" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="6492:6543" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="7408:7486" placeholder="SELECT email..user..." />
-                <marker date="1480499946000" expanded="true" signature="9084:9125" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="9974:10262" placeholder="SELECT categ..category..." />
-                <marker date="1480499946000" expanded="true" signature="11497:11920" placeholder="SELECT tip_c..tip_category..." />
-                <marker date="1480499946000" expanded="true" signature="13283:13521" placeholder="SELECT tip.i..tip..." />
-                <marker date="1480499946000" expanded="true" signature="14624:14861" placeholder="SELECT tutor..tutorial..." />
-                <marker date="1480499946000" expanded="true" signature="16051:16289" placeholder="SELECT tip.i..tip..." />
-                <marker date="1480499946000" expanded="true" signature="17350:17763" placeholder="SELECT categ..category..." />
-                <marker date="1480499946000" expanded="true" signature="17350:18009" placeholder="SELECT categ..category..." />
-                <marker date="1480499946000" expanded="true" signature="18901:19665" placeholder="SELECT categ..category..." />
-                <marker date="1480499946000" expanded="true" signature="21336:21377" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="21674:22540" placeholder="SELECT categ..category..." />
-                <marker date="1480499946000" expanded="true" signature="24199:24240" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="24484:25387" placeholder="SELECT user_..category..." />
-                <marker date="1480499946000" expanded="true" signature="26296:26932" placeholder="SELECT ingre..ingredient..." />
-                <marker date="1480499946000" expanded="true" signature="28365:28403" placeholder="DELETE FROM ..." />
-                <marker date="1480499946000" expanded="true" signature="28704:28745" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="29042:30040" placeholder="SELECT categ..category..." />
-                <marker date="1480499946000" expanded="true" signature="32562:32724" placeholder="SELECT categ..categoria..." />
-                <marker date="1480499946000" expanded="true" signature="34799:35258" placeholder="SELECT calcu..calculadora_calorias..." />
-                <marker date="1480499946000" expanded="true" signature="35529:35802" placeholder="SELECT calcu..calculadora_calorias_diarias..." />
-                <marker date="1480499946000" expanded="true" signature="36291:36774" placeholder="SELECT calcu..calculadora_nutrientes..." />
-                <marker date="1480499946000" expanded="true" signature="36954:37422" placeholder="SELECT calcu..calculadora_proteinas..." />
-                <marker date="1480499946000" expanded="true" signature="38330:38492" placeholder="SELECT categ..categoria..." />
-                <marker date="1480499946000" expanded="true" signature="38542:38685" placeholder="SELECT alime..alimento..." />
-                <marker date="1480499946000" expanded="true" signature="40092:40529" placeholder="SELECT ${$ty..." />
-                <marker date="1480499946000" expanded="true" signature="41096:41646" placeholder="SELECT ${$ty..." />
-                <marker date="1480499946000" expanded="true" signature="42237:42731" placeholder="SELECT ${$ty..." />
-                <marker date="1480499946000" expanded="true" signature="43826:43867" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="44107:44974" placeholder="SELECT categ..category..." />
-                <marker date="1480499946000" expanded="true" signature="45842:46483" placeholder="SELECT ingre..ingredient..." />
-                <marker date="1480499946000" expanded="true" signature="48546:48857" placeholder="SELECT food...category..." />
-                <marker date="1480499946000" expanded="true" signature="49002:49730" placeholder="SELECT categ..category..." />
-                <marker date="1480499946000" expanded="true" signature="50834:51480" placeholder="SELECT ingre..ingredient..." />
-                <marker date="1480499946000" expanded="true" signature="52757:52974" placeholder="SELECT food_..food_step..." />
-                <marker date="1480499946000" expanded="true" signature="53505:53812" placeholder="SELECT food_..food_step_media..." />
-                <marker date="1480499946000" expanded="true" signature="54561:54868" placeholder="SELECT food_..food_step_media..." />
-                <marker date="1480499946000" expanded="true" signature="56169:56224" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="56361:57142" placeholder="SELECT categ..category..." />
-                <marker date="1480499946000" expanded="true" signature="57239:58019" placeholder="SELECT categ..category..." />
-                <marker date="1480499946000" expanded="true" signature="58118:58455" placeholder="SELECT count..category..." />
-                <marker date="1480499946000" expanded="true" signature="58594:58930" placeholder="SELECT count..category..." />
-                <marker date="1480499946000" expanded="true" signature="63262:63573" placeholder="SELECT food...category..." />
-                <marker date="1480499946000" expanded="true" signature="63669:63979" placeholder="SELECT food...category..." />
-                <marker date="1480499946000" expanded="true" signature="64196:64913" placeholder="SELECT categ..category..." />
-                <marker date="1480499946000" expanded="true" signature="65010:65726" placeholder="SELECT categ..category..." />
-                <marker date="1480499946000" expanded="true" signature="65825:66058" placeholder="SELECT count..category..." />
-                <marker date="1480499946000" expanded="true" signature="66197:66429" placeholder="SELECT count..category..." />
-                <marker date="1480499946000" expanded="true" signature="71093:71134" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="71305:71429" placeholder="SELECT id FR..user_favorite..." />
-                <marker date="1480499946000" expanded="true" signature="71529:71592" placeholder="UPDATE food ..." />
-                <marker date="1480499946000" expanded="true" signature="72102:72143" placeholder="SELECT * FRO..user..." />
-                <marker date="1480499946000" expanded="true" signature="72369:72534" placeholder="SELECT id FR..user_recipe..." />
-                <marker date="1480499946000" expanded="true" signature="72769:72836" placeholder="UPDATE food ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="142" column="135" selection-start-line="152" selection-start-column="37" selection-end-line="152" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+              <caret line="103" column="34" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -135,8 +39,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1635" column="26" selection-start-line="1635" selection-start-column="26" selection-end-line="1635" selection-end-column="26" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="689" column="56" selection-start-line="689" selection-start-column="56" selection-end-line="689" selection-end-column="56" />
               <folding>
                 <element signature="n#ons-page#0;n#ons-template#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ons-page#0;n#ons-template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -175,48 +79,18 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5535714">
-              <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.3325893">
+              <caret line="194" column="43" selection-start-line="194" selection-start-column="43" selection-end-line="194" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../platforms/android/assets/www/js/app.js">
+      <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="3233" column="7" selection-start-line="3233" selection-start-column="7" selection-end-line="3233" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../platforms/ios/www/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3224" column="26" selection-start-line="3224" selection-start-column="26" selection-end-line="3224" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1216" column="1" selection-start-line="1216" selection-start-column="1" selection-end-line="1216" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="framework-fixes.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/framework-fixes.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="210" column="32" selection-start-line="210" selection-start-column="32" selection-end-line="210" selection-end-column="32" />
+              <caret line="436" column="35" selection-start-line="434" selection-start-column="12" selection-end-line="436" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -232,7 +106,6 @@
       <list>
         <option value="$PROJECT_DIR$/js/util.js" />
         <option value="$PROJECT_DIR$/../../admin/config/database.php" />
-        <option value="$PROJECT_DIR$/js/services.js" />
         <option value="$PROJECT_DIR$/js/fractional.js" />
         <option value="$PROJECT_DIR$/../../admin/controllers/api.php" />
         <option value="$PROJECT_DIR$/css/responsive.css" />
@@ -243,9 +116,12 @@
         <option value="$PROJECT_DIR$/css/app.css" />
         <option value="$PROJECT_DIR$/css/framework-fixes.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/../../../queplan/QuePlan/config.xml" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/../config.xml" />
+        <option value="$PROJECT_DIR$/../../../queplan/QuePlan/www/config.xml" />
+        <option value="$PROJECT_DIR$/../../../queplan/QuePlan/config.xml" />
+        <option value="$PROJECT_DIR$/../../../queplan/QuePlan/platforms/android/assets/www/config.xml" />
+        <option value="$PROJECT_DIR$/js/services.js" />
         <option value="$PROJECT_DIR$/js/app.js" />
       </list>
     </option>
@@ -338,8 +214,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -397,7 +273,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25239617" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15335463" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15814696" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -430,21 +306,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1733" column="19" selection-start-line="1733" selection-start-column="19" selection-end-line="1733" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -463,7 +324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -494,7 +354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -516,7 +375,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -547,7 +405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -569,7 +426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -600,7 +456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1705" column="1" selection-start-line="1705" selection-start-column="1" selection-end-line="1705" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,7 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -700,13 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="247" column="28" selection-start-line="247" selection-start-column="20" selection-end-line="247" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/fractional.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -726,7 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="138" column="23" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,7 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1216" column="1" selection-start-line="1216" selection-start-column="1" selection-end-line="1216" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -742,6 +587,70 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="210" column="32" selection-start-line="210" selection-start-column="32" selection-end-line="210" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../platforms/android/assets/www/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5805369">
+          <caret line="157" column="51" selection-start-line="157" selection-start-column="51" selection-end-line="157" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../platforms/ios/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3224" column="26" selection-start-line="3224" selection-start-column="26" selection-end-line="3224" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../platforms/android/assets/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3233" column="0" selection-start-line="3233" selection-start-column="0" selection-end-line="3233" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../queplan/QuePlan/www/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18526785">
+          <caret line="137" column="123" selection-start-line="137" selection-start-column="123" selection-end-line="137" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3638393">
+          <caret line="71" column="121" selection-start-line="71" selection-start-column="121" selection-end-line="71" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../queplan/QuePlan/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="147" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="213" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../queplan/QuePlan/platforms/android/assets/www/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../admin/controllers/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82798165">
+          <caret line="2306" column="4" selection-start-line="2306" selection-start-column="4" selection-end-line="2306" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="34" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -749,7 +658,7 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1635" column="26" selection-start-line="1635" selection-start-column="26" selection-end-line="1635" selection-end-column="26" />
+          <caret line="689" column="56" selection-start-line="689" selection-start-column="56" selection-end-line="689" selection-end-column="56" />
           <folding>
             <element signature="n#ons-page#0;n#ons-template#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ons-page#0;n#ons-template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -784,133 +693,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../platforms/android/assets/www/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5805369">
-          <caret line="157" column="51" selection-start-line="157" selection-start-column="51" selection-end-line="157" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../admin/controllers/api.php">
+    <entry file="file://$PROJECT_DIR$/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1070" column="38" selection-start-line="1070" selection-start-column="38" selection-end-line="1070" selection-end-column="38" />
-          <folding>
-            <marker date="1480499946000" expanded="true" signature="519:622" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="1820:1860" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="2002:2355" placeholder="SELECT count..category..." />
-            <marker date="1480499946000" expanded="true" signature="2256:2337" placeholder="SELECT food_..user_favorite..." />
-            <marker date="1480499946000" expanded="true" signature="2490:2891" placeholder="SELECT count..category..." />
-            <marker date="1480499946000" expanded="true" signature="3948:4022" placeholder="update user ..." />
-            <marker date="1480499946000" expanded="true" signature="4496:4636" placeholder="update user ..." />
-            <marker date="1480499946000" expanded="true" signature="4683:4742" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="5885:5958" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="6060:6158" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="6193:6244" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="6193:6245" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="6492:6543" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="7408:7486" placeholder="SELECT email..user..." />
-            <marker date="1480499946000" expanded="true" signature="9084:9125" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="9974:10262" placeholder="SELECT categ..category..." />
-            <marker date="1480499946000" expanded="true" signature="11497:11920" placeholder="SELECT tip_c..tip_category..." />
-            <marker date="1480499946000" expanded="true" signature="13283:13521" placeholder="SELECT tip.i..tip..." />
-            <marker date="1480499946000" expanded="true" signature="14624:14861" placeholder="SELECT tutor..tutorial..." />
-            <marker date="1480499946000" expanded="true" signature="16051:16289" placeholder="SELECT tip.i..tip..." />
-            <marker date="1480499946000" expanded="true" signature="17350:17763" placeholder="SELECT categ..category..." />
-            <marker date="1480499946000" expanded="true" signature="17350:18009" placeholder="SELECT categ..category..." />
-            <marker date="1480499946000" expanded="true" signature="18901:19665" placeholder="SELECT categ..category..." />
-            <marker date="1480499946000" expanded="true" signature="21336:21377" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="21674:22540" placeholder="SELECT categ..category..." />
-            <marker date="1480499946000" expanded="true" signature="24199:24240" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="24484:25387" placeholder="SELECT user_..category..." />
-            <marker date="1480499946000" expanded="true" signature="26296:26932" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1480499946000" expanded="true" signature="28365:28403" placeholder="DELETE FROM ..." />
-            <marker date="1480499946000" expanded="true" signature="28704:28745" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="29042:30040" placeholder="SELECT categ..category..." />
-            <marker date="1480499946000" expanded="true" signature="32562:32724" placeholder="SELECT categ..categoria..." />
-            <marker date="1480499946000" expanded="true" signature="34799:35258" placeholder="SELECT calcu..calculadora_calorias..." />
-            <marker date="1480499946000" expanded="true" signature="35529:35802" placeholder="SELECT calcu..calculadora_calorias_diarias..." />
-            <marker date="1480499946000" expanded="true" signature="36291:36774" placeholder="SELECT calcu..calculadora_nutrientes..." />
-            <marker date="1480499946000" expanded="true" signature="36954:37422" placeholder="SELECT calcu..calculadora_proteinas..." />
-            <marker date="1480499946000" expanded="true" signature="38330:38492" placeholder="SELECT categ..categoria..." />
-            <marker date="1480499946000" expanded="true" signature="38542:38685" placeholder="SELECT alime..alimento..." />
-            <marker date="1480499946000" expanded="true" signature="40092:40529" placeholder="SELECT ${$ty..." />
-            <marker date="1480499946000" expanded="true" signature="41096:41646" placeholder="SELECT ${$ty..." />
-            <marker date="1480499946000" expanded="true" signature="42237:42731" placeholder="SELECT ${$ty..." />
-            <marker date="1480499946000" expanded="true" signature="43826:43867" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="44107:44974" placeholder="SELECT categ..category..." />
-            <marker date="1480499946000" expanded="true" signature="45842:46483" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1480499946000" expanded="true" signature="48546:48857" placeholder="SELECT food...category..." />
-            <marker date="1480499946000" expanded="true" signature="49002:49730" placeholder="SELECT categ..category..." />
-            <marker date="1480499946000" expanded="true" signature="50834:51480" placeholder="SELECT ingre..ingredient..." />
-            <marker date="1480499946000" expanded="true" signature="52757:52974" placeholder="SELECT food_..food_step..." />
-            <marker date="1480499946000" expanded="true" signature="53505:53812" placeholder="SELECT food_..food_step_media..." />
-            <marker date="1480499946000" expanded="true" signature="54561:54868" placeholder="SELECT food_..food_step_media..." />
-            <marker date="1480499946000" expanded="true" signature="56169:56224" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="56361:57142" placeholder="SELECT categ..category..." />
-            <marker date="1480499946000" expanded="true" signature="57239:58019" placeholder="SELECT categ..category..." />
-            <marker date="1480499946000" expanded="true" signature="58118:58455" placeholder="SELECT count..category..." />
-            <marker date="1480499946000" expanded="true" signature="58594:58930" placeholder="SELECT count..category..." />
-            <marker date="1480499946000" expanded="true" signature="63262:63573" placeholder="SELECT food...category..." />
-            <marker date="1480499946000" expanded="true" signature="63669:63979" placeholder="SELECT food...category..." />
-            <marker date="1480499946000" expanded="true" signature="64196:64913" placeholder="SELECT categ..category..." />
-            <marker date="1480499946000" expanded="true" signature="65010:65726" placeholder="SELECT categ..category..." />
-            <marker date="1480499946000" expanded="true" signature="65825:66058" placeholder="SELECT count..category..." />
-            <marker date="1480499946000" expanded="true" signature="66197:66429" placeholder="SELECT count..category..." />
-            <marker date="1480499946000" expanded="true" signature="71093:71134" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="71305:71429" placeholder="SELECT id FR..user_favorite..." />
-            <marker date="1480499946000" expanded="true" signature="71529:71592" placeholder="UPDATE food ..." />
-            <marker date="1480499946000" expanded="true" signature="72102:72143" placeholder="SELECT * FRO..user..." />
-            <marker date="1480499946000" expanded="true" signature="72369:72534" placeholder="SELECT id FR..user_recipe..." />
-            <marker date="1480499946000" expanded="true" signature="72769:72836" placeholder="UPDATE food ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../platforms/ios/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3224" column="26" selection-start-line="3224" selection-start-column="26" selection-end-line="3224" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../queplan/QuePlan/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21316965">
-          <caret line="172" column="33" selection-start-line="172" selection-start-column="33" selection-end-line="172" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../platforms/android/assets/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3233" column="7" selection-start-line="3233" selection-start-column="7" selection-end-line="3233" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="142" column="135" selection-start-line="152" selection-start-column="37" selection-end-line="152" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+          <caret line="436" column="35" selection-start-line="434" selection-start-column="12" selection-end-line="436" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5535714">
-          <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.3325893">
+          <caret line="194" column="43" selection-start-line="194" selection-start-column="43" selection-end-line="194" selection-end-column="43" />
           <folding />
         </state>
       </provider>

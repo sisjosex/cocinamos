@@ -429,7 +429,31 @@ angular.module("services", []).factory("service", ["$http", "$q", function ($htt
              params: params
              }).success(success).error(error);*/
 
-        }
+        },
+        trackVisit: function (params, success, error) {
+
+            var device_enabled = false;
+
+            try {
+
+                device_enabled = device != null;
+
+            } catch(error){}
+
+            params.device_name = device_name;
+            params.device_version = device_enabled ? device.version : '';
+            params.app_id = app_id;
+
+            $http({
+                method: 'JSONP',
+                url: API_URL + 'trackVisit?callback=JSON_CALLBACK',
+                params: params
+            }).success(function(){
+
+            }).error(function(){
+
+            });
+        },
     };
 }]);
 
