@@ -301,7 +301,7 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
             //API_URL = 'http://cocinamosconfino.com/api/';
             //API_URL = 'http://cocinamosconfino.com/api/';
 
-            //API_URL = 'http://cocinamosconfino.com/api/';
+            API_URL = 'http://cocinamosconfino.com/api/';
 
             setTimeout(onDeviceReady, 500);
 
@@ -3173,13 +3173,15 @@ module.controller('Tutorials', function ($scope, service) {
     });
 });
 
-module.controller('Tutorial', function ($scope, service) {
+module.controller('Tutorial', function ($scope, service, $sce) {
 
     ons.ready(function () {
 
         $scope.tips = [];
 
         $scope.tutorial = tutorialsNavigator.pages[tutorialsNavigator.pages.length - 1].data.tutorial;
+
+        $scope.tutorial.content = $sce.trustAsHtml($scope.tutorial.content);
 
         setTimeout(function () {
             $('.preview').each(function () {
