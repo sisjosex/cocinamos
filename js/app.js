@@ -363,6 +363,10 @@ module.controller('MainNavigatorController', function ($scope, $rootScope, servi
                 }, 800);
 
             });
+
+            try {
+                window.analytics.startTrackerWithId('923763813');
+            } catch(error){}
         }
 
         function onOnline() {

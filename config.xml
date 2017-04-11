@@ -88,6 +88,15 @@
     </feature>
 
 
+    <plugin spec="https://github.com/AppsFlyerSDK/PhoneGap.git" source="git" />
+    <feature name="AppsFlyerPlugin">
+        <param name="ios-package" value="AppsFlyerPlugin" />
+    </feature>
+    <feature name="AppsFlyerPlugin">
+        <param name="android-package" value="com.appsflyer.cordova.plugin.AppsFlyerPlugin" />
+    </feature>
+
+
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#e12d5a" />
     <preference name="StatusBarStyle" value="blackopaque" />
@@ -153,10 +162,33 @@
     <plugin spec="https://github.com/Glitchbone/CordovaYoutubeVideoPlayer.git" source="git" />
     <plugin spec="https://github.com/sarriaroman/photoviewer.git" source="git" />
 
-    <plugin name="cordova-plugin-facebook4">
+    <plugin spec="https://github.com/Wizcorp/phonegap-facebook-plugin.git" source="git">
         <param name="APP_ID" value="1129872310422559" />
         <param name="APP_NAME" value="COCINAMOS" />
     </plugin>
+    <!-- variable APP_ID="1129872310422559" variable APP_NAME="COCINAMOS"-->
+
+    <plugin spec="https://github.com/appfeel/admob-google-cordova.git" source="git" />
+
+    <plugin spec="https://github.com/danwilson/google-analytics-plugin.git" source="git" />
+
+    <feature name="UniversalAnalytics">
+        <param name="ios-package" value="UniversalAnalyticsPlugin" />
+    </feature>
+    <feature name="UniversalAnalytics">
+        <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin" />
+    </feature>
+    <feature name="UniversalAnalytics">
+        <param name="wp-package" value="UniversalAnalyticsPlugin" />
+    </feature>
+
+    <!--923763813-->
+
+
+    <!--<plugin name="cordova-plugin-facebook4">-->
+        <!--<param name="APP_ID" value="1129872310422559" />-->
+        <!--<param name="APP_NAME" value="COCINAMOS" />-->
+    <!--</plugin>-->
 
     <!--<plugin name="nl.x-services.plugins.socialsharing" source="pgb" />-->
 
