@@ -210,7 +210,7 @@
         <variable name="APP_NAME" value="COCINAMOS" />
 	</plugin>
     <plugin spec="https://github.com/jackpocket/cordova-plugin-facebook-push-campaign.git" source="npm" />
-    <plugin name="phonegap-plugin-push" source="npm" spec="~2.0.0">
+    <plugin name="phonegap-plugin-push" source="npm" spec="~1.10.4">
         <variable name="SENDER_ID" value="739773876794" />
         <variable name="APP_ID" value="1129872310422559" />
         <variable name="APP_NAME" value="COCINAMOS" />
