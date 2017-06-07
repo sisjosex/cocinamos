@@ -30,6 +30,8 @@
     <script src="lib/onsen/js/angular/angular.js"></script>
     <script src="lib/onsen/js/onsenui.js"></script>-->
 
+    <script src="js/notifications.js"></script>
+
     <script src="lib/jquery-2.1.4.min.js"></script>
     <script src="lib/moment.js"></script>
     <script src="cordova.js"></script>
@@ -37,7 +39,6 @@
     <script src="js/util.js"></script>
     <script src="lib/angular-satinize.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/notifications.js"></script>
     <script src="js/fractional.js"></script>
 </head>
 <body>
@@ -74,7 +75,6 @@
                         <a modifier="large" class="button" ng-click="saltar()">
                             <img src="img/new/btn_ingresar.png" alt="">
                         </a>
-                        </p>
                     </div>
                 </div>
             </div>
@@ -280,7 +280,7 @@
                         <h1 class="intro-title">Recuperar Contraseña</h1>
                         <input type="email" class="text-input--underbar input-text" placeholder="Ingrese su email"
                                ng-model="user.email" autocomplete="off">
-                        <ons-button class="btn-yellow" ng-click="retrieve_password()">Recuperar</i></ons-button>
+                        <ons-button class="btn-yellow" ng-click="retrieve_password()">Recuperar</ons-button>
                     </div>
                 </div>
             </div>

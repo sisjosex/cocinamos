@@ -13,7 +13,7 @@ var applicationLanguage = 'es';
 var user;
 var user_storage_key = 'finoapp_user';
 
-var app_id = 123456;
+var app_id = 1129872310422559;
 var recipe_share_text = 'Te invito a participar';
 var currentNavigator = undefined;
 var MyShoppingScope;

@@ -4,9 +4,9 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.fino.cocinamos"
-        versionCode = "20009"
-        android-versionCode="20009"
-        version 	= "20009">
+        versionCode = "20010"
+        android-versionCode="20010"
+        version 	= "20010">
 
     <name>Cocinamos</name>
 
@@ -14,8 +14,8 @@
         cocinando con Fino
     </description>
 
-    <author href="http://josex.info" email="sisjosex@gmail.com">
-        Jose L. Perez Nogales
+    <author href="http://www.motion.com.bo" email="info@motion.com.bo">
+        MOTION TM LTDA.
     </author>
 
     <preference name="android-build-tool" value="gradle" />
@@ -162,41 +162,33 @@
 
 
 
-    <!-- iPhone and iPod touch -->
-    <splash src="res/splash/ios/Default.png" platform="ios" width="320" height="480" />
-    <splash src="res/splash/ios/Default@2x.png" platform="ios" width="640" height="960" />
-
-    <!-- iPhone 5 / iPod Touch (5th Generation) -->
-    <splash src="res/splash/ios/Default-568h@2x.png" platform="ios" width="640" height="1136" />
-
-    <!-- iPhone 6 -->
-    <splash src="res/splash/ios/Default-667h@2x.png" platform="ios" width="750" height="1334" />
-    <splash src="res/splash/ios/Default-Portrait-736h@3x.png" platform="ios" width="1242" height="2208" />
-    <!--<splash src="Default-Landscape-736h@3x.png" platform="ios" width="2208" height="1242" />-->
-
-    <!-- iPad -->
-    <!--<splash src="res/splash/ios/Default-Portrait.png" platform="ios" width="768" height="1024" />-->
-    <!--<splash src="Default-Landscape.png" platform="ios" width="1024" height="768" />-->
-
-    <!-- Retina iPad -->
-    <!--<splash src="res/splash/ios/Default-Portrait@2x.png" platform="ios" width="1536" height="2048" />-->
-    <!--<splash src="Default-Landscape@2x.png" platform="ios" width="2048" height="1536" />-->
-
-
-
+    <!-- iOS Splash -->
+	<splash height="1136" platform="ios" src="res/screen/ios/Default-568h@2x~iphone.png" width="640" />
+	<splash height="1334" platform="ios" src="res/screen/ios/Default-667h.png" width="750" />
+	<splash height="2208" platform="ios" src="res/screen/ios/Default-736h.png" width="1242" />
+	<splash height="1242" platform="ios" src="res/screen/ios/Default-Landscape-736h.png" width="2208" />
+	<splash height="1536" platform="ios" src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" />
+	<splash height="768" platform="ios" src="res/screen/ios/Default-Landscape~ipad.png" width="1024" />
+	<splash height="2048" platform="ios" src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" />
+	<splash height="1024" platform="ios" src="res/screen/ios/Default-Portrait~ipad.png" width="768" />
+	<splash height="960" platform="ios" src="res/screen/ios/Default@2x~iphone.png" width="640" />
+	<splash height="480" platform="ios" src="res/screen/ios/Default~iphone.png" width="320" />
 
     <!-- Android Splash -->
-    <splash src="res/splash/android/ldpi.png" platform="android" qualifier="ldpi" />
-    <splash src="res/splash/android/mdpi.png" platform="android" qualifier="mdpi" />
-    <splash src="res/splash/android/hdpi.png" platform="android" qualifier="hdpi" />
-    <splash src="res/splash/android/xhdpi.png" platform="android" qualifier="xhdpi" />
-    <!--<splash src="fr-xhdpi.png" platform="android" qualifier="fr-xhdpi" />-->
-    <!--<splash src="portrait-xxhdpi.png" platform="android" qualifier="port-xxhdpi" />-->
-    <!--<splash src="landscape-xxhdpi.png" platform="android" qualifier="land-xxhdpi" />-->
+    <splash src="res/screen/android/ldpi.png" platform="android" qualifier="port-ldpi" />
+    <splash src="res/screen/android/mdpi.png" platform="android" qualifier="port-mdpi" />
+    <splash src="res/screen/android/hdpi.png" platform="android" qualifier="port-hdpi" />
+    <splash src="res/screen/android/xhdpi.png" platform="android" qualifier="port-xhdpi" />
+    <splash src="res/screen/android/xhdpi.png" platform="android" qualifier="port-xxhdpi" />
+    <splash src="res/screen/android/xhdpi.png" platform="android" qualifier="port-xxxhdpi" />
+    <splash src="res/screen/android/land-ldpi.png" platform="android" qualifier="land-ldpi" />
+    <splash src="res/screen/android/land-mdpi.png" platform="android" qualifier="land-mdpi" />
+    <splash src="res/screen/android/land-hdpi.png" platform="android" qualifier="land-hdpi" />
+    <splash src="res/screen/android/land-xhdpi.png" platform="android" qualifier="land-xhdpi" />
+    <splash src="res/screen/android/land-xhdpi.png" platform="android" qualifier="land-xxhdpi" />
+    <splash src="res/screen/android/land-xhdpi.png" platform="android" qualifier="land-xxxhdpi" />
 
-
-
-
+   
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
         <string>100</string>
     </gap:config-file>
@@ -210,6 +202,22 @@
 
     <plugin spec="https://github.com/Glitchbone/CordovaYoutubeVideoPlayer.git" source="git" />
     <plugin spec="https://github.com/sarriaroman/photoviewer.git" source="git" />
+
+    <!-- Facebook Push -->
+    <plugin spec="https://github.com/jackpocket/cordova-plugin-facebook4.git" source="git">
+        <variable name="SENDER_ID" value="739773876794" />
+        <variable name="APP_ID" value="1129872310422559" />
+        <variable name="APP_NAME" value="COCINAMOS" />
+	</plugin>
+    <plugin spec="https://github.com/jackpocket/cordova-plugin-facebook-push-campaign.git" source="npm" />
+    <plugin name="phonegap-plugin-push" source="npm" spec="~2.0.0">
+        <variable name="SENDER_ID" value="739773876794" />
+        <variable name="APP_ID" value="1129872310422559" />
+        <variable name="APP_NAME" value="COCINAMOS" />
+    </plugin>
+    
+    <plugin name="cordova-plugin-google-app-conversion-tracker" spec="https://github.com/insiderpages/google-app-conversion-tracker.git" />
+
     <!--<plugin name="cordova-plugin-x-socialsharing" source="npm" />-->
     <!--<plugin spec="https://github.com/apache/cordova-plugin-geolocation.git" source="git" />-->
     <!--<plugin name="nl.x-services.plugins.socialsharing" source="pgb" />-->
@@ -241,10 +249,6 @@
         <allow-intent href="itms-apps:*" />
         <preference name="StatusBarBackgroundColor" value="#39ac08" />
     </platform>
-    <plugin name="cordova-plugin-facebook4" spec="~1.7.4">
-        <variable name="APP_ID" value="1129872310422559" />
-        <variable name="APP_NAME" value="COCINAMOS" />
-    </plugin>
     <plugin spec="https://github.com/danwilson/google-analytics-plugin.git" source="git" />
     <feature name="UniversalAnalytics">
         <param name="ios-package" value="UniversalAnalyticsPlugin" />
