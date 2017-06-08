@@ -1,22 +1,64 @@
-// wait for device to be ready
-window.document.addEventListener('deviceready', function() {
- 
-  // initiate the push plugin. 
-  // For more info on this see https://github.com/jackpocket/cordova-plugin-facebook-push-campaign.git
-  pushPlugin
-    .init({
-      ios: {
-        badge:      'true',
-        sound:      'true',
-        alert:      'true',
-        clearBadge: 'true',
-      }
-    })
-    // wait for the plugin to register the Push Token 
-    .on('registration', function(pushToken) {
-      // grab the token and pass it to Facebook
-      cordova.plugins.FacebookPushCampaign.register(pushToken);
-    });
+var app = {
+    // Application Constructor
+    initialize: function() {
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+        console.log('Received Device Ready Event');
+        console.log('calling setup push');
+        app.setupPush();
+    },
+    setupPush: function() {
+        console.log('calling push init');
+        var push = PushNotification.init({
+            "android": {
+                "senderID": "739773876794"
+            },
+            "ios": {
+                "sound": true,
+                "vibration": true,
+                "badge": true,
+				"clearBadge": true
+            },
+        });
+        console.log('after init');
 
-  GappTrack.track("923763813", "IKvfCO-lym8Q5Yi-uAM", "0.00", "NO");
-});
+        push.on('registration', function(data) {
+            console.log('registration event: ' + data.registrationId);
+    	    cordova.plugins.FacebookPushCampaign.register(data.registrationId);
+
+            var oldRegId = localStorage.getItem('registrationId');
+            if (oldRegId !== data.registrationId) {
+                // Save new registration ID
+                localStorage.setItem('registrationId', data.registrationId);
+                // Post registrationId to your app server as the value has changed
+            }
+
+        });
+
+        push.on('error', function(e) {
+            console.log("push error = " + e.message);
+        });
+
+        push.on('notification', function(data) {
+            console.log('notification event');
+            navigator.notification.alert(
+                data.message,         // message
+                null,                 // callback
+                data.title,           // title
+                'Ok'                  // buttonName
+            );
+       });
+    }
+};
