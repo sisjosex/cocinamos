@@ -218,8 +218,8 @@
     
     <plugin name="cordova-plugin-google-app-conversion-tracker" spec="https://github.com/insiderpages/google-app-conversion-tracker.git" />
 
-    <!--<plugin name="cordova-plugin-x-socialsharing" source="npm" />-->
-    <plugin name="nl.x-services.plugins.socialsharing" source="pgb" />
+    <plugin name="cordova-plugin-x-socialsharing" source="npm" />
+    <!--<plugin name="nl.x-services.plugins.socialsharing" source="pgb" />-->
 
     <!--<plugin spec="https://github.com/apache/cordova-plugin-geolocation.git" source="git" />-->
     <!--<plugin spec="https://github.com/OneSignal/OneSignal-Cordova-SDK.git" source="git"></plugin>-->
