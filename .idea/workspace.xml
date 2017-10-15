@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="982fff58-3371-4dab-9d32-f016f2bc3da0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/ios/icon-76@2x.png" afterPath="$PROJECT_DIR$/res/icon/ios/icon-76@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
     </list>
     <ignored path="www.iws" />
@@ -28,8 +25,8 @@
       <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="115" column="117" lean-forward="false" selection-start-line="115" selection-start-column="117" selection-end-line="115" selection-end-column="117" />
+            <state relative-caret-position="153">
+              <caret line="33" column="58" lean-forward="true" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -38,72 +35,19 @@
       <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="185" column="94" lean-forward="true" selection-start-line="185" selection-start-column="94" selection-end-line="185" selection-end-column="94" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19227">
-              <caret line="2489" column="25" lean-forward="false" selection-start-line="2489" selection-start-column="25" selection-end-line="2489" selection-end-column="25" />
-              <folding>
-                <element signature="n#ons-page#0;n#ons-template#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#8;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#9;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#10;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#11;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#12;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#13;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#16;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#17;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#18;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#19;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#20;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#25;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#26;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#27;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#28;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#29;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#33;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#34;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#35;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-navigator#0;n#ons-template#36;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ons-page#0;n#ons-template#38;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6222">
-              <caret line="366" column="17" lean-forward="false" selection-start-line="366" selection-start-column="17" selection-end-line="366" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/services.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7412">
-              <caret line="436" column="17" lean-forward="false" selection-start-line="434" selection-start-column="12" selection-end-line="436" selection-end-column="17" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>phonegap</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -145,7 +89,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="1014" />
@@ -229,18 +173,18 @@
       <option name="presentableId" value="Default" />
       <updated>1473157269326</updated>
       <workItem from="1508046090713" duration="708000" />
-      <workItem from="1508050141770" duration="364000" />
+      <workItem from="1508050141770" duration="4227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1072000" />
+    <option name="totallyTimeSpent" value="4935000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1014" extended-state="0" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12184874" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.090625" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -281,21 +225,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="436" column="17" lean-forward="false" selection-start-line="434" selection-start-column="12" selection-end-line="436" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="116" column="5" lean-forward="false" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -545,17 +474,28 @@
     <entry file="file://A:/queplan/QuePlan/config.xml" />
     <entry file="file://A:/queplan/QuePlan/platforms/android/assets/www/config.xml" />
     <entry file="file://$PROJECT_DIR$/../../admin/controllers/api.php" />
+    <entry file="file://$PROJECT_DIR$/config2.xml" />
+    <entry file="file://$PROJECT_DIR$/../platforms/ios/Cocinamos/Cocinamos-Info.plist" />
+    <entry file="file://A:/queplan/QuePlan/www/config.xml" />
     <entry file="file://$PROJECT_DIR$/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7412">
+        <state relative-caret-position="1221">
           <caret line="436" column="17" lean-forward="false" selection-start-line="434" selection-start-column="12" selection-end-line="436" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="366" column="17" lean-forward="false" selection-start-line="366" selection-start-column="17" selection-end-line="366" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19227">
+        <state relative-caret-position="830">
           <caret line="2489" column="25" lean-forward="false" selection-start-line="2489" selection-start-column="25" selection-end-line="2489" selection-end-column="25" />
           <folding>
             <element signature="n#ons-page#0;n#ons-template#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -589,29 +529,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config2.xml" />
-    <entry file="file://$PROJECT_DIR$/js/app.js">
+    <entry file="file://E:/Portafolio Motion/SoBrities/Trabajos/Fino/App Cocinamos/Apps/2017-10-15/com.motion.fino.cocinamos/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6222">
-          <caret line="366" column="17" lean-forward="false" selection-start-line="366" selection-start-column="17" selection-end-line="366" selection-end-column="17" />
+        <state relative-caret-position="357">
+          <caret line="21" column="97" lean-forward="true" selection-start-line="21" selection-start-column="97" selection-end-line="21" selection-end-column="97" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../platforms/ios/Cocinamos/Cocinamos-Info.plist" />
-    <entry file="file://A:/queplan/QuePlan/www/config.xml" />
+    <entry file="file://E:/Portafolio Motion/SoBrities/Trabajos/Fino/App Cocinamos/Apps/2017-10-15/com.motion.fino.cocinamos/res/xml/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="185" column="94" lean-forward="true" selection-start-line="185" selection-start-column="94" selection-end-line="185" selection-end-column="94" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="115" column="117" lean-forward="false" selection-start-line="115" selection-start-column="117" selection-end-line="115" selection-end-column="117" />
+        <state relative-caret-position="153">
+          <caret line="33" column="58" lean-forward="true" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
           <folding />
         </state>
       </provider>
