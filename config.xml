@@ -119,6 +119,7 @@
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1" />
     <plugin source="git" spec="https://github.com/Glitchbone/CordovaYoutubeVideoPlayer.git" />
+    <plugin spec="https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git" source="git" />
     <plugin source="git" spec="https://github.com/sarriaroman/photoviewer.git" />
     <plugin source="git" spec="https://github.com/jackpocket/cordova-plugin-facebook4.git">
         <variable name="SENDER_ID" value="739773876794" />
