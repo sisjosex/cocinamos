@@ -113,9 +113,7 @@
     <splash platform="android" qualifier="land-xhdpi" src="res/screen/android/land-xhdpi.png" />
     <splash platform="android" qualifier="land-xxhdpi" src="res/screen/android/land-xhdpi.png" />
     <splash platform="android" qualifier="land-xxxhdpi" src="res/screen/android/land-xhdpi.png" />
-    <gap:config-file parent="CFBundleShortVersionString" platform="ios">
-        <string>100</string>
-    </gap:config-file>
+    <!--<gap:config-file parent="CFBundleShortVersionString" platform="ios"><string>100</string></gap:config-file>-->
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1" />
     <plugin source="git" spec="https://github.com/Glitchbone/CordovaYoutubeVideoPlayer.git" />
