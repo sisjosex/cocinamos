@@ -147,14 +147,12 @@
         <allow-intent href="itms-apps:*" />
         <preference name="StatusBarBackgroundColor" value="#39ac08" />
     </platform>
-    <plugin source="git" spec="https://github.com/danwilson/google-analytics-plugin.git" />
+    <!--<plugin source="git" spec="https://github.com/danwilson/google-analytics-plugin.git" />-->
+    <plugin source="git" spec="https://github.com/Code1Tech/google-analytics-plugin.git" />
     <feature name="UniversalAnalytics">
         <param name="ios-package" value="UniversalAnalyticsPlugin" />
     </feature>
     <feature name="UniversalAnalytics">
         <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin" />
-    </feature>
-    <feature name="UniversalAnalytics">
-        <param name="wp-package" value="UniversalAnalyticsPlugin" />
     </feature>
 </widget>
