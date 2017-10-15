@@ -148,7 +148,7 @@
         <preference name="StatusBarBackgroundColor" value="#39ac08" />
     </platform>
     <!--<plugin source="git" spec="https://github.com/danwilson/google-analytics-plugin.git" />-->
-    <plugin source="git" spec="https://github.com/Code1Tech/google-analytics-plugin.git" />
+    <plugin name="mp-cordova-plugin-google-analytics" />
     <feature name="UniversalAnalytics">
         <param name="ios-package" value="UniversalAnalyticsPlugin" />
     </feature>
